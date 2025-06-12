@@ -21,6 +21,7 @@ function DepartmentPage() {
       "Electrical Engineering",
       "Mechanical Engineering",
       "Civil Engineering",
+      "Chemical Engineering",
     ],
     Science: [
       "Science Lab Tech",
@@ -34,7 +35,12 @@ function DepartmentPage() {
   };
 
   const marineSubdivisions = ["Offshore", "Naval", "Powerplant"];
-  const mechanicalSubdivisions = ["1", "2"];
+  const mechanicalSubdivisions = ["thermofluid", "production"];
+  const electricalSubdivisions = [
+    "instrumentations and control",
+    "electronics and telecommunication",
+    "power",
+  ];
 
   useEffect(() => {
     const normalizedCollege =
@@ -49,19 +55,29 @@ function DepartmentPage() {
 
   useEffect(() => {
     const dept = department.toLowerCase();
+    const normalizedLevel = String(level); // Make sure level is a string
 
-    if (dept === "marine engineering") {
-      setSubdivisionOptions(marineSubdivisions);
-      setShowSubdivision(true);
-    } else if (dept === "mechanical engineering") {
-      setSubdivisionOptions(mechanicalSubdivisions);
-      setShowSubdivision(true);
+    if (normalizedLevel === "500") {
+      if (dept === "marine engineering") {
+        setSubdivisionOptions(marineSubdivisions);
+        setShowSubdivision(true);
+      } else if (dept === "mechanical engineering") {
+        setSubdivisionOptions(mechanicalSubdivisions);
+        setShowSubdivision(true);
+      } else if (dept === "electrical engineering") {
+        setSubdivisionOptions(electricalSubdivisions);
+        setShowSubdivision(true);
+      } else {
+        setSubdivisionOptions([]);
+        setShowSubdivision(false);
+        setSubdivision("");
+      }
     } else {
       setSubdivisionOptions([]);
       setShowSubdivision(false);
-      setSubdivision(""); // reset
+      setSubdivision("");
     }
-  }, [department]);
+  }, [department, level]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

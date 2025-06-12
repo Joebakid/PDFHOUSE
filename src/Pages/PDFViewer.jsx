@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-// JSON import for marine offshore 500 level first semester
+// JSON imports
 import marineoffshore1 from "../JSON/marineoffshore1.json";
+// import marinenaval1 from "../JSON/marinenaval1.json";
+// import marinepowerplant1 from "../JSON/marinepowerplant1.json";
 
 function PDFViewer() {
   const location = useLocation();
-  const { level, college, department, semester } = location.state || {};
+  const { level, college, department, semester, subdivision } =
+    location.state || {};
   const [pdfs, setPdfs] = useState([]);
 
   useEffect(() => {
@@ -16,26 +19,34 @@ function PDFViewer() {
     }
 
     const dept = department.toLowerCase().trim();
+    const sub = subdivision?.toLowerCase().trim(); // may be undefined
     const sem = semester.toLowerCase().trim();
+    const lvl = level.trim();
 
     let matchedPDFs = [];
 
-    if (level === "500" && sem === "first") {
-      if (dept.includes("offshore")) {
+    // Marine Engineering 500 Level PDFs - Based on Subdivision and Semester
+    if (dept === "marine engineering" && lvl === "500" && sem === "first") {
+      if (sub === "offshore") {
         matchedPDFs = Object.values(marineoffshore1).flat();
       }
-      // You can add more conditions here for naval and powerplant:
-      // else if (dept.includes("naval")) { import and use corresponding JSON }
-      // else if (dept.includes("powerplant")) { import and use corresponding JSON }
+      // Add more when you have the other JSONs:
+      // else if (sub === "naval") matchedPDFs = Object.values(marinenaval1).flat();
+      // else if (sub === "powerplant") matchedPDFs = Object.values(marinepowerplant1).flat();
     }
 
+    // You can later add similar conditional blocks for Mechanical or others here
+
     setPdfs(matchedPDFs);
-  }, [department, level, semester]);
+  }, [department, level, semester, subdivision]);
 
   return (
     <div className="max-w-2xl mx-auto mt-10 p-6 bg-white rounded shadow text-left">
       <h2 className="text-2xl font-bold mb-4 text-center">
-        PDFs for {department || "Unknown Department"}
+        PDFs for{" "}
+        {subdivision
+          ? `${subdivision} - ${department}`
+          : department || "Unknown Department"}
       </h2>
       <p className="text-center text-sm text-gray-600 mb-6">
         College: {college || "N/A"} | Level: {level || "N/A"} | Semester:{" "}
