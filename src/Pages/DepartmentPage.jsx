@@ -1,0 +1,147 @@
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
+function DepartmentPage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { level, college } = location.state || {};
+
+  const [department, setDepartment] = useState("");
+  const [semester, setSemester] = useState("");
+  const [subdivision, setSubdivision] = useState("");
+  const [departmentOptions, setDepartmentOptions] = useState([]);
+  const [showSubdivision, setShowSubdivision] = useState(false);
+  const [subdivisionOptions, setSubdivisionOptions] = useState([]);
+
+  const departments = {
+    Technology: [
+      "Marine Engineering",
+      "Petroleum Engineering",
+      "Oil and Gas",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Civil Engineering",
+    ],
+    Science: [
+      "Science Lab Tech",
+      "Geology",
+      "Computer Science",
+      "Nautical Science",
+      "Chemistry",
+      "Industrial Chemistry",
+      "Environment Science",
+    ],
+  };
+
+  const marineSubdivisions = ["Offshore", "Naval", "Powerplant"];
+  const mechanicalSubdivisions = ["1", "2"];
+
+  useEffect(() => {
+    const normalizedCollege =
+      college?.charAt(0).toUpperCase() + college?.slice(1).toLowerCase();
+
+    if (normalizedCollege && departments[normalizedCollege]) {
+      setDepartmentOptions(departments[normalizedCollege]);
+    } else {
+      setDepartmentOptions([]);
+    }
+  }, [college]);
+
+  useEffect(() => {
+    const dept = department.toLowerCase();
+
+    if (dept === "marine engineering") {
+      setSubdivisionOptions(marineSubdivisions);
+      setShowSubdivision(true);
+    } else if (dept === "mechanical engineering") {
+      setSubdivisionOptions(mechanicalSubdivisions);
+      setShowSubdivision(true);
+    } else {
+      setSubdivisionOptions([]);
+      setShowSubdivision(false);
+      setSubdivision(""); // reset
+    }
+  }, [department]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/pdfs-view", {
+      state: { department, level, college, semester, subdivision },
+    });
+  };
+
+  return (
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow text-left">
+      <h2 className="text-2xl font-bold mb-4 text-center">Select Department</h2>
+      <p className="mb-2 text-sm text-gray-600 text-center">
+        Level: {level} | College: {college}
+      </p>
+
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="department" className="block mb-2 font-medium">
+          Department
+        </label>
+        <select
+          id="department"
+          value={department}
+          onChange={(e) => setDepartment(e.target.value)}
+          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+        >
+          <option value="">Select department</option>
+          {departmentOptions.map((dept, i) => (
+            <option key={i} value={dept}>
+              {dept}
+            </option>
+          ))}
+        </select>
+
+        {showSubdivision && (
+          <>
+            <label htmlFor="subdivision" className="block mb-2 font-medium">
+              Subdivision
+            </label>
+            <select
+              id="subdivision"
+              value={subdivision}
+              onChange={(e) => setSubdivision(e.target.value)}
+              className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+            >
+              <option value="">Select subdivision</option>
+              {subdivisionOptions.map((option, i) => (
+                <option key={i} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </>
+        )}
+
+        <label htmlFor="semester" className="block mb-2 font-medium">
+          Semester
+        </label>
+        <select
+          id="semester"
+          value={semester}
+          onChange={(e) => setSemester(e.target.value)}
+          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+        >
+          <option value="">Select semester</option>
+          <option value="first">First Semester</option>
+          <option value="second">Second Semester</option>
+        </select>
+
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-2 rounded"
+          disabled={
+            !department || !semester || (showSubdivision && !subdivision)
+          }
+        >
+          Continue
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default DepartmentPage;
