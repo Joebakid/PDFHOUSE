@@ -41,6 +41,13 @@ function DepartmentPage() {
     "electronics and telecommunication",
     "power",
   ];
+  const chemicalSubdivisions = [
+    "Process",
+    "biochemical",
+    "material",
+    "energy",
+    "environmental",
+  ];
 
   useEffect(() => {
     const normalizedCollege =
@@ -66,6 +73,9 @@ function DepartmentPage() {
         setShowSubdivision(true);
       } else if (dept === "electrical engineering") {
         setSubdivisionOptions(electricalSubdivisions);
+        setShowSubdivision(true);
+      } else if (dept === "chemical engineering") {
+        setSubdivisionOptions(chemicalSubdivisions);
         setShowSubdivision(true);
       } else {
         setSubdivisionOptions([]);
