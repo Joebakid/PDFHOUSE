@@ -4,7 +4,7 @@ function Footer({ Btn, LinkCustom }) {
   return (
     <div className="bg-slate-400 py-5">
       <div className="custom-container">
-        <div className="py-5">
+        <div className="py-5 text-xl">
           <h2>PDF HOME</h2>
           <span className="flex flex-col py-5 gap-5 sm:flex-row text-center">
             <LinkCustom
