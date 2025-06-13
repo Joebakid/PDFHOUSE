@@ -6,7 +6,7 @@ function Footer({ Btn, LinkCustom }) {
       <div className="custom-container">
         <div className="py-5">
           <h2>PDF HOME</h2>
-          <span className="flex flex-col py-5 gap-5 sm:flex-row">
+          <span className="flex flex-col py-5 gap-5 sm:flex-row text-center">
             <LinkCustom
               to="/pdfs"
               text="View PDFs"
@@ -20,7 +20,7 @@ function Footer({ Btn, LinkCustom }) {
         </div>
         <div>
           <h2>© 2025 The PDF House</h2>
-          <p>
+          <p className="block">
             Sponsored by{" "}
             <a
               className="underline hover:decoration-[#00CCFF] custom-transition"
