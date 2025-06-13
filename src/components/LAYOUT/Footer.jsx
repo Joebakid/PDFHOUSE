@@ -6,7 +6,7 @@ function Footer({ Btn, LinkCustom }) {
       <div className="custom-container">
         <div className="py-5">
           <h2>PDF HOME</h2>
-          <span className="flex py-5 gap-5">
+          <span className="flex flex-col py-5 gap-5 sm:flex-row">
             <LinkCustom
               to="/pdfs"
               text="View PDFs"
