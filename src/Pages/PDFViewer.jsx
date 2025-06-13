@@ -30,7 +30,7 @@ function CourseSection({ title, docs }) {
       </h2>
 
       {isOpen && (
-        <div className="flex flex-wrap gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4 items-center  ">
           {docs.map((doc, index) => (
             <Doc key={index} name={doc.name} href={doc.href} />
           ))}
@@ -100,13 +100,13 @@ function PDFViewer() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 text-center  ">
       <header className="mb-8">
-        <h1 className="text-2xl font-bold">
+        {/* <h1 className="text-2xl font-bold">
           Marine Engineering Document Repository
-        </h1>
-        <p className="text-md text-gray-700 mt-1">
+        </h1> */}
+        <h1 className="text-md text-gray-700 mt-1 font-bold">
           Access and download course materials for {subdivision || "N/A"}{" "}
           subdivision
-        </p>
+        </h1>
         <p className="text-sm text-gray-600 mt-2">
           College: {college || "N/A"} | Level: {level || "N/A"} | Semester:{" "}
           {semester || "N/A"}

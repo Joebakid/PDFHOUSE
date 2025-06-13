@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import Nav from "./components/LAYOUT/Nav";
 import Header from "./components/LAYOUT/Header";
 import PDFs from "./Pages/PDFs";
 import DepartmentPage from "./Pages/DepartmentPage";
-import PDFViewer from "./Pages/PDFViewer"; // 👈 Make sure this file exists
-
+import PDFViewer from "./Pages/PDFViewer";
+import WhyUs from "./components/LAYOUT/WhyUs";
 import "./App.css";
 
-// Reusable Button component
 function Btn({ text, className }) {
   return (
     <a
@@ -23,7 +21,6 @@ function Btn({ text, className }) {
   );
 }
 
-// Reusable Link component
 function LinkCustom({ text, className, to }) {
   return (
     <Link to={to} className={`${className} cursor-pointer hover:scale-105`}>
@@ -39,7 +36,12 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Header Btn={Btn} LinkCustom={LinkCustom} />}
+          element={
+            <>
+              <Header Btn={Btn} LinkCustom={LinkCustom} />
+              <WhyUs />
+            </>
+          }
         />
         <Route
           path="/pdfs"

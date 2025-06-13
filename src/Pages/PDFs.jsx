@@ -10,7 +10,7 @@ function PDFs() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -23,9 +23,7 @@ function PDFs() {
 
   return (
     <div className="custom-container initial-spacing text-center">
-      <h2 className="text-4xl font-bold py-3">
-        Find what you need in seconds
-      </h2>
+      <h2 className="text-4xl font-bold py-3">Find what you need in seconds</h2>
       <p className="text-lg py-3">
         We’ll guide you to the exact files you need, no accounts, no clutter.
       </p>
@@ -61,14 +59,22 @@ function PDFs() {
               ? ["100", "200", "300", "400"]
               : ["100", "200", "300", "400", "500"]
             ).map((lvl) => (
-              <option key={lvl} value={lvl}>{lvl}</option>
+              <option key={lvl} value={lvl}>
+                {lvl}
+              </option>
             ))}
           </select>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded"
+          disabled={!formData.college || !formData.level}
+          className={`w-full py-2 px-4 rounded transition 
+    ${
+      !formData.college || !formData.level
+        ? "bg-gray-400 text-white cursor-not-allowed"
+        : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+    }`}
         >
           Proceed
         </button>

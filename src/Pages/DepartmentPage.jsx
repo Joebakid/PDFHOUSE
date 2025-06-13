@@ -26,6 +26,8 @@ function DepartmentPage() {
     Science: [
       "Science Lab Tech",
       "Geology",
+      "Geophysic",
+      "Physic",
       "Computer Science",
       "Nautical Science",
       "Chemistry",
@@ -158,10 +160,15 @@ function DepartmentPage() {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded"
           disabled={
             !department || !semester || (showSubdivision && !subdivision)
           }
+          className={`w-full py-2 rounded transition 
+    ${
+      !department || !semester || (showSubdivision && !subdivision)
+        ? "bg-gray-400 text-white cursor-not-allowed"
+        : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+    }`}
         >
           Continue
         </button>
