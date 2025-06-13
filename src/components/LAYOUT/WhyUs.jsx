@@ -142,16 +142,7 @@ function WhyUs() {
       <div className=" w-full h-[2px] my-12 bg-gray-500"></div>
 
       <div className="px-4 md:px-8 py-12 max-w-7xl mx-auto custom-container">
-        {/* Duplicated Left Image */}
-        {/* <div className="flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-[40%]">
-            <img
-              alt="student"
-              src="/img/students.png"
-              className="w-full h-auto object-cover rounded-xl"
-            />
-          </div>
-        </div> */}
+      
 
         {/* Duplicated Right Content */}
         <div className="flex flex-col lg:flex-row items-center gap-10 mt-16">
