@@ -9,6 +9,8 @@ import WhyUs from "./components/LAYOUT/WhyUs";
 // import { Minimize2 } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import CreatorsSection from "./components/CreatorsSection";
+import Footer from "./components/LAYOUT/Footer";
 import "./App.css";
 
 function Btn({ text, className }) {
@@ -60,6 +62,8 @@ function App() {
             <>
               <Header Btn={Btn} LinkCustom={LinkCustom} />
               <WhyUs />
+              <CreatorsSection />
+              <Footer Btn={Btn} LinkCustom={LinkCustom} />
             </>
           }
         />
