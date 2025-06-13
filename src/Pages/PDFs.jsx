@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Minimize2 } from "lucide-react";
 
-function PDFs() {
+function PDFs({ BackButton }) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     level: "",
@@ -23,6 +24,7 @@ function PDFs() {
 
   return (
     <div className="custom-container initial-spacing text-center">
+      <BackButton />
       <h2 className="text-4xl font-bold py-3">Find what you need in seconds</h2>
       <p className="text-lg py-3">
         We’ll guide you to the exact files you need, no accounts, no clutter.

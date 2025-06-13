@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function DepartmentPage() {
+function DepartmentPage({ BackButton }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { level, college } = location.state || {};
@@ -99,81 +99,88 @@ function DepartmentPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow text-left">
-      <h2 className="text-2xl font-bold mb-4 text-center">Select Department</h2>
-      <p className="mb-2 text-sm text-gray-600 text-center">
-        Level: {level} | College: {college}
-      </p>
+    <>
+      <div className="custom-container initial-spacing">
+        <BackButton />
+      </div>{" "}
+      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow text-left">
+        <h2 className="text-2xl font-bold mb-4 text-center">
+          Select Department
+        </h2>
+        <p className="mb-2 text-sm text-gray-600 text-center">
+          Level: {level} | College: {college}
+        </p>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="department" className="block mb-2 font-medium">
-          Department
-        </label>
-        <select
-          id="department"
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
-          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
-        >
-          <option value="">Select department</option>
-          {departmentOptions.map((dept, i) => (
-            <option key={i} value={dept}>
-              {dept}
-            </option>
-          ))}
-        </select>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="department" className="block mb-2 font-medium">
+            Department
+          </label>
+          <select
+            id="department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+            className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+          >
+            <option value="">Select department</option>
+            {departmentOptions.map((dept, i) => (
+              <option key={i} value={dept}>
+                {dept}
+              </option>
+            ))}
+          </select>
 
-        {showSubdivision && (
-          <>
-            <label htmlFor="subdivision" className="block mb-2 font-medium">
-              Subdivision
-            </label>
-            <select
-              id="subdivision"
-              value={subdivision}
-              onChange={(e) => setSubdivision(e.target.value)}
-              className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
-            >
-              <option value="">Select subdivision</option>
-              {subdivisionOptions.map((option, i) => (
-                <option key={i} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </>
-        )}
+          {showSubdivision && (
+            <>
+              <label htmlFor="subdivision" className="block mb-2 font-medium">
+                Subdivision
+              </label>
+              <select
+                id="subdivision"
+                value={subdivision}
+                onChange={(e) => setSubdivision(e.target.value)}
+                className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Select subdivision</option>
+                {subdivisionOptions.map((option, i) => (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
 
-        <label htmlFor="semester" className="block mb-2 font-medium">
-          Semester
-        </label>
-        <select
-          id="semester"
-          value={semester}
-          onChange={(e) => setSemester(e.target.value)}
-          className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
-        >
-          <option value="">Select semester</option>
-          <option value="first">First Semester</option>
-          <option value="second">Second Semester</option>
-        </select>
+          <label htmlFor="semester" className="block mb-2 font-medium">
+            Semester
+          </label>
+          <select
+            id="semester"
+            value={semester}
+            onChange={(e) => setSemester(e.target.value)}
+            className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+          >
+            <option value="">Select semester</option>
+            <option value="first">First Semester</option>
+            <option value="second">Second Semester</option>
+          </select>
 
-        <button
-          type="submit"
-          disabled={
-            !department || !semester || (showSubdivision && !subdivision)
-          }
-          className={`w-full py-2 rounded transition 
+          <button
+            type="submit"
+            disabled={
+              !department || !semester || (showSubdivision && !subdivision)
+            }
+            className={`w-full py-2 rounded transition 
     ${
       !department || !semester || (showSubdivision && !subdivision)
         ? "bg-gray-400 text-white cursor-not-allowed"
         : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
     }`}
-        >
-          Continue
-        </button>
-      </form>
-    </div>
+          >
+            Continue
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

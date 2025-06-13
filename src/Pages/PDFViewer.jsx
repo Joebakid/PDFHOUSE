@@ -40,7 +40,7 @@ function CourseSection({ title, docs }) {
   );
 }
 
-function PDFViewer() {
+function PDFViewer({ BackButton }) {
   const location = useLocation();
   const { level, college, department, semester, subdivision } =
     location.state || {};
@@ -100,9 +100,7 @@ function PDFViewer() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 text-center  ">
       <header className="mb-8">
-        {/* <h1 className="text-2xl font-bold">
-          Marine Engineering Document Repository
-        </h1> */}
+        <BackButton />
         <h1 className="text-md text-gray-700 mt-1 font-bold">
           Access and download course materials for {subdivision || "N/A"}{" "}
           subdivision

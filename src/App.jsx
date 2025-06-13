@@ -6,6 +6,9 @@ import PDFs from "./Pages/PDFs";
 import DepartmentPage from "./Pages/DepartmentPage";
 import PDFViewer from "./Pages/PDFViewer";
 import WhyUs from "./components/LAYOUT/WhyUs";
+// import { Minimize2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 
 function Btn({ text, className }) {
@@ -29,10 +32,27 @@ function LinkCustom({ text, className, to }) {
   );
 }
 
+function BackButton() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="w-full flex justify-end mb-4">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
+      >
+        <ArrowLeft className="w-5 h-5" />
+        <span className="text-sm font-medium">Back</span>
+      </button>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
+
       <Routes>
         <Route
           path="/"
@@ -45,15 +65,29 @@ function App() {
         />
         <Route
           path="/pdfs"
-          element={<PDFs Btn={Btn} LinkCustom={LinkCustom} />}
+          element={
+            <PDFs Btn={Btn} LinkCustom={LinkCustom} BackButton={BackButton} />
+          }
         />
         <Route
           path="/department"
-          element={<DepartmentPage Btn={Btn} LinkCustom={LinkCustom} />}
+          element={
+            <DepartmentPage
+              Btn={Btn}
+              LinkCustom={LinkCustom}
+              BackButton={BackButton}
+            />
+          }
         />
         <Route
           path="/pdfs-view"
-          element={<PDFViewer Btn={Btn} LinkCustom={LinkCustom} />}
+          element={
+            <PDFViewer
+              Btn={Btn}
+              LinkCustom={LinkCustom}
+              BackButton={BackButton}
+            />
+          }
         />
       </Routes>
     </Router>

@@ -19,7 +19,7 @@
 }
 
 .initial-spacing {
-  @apply py-6 my-16;
+  @apply py-6 my-11;
 }
 
 /* svg {
