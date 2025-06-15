@@ -23,14 +23,14 @@ function PDFs({ BackButton }) {
   };
 
   return (
-    <div className="custom-container initial-spacing text-center">
+    <div className="text-center custom-container initial-spacing">
       <BackButton />
-      <h2 className="text-4xl font-bold py-3">Find what you need in seconds</h2>
-      <p className="text-lg py-3">
+      <h2 className="py-3 text-4xl font-bold">Find what you need in seconds</h2>
+      <p className="py-3 text-lg">
         We’ll guide you to the exact files you need, no accounts, no clutter.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto text-left">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 text-left">
         {/* College Dropdown */}
         <div className="mb-4">
           <label className="block mb-1 font-medium">College</label>
@@ -58,7 +58,7 @@ function PDFs({ BackButton }) {
             <option value="">Select level</option>
             {/* Filter levels based on college */}
             {(formData.college === "Science"
-              ? ["100", "200", "300", "400"]
+              ? ["100", "200", "300", "400", "500"]
               : ["100", "200", "300", "400", "500"]
             ).map((lvl) => (
               <option key={lvl} value={lvl}>

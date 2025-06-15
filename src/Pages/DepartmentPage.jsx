@@ -64,7 +64,9 @@ function DepartmentPage({ BackButton }) {
 
   useEffect(() => {
     const dept = department.toLowerCase();
-    const normalizedLevel = String(level); // Make sure level is a string
+    const normalizedLevel = String(level);
+
+    const science500NoSubdivision = ["environment science", "science lab tech"];
 
     if (normalizedLevel === "500") {
       if (dept === "marine engineering") {
@@ -79,6 +81,10 @@ function DepartmentPage({ BackButton }) {
       } else if (dept === "chemical engineering") {
         setSubdivisionOptions(chemicalSubdivisions);
         setShowSubdivision(true);
+      } else if (science500NoSubdivision.includes(dept)) {
+        setSubdivisionOptions([]);
+        setShowSubdivision(false);
+        setSubdivision("");
       } else {
         setSubdivisionOptions([]);
         setShowSubdivision(false);
@@ -102,12 +108,12 @@ function DepartmentPage({ BackButton }) {
     <>
       <div className="custom-container initial-spacing">
         <BackButton />
-      </div>{" "}
-      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow text-left">
-        <h2 className="text-2xl font-bold mb-4 text-center">
+      </div>
+      <div className="max-w-md p-6 mx-auto mt-10 text-left bg-white rounded shadow">
+        <h2 className="mb-4 text-2xl font-bold text-center">
           Select Department
         </h2>
-        <p className="mb-2 text-sm text-gray-600 text-center">
+        <p className="mb-2 text-sm text-center text-gray-600">
           Level: {level} | College: {college}
         </p>
 
@@ -119,7 +125,7 @@ function DepartmentPage({ BackButton }) {
             id="department"
             value={department}
             onChange={(e) => setDepartment(e.target.value)}
-            className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md"
           >
             <option value="">Select department</option>
             {departmentOptions.map((dept, i) => (
@@ -138,7 +144,7 @@ function DepartmentPage({ BackButton }) {
                 id="subdivision"
                 value={subdivision}
                 onChange={(e) => setSubdivision(e.target.value)}
-                className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+                className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md"
               >
                 <option value="">Select subdivision</option>
                 {subdivisionOptions.map((option, i) => (
@@ -157,7 +163,7 @@ function DepartmentPage({ BackButton }) {
             id="semester"
             value={semester}
             onChange={(e) => setSemester(e.target.value)}
-            className="w-full mb-4 px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md"
           >
             <option value="">Select semester</option>
             <option value="first">First Semester</option>
@@ -170,11 +176,11 @@ function DepartmentPage({ BackButton }) {
               !department || !semester || (showSubdivision && !subdivision)
             }
             className={`w-full py-2 rounded transition 
-    ${
-      !department || !semester || (showSubdivision && !subdivision)
-        ? "bg-gray-400 text-white cursor-not-allowed"
-        : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
-    }`}
+            ${
+              !department || !semester || (showSubdivision && !subdivision)
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+            }`}
           >
             Continue
           </button>
