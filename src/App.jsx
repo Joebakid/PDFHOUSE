@@ -1,18 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import Nav from "./components/LAYOUT/Nav";
 import Header from "./components/LAYOUT/Header";
 import PDFs from "./Pages/PDFs";
 import DepartmentPage from "./Pages/DepartmentPage";
 import PDFViewer from "./Pages/PDFViewer";
 import WhyUs from "./components/LAYOUT/WhyUs";
-// import { Minimize2 } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import CreatorsSection from "./components/CreatorsSection";
+import CreatorsSection from "./components/LAYOUT/CreatorsSection";
 import Footer from "./components/LAYOUT/Footer";
 import "./App.css";
 
+// Telegram Button
 function Btn({ text, className }) {
   return (
     <a
@@ -26,6 +32,7 @@ function Btn({ text, className }) {
   );
 }
 
+// React Router Link
 function LinkCustom({ text, className, to }) {
   return (
     <Link to={to} className={`${className} cursor-pointer hover:scale-105`}>
@@ -34,6 +41,7 @@ function LinkCustom({ text, className, to }) {
   );
 }
 
+// Back Button Component
 function BackButton() {
   const navigate = useNavigate();
 
@@ -50,9 +58,20 @@ function BackButton() {
   );
 }
 
-function App() {
+// App Wrapper to handle GA4 Route Tracking
+function AppWrapper() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag("config", "G-VQ0HCBZ327", {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+
   return (
-    <Router>
+    <>
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
       <Routes>
@@ -94,6 +113,15 @@ function App() {
           }
         />
       </Routes>
+    </>
+  );
+}
+
+// Main App with Router
+function App() {
+  return (
+    <Router>
+      <AppWrapper />
     </Router>
   );
 }

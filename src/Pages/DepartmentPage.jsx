@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import ProductAdCarousel from "./ProductAdCarousel";
 
 function DepartmentPage({ BackButton }) {
   const location = useLocation();
@@ -108,8 +109,9 @@ function DepartmentPage({ BackButton }) {
     <>
       <div className="custom-container initial-spacing">
         <BackButton />
+        {/* <ProductAdCarousel /> */}
       </div>
-      <div className="max-w-md p-6 mx-auto mt-10 text-left bg-white rounded shadow">
+      <div className="max-w-md p-5 mx-auto  text-left bg-white rounded shadow">
         <h2 className="mb-4 text-2xl font-bold text-center">
           Select Department
         </h2>
