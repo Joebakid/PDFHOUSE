@@ -1,49 +1,50 @@
 {
-  "MTH101": [
+  "GST111": [
     {
-      "name": "MTH101 Note",
+      "name": "GST111 Note",
       "href": "#"
     }
   ],
-  "MTH103": [
+
+  "FUPRE-PHY102": [
     {
-      "name": "MTH103 Note",
+      "name": "FUPRE-PHY102 Note",
       "href": "#"
     }
   ],
-  "CHM101": [
+  "PHY108": [
     {
-      "name": "CHM101 Note",
+      "name": "PHY108 Practical",
       "href": "#"
     }
   ],
-  "CHM107": [
+  "CHM102": [
     {
-      "name": "CHM107 Practical",
+      "name": "CHM102 Note",
       "href": "#"
     }
   ],
-  "PHY101": [
+  "CHM108": [
     {
-      "name": "PHY101 Note",
+      "name": "CHM108 Practical",
       "href": "#"
     }
   ],
-  "PHY103": [
+  "GET102": [
     {
-      "name": "PHY103 Note",
+      "name": "GET102 Graphics",
       "href": "#"
     }
   ],
-  "PHY107": [
+  "GST112": [
     {
-      "name": "PHY107 Practical",
+      "name": "GST112 Note",
       "href": "#"
     }
   ],
-  "GET101": [
+  "FUPRE-PHY104": [
     {
-      "name": "GET101 Note",
+      "name": "FUPRE-PHY104 Note",
       "href": "#"
     }
   ]
