@@ -1,0 +1,50 @@
+{
+  "MTH101": [
+    {
+      "name": "MTH101 Note",
+      "href": "#"
+    }
+  ],
+  "MTH103": [
+    {
+      "name": "MTH103 Note",
+      "href": "#"
+    }
+  ],
+  "CHM101": [
+    {
+      "name": "CHM101 Note",
+      "href": "#"
+    }
+  ],
+  "CHM107": [
+    {
+      "name": "CHM107 Practical",
+      "href": "#"
+    }
+  ],
+  "PHY101": [
+    {
+      "name": "PHY101 Note",
+      "href": "#"
+    }
+  ],
+  "PHY103": [
+    {
+      "name": "PHY103 Note",
+      "href": "#"
+    }
+  ],
+  "PHY107": [
+    {
+      "name": "PHY107 Practical",
+      "href": "#"
+    }
+  ],
+  "GET101": [
+    {
+      "name": "GET101 Note",
+      "href": "#"
+    }
+  ]
+}

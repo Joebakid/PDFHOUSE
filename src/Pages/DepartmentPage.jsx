@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ProductAdCarousel from "./ProductAdCarousel";
+// import ProductAdCarousel from "./ProductAdCarousel"; // Optional
 
 function DepartmentPage({ BackButton }) {
   const location = useLocation();
@@ -27,29 +27,36 @@ function DepartmentPage({ BackButton }) {
     Science: [
       "Science Lab Tech",
       "Geology",
-      "Geophysic",
-      "Physic",
-      "Computer Science",
+      "Geophysics",
+      "Physics",
       "Nautical Science",
       "Chemistry",
       "Industrial Chemistry",
-      "Environment Science",
+      "Environmental Science",
     ],
+    Computing: [
+      "Computer Science",
+      "Information Technology",
+      "Software Engineering",
+      "Cyber Security",
+      "Data Science",
+    ],
+    // Marinetime:[]
   };
 
   const marineSubdivisions = ["Offshore", "Naval", "Powerplant"];
-  const mechanicalSubdivisions = ["thermofluid", "production"];
+  const mechanicalSubdivisions = ["Thermofluid", "Production"];
   const electricalSubdivisions = [
-    "instrumentations and control",
-    "electronics and telecommunication",
-    "power",
+    "Instrumentations and Control",
+    "Electronics and Telecommunication",
+    "Power",
   ];
   const chemicalSubdivisions = [
     "Process",
-    "biochemical",
-    "material",
-    "energy",
-    "environmental",
+    "Biochemical",
+    "Material",
+    "Energy",
+    "Environmental",
   ];
 
   useEffect(() => {
@@ -66,8 +73,10 @@ function DepartmentPage({ BackButton }) {
   useEffect(() => {
     const dept = department.toLowerCase();
     const normalizedLevel = String(level);
-
-    const science500NoSubdivision = ["environment science", "science lab tech"];
+    const science500NoSubdivision = [
+      "environmental science",
+      "science lab tech",
+    ];
 
     if (normalizedLevel === "500") {
       if (dept === "marine engineering") {
@@ -111,7 +120,8 @@ function DepartmentPage({ BackButton }) {
         <BackButton />
         {/* <ProductAdCarousel /> */}
       </div>
-      <div className="max-w-md p-5 mx-auto  text-left bg-white rounded shadow">
+
+      <div className="max-w-md p-5 mx-auto text-left bg-white rounded shadow">
         <h2 className="mb-4 text-2xl font-bold text-center">
           Select Department
         </h2>

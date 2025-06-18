@@ -22,6 +22,17 @@ function PDFs({ BackButton }) {
     navigate("/department", { state: formData });
   };
 
+  // Define level options based on college
+  const getLevelsForCollege = (college) => {
+    if (college === "Science") {
+      // Science students max out at 400L, except Sci Lab Tech & Env Science (handled in department page)
+      return ["100", "200", "300", "400", "500"];
+    } else if (college === "Technology" || college === "Computing") {
+      return ["100", "200", "300", "400", "500"];
+    }
+    return [];
+  };
+
   return (
     <div className="text-center custom-container initial-spacing">
       <BackButton />
@@ -43,6 +54,7 @@ function PDFs({ BackButton }) {
             <option value="">Select college</option>
             <option value="Science">Science</option>
             <option value="Technology">Technology</option>
+            <option value="Computing">Computing</option>
           </select>
         </div>
 
@@ -56,11 +68,7 @@ function PDFs({ BackButton }) {
             className="w-full px-3 py-2 border rounded-md"
           >
             <option value="">Select level</option>
-            {/* Filter levels based on college */}
-            {(formData.college === "Science"
-              ? ["100", "200", "300", "400", "500"]
-              : ["100", "200", "300", "400", "500"]
-            ).map((lvl) => (
+            {getLevelsForCollege(formData.college).map((lvl) => (
               <option key={lvl} value={lvl}>
                 {lvl}
               </option>
@@ -72,11 +80,11 @@ function PDFs({ BackButton }) {
           type="submit"
           disabled={!formData.college || !formData.level}
           className={`w-full py-2 px-4 rounded transition 
-    ${
-      !formData.college || !formData.level
-        ? "bg-gray-400 text-white cursor-not-allowed"
-        : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
-    }`}
+            ${
+              !formData.college || !formData.level
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+            }`}
         >
           Proceed
         </button>
