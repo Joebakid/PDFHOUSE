@@ -11,12 +11,11 @@ function Doc({ name, href }) {
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200"
-    >
+      target='_blank'
+      rel='noopener noreferrer'
+      className='bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200'>
       <FileText size={18} />
-      <span className="truncate">{name}</span>
+      <span className='truncate'>{name}</span>
     </a>
   );
 }
@@ -25,21 +24,20 @@ function CourseSection({ title, docs }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-6 text-left">
+    <div className='mb-6 text-left'>
       <button
-        className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold bg-gray-100 rounded-lg shadow hover:bg-gray-200 transition-colors duration-200"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+        className='flex items-center justify-between w-full px-4 py-3 text-lg font-semibold bg-gray-100 rounded-lg shadow hover:bg-gray-200 transition-colors duration-200'
+        onClick={() => setIsOpen(!isOpen)}>
         <span>{title}</span>
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600">({docs.length} files)</span>
+        <div className='flex items-center gap-2'>
+          <span className='text-sm text-gray-600'>({docs.length} files)</span>
           {isOpen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
         </div>
       </button>
 
       {isOpen && (
-        <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             {docs.map((doc, index) => (
               <Doc key={index} name={doc.name} href={doc.href} />
             ))}
@@ -67,24 +65,63 @@ function PDFViewer({ BackButton }) {
         setLoading(false);
         return;
       }
+      // add logs
+      // console.log("Loading PDFs for:", {
+      //   level,
+      //   college,
+      //   semester,
+      //   department,
+      // });
+      // Transformations
+      const formattedCollege = college.toLowerCase();
+      const formattedSemester = `${semester.toLowerCase()}-semester`;
+      const formattedDepartment = department.split(" ")[0].toLowerCase();
 
-      // ✅ Build the dynamic path
-      const relativePath = `/src/JSON/${level}/${college.toLowerCase()}/${semester.toLowerCase()}/${department
-        .toLowerCase()
-        .replace(/\s+/g, "")}.json`;
-
+      // Build the path
+      const relativePath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+      /*
+      🧠 Why it works:
+      .split(" ")[0]: Grabs the first word from "Mechanical Engineering" to get "Mechanical".
+      
+      .toLowerCase(): Ensures everything matches folder naming conventions (all lowercase).
+      
+      Template string builds the exact structure needed.
+      📝 Notes from developer
+      1. Rename .json files to match the new structure.
+      2. Ensure all directories exist as expected.
+      3. This approach allows for easy addition of new departments or levels without changing the code.
+      4. If a department has multiple words, only the first word is used to match the folder structure.
+      5. This assumes all JSON files are structured correctly and contain the expected data format.
+      6. For the science department, make sure that u name the jsons to match the first word of the department name.
+      7. As for the 500 level that has sub-divisions, i'll add additional conditionals to handle that.
+      8. Dont forget to add an empty JSON object for new JSON files to avoid errors.
+      9. If you need to add more levels or colleges, just follow the same naming convention.
+      */
       try {
         console.log("Trying to load:", relativePath);
         if (allJSONFiles[relativePath]) {
           const module = await allJSONFiles[relativePath]();
           const data = module.default;
 
-          const courseSections = Object.entries(data).map(
-            ([courseCode, docs]) => ({
-              title: courseCode.toUpperCase(),
-              docs,
+          // Support both flat and nested JSON structures
+          const courseSections = Object.entries(data)
+            .map(([key, value]) => {
+              // If value is an array of docs (flat structure)
+              if (Array.isArray(value) && value.length && value[0].name && value[0].href) {
+                return { title: key.toUpperCase(), docs: value };
+              }
+              // If value is an object (nested structure)
+              if (typeof value === "object" && !Array.isArray(value)) {
+                // Each subkey is a section
+                return Object.entries(value).map(([subKey, docs]) => ({
+                  title: subKey.toUpperCase(),
+                  docs: docs,
+                }));
+              }
+              return null;
             })
-          );
+            .flat()
+            .filter(Boolean);
 
           setSections(courseSections);
         } else {
@@ -92,9 +129,7 @@ function PDFViewer({ BackButton }) {
         }
       } catch (err) {
         console.error("Load error:", err.message);
-        setError(
-          `Failed to load course materials. Could not find: ${relativePath}`
-        );
+        setError(`Failed to load course materials. Could not find: ${relativePath}`);
         setSections([]);
       } finally {
         setLoading(false);
@@ -105,17 +140,15 @@ function PDFViewer({ BackButton }) {
   }, [level, college, department, semester]);
 
   return (
-    <div className="max-w-6xl px-4 py-8 mx-auto">
-      <header className="mb-8">
+    <div className='max-w-6xl px-4 py-8 mx-auto'>
+      <header className='mb-8'>
         <BackButton />
-        <div className="mt-4 text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">
-            Course Materials
-          </h1>
-          <p className="text-gray-600 mb-1">
+        <div className='mt-4 text-center'>
+          <h1 className='text-2xl font-bold text-gray-800 mb-2'>Course Materials</h1>
+          <p className='text-gray-600 mb-1'>
             Access and download course materials for {department || "N/A"}
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+          <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
             <span>College: {college || "N/A"}</span>
             <span>|</span>
             <span>Level: {level || "N/A"}</span>
@@ -127,31 +160,31 @@ function PDFViewer({ BackButton }) {
 
       <main>
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00CCFF] mb-4"></div>
-            <p className="text-gray-500">Loading course materials...</p>
+          <div className='flex flex-col items-center justify-center py-12'>
+            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#00CCFF] mb-4'></div>
+            <p className='text-gray-500'>Loading course materials...</p>
           </div>
         ) : error ? (
-          <div className="text-center py-12">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto">
-              <p className="text-red-600 mb-2">{error}</p>
-              <p className="text-sm text-gray-500">
+          <div className='text-center py-12'>
+            <div className='bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto'>
+              <p className='text-red-600 mb-2'>{error}</p>
+              <p className='text-sm text-gray-500'>
                 Make sure the JSON file exists in the correct location.
               </p>
             </div>
           </div>
         ) : sections.length > 0 ? (
-          <div className="space-y-4">
+          <div className='space-y-4'>
             {sections.map(({ title, docs }, index) => (
               <CourseSection key={index} title={title} docs={docs} />
             ))}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-md mx-auto">
-              <FileText size={48} className="mx-auto text-gray-400 mb-4" />
-              <p className="text-gray-500 text-lg mb-2">No materials found</p>
-              <p className="text-gray-400 text-sm">
+          <div className='text-center py-12'>
+            <div className='bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-md mx-auto'>
+              <FileText size={48} className='mx-auto text-gray-400 mb-4' />
+              <p className='text-gray-500 text-lg mb-2'>No materials found</p>
+              <p className='text-gray-400 text-sm'>
                 No PDFs found for this department, level, or semester.
               </p>
             </div>
