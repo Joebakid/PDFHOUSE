@@ -39,7 +39,7 @@ function DepartmentPage({ BackButton }) {
       "Information Technology",
       "Software Engineering",
       "Cyber Security",
-      "Data Science",
+      "Data Sciences",
     ],
     // Marinetime:[]
   };
