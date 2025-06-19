@@ -6,7 +6,7 @@ const creators = [
     role: "Frontend Developer",
     department: "Marine Engineering",
     src: "/img/josephbawo.jpg",
-    portfolio: "https://josephbawo.tech",
+    portfolio: "https://www.josephbawo.tech/",
   },
   {
     name: "Unuigbokhai Noah",
