@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Minimize2, Maximize2, FileText } from "lucide-react";
 
-// ✅ Preload all JSON files from your src/JSON directory
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
 
 function Doc({ name, href }) {
@@ -50,9 +49,29 @@ function CourseSection({ title, docs }) {
   );
 }
 
+// 🔁 Helper to convert loaded JSON structure into course sections
+function parseSections(data) {
+  return Object.entries(data)
+    .map(([key, value]) => {
+      if (Array.isArray(value)) {
+        return { title: key.toUpperCase(), docs: value };
+      }
+      if (typeof value === "object") {
+        return Object.entries(value).map(([subKey, docs]) => ({
+          title: subKey.toUpperCase(),
+          docs: docs,
+        }));
+      }
+      return null;
+    })
+    .flat()
+    .filter(Boolean);
+}
+
 function PDFViewer({ BackButton }) {
   const location = useLocation();
   const { level, college, department, semester } = location.state || {};
+
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -67,77 +86,52 @@ function PDFViewer({ BackButton }) {
         setLoading(false);
         return;
       }
-      // add logs
-      // console.log("Loading PDFs for:", {
-      //   level,
-      //   college,
-      //   semester,
-      //   department,
-      // });
-      // Transformations
+
       const formattedCollege = college.toLowerCase();
       const formattedSemester = `${semester.toLowerCase()}-semester`;
       const formattedDepartment = department.split(" ")[0].toLowerCase();
 
-      // Build the path
-      const relativePath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
-      /*
-      🧠 Why it works:
-      .split(" ")[0]: Grabs the first word from "Mechanical Engineering" to get "Mechanical".
-      
-      .toLowerCase(): Ensures everything matches folder naming conventions (all lowercase).
-      
-      Template string builds the exact structure needed.
-      📝 Notes from developer
-      1. Rename .json files to match the new structure.
-      2. Ensure all directories exist as expected.
-      3. This approach allows for easy addition of new departments or levels without changing the code.
-      4. If a department has multiple words, only the first word is used to match the folder structure.
-      5. This assumes all JSON files are structured correctly and contain the expected data format.
-      6. For the science department, make sure that u name the jsons to match the first word of the department name.
-      7. As for the 500 level that has sub-divisions, i'll add additional conditionals to handle that.
-      8. Dont forget to add an empty JSON object for new JSON files to avoid errors.
-      9. If you need to add more levels or colleges, just follow the same naming convention.
-      */
+      const departmentPath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+      const generalPath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/general.json`;
+
       try {
-        console.log("Trying to load:", relativePath);
-        if (allJSONFiles[relativePath]) {
-          const module = await allJSONFiles[relativePath]();
-          const data = module.default;
+        let combinedSections = [];
 
-          // Support both flat and nested JSON structures
-          const courseSections = Object.entries(data)
-            .map(([key, value]) => {
-              // If value is an array of docs (flat structure)
-              if (
-                Array.isArray(value) &&
-                value.length &&
-                value[0].name &&
-                value[0].href
-              ) {
-                return { title: key.toUpperCase(), docs: value };
-              }
-              // If value is an object (nested structure)
-              if (typeof value === "object" && !Array.isArray(value)) {
-                // Each subkey is a section
-                return Object.entries(value).map(([subKey, docs]) => ({
-                  title: subKey.toUpperCase(),
-                  docs: docs,
-                }));
-              }
-              return null;
-            })
-            .flat()
-            .filter(Boolean);
-
-          setSections(courseSections);
-        } else {
-          throw new Error("JSON path not found in preloaded files.");
+        // Load department-specific materials
+        if (allJSONFiles[departmentPath]) {
+          const deptModule = await allJSONFiles[departmentPath]();
+          const deptData = deptModule.default;
+          const deptSections = parseSections(deptData);
+          combinedSections = [...combinedSections, ...deptSections];
         }
+
+        // Load general course materials for the same college & semester
+        if (allJSONFiles[generalPath]) {
+          const generalModule = await allJSONFiles[generalPath]();
+          const generalData = generalModule.default;
+
+          if (Array.isArray(generalData)) {
+            combinedSections.push({ title: "GENERAL", docs: generalData });
+          } else {
+            const generalSections = parseSections(generalData);
+            combinedSections.push(
+              ...generalSections.map((section) => ({
+                ...section,
+                title: `GENERAL - ${section.title}`,
+              }))
+            );
+          }
+        }
+
+        if (combinedSections.length === 0) {
+          throw new Error("No course materials found.");
+        }
+
+        setSections(combinedSections);
       } catch (err) {
         console.error("Load error:", err.message);
         setError(
-          `Failed to load course materials. Could not find: ${relativePath}`
+          `Failed to load course materials. Could not find: ${departmentPath}`
         );
         setSections([]);
       } finally {
