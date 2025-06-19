@@ -1,51 +1,38 @@
-{
-  "GST111": [
-    {
-      "name": "GST111 Note",
-      "href": "#"
-    }
-  ],
-
-  "FUPRE-PHY102": [
-    {
-      "name": "FUPRE-PHY102 Note",
-      "href": "#"
-    }
-  ],
-  "PHY108": [
-    {
-      "name": "PHY108 Practical",
-      "href": "#"
-    }
-  ],
-  "CHM102": [
-    {
-      "name": "CHM102 Note",
-      "href": "#"
-    }
-  ],
-  "CHM108": [
-    {
-      "name": "CHM108 Practical",
-      "href": "#"
-    }
-  ],
-  "GET102": [
-    {
-      "name": "GET102 Graphics",
-      "href": "#"
-    }
-  ],
-  "GST112": [
-    {
-      "name": "GST112 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PHY104": [
-    {
-      "name": "FUPRE-PHY104 Note",
-      "href": "#"
-    }
-  ]
-}
+[
+  {
+    "name": "CHM 101 - General Chemistry I",
+    "href": "#"
+  },
+  {
+    "name": "CHM 107 - General Practical Chemistry I",
+    "href": "#"
+  },
+  {
+    "name": "FUPRE-MTH 103 - Elementary Mathematics III",
+    "href": "#"
+  },
+  {
+    "name": "GET 101 - Engineer in Society",
+    "href": "#"
+  },
+  {
+    "name": "GST 111 - Communication in English",
+    "href": "#"
+  },
+  {
+    "name": "MTH 101 - Elementary Mathematics I",
+    "href": "#"
+  },
+  {
+    "name": "PHY 101 - General Physics I",
+    "href": "#"
+  },
+  {
+    "name": "PHY 103 - General Physics III",
+    "href": "#"
+  },
+  {
+    "name": "PHY 107 - General Practical Physics I",
+    "href": "#"
+  }
+]

@@ -1,122 +1,46 @@
-{
-  "MTH101": [
-    {
-      "name": "MTH101 Note",
-      "href": "#"
-    }
-  ],
-  "MTH103": [
-    {
-      "name": "MTH103 Note",
-      "href": "#"
-    }
-  ],
-  "CHM101": [
-    {
-      "name": "CHM101 Note",
-      "href": "#"
-    }
-  ],
-  "CHM107": [
-    {
-      "name": "CHM107 Practical",
-      "href": "#"
-    }
-  ],
-  "PHY101": [
-    {
-      "name": "PHY101 Note",
-      "href": "#"
-    }
-  ],
-  "PHY103": [
-    {
-      "name": "PHY103 Note",
-      "href": "#"
-    }
-  ],
-  "PHY107": [
-    {
-      "name": "PHY107 Practical",
-      "href": "#"
-    }
-  ],
-  "GET101": [
-    {
-      "name": "GET101 Note",
-      "href": "#"
-    }
-  ],
-  "MAR101": [
-    {
-      "name": "MAR101 Note",
-      "href": "#"
-    }
-  ],
-  "GST111": [
-    {
-      "name": "GST111 Note",
-      "href": "#"
-    }
-  ],
-  "MEE102": [
-    {
-      "name": "MEE102 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PHY102": [
-    {
-      "name": "FUPRE-PHY102 Note",
-      "href": "#"
-    }
-  ],
-  "PHY108": [
-    {
-      "name": "PHY108 Practical",
-      "href": "#"
-    }
-  ],
-  "CHM102": [
-    {
-      "name": "CHM102 Note",
-      "href": "#"
-    }
-  ],
-  "CHM108": [
-    {
-      "name": "CHM108 Practical",
-      "href": "#"
-    }
-  ],
-  "GET102": [
-    {
-      "name": "GET102 Graphics",
-      "href": "#"
-    }
-  ],
-  "GST112": [
-    {
-      "name": "GST112 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PHY104": [
-    {
-      "name": "FUPRE-PHY104 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-STA112": [
-    {
-      "name": "FUPRE-STA112 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PEE102": [
-    {
-      "name": "FUPRE-PEE102 Note",
-      "href": "#"
-    }
-  ]
-}
+[
+  {
+    "name": "CHM 108 - General Practical Chemistry II",
+    "href": "#"
+  },
+  {
+    "name": "EEE 102 - Introduction to Electrical and Electronics Engineering",
+    "href": "#"
+  },
+  {
+    "name": "FUPRE-PEE 102 - Overview of Oil and Gas Industry Operations and Process",
+    "href": "#"
+  },
+  {
+    "name": "FUPRE-PHY 102 - General Physics II",
+    "href": "#"
+  },
+  {
+    "name": "FUPRE-PHY 104 - General Physics IV (Vibration, Waves and Optics)",
+    "href": "#"
+  },
+  {
+    "name": "FUPRE-STA 112 - Probability I",
+    "href": "#"
+  },
+  {
+    "name": "GET 102 - Engineering Graphics and Solid Modelling I",
+    "href": "#"
+  },
+  {
+    "name": "GST 112 - Nigerian People and Culture",
+    "href": "#"
+  },
+  {
+    "name": "MTH 102 - Elementary Mathematics II",
+    "href": "#"
+  },
+  {
+    "name": "PHY 108 - General Practical Physics II",
+    "href": "#"
+  },
+  {
+    "name": "CHM 102 - General Chemistry II",
+    "href": "#"
+  }
+]
