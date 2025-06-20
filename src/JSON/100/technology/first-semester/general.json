@@ -1,38 +1,56 @@
-[
-  {
-    "name": "CHM 101 - General Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "CHM 107 - General Practical Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-MTH 103 - Elementary Mathematics III",
-    "href": "#"
-  },
-  {
-    "name": "GET 101 - Engineer in Society",
-    "href": "#"
-  },
-  {
-    "name": "GST 111 - Communication in English",
-    "href": "#"
-  },
-  {
-    "name": "MTH 101 - Elementary Mathematics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 101 - General Physics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 103 - General Physics III",
-    "href": "#"
-  },
-  {
-    "name": "PHY 107 - General Practical Physics I",
-    "href": "#"
-  }
-]
+{
+  "CHM 101 - General Chemistry I": [
+    {
+      "name": "CHM 101 - General Chemistry I",
+      "href": "#"
+    }
+  ],
+  "CHM 107 - General Practical Chemistry I": [
+    {
+      "name": "CHM 107 - General Practical Chemistry I",
+      "href": "#"
+    }
+  ],
+  "FUPRE-MTH 103 - Elementary Mathematics III": [
+    {
+      "name": "FUPRE-MTH 103 - Elementary Mathematics III",
+      "href": "#"
+    }
+  ],
+  "GET 101 - Engineer in Society": [
+    {
+      "name": "GET 101 - Engineer in Society",
+      "href": "#"
+    }
+  ],
+  "GST 111 - Communication in English": [
+    {
+      "name": "GST 111 - Communication in English",
+      "href": "#"
+    }
+  ],
+  "MTH 101 - Elementary Mathematics I": [
+    {
+      "name": "MTH 101 - Elementary Mathematics I",
+      "href": "#"
+    }
+  ],
+  "PHY 101 - General Physics I": [
+    {
+      "name": "PHY 101 - General Physics I",
+      "href": "#"
+    }
+  ],
+  "PHY 103 - General Physics III": [
+    {
+      "name": "PHY 103 - General Physics III",
+      "href": "#"
+    }
+  ],
+  "PHY 107 - General Practical Physics I": [
+    {
+      "name": "PHY 107 - General Practical Physics I",
+      "href": "#"
+    }
+  ]
+}
