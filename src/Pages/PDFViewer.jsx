@@ -49,7 +49,6 @@ function CourseSection({ title, docs }) {
   );
 }
 
-// 🔁 Helper to convert loaded JSON structure into course sections
 function parseSections(data) {
   return Object.entries(data)
     .map(([key, value]) => {
@@ -87,52 +86,34 @@ function PDFViewer({ BackButton }) {
         return;
       }
 
+      const formattedLevel = level.toLowerCase();
       const formattedCollege = college.toLowerCase();
       const formattedSemester = `${semester.toLowerCase()}-semester`;
       const formattedDepartment = department.split(" ")[0].toLowerCase();
 
-      const departmentPath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
-      const generalPath = `/src/JSON/${level}/${formattedCollege}/${formattedSemester}/general.json`;
+      // Only support levels from 100 to 400
+      const supportedLevels = ["100", "200", "300", "400"];
+      if (!supportedLevels.includes(level)) {
+        setError("Only 100 to 400 level materials are supported.");
+        setLoading(false);
+        return;
+      }
 
       try {
-        let combinedSections = [];
+        const jsonPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
 
-        // Load department-specific materials
-        if (allJSONFiles[departmentPath]) {
-          const deptModule = await allJSONFiles[departmentPath]();
-          const deptData = deptModule.default;
-          const deptSections = parseSections(deptData);
-          combinedSections = [...combinedSections, ...deptSections];
+        if (allJSONFiles[jsonPath]) {
+          const module = await allJSONFiles[jsonPath]();
+          const data = module.default;
+          const parsedSections = parseSections(data);
+          setSections(parsedSections);
+        } else {
+          throw new Error(
+            `Course material not found for: ${formattedDepartment} in ${formattedSemester}`
+          );
         }
-
-        // Load general course materials for the same college & semester
-        if (allJSONFiles[generalPath]) {
-          const generalModule = await allJSONFiles[generalPath]();
-          const generalData = generalModule.default;
-
-          if (Array.isArray(generalData)) {
-            combinedSections.push({ title: "GENERAL", docs: generalData });
-          } else {
-            const generalSections = parseSections(generalData);
-            combinedSections.push(
-              ...generalSections.map((section) => ({
-                ...section,
-                title: `GENERAL - ${section.title}`,
-              }))
-            );
-          }
-        }
-
-        if (combinedSections.length === 0) {
-          throw new Error("No course materials found.");
-        }
-
-        setSections(combinedSections);
       } catch (err) {
-        console.error("Load error:", err.message);
-        setError(
-          `Failed to load course materials. Could not find: ${departmentPath}`
-        );
+        setError(err.message);
         setSections([]);
       } finally {
         setLoading(false);
@@ -174,25 +155,15 @@ function PDFViewer({ BackButton }) {
             <div className="max-w-md p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
               <p className="mb-2 text-red-600">{error}</p>
               <p className="text-sm text-gray-500">
-                Make sure the JSON file exists in the correct location.
+                Ensure the correct JSON file exists in the directory.
               </p>
             </div>
           </div>
-        ) : sections.length > 0 ? (
+        ) : (
           <div className="space-y-4">
             {sections.map(({ title, docs }, index) => (
               <CourseSection key={index} title={title} docs={docs} />
             ))}
-          </div>
-        ) : (
-          <div className="py-12 text-center">
-            <div className="max-w-md p-8 mx-auto border border-gray-200 rounded-lg bg-gray-50">
-              <FileText size={48} className="mx-auto mb-4 text-gray-400" />
-              <p className="mb-2 text-lg text-gray-500">No materials found</p>
-              <p className="text-sm text-gray-400">
-                No PDFs found for this department, level, or semester.
-              </p>
-            </div>
           </div>
         )}
       </main>
