@@ -38,11 +38,17 @@ function CourseSection({ title, docs }) {
 
       {isOpen && (
         <div className="p-4 mt-4 rounded-lg bg-gray-50">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {docs.map((doc, index) => (
-              <Doc key={index} name={doc.name} href={doc.href} />
-            ))}
-          </div>
+          {docs.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {docs.map((doc, index) => (
+                <Doc key={index} name={doc.name} href={doc.href} />
+              ))}
+            </div>
+          ) : (
+            <p className="italic text-center text-gray-500">
+              No PDFs uploaded yet.
+            </p>
+          )}
         </div>
       )}
     </div>
@@ -100,18 +106,32 @@ function PDFViewer({ BackButton }) {
       }
 
       try {
-        const jsonPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+        const deptPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+        const generalPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/general.json`;
 
-        if (allJSONFiles[jsonPath]) {
-          const module = await allJSONFiles[jsonPath]();
-          const data = module.default;
-          const parsedSections = parseSections(data);
-          setSections(parsedSections);
-        } else {
-          throw new Error(
-            `Course material not found for: ${formattedDepartment} in ${formattedSemester}`
-          );
+        const loadedSections = [];
+
+        // Load department-specific materials
+        if (allJSONFiles[deptPath]) {
+          const deptModule = await allJSONFiles[deptPath]();
+          const deptData = deptModule.default;
+          const deptSections = parseSections(deptData);
+          loadedSections.push(...deptSections);
         }
+
+        // Load general materials for everyone (if available)
+        if (allJSONFiles[generalPath]) {
+          const generalModule = await allJSONFiles[generalPath]();
+          const generalData = generalModule.default;
+          const generalSections = parseSections({ general: generalData });
+          loadedSections.push(...generalSections);
+        }
+
+        if (loadedSections.length === 0) {
+          loadedSections.push({ title: "NO MATERIALS", docs: [] });
+        }
+
+        setSections(loadedSections);
       } catch (err) {
         setError(err.message);
         setSections([]);
@@ -155,9 +175,15 @@ function PDFViewer({ BackButton }) {
             <div className="max-w-md p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
               <p className="mb-2 text-red-600">{error}</p>
               <p className="text-sm text-gray-500">
-                Ensure the correct JSON file exists in the directory.
+                Make sure the JSON file exists in the correct location.
               </p>
             </div>
+          </div>
+        ) : sections.length === 0 ? (
+          <div className="py-12 text-center">
+            <p className="text-lg font-medium text-gray-500">
+              No PDFs uploaded yet.
+            </p>
           </div>
         ) : (
           <div className="space-y-4">
