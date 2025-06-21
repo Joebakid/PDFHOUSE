@@ -22,6 +22,8 @@ function DepartmentPage({ BackButton }) {
       "Mechanical Engineering",
       "Civil Engineering",
       "Chemical Engineering",
+      'Computer Engineering',
+      'Software Engineering'
     ],
     Science: [
       "Science Lab Tech",

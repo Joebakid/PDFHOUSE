@@ -189,7 +189,7 @@ function load500LevelPDFs(department, semester, subdivision) {
   } else if (formattedDepartment === "petroleum") {
     departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/petroleum.json`)
   } else if (formattedDepartment === "oilandgas") {
-    departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/oilandgas.json`)
+    departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/oil.json`)
   } else if (formattedDepartment === "environmental") {
     departmentPaths.push(`/src/JSON/500/science/${formattedSemester}/environmental.json`)
   } else if (formattedDepartment === "science") {
