@@ -77,11 +77,11 @@ src/
       technology/
         first-semester/
           marine/
-            marine.json
+            general.json
             subdivision/
-              offshore/
-              powerplant/
-              naval/
+              offshore.json
+              powerplant.json
+              naval.json
 ```
 
 ---
