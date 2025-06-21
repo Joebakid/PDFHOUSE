@@ -1,39 +1,51 @@
-[
-  {
-    "name": "PHY 121 SOLUTION",
-    "href": "https://drive.google.com/file/d/18VAUVIgW1TNkr_PNojI4SssEg6LYo6CE/view?usp=drive_link"
-  },
-  {
-    "name": "PHY 121 QST & ANS",
-    "href": "https://drive.google.com/file/d/1C7b5BF_x-Rw8nIIZIjLWG0AMKuMYzXcv/view?usp=drive_link"
-  },
+{
+  "PHY 121 - Solution": [
+    {
+      "name": "PHY 121 SOLUTION",
+      "href": "https://drive.google.com/file/d/18VAUVIgW1TNkr_PNojI4SssEg6LYo6CE/view?usp=drive_link"
+    }
+  ],
+  "PHY 121 - Question & Answer": [
+    {
+      "name": "PHY 121 QST & ANS",
+      "href": "https://drive.google.com/file/d/1C7b5BF_x-Rw8nIIZIjLWG0AMKuMYzXcv/view?usp=drive_link"
+    }
+  ],
+  "PHY 121 - Possible Question": [
+    {
+      "name": "PHY121 POSSIBLE QUESTION BY VOTU JERRY",
+      "href": "https://drive.google.com/file/d/1mdLS_5jq4vH3GtQo3t1OcLJpcgd0sJgA/view?usp=drive_link"
+    }
+  ],
+  "PHY 104 - General Physics IV (Vibration, Waves and Optics)": [
+    {
+      "name": "FUPRE-PHY 104 - General Physics IV (Vibration, Waves and Optics)",
+      "href": "https://drive.google.com/file/d/1qxG4b1MzNXRd_D5WO2EZvnHCLwV49p_d/view?usp=drive_link"
+    }
+  ],
+  "STA 112 - Probability I": [
+    {
+      "name": "FUPRE-STA 112 - Probability I",
+      "href": "https://drive.google.com/file/d/1rFrIwtVFZOd5s90Cz10O4Ae9msfQiMTQ/view?usp=drive_link"
+    }
+  ],
+  "PHY 102 - Formulas": [
+    {
+      "name": "PHY 102 FORMULAS BY THROCO",
+      "href": "https://drive.google.com/file/d/1K-VemP7S1lgMMF9HEVV3lcIT_DByQOiM/view?usp=drive_link"
+    }
+  ],
 
-  {
-    "name": "PHY121 POSSIBLE QUESTION BY VOTU JERRY",
-    "href": "https://drive.google.com/file/d/1mdLS_5jq4vH3GtQo3t1OcLJpcgd0sJgA/view?usp=drive_link"
-  },
-  {
-    "name": "FUPRE-PHY 104 - General Physics IV (Vibration, Waves and Optics)",
-    "href": "https://drive.google.com/file/d/1qxG4b1MzNXRd_D5WO2EZvnHCLwV49p_d/view?usp=drive_link"
-  },
-  {
-    "name": "FUPRE-STA 112 - Probability I",
-    "href": "https://drive.google.com/file/d/1rFrIwtVFZOd5s90Cz10O4Ae9msfQiMTQ/view?usp=drive_link"
-  },
-  {
-    "name": "PHY 102 FORMULAS BY THROCO",
-    "href": "https://drive.google.com/file/d/1K-VemP7S1lgMMF9HEVV3lcIT_DByQOiM/view?usp=drive_link"
-  },
-  {
-    "name": "PEE102 NOTE BY THEOCO",
-    "href": "https://drive.google.com/file/d/19pcZqVB3Lhnr51Px-gcZXGSmXh9BXdva/view?usp=drive_link"
-  },
-  {
-    "name": "MTH 102 -SOLUTION ON LIMIT",
-    "href": "https://drive.google.com/file/d/1txGeb3k-niQKKuPQkbzHR1-JYESEruJA/view?usp=drive_link"
-  },
-  {
-    "name": "MATH 102 PST QUESTION",
-    "href": "https://drive.google.com/file/d/1-JCF62EFvUG1BRPUuTNVirNMtGYIDJQH/view?usp=drive_link"
-  }
-]
+  "MTH 102 - Solution on Limit": [
+    {
+      "name": "MTH 102 -SOLUTION ON LIMIT",
+      "href": "https://drive.google.com/file/d/1txGeb3k-niQKKuPQkbzHR1-JYESEruJA/view?usp=drive_link"
+    }
+  ],
+  "MTH 102 - Past Question": [
+    {
+      "name": "MATH 102 PST QUESTION",
+      "href": "https://drive.google.com/file/d/1-JCF62EFvUG1BRPUuTNVirNMtGYIDJQH/view?usp=drive_link"
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import ProductAdCarousel from "./ProductAdCarousel"; // Optional
 
 function DepartmentPage({ BackButton }) {
   const location = useLocation();
@@ -41,7 +40,6 @@ function DepartmentPage({ BackButton }) {
       "Cyber Security",
       "Data Science",
     ],
-    // Marinetime:[]
   };
 
   const marineSubdivisions = ["Offshore", "Naval", "Powerplant"];
@@ -109,6 +107,7 @@ function DepartmentPage({ BackButton }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     navigate("/pdfs-view", {
       state: { department, level, college, semester, subdivision },
     });
@@ -118,7 +117,6 @@ function DepartmentPage({ BackButton }) {
     <>
       <div className="custom-container initial-spacing">
         <BackButton />
-        {/* <ProductAdCarousel /> */}
       </div>
 
       <div className="max-w-md p-5 mx-auto text-left bg-white rounded shadow">

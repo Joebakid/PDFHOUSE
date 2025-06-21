@@ -46,10 +46,10 @@ function BackButton() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full flex justify-end mb-4">
+    <div className="flex justify-end w-full mb-4">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
+        className="flex items-center gap-2 px-4 py-2 transition bg-gray-100 rounded-md hover:bg-gray-200"
       >
         <ArrowLeft className="w-5 h-5" />
         <span className="text-sm font-medium">Back</span>
