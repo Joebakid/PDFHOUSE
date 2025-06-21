@@ -1,38 +1,7 @@
-[
-  {
-    "name": "CHM 101 - General Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "CHM 107 - General Practical Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-MTH 103 - Elementary Mathematics III",
-    "href": "#"
-  },
-  {
-    "name": "GET 101 - Engineer in Society",
-    "href": "#"
-  },
-  {
-    "name": "GST 111 - Communication in English",
-    "href": "#"
-  },
-  {
-    "name": "MTH 101 - Elementary Mathematics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 101 - General Physics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 103 - General Physics III",
-    "href": "#"
-  },
-  {
-    "name": "PHY 107 - General Practical Physics I",
-    "href": "#"
-  }
-]
+{
+  "GET311": [{ "name": "GET311 Note", "href": "#" }],
+  "GET321": [{ "name": "GET321 Note", "href": "#" }],
+  "GET322": [{ "name": "GET322 Note", "href": "#" }],
+  "GSE311": [{ "name": "GSE311 Note", "href": "#" }],
+  "MEE317": [{ "name": "MEE317 Note", "href": "#" }]
+}
