@@ -75,8 +75,7 @@ function parseSections(data) {
 
 function PDFViewer({ BackButton }) {
   const location = useLocation();
-  const { level, college, department, semester, subdivision } =
-    location.state || {};
+  const { level, college, department, semester } = location.state || {};
 
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -97,37 +96,35 @@ function PDFViewer({ BackButton }) {
       const formattedCollege = college.toLowerCase();
       const formattedSemester = `${semester.toLowerCase()}-semester`;
       const formattedDepartment = department.split(" ")[0].toLowerCase();
-      const formattedSubdivision = subdivision?.toLowerCase();
+
+      // Only support levels from 100 to 400
+      const supportedLevels = ["100", "200", "300", "400"];
+      if (!supportedLevels.includes(level)) {
+        setError("Only 100 to 400 level materials are supported.");
+        setLoading(false);
+        return;
+      }
 
       try {
+        const deptPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+        const generalPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/general.json`;
+
         const loadedSections = [];
 
-        const basePath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}`;
-
-        // Load general.json
-        const generalPath = `${basePath}/general.json`;
-        console.log("Looking for general.json:", generalPath);
-
-        if (allJSONFiles[generalPath]) {
-          const generalModule = await allJSONFiles[generalPath]();
-          loadedSections.push(
-            ...parseSections({ general: generalModule.default })
-          );
+        // Load department-specific materials
+        if (allJSONFiles[deptPath]) {
+          const deptModule = await allJSONFiles[deptPath]();
+          const deptData = deptModule.default;
+          const deptSections = parseSections(deptData);
+          loadedSections.push(...deptSections);
         }
 
-        // Load subdivision file (e.g., naval.json)
-        if (formattedSubdivision) {
-          const subFilePath = `${basePath}/subdivision/${formattedSubdivision}.json`;
-          console.log("Looking for subdivision file:", subFilePath);
-
-          if (allJSONFiles[subFilePath]) {
-            const subModule = await allJSONFiles[subFilePath]();
-            loadedSections.push(
-              ...parseSections({ [formattedSubdivision]: subModule.default })
-            );
-          } else {
-            console.warn("Missing subdivision file:", subFilePath);
-          }
+        // Load general materials for everyone (if available)
+        if (allJSONFiles[generalPath]) {
+          const generalModule = await allJSONFiles[generalPath]();
+          const generalData = generalModule.default;
+          const generalSections = parseSections({ general: generalData });
+          loadedSections.push(...generalSections);
         }
 
         if (loadedSections.length === 0) {
@@ -136,7 +133,7 @@ function PDFViewer({ BackButton }) {
 
         setSections(loadedSections);
       } catch (err) {
-        setError(err.message || "Failed to load materials.");
+        setError(err.message);
         setSections([]);
       } finally {
         setLoading(false);
@@ -144,7 +141,7 @@ function PDFViewer({ BackButton }) {
     };
 
     loadPDFs();
-  }, [level, college, department, semester, subdivision]);
+  }, [level, college, department, semester]);
 
   return (
     <div className="max-w-6xl px-4 py-8 mx-auto">
@@ -163,12 +160,6 @@ function PDFViewer({ BackButton }) {
             <span>Level: {level || "N/A"}</span>
             <span>|</span>
             <span>Semester: {semester || "N/A"}</span>
-            {subdivision && (
-              <>
-                <span>|</span>
-                <span>Subdivision: {subdivision}</span>
-              </>
-            )}
           </div>
         </div>
       </header>
