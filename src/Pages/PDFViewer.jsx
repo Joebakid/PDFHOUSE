@@ -85,12 +85,16 @@ function parseSections(data) {
 function load500LevelPDFs(department, semester, subdivision) {
   const formattedDepartment = department.split(" ")[0].toLowerCase()
   const formattedSemester = `${semester.toLowerCase()}-semester`
-  const formattedSubdivision = subdivision ? subdivision.toLowerCase() : null
+  const formattedSubdivision = subdivision ? subdivision.toLowerCase().trim() : null
 
+  // Better debugging
   console.log("Loading 500 level PDFs for:", {
-    department: formattedDepartment,
-    semester: formattedSemester,
-    subdivision: formattedSubdivision,
+    originalDepartment: department,
+    formattedDepartment,
+    originalSemester: semester,
+    formattedSemester,
+    originalSubdivision: subdivision,
+    formattedSubdivision,
   })
 
   // If subdivision is specified, load only that subdivision + general
@@ -101,15 +105,18 @@ function load500LevelPDFs(department, semester, subdivision) {
       const generalPath = `/src/JSON/500/technology/${formattedSemester}/marine/general.json`
 
       if (formattedSubdivision === "naval") {
-        subdivisionPaths.push(`/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/naval.json`, generalPath)
+        subdivisionPaths.push(
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/naval.json`,
+          generalPath,
+        )
       } else if (formattedSubdivision === "offshore") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/offshore.json`,
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/offshore.json`,
           generalPath,
         )
       } else if (formattedSubdivision === "powerplant") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/powerplant.json`,
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/powerplant.json`,
           generalPath,
         )
       }
@@ -145,17 +152,28 @@ function load500LevelPDFs(department, semester, subdivision) {
     } else if (formattedDepartment === "electrical") {
       const generalPath = `/src/JSON/500/technology/${formattedSemester}/electrical/general.json`
 
-      if (formattedSubdivision === "electronic") {
+      // More comprehensive subdivision matching for electrical engineering
+      if (
+        formattedSubdivision.includes("electronic") ||
+        formattedSubdivision.includes("telecommunication") ||
+        formattedSubdivision === "electronics and telecommunication"
+      ) {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/telecommunication.json`,
           generalPath,
         )
-      } else if (formattedSubdivision === "instrument") {
+      } else if (
+        formattedSubdivision.includes("instrumentation") ||
+        formattedSubdivision.includes("control") ||
+        formattedSubdivision === "instrumentations and control"
+      ) {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrument.json`,
+          // `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
           generalPath,
         )
-      } else if (formattedSubdivision === "power") {
+      } else if (formattedSubdivision.includes("power")) {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/power.json`,
           generalPath,
@@ -171,13 +189,14 @@ function load500LevelPDFs(department, semester, subdivision) {
         )
       } else if (formattedSubdivision === "thermofluid") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/thermoflud.json`,
+          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/thermofluid.json`,
           generalPath,
         )
       }
     }
 
     console.log("Subdivision paths:", subdivisionPaths)
+    console.log("Matched subdivision logic for:", formattedSubdivision)
     return subdivisionPaths
   }
 
@@ -198,6 +217,31 @@ function load500LevelPDFs(department, semester, subdivision) {
 
   console.log("Department paths:", departmentPaths)
   return departmentPaths
+}
+
+function DebugInfo({ level, college, department, semester, subdivision }) {
+  return (
+    <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+      <h3 className="font-semibold text-yellow-800 mb-2">Debug Information:</h3>
+      <div className="text-sm text-yellow-700 space-y-1">
+        <div>
+          <strong>Level:</strong> "{level}" (type: {typeof level})
+        </div>
+        <div>
+          <strong>College:</strong> "{college}" (type: {typeof college})
+        </div>
+        <div>
+          <strong>Department:</strong> "{department}" (type: {typeof department})
+        </div>
+        <div>
+          <strong>Semester:</strong> "{semester}" (type: {typeof semester})
+        </div>
+        <div>
+          <strong>Subdivision:</strong> "{subdivision}" (type: {typeof subdivision})
+        </div>
+      </div>
+    </div>
+  )
 }
 
 function PDFViewer({ BackButton }) {
@@ -249,11 +293,20 @@ function PDFViewer({ BackButton }) {
               }
             } else {
               console.log("❌ File not found:", path)
+              console.log(
+                "Available electrical files:",
+                Object.keys(allJSONFiles).filter((key) => key.includes("electrical")),
+              )
             }
           }
 
           if (loadedSections.length === 0) {
-            loadedSections.push({ title: "NO MATERIALS", docs: [] })
+            const subdivisionText = subdivision
+              ? ` - ${subdivision.charAt(0).toUpperCase() + subdivision.slice(1)}`
+              : ""
+            setError(
+              `No materials found for ${department}${subdivisionText}. Expected files: ${pathsToLoad.join(", ")}`,
+            )
           }
 
           setSections(loadedSections)
@@ -325,6 +378,14 @@ function PDFViewer({ BackButton }) {
     <div className="max-w-6xl px-4 py-8 mx-auto">
       <header className="mb-8">
         <BackButton />
+        {/* Add debug info - remove this once you've identified the issue */}
+        {/* <DebugInfo
+          level={level}
+          college={college}
+          department={department}
+          semester={semester}
+          subdivision={subdivision}
+        /> */}
         <div className="mt-4 text-center">
           <h1 className="mb-2 text-2xl font-bold text-gray-800">Course Materials</h1>
           <p className="mb-1 text-gray-600">Access and download course materials for {department || "N/A"}</p>
@@ -362,7 +423,7 @@ function PDFViewer({ BackButton }) {
           </div>
         ) : error ? (
           <div className="py-12 text-center">
-            <div className="max-w-md p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
+            <div className="max-w-2xl p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
               <p className="mb-2 text-red-600">{error}</p>
               <p className="text-sm text-gray-500">Make sure the JSON file exists in the correct location.</p>
             </div>
