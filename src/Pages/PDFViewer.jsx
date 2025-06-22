@@ -152,7 +152,7 @@ function load500LevelPDFs(department, semester, subdivision) {
         )
       } else if (formattedSubdivision === "instrument") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrment.json`,
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrument.json`,
           generalPath,
         )
       } else if (formattedSubdivision === "power") {
