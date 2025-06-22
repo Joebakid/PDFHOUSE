@@ -195,7 +195,7 @@ function load500LevelPDFs(department, semester, subdivision) {
     );
   } else if (formattedDepartment === "petroleum") {
     departmentPaths.push(
-      `/src/JSON/500/technology/${formattedSemester}/petroluem.json`
+      `/src/JSON/500/technology/${formattedSemester}/petroleum.json`
     );
   } else if (formattedDepartment === "oilandgas") {
     departmentPaths.push(
