@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
-import { Minimize2, Maximize2, FileText } from "lucide-react"
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Minimize2, Maximize2, FileText } from "lucide-react";
 
-const allJSONFiles = import.meta.glob("/src/JSON/**/*.json")
+const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
 
 function Doc({ name, href }) {
   return (
@@ -17,11 +17,11 @@ function Doc({ name, href }) {
       <FileText size={18} />
       <span className="truncate">{name}</span>
     </a>
-  )
+  );
 }
 
 function CourseSection({ title, docs }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="mb-6 text-left">
@@ -45,350 +45,317 @@ function CourseSection({ title, docs }) {
               ))}
             </div>
           ) : (
-            <p className="italic text-center text-gray-500">No PDFs uploaded yet.</p>
+            <p className="italic text-center text-gray-500">
+              No PDFs uploaded yet.
+            </p>
           )}
         </div>
       )}
     </div>
-  )
+  );
 }
 
 function parseSections(data) {
-  const sections = []
+  const sections = [];
 
   if (!data || typeof data !== "object" || Object.keys(data).length === 0) {
-    return []
+    return [];
   }
 
   if (Array.isArray(data)) {
-    sections.push({ title: "MATERIALS", docs: data })
+    sections.push({ title: "MATERIALS", docs: data });
   } else {
     Object.entries(data).forEach(([key, value]) => {
       if (Array.isArray(value)) {
-        sections.push({ title: key.toUpperCase(), docs: value })
+        sections.push({ title: key.toUpperCase(), docs: value });
       } else if (typeof value === "object" && value !== null) {
         Object.entries(value).forEach(([subKey, subValue]) => {
           if (Array.isArray(subValue)) {
             sections.push({
               title: `${key.toUpperCase()} - ${subKey.toUpperCase()}`,
               docs: subValue,
-            })
+            });
           }
-        })
+        });
       }
-    })
+    });
   }
 
-  return sections
+  return sections;
 }
 
 function load500LevelPDFs(department, semester, subdivision) {
-  const formattedDepartment = department.split(" ")[0].toLowerCase()
-  const formattedSemester = `${semester.toLowerCase()}-semester`
-  const formattedSubdivision = subdivision ? subdivision.toLowerCase().trim() : null
+  const formattedDepartment = department.split(" ")[0].toLowerCase();
+  const formattedSemester = `${semester.toLowerCase()}-semester`;
+  const formattedSubdivision = subdivision ? subdivision.toLowerCase() : null;
 
-  // Better debugging
   console.log("Loading 500 level PDFs for:", {
-    originalDepartment: department,
-    formattedDepartment,
-    originalSemester: semester,
-    formattedSemester,
-    originalSubdivision: subdivision,
-    formattedSubdivision,
-  })
+    department: formattedDepartment,
+    semester: formattedSemester,
+    subdivision: formattedSubdivision,
+  });
 
   // If subdivision is specified, load only that subdivision + general
   if (formattedSubdivision) {
-    const subdivisionPaths = []
+    const subdivisionPaths = [];
 
     if (formattedDepartment === "marine") {
-      const generalPath = `/src/JSON/500/technology/${formattedSemester}/marine/general.json`
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/marine/general.json`;
 
       if (formattedSubdivision === "naval") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/naval.json`,
-          generalPath,
-        )
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/naval.json`,
+          generalPath
+        );
       } else if (formattedSubdivision === "offshore") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/offshore.json`,
-          generalPath,
-        )
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/offshore.json`,
+          generalPath
+        );
       } else if (formattedSubdivision === "powerplant") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/powerplant.json`,
-          generalPath,
-        )
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivsion/powerplant.json`,
+          generalPath
+        );
       }
     } else if (formattedDepartment === "chemical") {
-      const generalPath = `/src/JSON/500/technology/${formattedSemester}/chemical/general.json`
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/chemical/general.json`;
 
       if (formattedSubdivision === "biochemical") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/biochemical.json`,
-          generalPath,
-        )
+          generalPath
+        );
       } else if (formattedSubdivision === "energy") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/energy.json`,
-          generalPath,
-        )
+          generalPath
+        );
       } else if (formattedSubdivision === "environmental") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/env.json`,
-          generalPath,
-        )
+          generalPath
+        );
       } else if (formattedSubdivision === "material") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/material.json`,
-          generalPath,
-        )
+          generalPath
+        );
       } else if (formattedSubdivision === "process") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/process.json`,
-          generalPath,
-        )
+          generalPath
+        );
       }
     } else if (formattedDepartment === "electrical") {
-      const generalPath = `/src/JSON/500/technology/${formattedSemester}/electrical/general.json`
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/electrical/general.json`;
 
-      // More comprehensive subdivision matching for electrical engineering
-      if (
-        formattedSubdivision.includes("electronic") ||
-        formattedSubdivision.includes("telecommunication") ||
-        formattedSubdivision === "electronics and telecommunication"
-      ) {
+      if (formattedSubdivision === "electronic") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
-          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/telecommunication.json`,
-          generalPath,
-        )
-      } else if (
-        formattedSubdivision.includes("instrumentation") ||
-        formattedSubdivision.includes("control") ||
-        formattedSubdivision === "instrumentations and control"
-      ) {
+          generalPath
+        );
+      } else if (formattedSubdivision === "instrument") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrument.json`,
-          // `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
-          generalPath,
-        )
-      } else if (formattedSubdivision.includes("power")) {
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrment.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "power") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/power.json`,
-          generalPath,
-        )
+          generalPath
+        );
       }
     } else if (formattedDepartment === "mechanical") {
-      const generalPath = `/src/JSON/500/technology/${formattedSemester}/mechanical/general.json`
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/mechanical/general.json`;
 
       if (formattedSubdivision === "production") {
         subdivisionPaths.push(
           `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/production.json`,
-          generalPath,
-        )
+          generalPath
+        );
       } else if (formattedSubdivision === "thermofluid") {
         subdivisionPaths.push(
-          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/thermofluid.json`,
-          generalPath,
-        )
+          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/thermoflud.json`,
+          generalPath
+        );
       }
     }
 
-    console.log("Subdivision paths:", subdivisionPaths)
-    console.log("Matched subdivision logic for:", formattedSubdivision)
-    return subdivisionPaths
+    console.log("Subdivision paths:", subdivisionPaths);
+    return subdivisionPaths;
   }
 
   // If no subdivision specified, load department-level files
-  const departmentPaths = []
+  const departmentPaths = [];
 
   if (formattedDepartment === "civil") {
-    departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/civil.json`)
+    departmentPaths.push(
+      `/src/JSON/500/technology/${formattedSemester}/civil.json`
+    );
   } else if (formattedDepartment === "petroleum") {
-    departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/petroleum.json`)
+    departmentPaths.push(
+      `/src/JSON/500/technology/${formattedSemester}/petroluem.json`
+    );
   } else if (formattedDepartment === "oilandgas") {
-    departmentPaths.push(`/src/JSON/500/technology/${formattedSemester}/oil.json`)
+    departmentPaths.push(
+      `/src/JSON/500/technology/${formattedSemester}/oilandgas.json`
+    );
   } else if (formattedDepartment === "environmental") {
-    departmentPaths.push(`/src/JSON/500/science/${formattedSemester}/environmental.json`)
+    departmentPaths.push(
+      `/src/JSON/500/science/${formattedSemester}/environmental.json`
+    );
   } else if (formattedDepartment === "science") {
-    departmentPaths.push(`/src/JSON/500/science/${formattedSemester}/science.json`)
+    departmentPaths.push(
+      `/src/JSON/500/science/${formattedSemester}/science.json`
+    );
   }
 
-  console.log("Department paths:", departmentPaths)
-  return departmentPaths
-}
-
-function DebugInfo({ level, college, department, semester, subdivision }) {
-  return (
-    <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-      <h3 className="font-semibold text-yellow-800 mb-2">Debug Information:</h3>
-      <div className="text-sm text-yellow-700 space-y-1">
-        <div>
-          <strong>Level:</strong> "{level}" (type: {typeof level})
-        </div>
-        <div>
-          <strong>College:</strong> "{college}" (type: {typeof college})
-        </div>
-        <div>
-          <strong>Department:</strong> "{department}" (type: {typeof department})
-        </div>
-        <div>
-          <strong>Semester:</strong> "{semester}" (type: {typeof semester})
-        </div>
-        <div>
-          <strong>Subdivision:</strong> "{subdivision}" (type: {typeof subdivision})
-        </div>
-      </div>
-    </div>
-  )
+  console.log("Department paths:", departmentPaths);
+  return departmentPaths;
 }
 
 function PDFViewer({ BackButton }) {
-  const location = useLocation()
-  const { level, college, department, semester, subdivision } = location.state || {}
+  const location = useLocation();
+  const { level, college, department, semester, subdivision } =
+    location.state || {};
 
-  const [sections, setSections] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [sections, setSections] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadPDFs = async () => {
-      setLoading(true)
-      setError(null)
+      setLoading(true);
+      setError(null);
 
       if (!level || !semester || !department) {
-        setSections([])
-        setLoading(false)
-        return
+        setSections([]);
+        setLoading(false);
+        return;
       }
 
       if (level === "500") {
         try {
-          const pathsToLoad = load500LevelPDFs(department, semester, subdivision)
+          const pathsToLoad = load500LevelPDFs(
+            department,
+            semester,
+            subdivision
+          );
 
           if (!pathsToLoad || pathsToLoad.length === 0) {
-            setError(`No materials found for ${department}${subdivision ? ` - ${subdivision}` : ""}.`)
-            setLoading(false)
-            return
+            setError(
+              `No materials found for ${department}${
+                subdivision ? ` - ${subdivision}` : ""
+              }.`
+            );
+            setLoading(false);
+            return;
           }
 
-          const loadedSections = []
+          const loadedSections = [];
 
           for (const path of pathsToLoad) {
-            console.log("Checking path:", path)
+            console.log("Checking path:", path);
 
             if (allJSONFiles[path]) {
-              console.log("✅ Found file:", path)
+              console.log("✅ Found file:", path);
 
               try {
-                const module = await allJSONFiles[path]()
-                const data = module.default
-                console.log("Loaded data from", path, ":", data)
+                const module = await allJSONFiles[path]();
+                const data = module.default;
+                console.log("Loaded data from", path, ":", data);
 
-                const sections = parseSections(data)
-                loadedSections.push(...sections)
+                const sections = parseSections(data);
+                loadedSections.push(...sections);
               } catch (fileError) {
-                console.error(`Error loading ${path}:`, fileError)
+                console.error(`Error loading ${path}:`, fileError);
               }
             } else {
-              console.log("❌ File not found:", path)
-              console.log(
-                "Available electrical files:",
-                Object.keys(allJSONFiles).filter((key) => key.includes("electrical")),
-              )
+              console.log("❌ File not found:", path);
             }
           }
 
           if (loadedSections.length === 0) {
-            const subdivisionText = subdivision
-              ? ` - ${subdivision.charAt(0).toUpperCase() + subdivision.slice(1)}`
-              : ""
-            setError(
-              `No materials found for ${department}${subdivisionText}. Expected files: ${pathsToLoad.join(", ")}`,
-            )
+            loadedSections.push({ title: "NO MATERIALS", docs: [] });
           }
 
-          setSections(loadedSections)
+          setSections(loadedSections);
         } catch (err) {
-          setError(err.message)
-          setSections([])
+          setError(err.message);
+          setSections([]);
         } finally {
-          setLoading(false)
+          setLoading(false);
         }
-        return
+        return;
       }
 
       // Existing logic for 100-400 levels (unchanged)
       if (!college) {
-        setSections([])
-        setLoading(false)
-        return
+        setSections([]);
+        setLoading(false);
+        return;
       }
 
-      const formattedLevel = level.toLowerCase()
-      const formattedCollege = college.toLowerCase()
-      const formattedSemester = `${semester.toLowerCase()}-semester`
-      const formattedDepartment = department.split(" ")[0].toLowerCase()
+      const formattedLevel = level.toLowerCase();
+      const formattedCollege = college.toLowerCase();
+      const formattedSemester = `${semester.toLowerCase()}-semester`;
+      const formattedDepartment = department.split(" ")[0].toLowerCase();
 
-      const supportedLevels = ["100", "200", "300", "400"]
+      const supportedLevels = ["100", "200", "300", "400"];
       if (!supportedLevels.includes(level)) {
-        setError("Only 100 to 400 level materials are supported.")
-        setLoading(false)
-        return
+        setError("Only 100 to 400 level materials are supported.");
+        setLoading(false);
+        return;
       }
 
       try {
-        const deptPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`
-        const generalPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/general.json`
+        const deptPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/${formattedDepartment}.json`;
+        const generalPath = `/src/JSON/${formattedLevel}/${formattedCollege}/${formattedSemester}/general.json`;
 
-        const loadedSections = []
+        const loadedSections = [];
 
         if (allJSONFiles[deptPath]) {
-          const deptModule = await allJSONFiles[deptPath]()
-          const deptData = deptModule.default
-          const deptSections = parseSections(deptData)
-          loadedSections.push(...deptSections)
+          const deptModule = await allJSONFiles[deptPath]();
+          const deptData = deptModule.default;
+          const deptSections = parseSections(deptData);
+          loadedSections.push(...deptSections);
         }
 
         if (allJSONFiles[generalPath]) {
-          const generalModule = await allJSONFiles[generalPath]()
-          const generalData = generalModule.default
-          const generalSections = parseSections({ general: generalData })
-          loadedSections.push(...generalSections)
+          const generalModule = await allJSONFiles[generalPath]();
+          const generalData = generalModule.default;
+          const generalSections = parseSections({ general: generalData });
+          loadedSections.push(...generalSections);
         }
 
         if (loadedSections.length === 0) {
-          loadedSections.push({ title: "NO MATERIALS", docs: [] })
+          loadedSections.push({ title: "NO MATERIALS", docs: [] });
         }
 
-        setSections(loadedSections)
+        setSections(loadedSections);
       } catch (err) {
-        setError(err.message)
-        setSections([])
+        setError(err.message);
+        setSections([]);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    loadPDFs()
-  }, [level, college, department, semester, subdivision])
+    loadPDFs();
+  }, [level, college, department, semester, subdivision]);
 
   return (
     <div className="max-w-6xl px-4 py-8 mx-auto">
       <header className="mb-8">
         <BackButton />
-        {/* Add debug info - remove this once you've identified the issue */}
-        {/* <DebugInfo
-          level={level}
-          college={college}
-          department={department}
-          semester={semester}
-          subdivision={subdivision}
-        /> */}
         <div className="mt-4 text-center">
-          <h1 className="mb-2 text-2xl font-bold text-gray-800">Course Materials</h1>
-          <p className="mb-1 text-gray-600">Access and download course materials for {department || "N/A"}</p>
+          <h1 className="mb-2 text-2xl font-bold text-gray-800">
+            Course Materials
+          </h1>
+          <p className="mb-1 text-gray-600">
+            Access and download course materials for {department || "N/A"}
+          </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             {level === "500" ? (
               <>
@@ -423,14 +390,18 @@ function PDFViewer({ BackButton }) {
           </div>
         ) : error ? (
           <div className="py-12 text-center">
-            <div className="max-w-2xl p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
+            <div className="max-w-md p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
               <p className="mb-2 text-red-600">{error}</p>
-              <p className="text-sm text-gray-500">Make sure the JSON file exists in the correct location.</p>
+              <p className="text-sm text-gray-500">
+                Make sure the JSON file exists in the correct location.
+              </p>
             </div>
           </div>
         ) : sections.length === 0 ? (
           <div className="py-12 text-center">
-            <p className="text-lg font-medium text-gray-500">No PDFs uploaded yet.</p>
+            <p className="text-lg font-medium text-gray-500">
+              No PDFs uploaded yet.
+            </p>
           </div>
         ) : (
           <div className="space-y-4">
@@ -441,7 +412,7 @@ function PDFViewer({ BackButton }) {
         )}
       </main>
     </div>
-  )
+  );
 }
 
-export default PDFViewer
+export default PDFViewer;
