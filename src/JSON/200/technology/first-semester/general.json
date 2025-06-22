@@ -1,38 +1,8 @@
-[
-  {
-    "name": "CHM 101 - General Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "CHM 107 - General Practical Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-MTH 103 - Elementary Mathematics III",
-    "href": "#"
-  },
-  {
-    "name": "GET 101 - Engineer in Society",
-    "href": "#"
-  },
-  {
-    "name": "GST 111 - Communication in English",
-    "href": "#"
-  },
-  {
-    "name": "MTH 101 - Elementary Mathematics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 101 - General Physics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 103 - General Physics III",
-    "href": "#"
-  },
-  {
-    "name": "PHY 107 - General Practical Physics I",
-    "href": "#"
-  }
-]
+{
+  "GET 211 LECTURE NOTE": [
+    {
+      "name": "NOTE",
+      "href": "https://drive.google.com/file/d/1kKL2HjFHYdnzbemAKdcHPRUi9b-7mzXt/view?usp=drive_link"
+    }
+  ]
+}
