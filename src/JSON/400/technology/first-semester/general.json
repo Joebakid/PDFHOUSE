@@ -1,38 +1,36 @@
-[
-  {
-    "name": "CHM 101 - General Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "CHM 107 - General Practical Chemistry I",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-MTH 103 - Elementary Mathematics III",
-    "href": "#"
-  },
-  {
-    "name": "GET 101 - Engineer in Society",
-    "href": "#"
-  },
-  {
-    "name": "GST 111 - Communication in English",
-    "href": "#"
-  },
-  {
-    "name": "MTH 101 - Elementary Mathematics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 101 - General Physics I",
-    "href": "#"
-  },
-  {
-    "name": "PHY 103 - General Physics III",
-    "href": "#"
-  },
-  {
-    "name": "PHY 107 - General Practical Physics I",
-    "href": "#"
-  }
-]
+{
+  "Math": [
+    {
+      "name": "Solutions of a System of Linear Equation",
+      "href": "https://drive.google.com/file/d/1yuMrln2Sjxc9ODjEiPxy83p0jnVLHpvv/view?usp=drive_link"
+    },
+    {
+      "name": "Numerical Solution of ODE_021924",
+      "href": "https://drive.google.com/file/d/10XvdNqLP5KHDQ3HjsbEo67Sqlyb3CKQl/view?usp=drive_link"
+    },
+    {
+      "name": "Numerical Integration_021915",
+      "href": "https://drive.google.com/file/d/1njVfniIGXhxGsu9uvjTisGydyKtDw3l6/view?usp=drive_link"
+    },
+    {
+      "name": "Curve and Data Fitting",
+      "href": "https://drive.google.com/file/d/19ZQ--yhEyIWgbYH_LjwFiSYQ75D5HuGi/view?usp=drive_link"
+    },
+    {
+      "name": "5 FINITE DIFFEERENCE AND INTERPOLATION_080700",
+      "href": "https://drive.google.com/file/d/1kvG2Nm0RaRtr95C8yqkgBpe5nxJw-bLX/view?usp=drive_link"
+    },
+    {
+      "name": "3 Solution to Non Linear Equation ",
+      "href": "https://drive.google.com/file/d/1YcCkXBK3ZdnsnEDj7uTh2rGI6QVlaA3m/view?usp=drive_link"
+    },
+    {
+      "name": "2 Error Analysis And Computer Arithmetic Errors In Computation",
+      "href": "https://drive.google.com/file/d/1AMaTtJ1j7-DN94NBxIsPFvzGc-MSEsxq/view?usp=drive_link"
+    },
+    {
+      "name": "1 Intro and Binary Operations",
+      "href": "https://drive.google.com/file/d/1pZgtY_L-7OQjRRAXfOaP4kqrhGa9Gu7j/view?usp=drive_link"
+    }
+  ]
+}
