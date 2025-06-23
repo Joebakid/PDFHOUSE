@@ -100,25 +100,6 @@ function load500LevelPDFs(department, semester, subdivision) {
     formattedSubdivision,
   });
 
-  // Debug: Show ALL files that import.meta.glob found
-  console.log("🔍 ALL FILES FOUND BY import.meta.glob:");
-  console.log("Total files:", Object.keys(allJSONFiles).length);
-  
-  // Show all marine-related files
-  const marineFiles = Object.keys(allJSONFiles).filter(path => path.includes('marine'));
-  console.log("🐠 MARINE FILES FOUND:", marineFiles.length);
-  marineFiles.forEach(path => console.log("   📁", path));
-  
-  // Show all 500-level files
-  const level500Files = Object.keys(allJSONFiles).filter(path => path.includes('/500/'));
-  console.log("🎓 500-LEVEL FILES FOUND:", level500Files.length);
-  level500Files.forEach(path => console.log("   📁", path));
-  
-  // Show all subdivision files
-  const subdivisionFiles = Object.keys(allJSONFiles).filter(path => path.includes('subdivision'));
-  console.log("📂 SUBDIVISION FILES FOUND:", subdivisionFiles.length);
-  subdivisionFiles.forEach(path => console.log("   📁", path));
-
   const paths = [];
 
   // If subdivision is specified, handle by department
@@ -127,79 +108,132 @@ function load500LevelPDFs(department, semester, subdivision) {
       const generalPath = `/src/JSON/500/technology/${formattedSemester}/marine/general.json`;
 
       if (formattedSubdivision === "naval") {
-        const subdivisionPath = `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/naval.json`;
-        paths.push(subdivisionPath, generalPath);
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/naval.json`,
+          generalPath
+        );
       } else if (formattedSubdivision === "offshore") {
-        const subdivisionPath = `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/offshore.json`;
-        paths.push(subdivisionPath, generalPath);
-      } else if (formattedSubdivision === "powerplant" || formattedSubdivision === "power plant") {
-        const subdivisionPath = `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/powerplant.json`;
-        paths.push(subdivisionPath, generalPath);
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/offshore.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "powerplant") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/powerplant.json`,
+          generalPath
+        );
+      }
+    } else if (formattedDepartment === "chemical") {
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/chemical/general.json`;
+
+      if (formattedSubdivision === "biochemical") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/biochemical.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "energy") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/energy.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "environmental") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/env.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "material") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/material.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "process") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/chemical/subdivision/process.json`,
+          generalPath
+        );
+      }
+    } else if (formattedDepartment === "electrical") {
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/electrical/general.json`;
+
+      if (
+        formattedSubdivision.includes("electronic") ||
+        formattedSubdivision.includes("telecommunication") ||
+        formattedSubdivision === "electronics and telecommunication"
+      ) {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/telecommunication.json`,
+          generalPath
+        );
+      } else if (
+        formattedSubdivision.includes("instrumentation") ||
+        formattedSubdivision.includes("control") ||
+        formattedSubdivision === "instrumentations and control"
+      ) {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/instrument.json`,
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/electronic.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision.includes("power")) {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/electrical/subdivision/power.json`,
+          generalPath
+        );
+      }
+    } else if (formattedDepartment === "mechanical") {
+      const generalPath = `/src/JSON/500/technology/${formattedSemester}/mechanical/general.json`;
+
+      if (formattedSubdivision === "production") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/production.json`,
+          generalPath
+        );
+      } else if (formattedSubdivision === "thermofluid") {
+        paths.push(
+          `/src/JSON/500/technology/${formattedSemester}/mechanical/subdivision/thermofluid.json`,
+          generalPath
+        );
       }
     }
-    // ... rest of your department logic
 
-    console.log("✅ Generated paths:", paths);
-    
-    // Debug: Check if each path exists and show exact matches
-    console.log("🔍 PATH EXISTENCE CHECK:");
-    paths.forEach(path => {
-      const exists = allJSONFiles.hasOwnProperty(path);
-      console.log(`   ${exists ? '✅' : '❌'} ${path} - ${exists ? 'EXISTS' : 'NOT FOUND'}`);
-      
-      if (!exists) {
-        // Try to find the closest match
-        const pathParts = path.split('/');
-        const fileName = pathParts[pathParts.length - 1];
-        const directory = pathParts.slice(0, -1).join('/');
-        
-        console.log(`   🔍 Looking for file: "${fileName}" in directory: "${directory}"`);
-        
-        // Find files in the same directory
-        const sameDirectoryFiles = Object.keys(allJSONFiles).filter(availablePath => 
-          availablePath.startsWith(directory)
-        );
-        
-        if (sameDirectoryFiles.length > 0) {
-          console.log("   📁 Files in same directory:");
-          sameDirectoryFiles.forEach(file => console.log(`      - ${file}`));
-        } else {
-          console.log("   ⚠️ Directory not found in allJSONFiles");
-          
-          // Check if parent directory exists
-          const parentDir = pathParts.slice(0, -2).join('/');
-          const parentDirFiles = Object.keys(allJSONFiles).filter(availablePath => 
-            availablePath.startsWith(parentDir)
-          );
-          
-          if (parentDirFiles.length > 0) {
-            console.log(`   📁 Files in parent directory "${parentDir}":`);
-            parentDirFiles.forEach(file => console.log(`      - ${file}`));
-          }
-        }
-      }
-    });
-
+    console.log("Subdivision paths:", paths);
     return paths;
   }
 
-  // Rest of your fallback logic...
+  // Fallback if no subdivision is specified
   if (formattedDepartment === "marine") {
     const generalPath = `/src/JSON/500/technology/${formattedSemester}/marine/general.json`;
-    const allMarinePaths = [
-      generalPath,
-      `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/naval.json`,
-      `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/offshore.json`,
-      `/src/JSON/500/technology/${formattedSemester}/marine/subdivision/powerplant.json`,
+    console.log(
+      "✅ Loading general marine file (no subdivision):",
+      generalPath
+    );
+    return [generalPath];
+  } else if (formattedDepartment === "chemical") {
+    return [
+      `/src/JSON/500/technology/${formattedSemester}/chemical/general.json`,
     ];
-    
-    console.log("✅ Loading all marine files (no subdivision):", allMarinePaths);
-    return allMarinePaths;
+  } else if (formattedDepartment === "electrical") {
+    return [
+      `/src/JSON/500/technology/${formattedSemester}/electrical/general.json`,
+    ];
+  } else if (formattedDepartment === "mechanical") {
+    return [
+      `/src/JSON/500/technology/${formattedSemester}/mechanical/general.json`,
+    ];
+  } else if (formattedDepartment === "civil") {
+    return [`/src/JSON/500/technology/${formattedSemester}/civil.json`];
+  } else if (formattedDepartment === "petroleum") {
+    return [`/src/JSON/500/technology/${formattedSemester}/petroleum.json`];
+  } else if (formattedDepartment === "oilandgas") {
+    return [`/src/JSON/500/technology/${formattedSemester}/oil.json`];
+  } else if (formattedDepartment === "environmental") {
+    return [`/src/JSON/500/science/${formattedSemester}/environmental.json`];
+  } else if (formattedDepartment === "science") {
+    return [`/src/JSON/500/science/${formattedSemester}/science.json`];
   }
 
-  // ... rest of your department logic
-
-  console.log("⚠️ No matching paths found for:", formattedDepartment);
+  console.log("⚠️ No matching paths found.");
   return [];
 }
 
