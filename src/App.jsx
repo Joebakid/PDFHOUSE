@@ -71,49 +71,52 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header Btn={Btn} LinkCustom={LinkCustom} />
-              <WhyUs />
-              <CreatorsSection />
-              <Footer Btn={Btn} LinkCustom={LinkCustom} />
-            </>
-          }
-        />
-        <Route
-          path="/pdfs"
-          element={
-            <PDFs Btn={Btn} LinkCustom={LinkCustom} BackButton={BackButton} />
-          }
-        />
-        <Route
-          path="/department"
-          element={
-            <DepartmentPage
-              Btn={Btn}
-              LinkCustom={LinkCustom}
-              BackButton={BackButton}
-            />
-          }
-        />
-        <Route
-          path="/pdfs-view"
-          element={
-            <PDFViewer
-              Btn={Btn}
-              LinkCustom={LinkCustom}
-              BackButton={BackButton}
-            />
-          }
-        />
-      </Routes>
-    </>
+      <div className="flex-grow">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header Btn={Btn} LinkCustom={LinkCustom} />
+                <WhyUs />
+                <CreatorsSection />
+              </>
+            }
+          />
+          <Route
+            path="/pdfs"
+            element={
+              <PDFs Btn={Btn} LinkCustom={LinkCustom} BackButton={BackButton} />
+            }
+          />
+          <Route
+            path="/department"
+            element={
+              <DepartmentPage
+                Btn={Btn}
+                LinkCustom={LinkCustom}
+                BackButton={BackButton}
+              />
+            }
+          />
+          <Route
+            path="/pdfs-view"
+            element={
+              <PDFViewer
+                Btn={Btn}
+                LinkCustom={LinkCustom}
+                BackButton={BackButton}
+              />
+            }
+          />
+        </Routes>
+      </div>
+
+      <Footer Btn={Btn} LinkCustom={LinkCustom} />
+    </div>
   );
 }
 

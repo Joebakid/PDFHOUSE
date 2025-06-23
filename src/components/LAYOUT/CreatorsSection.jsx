@@ -13,7 +13,7 @@ const creators = [
     role: "UI/UX Designer",
     department: "Marine Engineering",
     src: "/img/UnuigbokhaiNoah.jpeg",
-    portfolio: "https://www.behance.net/unuigbokhainoah",
+    portfolio: "https://linktr.ee/unuigbokhainoah?utm_source=linktree_profile_share&ltsid=dae4cb4f-18f8-452f-8b97-e30f4883fe69",
   },
   {
     name: "Obiajulu Anthony",
