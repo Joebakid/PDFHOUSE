@@ -1,46 +1,28 @@
-[
-  {
-    "name": "CHM 108 - General Practical Chemistry II",
-    "href": "#"
-  },
-  {
-    "name": "EEE 102 - Introduction to Electrical and Electronics Engineering",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-PEE 102 - Overview of Oil and Gas Industry Operations and Process",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-PHY 102 - General Physics II",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-PHY 104 - General Physics IV (Vibration, Waves and Optics)",
-    "href": "#"
-  },
-  {
-    "name": "FUPRE-STA 112 - Probability I",
-    "href": "#"
-  },
-  {
-    "name": "GET 102 - Engineering Graphics and Solid Modelling I",
-    "href": "#"
-  },
-  {
-    "name": "GST 112 - Nigerian People and Culture",
-    "href": "#"
-  },
-  {
-    "name": "MTH 102 - Elementary Mathematics II",
-    "href": "#"
-  },
-  {
-    "name": "PHY 108 - General Practical Physics II",
-    "href": "#"
-  },
-  {
-    "name": "CHM 102 - General Chemistry II",
-    "href": "#"
-  }
-]
+{
+  "strength of material": [
+    {
+      "name": "STRENGTH OF MATERIALS HANDOUT By Akportu Prince",
+      "href": "https://drive.google.com/file/d/1sNfMEmrU4Us0fD_7uFouJCvWpiDFkEJO/view?usp=drive_link"
+    },
+    {
+      "name": "strength of Materials(1)",
+      "href": "https://drive.google.com/file/d/1M3XcgJugG5FPXZ7-HlrGEqxMeWiMxFli/view?usp=drive_link"
+    },
+    {
+      "name": "strength-of-material-by-r-k-bansal",
+      "href": "https://drive.google.com/file/d/1kywB4FlcFurcx1G8dlNv1zsW9FU20ygX/view?usp=drive_link"
+    }
+  ],
+  "MEE 224": [
+    {
+      "name": "MEE224 NOTES by Kisoranking Samson",
+      "href": "https://drive.google.com/file/d/1b95ZmOaPKaEyDoAcb1csXFb3UsP7mE5n/view?usp=drive_link"
+    }
+  ],
+  "GET 299": [
+    {
+      "name": "MARINE DADDY - SWEP LIKELY QUESTIONS AND ANSWERS ",
+      "href": "https://drive.google.com/file/d/1ui5FTRgJyJGUN91G_kmMKwj1t35kBK6A/view?usp=drive_link"
+    }
+  ]
+}
