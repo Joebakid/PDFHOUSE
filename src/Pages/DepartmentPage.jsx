@@ -5,6 +5,9 @@ function DepartmentPage({ BackButton }) {
   const location = useLocation();
   const navigate = useNavigate();
   const { level, college } = location.state || {};
+  // const queryParams = new URLSearchParams(location.search);
+  // const level = queryParams.get("level");
+  // const college = queryParams.get("college");
 
   const [department, setDepartment] = useState("");
   const [semester, setSemester] = useState("");
@@ -22,8 +25,8 @@ function DepartmentPage({ BackButton }) {
       "Mechanical Engineering",
       "Civil Engineering",
       "Chemical Engineering",
-      'Computer Engineering',
-      'Software Engineering'
+      "Computer Engineering",
+      "Software Engineering",
     ],
     Science: [
       "Science Lab Tech",

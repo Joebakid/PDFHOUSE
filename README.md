@@ -39,7 +39,7 @@ This project is more than just code. It's about **empowerment and accessibility*
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/pdf-house.git
+   git clone https://github.com/Joebakid
    cd pdf-house
    ```
 

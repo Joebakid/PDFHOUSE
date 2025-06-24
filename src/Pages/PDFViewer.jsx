@@ -338,9 +338,7 @@ function PDFViewer({ BackButton }) {
                 }`
               : "";
             setError(
-              `No materials found for ${department}${subdivisionText}. Expected files: ${pathsToLoad.join(
-                ", "
-              )}`
+              `No materials uploaded yet for ${department}${subdivisionText}.  `
             );
           }
 
@@ -464,9 +462,7 @@ function PDFViewer({ BackButton }) {
           <div className="py-12 text-center">
             <div className="max-w-2xl p-6 mx-auto border border-red-200 rounded-lg bg-red-50">
               <p className="mb-2 text-red-600">{error}</p>
-              <p className="text-sm text-gray-500">
-                Make sure the JSON file exists in the correct location.
-              </p>
+              <p className="text-sm text-gray-500">Check Back another time.</p>
             </div>
           </div>
         ) : sections.length === 0 ? (

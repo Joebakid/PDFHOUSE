@@ -33,9 +33,13 @@ function Btn({ text, className }) {
 }
 
 // React Router Link
-function LinkCustom({ text, className, to }) {
+// Updated LinkCustom to support URL query params
+function LinkCustom({ text, className, to, search }) {
   return (
-    <Link to={to} className={`${className} cursor-pointer hover:scale-105`}>
+    <Link
+      to={search ? { pathname: to, search } : to}
+      className={`${className} cursor-pointer hover:scale-105`}
+    >
       {text}
     </Link>
   );
@@ -71,7 +75,7 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
       <div className="flex-grow">
