@@ -211,7 +211,7 @@
       "href": "https://drive.google.com/file/d/1Pu4fGTCWrQ34dPxtIdkXrda_H3YGsZ87/view?usp=drive_link"
     }
   ],
-  "Determining_Pi_Terms_(Buckingham_Pi_Theorem)": [
+  " Buckingham_Pi_Theorem": [
     {
       "name": "VIDEO",
       "href": "https://drive.google.com/file/d/1o25V7TqCbEX8XB6KbfhfCYUTAgIJY_W7/view?usp=drive_link"
@@ -241,7 +241,7 @@
       "href": "https://drive.google.com/file/d/19cvTgTSZ9WJc8VjlsS5nmAueTmPnOy8o/view?usp=drive_link"
     }
   ],
-   "MEE 214": [
+  "MEE 214": [
     {
       "name": "strength of Materials TEXTBOOK",
       "href": "https://drive.google.com/file/d/19xu6vdDEez_I0pbAhkISNQl1usuBlmHH/view?usp=drive_link"
@@ -290,10 +290,7 @@
       "name": "1.4 MATERIAL AND ENERGY BALANCE",
       "href": "https://drive.google.com/file/d/1-zmSKOExxVmNCZv43FbMk-Pbsj0-9lNI/view?usp=drive_link"
     }
-   
-  ]
-
-  ,  
+  ],
 
   "BASIC MANUFACTURING TECHNOLOGY": [
     {
@@ -324,10 +321,9 @@
       "name": "Bmt compiled by Cleverbee",
       "href": "https://drive.google.com/file/d/1tyioA3bzMcKZN3YkmKGxZnlD-ErLJml5/view?usp=drive_link"
     }
-    
   ],
 
-   "MEE 212 VIDEO": [
+  "MEE 212 VIDEO": [
     {
       "name": "1. Introduction to Engineering Mechanics",
       "href": "https://drive.google.com/file/d/11lEuso8gyMissE1IIyzF4ybdzLXsg_m9/view?usp=drive_link"
@@ -365,23 +361,23 @@
       "href": "https://drive.google.com/file/d/1AT9EdxllkXjxFj3AgY19H69ixSQVl88z/view?usp=drive_link"
     },
     {
-      "name":"Vector_Addition_Parallelogram_Method_-_Resultant_Vectors_Using_Law_of_Cosines_and_Sines,_Physics.mp4",
+      "name": "Vector_Addition_Parallelogram_Method_-_Resultant_Vectors_Using_Law_of_Cosines_and_Sines,_Physics.mp4",
       "href": "https://drive.google.com/file/d/18VVvFqzSN_AuuEsRA7o8dw6jWChEV0cJ/view?usp=drive_link"
     },
     {
-      "name":"Statics_Lecture_14___Problem_2.1__Finding_the_Magnitude_and_Direction_of_the_Resultant_Force",
+      "name": "Statics_Lecture_14___Problem_2.1__Finding_the_Magnitude_and_Direction_of_the_Resultant_Force",
       "href": "https://drive.google.com/file/d/1Q9XQVio0XgMrM9AsdeKk75BHF79rV_K9/view?usp=drive_link"
     },
     {
-      "name":"Resolving Vectors.1__Finding_the_Magnitude_and_Direction_of_the_Resultant_Force",
+      "name": "Resolving Vectors.1__Finding_the_Magnitude_and_Direction_of_the_Resultant_Force",
       "href": "https://drive.google.com/file/d/1QHCIG6K4B9Ku2-JIBwerVLSSrgtir7eQ/view?usp=drive_link"
     },
     {
-      "name":"Concurrent",
+      "name": "Concurrent",
       "href": "https://drive.google.com/file/d/1nPy-rTF-aCkTwJvBXrcQA2BVFheWfoqi/view?usp=drive_link"
     },
     {
-      "name":"Concurrent Forces Part 1 Finding Resultant",
+      "name": "Concurrent Forces Part 1 Finding Resultant",
       "href": "https://drive.google.com/file/d/1cPvSrWgYe0EhcT_eKMVRA8nI_HSFaK45/view?usp=drive_link"
     }
   ],
