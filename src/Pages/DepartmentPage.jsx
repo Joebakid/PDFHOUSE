@@ -20,13 +20,14 @@ function DepartmentPage({ BackButton }) {
     Technology: [
       "Marine Engineering",
       "Petroleum Engineering",
-      "Oil and Gas",
+      "Oil and Gas / natural gas",
       "Electrical Engineering",
       "Mechanical Engineering",
       "Civil Engineering",
       "Chemical Engineering",
       "Computer Engineering",
       "Software Engineering",
+      "Petrochemical Engineering ",
     ],
     Science: [
       "Science Lab Tech",
