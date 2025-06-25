@@ -18,11 +18,11 @@
       "name": "MEE224 NOTES by Kisoranking Samson",
       "href": "https://drive.google.com/file/d/1b95ZmOaPKaEyDoAcb1csXFb3UsP7mE5n/view?usp=drive_link"
     },
-     {
+    {
       "name": "VECTOR MECHANICS",
       "href": "https://drive.google.com/file/d/1WefmgS2R0NhesaPOs_Lc0zG7XypQyRJ7/view?usp=drive_link"
     },
-     {
+    {
       "name": "VECTOR MECHANICS",
       "href": "https://drive.google.com/file/d/1p1EEDptiCBSGSDVLzkOH1FDqUSiCB75q/view?usp=drive_link"
     }
@@ -37,6 +37,14 @@
     {
       "name": "GET 221 note 1",
       "href": "https://drive.google.com/file/d/1qThSgFHg5GwhgFKt19xdMA3rF3tXmUA9/view?usp=drive_link"
+    },
+    {
+      "name": "GET 221 notes CURRENT",
+      "href": "https://drive.google.com/file/d/1n1k3fVYmGa4Hz9C4XZkDFn0_UUNCEMXs/view?usp=drive_link"
+    },
+    {
+      "name": "Get221 pdf",
+      "href": "https://drive.google.com/file/d/1qjipZBJkyyLOxi59Fv-EqixxBQ0wZzWA/view?usp=drive_link"
     }
   ],
 
@@ -45,7 +53,18 @@
       "name": "MEE 223",
       "href": "https://drive.google.com/file/d/1hZ4RcMazOQ6P5iNv2FeXX9HADsC4W29k/view?usp=drive_link"
     }
-    
+  ],
+
+  "GET 223 lecture note 1& 2": [
+    {
+      "name": "Get221 pdf",
+      "href": "https://drive.google.com/file/d/1-t7Oe8QXgVS4C1anT3ea__CTol9immB6/view?usp=drive_link"
+    }
+  ],
+  "Learning C ": [
+    {
+      "name": "Fundamentals of Programming with C#",
+      "href": "https://drive.google.com/file/d/1eDKKeH8hP8X_tHxIWoxXyNXgGtG-FV9K/view?usp=drive_link"
+    }
   ]
-  
 }
