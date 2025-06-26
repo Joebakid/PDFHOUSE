@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Doc from "../components/LAYOUT/Doc";
 
-// Import all JSON files eagerly at build time
+// Import all JSON files eagerly
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 
 function useQuery() {
@@ -27,21 +27,27 @@ export default function SearchPage() {
       const matches = [];
 
       const entries = Object.entries(allJSONFiles);
-      for (const [path, data] of entries) {
-        const sections = Object.entries(data.default || data);
 
-        for (const [section, docs] of sections) {
+      for (const [path, fileData] of entries) {
+        const data = fileData.default || fileData;
+        const sections = Object.entries(data);
+
+        for (const [sectionKey, docs] of sections) {
+          const keyMatches = sectionKey.toLowerCase().includes(searchTerm);
+
           if (Array.isArray(docs)) {
             for (const doc of docs) {
-              if (
+              const nameMatch =
                 doc?.name &&
                 typeof doc.name === "string" &&
-                doc.name.toLowerCase().includes(searchTerm)
-              ) {
+                doc.name.toLowerCase().includes(searchTerm);
+
+              // Include if name OR section key matches
+              if (keyMatches || nameMatch) {
                 matches.push({
                   name: doc.name,
                   href: doc.href,
-                  section,
+                  section: sectionKey,
                   source: path.split("/src/JSON/")[1],
                 });
               }
