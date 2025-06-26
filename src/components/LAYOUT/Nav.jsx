@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi"; // ✅ Search icon
 import { Link, useNavigate } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 function Nav({ Btn, LinkCustom }) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-
-  const mobileInputRef = useRef(null);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -18,13 +17,6 @@ function Nav({ Btn, LinkCustom }) {
       setQuery("");
     }
   };
-
-  useEffect(() => {
-    // Blur the input when the mobile menu opens to prevent auto-focus
-    if (isOpen && mobileInputRef.current) {
-      mobileInputRef.current.blur();
-    }
-  }, [isOpen]);
 
   return (
     <nav className="relative flex flex-col items-center justify-between p-4 m-2 bg-gray-100 rounded-lg shadow-md custom-container md:flex-row">
@@ -51,7 +43,6 @@ function Nav({ Btn, LinkCustom }) {
           <form onSubmit={handleSearch} className="flex w-full gap-2">
             <input
               type="text"
-              ref={mobileInputRef}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search PDFs..."
@@ -118,7 +109,7 @@ function Nav({ Btn, LinkCustom }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search PDFs..."
-            className="px-3 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
+            className=" px-3 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
           />
           <button
             type="submit"
