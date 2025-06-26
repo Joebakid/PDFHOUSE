@@ -1,4 +1,67 @@
 {
+  "GET 221[ENGINEERING MATHEMATICS]": [
+    {
+      "name": "Understanding Engineering Mathematics - John Bird - 2014",
+      "href": "https://drive.google.com/file/d/1y8HLk0UjP4Ut8r-HHyBCkBQx5ZHxuYg0/view?usp=drive_link"
+    },
+    {
+      "name": "Advanced Engineering Mathematics by K.A. Stroud and D.J. Booth",
+      "href": "https://drive.google.com/file/d/1Z6c0Agnz3EL2iBB3J3xqcCm8pRfokasU/view?usp=drive_link"
+    },
+    {
+      "name": "Maths",
+      "href": "https://drive.google.com/file/d/11k8u3bcxSh5Uy0uzdkec8G3YQ3HdDf8j/view?usp=drive_link"
+    },
+    {
+      "name": "line integral and Green theorem",
+      "href": "https://drive.google.com/file/d/1oEoMPd0iVIMa-UxkDmEhhBYmjEZvDeCv/view?usp=drive_link"
+    },
+    {
+      "name": "John Bird - Higher Engineering Mathematics",
+      "href": "https://drive.google.com/file/d/1gJtYzuI52np7e1JLUvXMxUcbifl-jF7b/view?usp=drive_link"
+    },
+    {
+      "name": "Improper and line integral",
+      "href": "https://drive.google.com/file/d/1qUkTPpTb4dEDJwFBB4Xe7EtykeT9v9yH/view?usp=drive_link"
+    },
+    {
+      "name": "Higher Order",
+      "href": "https://drive.google.com/file/d/1ljQeTpId6Uu2MiNCw2Q_hm6DORpmdACh/view?usp=drive_link"
+    },
+    {
+      "name": "PQ 2014",
+      "href": "https://drive.google.com/file/d/1naJJxL89Qk2binVsessQRr_xzgkVdq1n/view?usp=drive_link"
+    },
+    {
+      "name": "GET221 NOTES by Kisoranking Sam",
+      "href": "https://drive.google.com/file/d/1iWMyMZnJgDi3s9QLQVR1qpp0Wr0XwaI7/view?usp=drive_link"
+    },
+    {
+      "name": "Vector integral calculus integral theorems",
+      "href": "https://drive.google.com/file/d/1htFJL37X75WsB0dAPuis_kaMResPQGL0/view?usp=drive_link"
+    },
+    {
+      "name": "Determinant",
+      "href": "https://drive.google.com/file/d/1EYXaKVN5raffQ1T3FzT6ypNpNUN2pQjP/view?usp=drive_link"
+    },
+    {
+      "name": "GET 221  2nd handout",
+      "href": "https://drive.google.com/file/d/1WxtYeu5ffRehVRWi2fbp2zOhKmUgodI6/view?usp=drive_link"
+    },
+    {
+      "name": "GET 221  1st handout",
+      "href": "https://drive.google.com/file/d/1Ay7iTzO5_EqmXKj8FotsQXnO0IaAC3px/view?usp=drive_link"
+    },
+    {
+      "name": "Calculus 3 by Paul Dawkins",
+      "href": "https://drive.google.com/file/d/1yd38-2yIeny2Bsjwvda-g1v-RPi6Ths1/view?usp=drive_link"
+    },
+    {
+      "name": "Advanced Mathematics for Engineering ",
+      "href": "https://drive.google.com/file/d/1sNATovso0-fB8J1zLxwIkGNNZallJ0Sm/view?usp=drive_link"
+    }
+  ],
+
   "strength of material": [
     {
       "name": "STRENGTH OF MATERIALS HANDOUT By Akportu Prince",
@@ -297,13 +360,13 @@
       "href": "https://drive.google.com/file/d/1PNjXVTHWmIrwy5xgynQhsH_rl8CMop-c/view?usp=drive_link"
     }
   ],
-  "GET223 (BASIC WORKSHOP PRACTICE)": [
+  "BONUS": [
     {
-      "name": "GET 223 lecture note 1& 2",
+      "name": "Engineering society Textbook",
       "href": "https://drive.google.com/file/d/1z7X-1QrRoRak4mQiLRYKBB_wQwJlqjj-/view?usp=drive_link"
     },
     {
-      "name": "GET 223 chptr 10-1",
+      "name": "Project management",
       "href": "https://drive.google.com/file/d/1FYOiKQgSHOPJlB7RDcbzyJ-6bmtR7ydt/view?usp=drive_link"
     }
   ]
