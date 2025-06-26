@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import ProductAdCarousel from './ProductAdCarousel'
+import ProductAdCarousel from "./ProductAdCarousel";
 
 function DepartmentPage({ BackButton }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const { level, college } = location.state || {};
-  // const queryParams = new URLSearchParams(location.search);
-  // const level = queryParams.get("level");
-  // const college = queryParams.get("college");
+  // const { level, college } = location.state || {};
+  // query parameter//////
+  const queryParams = new URLSearchParams(location.search);
+  const level = queryParams.get("level");
+  const college = queryParams.get("college");
+  // /////////
 
   const [department, setDepartment] = useState("");
   const [semester, setSemester] = useState("");
@@ -115,10 +117,23 @@ function DepartmentPage({ BackButton }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    navigate("/pdfs-view", {
-      state: { department, level, college, semester, subdivision },
+    // navigate("/pdfs-view", {
+    //   state: { department, level, college, semester, subdivision },
+    // });
+
+    // query string
+    const searchParams = new URLSearchParams({
+      level,
+      college,
+      department,
+      semester,
     });
+    if (subdivision) searchParams.append("subdivision", subdivision);
+
+    navigate(`/pdfs-view?${searchParams.toString()}`);
   };
+
+  // ///////
 
   return (
     <>

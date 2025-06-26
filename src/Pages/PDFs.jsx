@@ -19,7 +19,8 @@ function PDFs({ BackButton }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/department", { state: formData });
+    // navigate("/department", { state: formData });
+    navigate(`/department?level=${formData.level}&college=${formData.college}`);
   };
 
   // Define level options based on college

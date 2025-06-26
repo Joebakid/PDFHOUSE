@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { Minimize2, Maximize2, FileText } from "lucide-react";
 
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
@@ -265,9 +265,18 @@ function DebugInfo({ level, college, department, semester, subdivision }) {
 }
 
 function PDFViewer({ BackButton }) {
-  const location = useLocation();
-  const { level, college, department, semester, subdivision } =
-    location.state || {};
+  // const location = useLocation();
+  // const { level, college, department, semester, subdivision } =
+  //   location.state || {};
+
+  // Extract query parameters
+  const [searchParams] = useSearchParams();
+
+  const level = searchParams.get("level") || "";
+  const college = searchParams.get("college") || "";
+  const department = searchParams.get("department") || "";
+  const semester = searchParams.get("semester") || "";
+  const subdivision = searchParams.get("subdivision") || "";
 
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(true);
