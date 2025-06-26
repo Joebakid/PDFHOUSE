@@ -23,7 +23,7 @@ function Nav({ Btn, LinkCustom }) {
 
       {/* Underline accent below logo (optional, mobile only) */}
       {isOpen && (
-        <div className=" h-[3px] bg-[#00CCFF] rounded-full mt-2 mb-1 md:hidden"></div>
+        <div className="h-[3px] bg-[#00CCFF] rounded-full mt-2 mb-1 md:hidden"></div>
       )}
 
       {/* Mobile Menu (animated) */}
@@ -50,7 +50,16 @@ function Nav({ Btn, LinkCustom }) {
             Add a PDF
           </a>
 
-          {/* Button inside mobile menu */}
+          {/* Bookmarks link - mobile only */}
+          <div className="md:hidden">
+            <LinkCustom
+              to="/bookmarks"
+              text="Bookmarks"
+              className="text-[#00CCFF] font-medium hover:underline"
+            />
+          </div>
+
+          {/* View PDFs button - mobile only */}
           <div className="mt-2 md:hidden">
             <LinkCustom
               to="/pdfs"
@@ -61,8 +70,13 @@ function Nav({ Btn, LinkCustom }) {
         </ul>
       </div>
 
-      {/* Desktop Button */}
-      <div className="hidden md:block">
+      {/* Desktop links */}
+      <div className="items-center hidden gap-4 md:flex">
+        <LinkCustom
+          to="/bookmarks"
+          text="Bookmarks"
+          className="text-[#00CCFF] font-medium hover:underline"
+        />
         <LinkCustom
           to="/pdfs"
           text="View PDFs"

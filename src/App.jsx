@@ -16,6 +16,8 @@ import WhyUs from "./components/LAYOUT/WhyUs";
 import { ArrowLeft } from "lucide-react";
 import CreatorsSection from "./components/LAYOUT/CreatorsSection";
 import Footer from "./components/LAYOUT/Footer";
+import { BookmarkProvider } from "./context/BookmarkContext";
+import BookmarksPage from "./Pages/BookmarksPage";
 import "./App.css";
 
 // Telegram Button
@@ -116,6 +118,7 @@ function AppWrapper() {
               />
             }
           />
+          <Route path="/bookmarks" element={<BookmarksPage />} />
         </Routes>
       </div>
 
@@ -128,7 +131,9 @@ function AppWrapper() {
 function App() {
   return (
     <Router>
-      <AppWrapper />
+      <BookmarkProvider>
+        <AppWrapper />
+      </BookmarkProvider>
     </Router>
   );
 }

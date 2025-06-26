@@ -3,20 +3,58 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Minimize2, Maximize2, FileText } from "lucide-react";
+import { useBookmarks } from "../context/BookmarkContext";
 
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
 
+// function Doc({ name, href }) {
+//   return (
+//     <a
+//       href={href}
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200"
+//     >
+//       <FileText size={18} />
+//       <span className="truncate">{name}</span>
+//     </a>
+//   );
+// }
+// BOOKMARK
 function Doc({ name, href }) {
+  const { addBookmark, removeBookmark, isBookmarked } = useBookmarks();
+
+  const bookmarked = isBookmarked(href);
+
+  const toggleBookmark = () => {
+    if (bookmarked) {
+      removeBookmark(href);
+    } else {
+      addBookmark({ name, href });
+    }
+  };
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200"
-    >
-      <FileText size={18} />
-      <span className="truncate">{name}</span>
-    </a>
+    <div className="relative group">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200"
+      >
+        <FileText size={18} />
+        <span className="truncate">{name}</span>
+      </a>
+
+      <button
+        onClick={toggleBookmark}
+        className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
+          bookmarked ? "bg-red-500 text-white" : "bg-white text-[#00CCFF]"
+        } shadow hover:scale-105 transition`}
+      >
+        {bookmarked ? "Unsave" : "Save"}
+      </button>
+    </div>
   );
 }
 
