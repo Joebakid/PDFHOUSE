@@ -18,6 +18,7 @@ import CreatorsSection from "./components/LAYOUT/CreatorsSection";
 import Footer from "./components/LAYOUT/Footer";
 import { BookmarkProvider } from "./context/BookmarkContext";
 import BookmarksPage from "./Pages/BookmarksPage";
+import SearchPage from "./Pages/SearchPage";
 import "./App.css";
 
 // Telegram Button
@@ -119,6 +120,16 @@ function AppWrapper() {
             }
           />
           <Route path="/bookmarks" element={<BookmarksPage />} />
+          <Route
+            path="/search"
+            element={
+              <SearchPage
+                Btn={Btn}
+                LinkCustom={LinkCustom}
+                BackButton={BackButton}
+              />
+            }
+          />
         </Routes>
       </div>
 
