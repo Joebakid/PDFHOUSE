@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import { FileText } from "lucide-react";
 import { useBookmarks } from "../context/BookmarkContext";
 
-// Import all JSON files dynamically
-const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
+// Import all JSON files eagerly at build time
+const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 
 function useQuery() {
   const { search } = useLocation();
@@ -14,7 +14,6 @@ function useQuery() {
 // Doc component
 function Doc({ name, href }) {
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks();
-
   const bookmarked = isBookmarked(href);
 
   const toggleBookmark = () => {
@@ -66,8 +65,7 @@ export default function SearchPage() {
       const matches = [];
 
       const entries = Object.entries(allJSONFiles);
-      for (const [path, importer] of entries) {
-        const data = await importer();
+      for (const [path, data] of entries) {
         const sections = Object.entries(data.default || data);
 
         for (const [section, docs] of sections) {
