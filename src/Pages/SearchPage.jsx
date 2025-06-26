@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FileText } from "lucide-react";
-import { useBookmarks } from "../context/BookmarkContext";
+import Doc from "../components/LAYOUT/Doc";
 
 // Import all JSON files eagerly at build time
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
@@ -9,43 +8,6 @@ const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 function useQuery() {
   const { search } = useLocation();
   return new URLSearchParams(search);
-}
-
-// Doc component
-function Doc({ name, href }) {
-  const { addBookmark, removeBookmark, isBookmarked } = useBookmarks();
-  const bookmarked = isBookmarked(href);
-
-  const toggleBookmark = () => {
-    if (bookmarked) {
-      removeBookmark(href);
-    } else {
-      addBookmark({ name, href });
-    }
-  };
-
-  return (
-    <div className="relative w-[80%] mx-auto group">
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 break-words duration-200 w-full"
-      >
-        <FileText size={18} />
-        <span className="truncate">{name}</span>
-      </a>
-
-      <button
-        onClick={toggleBookmark}
-        className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-          bookmarked ? "bg-red-500 text-white" : "bg-white text-[#00CCFF]"
-        } shadow hover:scale-105 transition`}
-      >
-        {bookmarked ? "Unsave" : "Save"}
-      </button>
-    </div>
-  );
 }
 
 export default function SearchPage() {
@@ -119,9 +81,9 @@ export default function SearchPage() {
         <p className="text-center text-gray-500">Searching...</p>
       ) : results.length > 0 ? (
         <>
-          <div className="grid gap-6">
+          <div className="gap-6 py-3">
             {currentResults.map((pdf, index) => (
-              <div key={index}>
+              <div key={index} className="w-[80%] mx-auto">
                 <Doc name={pdf.name} href={pdf.href} />
                 <p className="mt-1 text-xs text-center text-gray-500">
                   {pdf.section} ({pdf.source})

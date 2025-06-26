@@ -40,7 +40,8 @@ function Doc({ name, href }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 max-w-xs break-words duration-200"
+        className="bg-[#00CCFF] text-white px-4 py-3 rounded-xl font-medium shadow hover:bg-[#00b0e6] transition flex items-center gap-2 w-full max-w-md
+ break-words duration-200"
       >
         <FileText size={18} />
         <span className="truncate">{name}</span>
