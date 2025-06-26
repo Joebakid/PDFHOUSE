@@ -53,7 +53,7 @@ function Doc({ name, href }) {
           bookmarked ? "bg-red-500 text-white" : "bg-white text-[#00CCFF]"
         } shadow hover:scale-105 transition`}
       >
-        {bookmarked ? "Unsave" : "Save"}
+        {bookmarked ? "Remove Bookmark" : "Bookmark"}
       </button>
     </div>
   );

@@ -1,5 +1,7 @@
 import { FileText } from "lucide-react";
 import { useBookmarks } from "../../context/BookmarkContext";
+// import { Plus, Minus } from "lucide-react";
+// import { BookmarkPlus, BookmarkMinus } from "lucide-react";
 
 export default function Doc({ name, href }) {
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks();
@@ -28,11 +30,11 @@ export default function Doc({ name, href }) {
 
         <button
           onClick={toggleBookmark}
-          className={`text-xs px-2 py-1 ml-4 rounded shrink-0 ${
+          className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
             bookmarked ? "bg-red-500 text-white" : "bg-white text-[#00CCFF]"
           } shadow hover:scale-105 transition`}
         >
-          {bookmarked ? "Unsave" : "Save"}
+          {bookmarked ? "Remove Bookmark" : "Bookmark"}
         </button>
       </div>
     </div>
