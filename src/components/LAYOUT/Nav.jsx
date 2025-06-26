@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { FiSearch } from "react-icons/fi"; // ✅ Search icon
-import { Link, useNavigate } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { FiSearch } from "react-icons/fi";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Nav({ Btn, LinkCustom }) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // ✅ Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
       navigate(`/search?query=${encodeURIComponent(query.trim())}`);
-      setIsOpen(false);
       setQuery("");
     }
   };
@@ -109,7 +113,7 @@ function Nav({ Btn, LinkCustom }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search PDFs..."
-            className=" px-3 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
+            className="px-3 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
           />
           <button
             type="submit"
