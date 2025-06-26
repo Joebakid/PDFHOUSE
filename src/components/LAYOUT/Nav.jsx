@@ -50,7 +50,7 @@ function Nav({ Btn, LinkCustom }) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search PDFs..."
-              className="w-full px-4 py-2 text-sm bg-white border border-gray-300 rounded-lg shadow-sm"
+              className="px-3 py-2 text-base border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
             />
             <button
               type="submit"
