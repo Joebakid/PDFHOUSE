@@ -43,14 +43,17 @@ function Nav({ Btn, LinkCustom }) {
 
       {/* ✅ Mobile Search */}
       {isOpen && (
-        <div className="z-20 w-full px-4 mt-2 bg-gray-100 md:hidden">
-          <form onSubmit={handleSearch} className="flex w-full gap-2">
+        <div className="z-20 flex justify-center w-full mt-2 md:hidden">
+          <form
+            onSubmit={handleSearch}
+            className="flex gap-2 w-[90%] max-w-sm items-center bg-gray-100 p-2 rounded-lg shadow-sm"
+          >
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search PDFs..."
-              className="px-3 py-2 text-base border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
+              className="flex-1 px-3 py-2 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00CCFF]"
             />
             <button
               type="submit"
