@@ -5,11 +5,11 @@
       "href": "https://drive.google.com/file/d/1y8HLk0UjP4Ut8r-HHyBCkBQx5ZHxuYg0/view?usp=drive_link"
     },
     {
-      "name": "Advanced Engineering Mathematics by K.A. Stroud and D.J. Booth",
+      "name": "K.A. Stroud and D.J. Booth on Advanced Engineering Mathematics by ",
       "href": "https://drive.google.com/file/d/1Z6c0Agnz3EL2iBB3J3xqcCm8pRfokasU/view?usp=drive_link"
     },
     {
-      "name": "Maths",
+      "name": "Maths Class Note",
       "href": "https://drive.google.com/file/d/11k8u3bcxSh5Uy0uzdkec8G3YQ3HdDf8j/view?usp=drive_link"
     },
     {
@@ -41,7 +41,7 @@
       "href": "https://drive.google.com/file/d/1htFJL37X75WsB0dAPuis_kaMResPQGL0/view?usp=drive_link"
     },
     {
-      "name": "Determinant",
+      "name": "Determinant and Matrices",
       "href": "https://drive.google.com/file/d/1EYXaKVN5raffQ1T3FzT6ypNpNUN2pQjP/view?usp=drive_link"
     },
     {
@@ -224,12 +224,7 @@
       "href": "https://drive.google.com/file/d/1-t7Oe8QXgVS4C1anT3ea__CTol9immB6/view?usp=drive_link"
     }
   ],
-  "Learning C ": [
-    {
-      "name": "Fundamentals of Programming with C#",
-      "href": "https://drive.google.com/file/d/1eDKKeH8hP8X_tHxIWoxXyNXgGtG-FV9K/view?usp=drive_link"
-    }
-  ],
+
   "MEE 222 ": [
     {
       "name": "Vector tutorial",
@@ -360,7 +355,93 @@
       "href": "https://drive.google.com/file/d/1PNjXVTHWmIrwy5xgynQhsH_rl8CMop-c/view?usp=drive_link"
     }
   ],
-  "BONUS": [
+  "EEE222/GET222": [
+    {
+      "name": "Teach Yourself C in 24 Hours (2nd Edition)",
+      "href": "https://drive.google.com/file/d/1DTTCAT-NY1za3xyx_zoDIJUf8543HCBL/view?usp=drive_link"
+    },
+    {
+      "name": "eee 222 computer programming",
+      "href": "https://drive.google.com/file/d/1iFrJtOyDaMhqypCnq7OeKMaam0FNW3Pe/view?usp=drive_link"
+    },
+    {
+      "name": "[video] C Programming Tutorial for Beginners By freeCodeCamp",
+      "href": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+    },
+    {
+      "name": "[video] Microsoft Word for Beginners ",
+      "href": "https://www.youtube.com/watch?v=2MCmnr2L50o"
+    },
+    {
+      "name": "[video] Excel for Beginners - The Complete Course ",
+      "href": "https://www.youtube.com/watch?v=wbJcJCkBcMg"
+    },
+    {
+      "name": "[video] PowerPoint Tutorial for Beginners ",
+      "href": "https://www.youtube.com/watch?v=l5Ij7nUy9UQ"
+    },
+    {
+      "name": "Introduction to Computer Applications by Sumathi-1",
+      "href": "https://drive.google.com/file/d/1-d4ht9abCP4r6YFrwl1PYBYClxcZMDhm/view?usp=drive_link"
+    },
+    {
+      "name": "GET222_MICROSOSFT",
+      "href": "https://drive.google.com/file/d/1vV0qug9brqF3QCC1JpQ_PT6AA8QXKLAF/view?usp=drive_link"
+    },
+    {
+      "name": "GET222_LectureNote-1-1 (Important)",
+      "href": "https://drive.google.com/file/d/1_LoaQYRSTzHH7ViFe7EJV8YCVXQwPoZU/view?usp=drive_link"
+    },
+    {
+      "name": "GET222 past question",
+      "href": "https://drive.google.com/file/d/1TDJhQWGg_-YuQmcB0oMGytcWAQ5FWRHZ/view?usp=drive_link"
+    },
+    {
+      "name": "GET222 note by Rollyprinz",
+      "href": "https://drive.google.com/file/d/18rVyixbRaxyGpR0aG43vOF3CgQEzyaxd/view?usp=drive_link"
+    },
+    {
+      "name": "GET222 ",
+      "href": "https://drive.google.com/file/d/1ESfSitCPzQJnLG5iBg4CF8iC0d0t8fSf/view?usp=drive_link"
+    },
+    {
+      "name": "GET 222.docx TIM",
+      "href": "https://drive.google.com/file/d/1Lfqdpic3EQwDR3qLF4VWyLani57DAZNe/view?usp=drive_link"
+    },
+    {
+      "name": "Get 222 past questions.",
+      "href": "https://drive.google.com/file/d/1k5JxxB6dCilXrB1AKi2b3tfNbADMaQwS/view?usp=drive_link"
+    },
+    {
+      "name": "Get 222 past questions and Answer.",
+      "href": "https://drive.google.com/file/d/1zLTZXmN8SdGGGlpWLqcVHe3fFkjDuNq3/view?usp=drive_link"
+    },
+    {
+      "name": "GET 222 Notes",
+      "href": "https://drive.google.com/file/d/11JexpciGleN0TwtURoe8h28xwgbTvfa9/view?usp=drive_link"
+    },
+    {
+      "name": "MSWORD",
+      "href": "https://drive.google.com/file/d/19KWUm4mG-4l8F51NBLz5MyA0lHvL_xiV/view?usp=drive_link"
+    },
+    {
+      "name": "Fundamentals of Programming with C#",
+      "href": "https://drive.google.com/file/d/1eDKKeH8hP8X_tHxIWoxXyNXgGtG-FV9K/view?usp=drive_link"
+    },
+    {
+      "name": "EEE222 SUMMARY by Kisoranking Sam",
+      "href": "https://drive.google.com/file/d/19KWUm4mG-4l8F51NBLz5MyA0lHvL_xiV/view?usp=drive_link"
+    },
+    {
+      "name": "EEE 222 FIRST HANDOUT (Important)",
+      "href": "https://drive.google.com/file/d/1LNkxNW6XTW3EysOdKxUMK_ePVjPFwgPF/view?usp=drive_link"
+    },
+    {
+      "name": "EEE 222 (C++) NEW ",
+      "href": "https://drive.google.com/file/d/10n8ofUPMVBBZds7v9-L4JLRvSzIzHR44/view?usp=drive_link"
+    }
+  ],
+  "Others": [
     {
       "name": "Engineering society Textbook",
       "href": "https://drive.google.com/file/d/1z7X-1QrRoRak4mQiLRYKBB_wQwJlqjj-/view?usp=drive_link"
