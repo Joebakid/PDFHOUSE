@@ -7,7 +7,10 @@ function BookmarksPage() {
 
   return (
     <div className="max-w-4xl px-4 py-8 mx-auto">
-      <h1 className="mb-6 text-2xl font-bold">Your Bookmarks</h1>
+      <h1 className="mb-2 text-2xl font-bold">Your Bookmarks</h1>
+      <p className="py-4 text-red-400">
+        warning: If history is cleared, you lose your bookmark!
+      </p>
 
       {bookmarks.length === 0 ? (
         <p className="text-gray-500">You haven’t saved any materials yet.</p>
