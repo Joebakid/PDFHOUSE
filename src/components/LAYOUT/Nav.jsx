@@ -11,6 +11,7 @@ function Nav({ Btn, LinkCustom }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext); // ⬅️ Access theme state
+  const isMobile = window.innerWidth < 768;
 
   // ✅ Close mobile menu on route change
   useEffect(() => {
@@ -137,7 +138,7 @@ function Nav({ Btn, LinkCustom }) {
             />
           </div>
 {/* ✅ Always show Install button on mobile */}
-{deferredPrompt && (
+{(isMobile && deferredPrompt) && (
   <div className="  md:hidden mt-5">
     <button
       onClick={handleInstall}
