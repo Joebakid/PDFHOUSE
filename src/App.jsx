@@ -22,6 +22,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
+import FYBPage from "./Pages/FYBPage";
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -38,7 +39,6 @@ function Btn({ text, className }) {
 }
 
 // React Router Link
-// Updated LinkCustom to support URL query params
 function LinkCustom({ text, className, to, search }) {
   return (
     <Link
@@ -58,7 +58,7 @@ function BackButton() {
     <div className="flex justify-end w-full mb-4">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 px-4 py-2 transition bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+        className="flex items-center gap-2 px-4 py-2 text-black transition bg-gray-100 rounded-md dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       >
         <ArrowLeft className="w-5 h-5" />
         <span className="text-sm font-medium">Back</span>
@@ -67,8 +67,7 @@ function BackButton() {
   );
 }
 
-
-// App Wrapper to handle GA4 Route Tracking
+// App Wrapper
 function AppWrapper() {
   const location = useLocation();
 
@@ -81,7 +80,7 @@ function AppWrapper() {
   }, [location]);
 
   return (
-   <div className="flex flex-col min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <div className="flex flex-col min-h-screen text-black transition-colors duration-300 bg-white dark:bg-gray-900 dark:text-white">
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
       <div className="flex-grow">
@@ -122,6 +121,16 @@ function AppWrapper() {
               />
             }
           />
+          <Route
+            path="/fyb"
+            element={
+              <FYBPage
+                Btn={Btn}
+                LinkCustom={LinkCustom}
+                BackButton={BackButton}
+              />
+            }
+          />
           <Route path="/bookmarks" element={<BookmarksPage />} />
           <Route
             path="/search"
@@ -137,19 +146,19 @@ function AppWrapper() {
       </div>
 
       <Footer Btn={Btn} LinkCustom={LinkCustom} />
-       <IOSInstallPrompt />
+      <IOSInstallPrompt />
     </div>
   );
 }
 
-// Main App with Router
+// Main App
 function App() {
   return (
     <Router>
       <BookmarkProvider>
-         <ThemeProvider>
-            <AppWrapper />
-         </ThemeProvider> 
+        <ThemeProvider>
+          <AppWrapper />
+        </ThemeProvider>
       </BookmarkProvider>
     </Router>
   );

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Doc from "../components/LAYOUT/Doc";
 
-// Import all JSON files eagerly
+// Eagerly import all JSON files
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 
 function useQuery() {
@@ -12,8 +12,13 @@ function useQuery() {
 
 export default function SearchPage() {
   const query = useQuery();
-  const searchTerm = query.get("query")?.toLowerCase() || "";
+  const navigate = useNavigate();
 
+  const initialQuery = query.get("query") || "";
+  const initialLevel = query.get("level") || "";
+
+  const [searchTerm, setSearchTerm] = useState(initialQuery);
+  const [selectedLevel, setSelectedLevel] = useState(initialLevel);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,20 +34,24 @@ export default function SearchPage() {
       const entries = Object.entries(allJSONFiles);
 
       for (const [path, fileData] of entries) {
+        // ✅ Filter by selected level
+        if (selectedLevel && !path.includes(`/${selectedLevel}/`)) continue;
+
         const data = fileData.default || fileData;
         const sections = Object.entries(data);
 
         for (const [sectionKey, docs] of sections) {
-          const keyMatches = sectionKey.toLowerCase().includes(searchTerm);
+          const keyMatches = sectionKey
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase());
 
           if (Array.isArray(docs)) {
             for (const doc of docs) {
               const nameMatch =
                 doc?.name &&
                 typeof doc.name === "string" &&
-                doc.name.toLowerCase().includes(searchTerm);
+                doc.name.toLowerCase().includes(searchTerm.toLowerCase());
 
-              // Include if name OR section key matches
               if (keyMatches || nameMatch) {
                 matches.push({
                   name: doc.name,
@@ -62,7 +71,20 @@ export default function SearchPage() {
     };
 
     loadAndSearch();
-  }, [searchTerm]);
+  }, [searchTerm, selectedLevel]);
+
+  const handleSearchInput = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleLevelChange = (e) => {
+    setSelectedLevel(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search?query=${searchTerm}&level=${selectedLevel}`);
+  };
 
   const indexOfLastResult = currentPage * resultsPerPage;
   const indexOfFirstResult = indexOfLastResult - resultsPerPage;
@@ -78,10 +100,43 @@ export default function SearchPage() {
 
   return (
     <div className="max-w-3xl p-4 mx-auto">
-      <h1 className="mb-4 text-2xl font-bold text-center">
-        Search Results for{" "}
-        <span className="text-[#00CCFF]">"{searchTerm}"</span>
-      </h1>
+      <h1 className="mb-4 text-2xl font-bold text-center">Search PDFs</h1>
+
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center gap-4 mb-6 sm:flex-row sm:justify-center"
+      >
+        <input
+          type="text"
+          placeholder="Enter keyword..."
+          value={searchTerm}
+          onChange={handleSearchInput}
+          className="w-full max-w-xs px-4 py-2 border rounded shadow focus:outline-none"
+        />
+        <select
+          value={selectedLevel}
+          onChange={handleLevelChange}
+          className="px-4 py-2 border rounded shadow focus:outline-none"
+        >
+          <option value="">All Levels</option>
+          <option value="100">100 Level</option>
+          <option value="200">200 Level</option>
+          <option value="300">300 Level</option>
+          <option value="400">400 Level</option>
+          <option value="500">500 Level</option>
+        </select>
+        <button
+          type="submit"
+          className="px-4 py-2 text-white bg-[#00CCFF] rounded hover:bg-[#00b5e6]"
+        >
+          Search
+        </button>
+      </form>
+
+      <h2 className="mb-4 text-lg text-center text-gray-700">
+        Results for <span className="font-semibold">"{searchTerm}"</span>{" "}
+        {selectedLevel && <span>({selectedLevel} Level)</span>}
+      </h2>
 
       {loading ? (
         <p className="text-center text-gray-500">Searching...</p>
@@ -99,41 +154,40 @@ export default function SearchPage() {
           </div>
 
           {/* Pagination Controls */}
-        <div className="flex flex-wrap justify-center mt-6 space-x-2">
-  <button
-    onClick={() => goToPage(currentPage - 1)}
-    disabled={currentPage === 1}
-    className="px-3 py-1 text-sm rounded transition-colors bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
-  >
-    Prev
-  </button>
+          <div className="flex flex-wrap justify-center mt-6 space-x-2">
+            <button
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-3 py-1 text-sm transition-colors bg-gray-200 rounded hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
+            >
+              Prev
+            </button>
 
-  {Array.from({ length: totalPages }, (_, i) => {
-    const isActive = currentPage === i + 1;
-    return (
-      <button
-        key={i + 1}
-        onClick={() => goToPage(i + 1)}
-        className={`px-3 py-1 text-sm rounded transition-colors ${
-          isActive
-            ? "bg-[#00CCFF] text-white"
-            : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
-        }`}
-      >
-        {i + 1}
-      </button>
-    );
-  })}
+            {Array.from({ length: totalPages }, (_, i) => {
+              const isActive = currentPage === i + 1;
+              return (
+                <button
+                  key={i + 1}
+                  onClick={() => goToPage(i + 1)}
+                  className={`px-3 py-1 text-sm rounded transition-colors ${
+                    isActive
+                      ? "bg-[#00CCFF] text-white"
+                      : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              );
+            })}
 
-  <button
-    onClick={() => goToPage(currentPage + 1)}
-    disabled={currentPage === totalPages}
-    className="px-3 py-1 text-sm rounded transition-colors bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
-  >
-    Next
-  </button>
-</div>
-
+            <button
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-3 py-1 text-sm transition-colors bg-gray-200 rounded hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
+            >
+              Next
+            </button>
+          </div>
         </>
       ) : (
         <p className="text-center text-gray-500">No results found.</p>

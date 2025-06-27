@@ -125,6 +125,12 @@ function Nav({ Btn, LinkCustom }) {
             Add a PDF
           </a>
 
+          <LinkCustom
+            to="/fyb"
+            text="FYB"
+            className="text-[#00CCFF] font-medium hover:underline "
+          />
+
           <div className="md:hidden">
             <LinkCustom
               to="/bookmarks"
@@ -140,6 +146,7 @@ function Nav({ Btn, LinkCustom }) {
               className="bg-[#00CCFF] text-white px-5 py-2 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF]"
             />
           </div>
+
           {/* ✅ Always show Install button on mobile */}
           {isMobile && deferredPrompt && (
             <div className="mt-5 md:hidden">
