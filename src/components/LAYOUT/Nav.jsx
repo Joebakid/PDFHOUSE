@@ -27,7 +27,10 @@ function Nav({ Btn, LinkCustom }) {
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
     };
   }, []);
 
@@ -52,11 +55,10 @@ function Nav({ Btn, LinkCustom }) {
   };
 
   return (
-   <nav className="relative flex flex-col items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md w-full max-w-7xl mx-auto md:flex-row text-black dark:text-white transition duration-300">
-
+    <nav className="relative flex flex-col items-center justify-between w-full px-6 py-4 mx-auto text-xs text-black transition duration-300 bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 max-w-7xl md:flex-row dark:text-white">
       {/* Logo and Hamburger */}
       <div className="flex items-center justify-between w-full md:w-auto">
-        <Link to="/" className="text-xl md:text-xs font-bold">
+        <Link to="/" className="text-xl font-bold">
           PDFHOUSE
         </Link>
         <div className="flex items-center gap-3 md:hidden">
@@ -107,7 +109,7 @@ function Nav({ Btn, LinkCustom }) {
             : "-translate-y-10 opacity-0 pointer-events-none"
         } md:translate-y-0 md:opacity-100 md:pointer-events-auto`}
       >
-        <ul className="flex flex-col gap-2 p-4 text-center md:flex-row md:items-center md:gap-6 md:p-0 text-xs">
+        <ul className="flex flex-col gap-2 p-4 text-xs text-center md:flex-row md:items-center md:gap-6 md:p-0">
           <a
             href="https://t.me/bakid1"
             target="_blank"
@@ -138,20 +140,17 @@ function Nav({ Btn, LinkCustom }) {
               className="bg-[#00CCFF] text-white px-5 py-2 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF]"
             />
           </div>
-{/* ✅ Always show Install button on mobile */}
-{(isMobile && deferredPrompt) && (
-  <div className="  md:hidden mt-5">
-    <button
-      onClick={handleInstall}
-      className="px-5 py-2 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition"
-    >
-      Install App
-    </button>
-  </div>
-)}
-
-
-
+          {/* ✅ Always show Install button on mobile */}
+          {isMobile && deferredPrompt && (
+            <div className="mt-5 md:hidden">
+              <button
+                onClick={handleInstall}
+                className="px-5 py-2 text-white transition bg-green-500 rounded-lg shadow-lg hover:bg-green-600"
+              >
+                Install App
+              </button>
+            </div>
+          )}
         </ul>
       </div>
 
@@ -195,15 +194,14 @@ function Nav({ Btn, LinkCustom }) {
         </button>
 
         {/* ✅ Install button for desktop */}
-      {deferredPrompt && (
-  <button
-    onClick={handleInstall}
-    className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition hidden md:block"
-  >
-    Install App
-  </button>
-)}
-
+        {deferredPrompt && (
+          <button
+            onClick={handleInstall}
+            className="hidden px-4 py-2 text-white transition bg-green-500 rounded-lg hover:bg-green-600 md:block"
+          >
+            Install App
+          </button>
+        )}
       </div>
     </nav>
   );
