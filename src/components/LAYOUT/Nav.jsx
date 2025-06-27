@@ -136,17 +136,19 @@ function Nav({ Btn, LinkCustom }) {
               className="bg-[#00CCFF] text-white px-5 py-2 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF]"
             />
           </div>
-
-          {/* ✅ Install button for mobile */}
-         {/* ✅ Install button for mobile */}
+{/* ✅ Always show Install button on mobile */}
 {deferredPrompt && (
-  <button
-    onClick={handleInstall}
-    className="w-[90%] mx-auto mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition md:hidden"
-  >
-    Install App
-  </button>
+  <div className="  md:hidden mt-5">
+    <button
+      onClick={handleInstall}
+      className="px-5 py-2 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition"
+    >
+      Install App
+    </button>
+  </div>
 )}
+
+
 
         </ul>
       </div>
