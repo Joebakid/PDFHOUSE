@@ -110,6 +110,15 @@
       "name": "PEE Get 511 22’23",
       "href": "https://drive.google.com/file/d/1FetK5JDK_soH8moBzc5sX5pWdVI1Izk3/view?usp=drive_link"
     } 
+     ,
+     {
+      "name": "PNG 510 PQ 1",
+      "href": "https://drive.google.com/file/d/1GDd_Gp3tMCBH9gfsZ08Q3IOiXdzC3gTp/view?usp=drive_link"
+    } ,
+     {
+      "name": "PNG 510 PQ 2",
+      "href": "https://drive.google.com/file/d/1y6mdn6lNH64NQy2vMiV5TOH48L77f645/view?usp=drive_link"
+    } 
   ],
 
    "PENG 515":[
@@ -201,9 +210,18 @@
      {
       "name": "511 MATERIAL",
       "href": "https://drive.google.com/file/d/1Jq2kpM9Z5xM_Kj5t6IE4t_7PyMtatmEa/view?usp=drive_link"
-    } 
+    }
+     ],
 
-   
-   
-     ]
+      "PEE 510":[
+
+     {
+      "name": "PNG 510 TUTORIAL",
+      "href": "https://drive.google.com/file/d/168BYY1zDosRuYofzzJpy18o4RXKfpoIE/view?usp=drive_link"
+    },
+     {
+      "name": "PEE 510 HANDOUT",
+      "href": "https://drive.google.com/file/d/1Li6ZXmaLtcruyx3VEcoeOuh83GjRQeZh/view?usp=drive_link"
+    } 
+  ]
 }
