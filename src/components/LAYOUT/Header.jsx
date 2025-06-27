@@ -15,19 +15,19 @@ function Header({ Btn, LinkCustom }) {
       </p>
 
       {/* Responsive buttons */}
-     <div className="flex flex-col sm:flex-row items-center gap-4 py-5 my-10">
-
-        <LinkCustom
-          to="/pdfs"
-          text="View PDFs"
-          className="bg-[#00CCFF] text-white py-3 px-10 sm:px-14 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF] hover:scale-105"
-        />
-        <Btn
-          text="Add PDFs"
-          className="bg-white text-[#00CCFF] py-3 px-10 sm:px-14 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-[#00CCFF] hover:text-white hover:scale-105"
-        />
-      </div>
-    </div>
+   {/* Responsive buttons */}
+<div className="flex flex-wrap justify-center items-center gap-4 py-5 my-10">
+  <LinkCustom
+    to="/pdfs"
+    text="View PDFs"
+    className="bg-[#00CCFF] text-white py-3 px-10 sm:px-14 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF] hover:scale-105"
+  />
+  <Btn
+    text="Add PDFs"
+    className="bg-white text-[#00CCFF] py-3 px-10 sm:px-14 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-[#00CCFF] hover:text-white hover:scale-105"
+  />
+</div>
+</div>
   );
 }
 
