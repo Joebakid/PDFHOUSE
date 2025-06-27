@@ -2,13 +2,75 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Doc from "../components/LAYOUT/Doc";
 
-// Eagerly import all JSON files
+// Import all JSON files
 const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 
+// Get query from URL
 function useQuery() {
   const { search } = useLocation();
   return new URLSearchParams(search);
 }
+
+// Department folder mapping
+const departmentFolderMap = {
+  "Marine Engineering": "marine",
+  "Petroleum Engineering": "petroleum",
+  "Oil and Gas / natural gas": "oilgas",
+  "Electrical Engineering": "electrical",
+  "Mechanical Engineering": "mechanical",
+  "Civil Engineering": "civil",
+  "Chemical Engineering": "chemical",
+  "Computer Engineering": "computer",
+  "Software Engineering": "software",
+  "Petrochemical Engineering ": "petrochemical",
+
+  "Science Lab Tech": "sciencelabtech",
+  Geology: "geology",
+  Geophysics: "geophysics",
+  Physics: "physics",
+  "Nautical Science": "nautical",
+  Chemistry: "chemistry",
+  "Industrial Chemistry": "industrialchem",
+  "Environmental Science": "environmental",
+
+  "Computer Science": "compsci",
+  "Information Technology": "it",
+  "Cyber Security": "cyber",
+  "Data Science": "datasci",
+};
+
+// Departments under each college
+const departmentsByCollege = {
+  Technology: [
+    "Marine Engineering",
+    "Petroleum Engineering",
+    "Oil and Gas / natural gas",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Civil Engineering",
+    "Chemical Engineering",
+    "Computer Engineering",
+    "Software Engineering",
+    "Petrochemical Engineering ",
+  ],
+  Science: [
+    "Science Lab Tech",
+    "Geology",
+    "Geophysics",
+    "Physics",
+    "Nautical Science",
+    "Chemistry",
+    "Industrial Chemistry",
+    "Environmental Science",
+  ],
+  Computing: [
+    "Computer Science",
+    "Information Technology",
+    "Software Engineering",
+    "Cyber Security",
+    "Data Science",
+  ],
+};
 
 export default function SearchPage() {
   const query = useQuery();
@@ -16,13 +78,19 @@ export default function SearchPage() {
 
   const initialQuery = query.get("query") || "";
   const initialLevel = query.get("level") || "";
+  const initialCollege = query.get("college") || "";
+  const initialDept = query.get("department") || "";
 
   const [searchTerm, setSearchTerm] = useState(initialQuery);
   const [selectedLevel, setSelectedLevel] = useState(initialLevel);
+  const [selectedCollege, setSelectedCollege] = useState(initialCollege);
+  const [selectedDepartment, setSelectedDepartment] = useState(initialDept);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const resultsPerPage = 10;
+
+  const departments = departmentsByCollege[selectedCollege] || [];
 
   useEffect(() => {
     const loadAndSearch = async () => {
@@ -30,12 +98,21 @@ export default function SearchPage() {
 
       setLoading(true);
       const matches = [];
-
       const entries = Object.entries(allJSONFiles);
 
+      const deptFolder = departmentFolderMap[selectedDepartment] || "";
+
       for (const [path, fileData] of entries) {
-        // ✅ Filter by selected level
-        if (selectedLevel && !path.includes(`/${selectedLevel}/`)) continue;
+        const lowerPath = path.toLowerCase();
+
+        if (selectedLevel && !lowerPath.includes(`/${selectedLevel}/`))
+          continue;
+        if (
+          selectedDepartment &&
+          deptFolder &&
+          !lowerPath.includes(`/${deptFolder}`)
+        )
+          continue;
 
         const data = fileData.default || fileData;
         const sections = Object.entries(data);
@@ -71,19 +148,13 @@ export default function SearchPage() {
     };
 
     loadAndSearch();
-  }, [searchTerm, selectedLevel]);
-
-  const handleSearchInput = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleLevelChange = (e) => {
-    setSelectedLevel(e.target.value);
-  };
+  }, [searchTerm, selectedLevel, selectedDepartment]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search?query=${searchTerm}&level=${selectedLevel}`);
+    navigate(
+      `/search?query=${searchTerm}&level=${selectedLevel}&college=${selectedCollege}&department=${selectedDepartment}`
+    );
   };
 
   const indexOfLastResult = currentPage * resultsPerPage;
@@ -104,18 +175,19 @@ export default function SearchPage() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-4 mb-6 sm:flex-row sm:justify-center"
+        className="flex flex-col flex-wrap items-center gap-4 mb-6 sm:flex-row sm:justify-center"
       >
         <input
           type="text"
           placeholder="Enter keyword..."
           value={searchTerm}
-          onChange={handleSearchInput}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full max-w-xs px-4 py-2 border rounded shadow focus:outline-none"
         />
+
         <select
           value={selectedLevel}
-          onChange={handleLevelChange}
+          onChange={(e) => setSelectedLevel(e.target.value)}
           className="px-4 py-2 border rounded shadow focus:outline-none"
         >
           <option value="">All Levels</option>
@@ -125,6 +197,37 @@ export default function SearchPage() {
           <option value="400">400 Level</option>
           <option value="500">500 Level</option>
         </select>
+
+        <select
+          value={selectedCollege}
+          onChange={(e) => {
+            setSelectedCollege(e.target.value);
+            setSelectedDepartment("");
+          }}
+          className="px-4 py-2 border rounded shadow focus:outline-none"
+        >
+          <option value="">Select College</option>
+          {Object.keys(departmentsByCollege).map((college) => (
+            <option key={college} value={college}>
+              {college}
+            </option>
+          ))}
+        </select>
+
+        <select
+          value={selectedDepartment}
+          onChange={(e) => setSelectedDepartment(e.target.value)}
+          disabled={!selectedCollege}
+          className="px-4 py-2 border rounded shadow focus:outline-none"
+        >
+          <option value="">Select Department</option>
+          {departments.map((dept) => (
+            <option key={dept} value={dept}>
+              {dept}
+            </option>
+          ))}
+        </select>
+
         <button
           type="submit"
           className="px-4 py-2 text-white bg-[#00CCFF] rounded hover:bg-[#00b5e6]"
@@ -135,7 +238,8 @@ export default function SearchPage() {
 
       <h2 className="mb-4 text-lg text-center text-gray-700">
         Results for <span className="font-semibold">"{searchTerm}"</span>{" "}
-        {selectedLevel && <span>({selectedLevel} Level)</span>}
+        {selectedLevel && <span>({selectedLevel} Level)</span>}{" "}
+        {selectedDepartment && <span>in {selectedDepartment}</span>}
       </h2>
 
       {loading ? (
@@ -153,37 +257,33 @@ export default function SearchPage() {
             ))}
           </div>
 
-          {/* Pagination Controls */}
           <div className="flex flex-wrap justify-center mt-6 space-x-2">
             <button
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
-              className="px-3 py-1 text-sm transition-colors bg-gray-200 rounded hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
+              className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
             >
               Prev
             </button>
 
-            {Array.from({ length: totalPages }, (_, i) => {
-              const isActive = currentPage === i + 1;
-              return (
-                <button
-                  key={i + 1}
-                  onClick={() => goToPage(i + 1)}
-                  className={`px-3 py-1 text-sm rounded transition-colors ${
-                    isActive
-                      ? "bg-[#00CCFF] text-white"
-                      : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white"
-                  }`}
-                >
-                  {i + 1}
-                </button>
-              );
-            })}
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => goToPage(i + 1)}
+                className={`px-3 py-1 text-sm rounded ${
+                  currentPage === i + 1
+                    ? "bg-[#00CCFF] text-white"
+                    : "bg-gray-200 hover:bg-gray-300"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
 
             <button
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="px-3 py-1 text-sm transition-colors bg-gray-200 rounded hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-50"
+              className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
             >
               Next
             </button>
