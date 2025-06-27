@@ -7,6 +7,7 @@ import { ThemeContext } from "../../context/ThemeContext"; // 🌙 Theme context
 function Nav({ Btn, LinkCustom }) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [deferredPrompt, setDeferredPrompt] = useState(null); // ✅ PWA prompt
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext); // ⬅️ Access theme state
@@ -15,6 +16,31 @@ function Nav({ Btn, LinkCustom }) {
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
+
+  // ✅ Handle PWA install prompt
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstall = () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choice) => {
+        if (choice.outcome === "accepted") {
+          console.log("User accepted the install prompt");
+        }
+        setDeferredPrompt(null);
+      });
+    }
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -90,7 +116,7 @@ function Nav({ Btn, LinkCustom }) {
           <a
             href="https://t.me/bakid1"
             target="_blank"
-            className="cursor-pointer hover:text-[#00CCFF] custom-transition  "
+            className="cursor-pointer hover:text-[#00CCFF] custom-transition"
           >
             Add a PDF
           </a>
@@ -99,7 +125,7 @@ function Nav({ Btn, LinkCustom }) {
             <LinkCustom
               to="/bookmarks"
               text="Bookmarks"
-              className="text-[#00CCFF] font-medium hover:underline "
+              className="text-[#00CCFF] font-medium hover:underline"
             />
           </div>
 
@@ -110,6 +136,18 @@ function Nav({ Btn, LinkCustom }) {
               className="bg-[#00CCFF] text-white px-5 py-2 rounded-lg border border-[#00CCFF] transition-all duration-300 hover:bg-white hover:text-[#00CCFF]"
             />
           </div>
+
+          {/* ✅ Install button for mobile */}
+         {/* ✅ Install button for mobile */}
+{deferredPrompt && (
+  <button
+    onClick={handleInstall}
+    className="w-[90%] mx-auto mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition md:hidden"
+  >
+    Install App
+  </button>
+)}
+
         </ul>
       </div>
 
@@ -151,6 +189,17 @@ function Nav({ Btn, LinkCustom }) {
         >
           {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
         </button>
+
+        {/* ✅ Install button for desktop */}
+      {deferredPrompt && (
+  <button
+    onClick={handleInstall}
+    className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition hidden md:block"
+  >
+    Install App
+  </button>
+)}
+
       </div>
     </nav>
   );
