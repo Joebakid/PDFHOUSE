@@ -36,9 +36,14 @@ const FYBPage = () => {
 
   const handleDownload = async (format = "png") => {
     const node = fybRef.current;
+
+    // Optional delay to ensure image is fully loaded
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
     const canvas = await html2canvas(node, {
-      scale: 3,
+      scale: 3, // High resolution
       useCORS: true,
+      backgroundColor: "#ffffff", // Prevent transparency issues
     });
 
     const dataUrl =
@@ -57,8 +62,6 @@ const FYBPage = () => {
   return (
     <div className="relative min-h-screen px-4 py-6 overflow-hidden bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200">
       <HiEmojiHappy className="absolute w-10 h-10 text-purple-400 opacity-40 bottom-3 right-3 animate-bounce" />
-
-      {/* Decorative icons instead of images */}
       <HiSparkles className="absolute w-10 h-10 text-pink-400 opacity-40 top-3 left-3 animate-bounce" />
 
       {/* Input Form */}
@@ -106,18 +109,16 @@ const FYBPage = () => {
           ref={fybRef}
           className="w-[360px] bg-white relative rounded-xl shadow-2xl p-5 text-sm overflow-hidden border-4 border-dashed border-purple-300"
         >
-          {/* Title */}
           <h2 className="mb-1 text-2xl font-extrabold text-center text-purple-700 drop-shadow-md">
             🌟 Meet Our FYB 🌟
           </h2>
-
           <p className="mb-4 text-sm font-medium text-center text-gray-600">
             Class ’25
           </p>
 
           {/* Image Frame */}
           {imageUrl && (
-            <div className="w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md">
+            <div className="w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md aspect-square">
               <img
                 src={imageUrl}
                 alt="FYB"
