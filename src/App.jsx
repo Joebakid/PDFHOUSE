@@ -20,6 +20,7 @@ import { BookmarkProvider } from "./context/BookmarkContext";
 import BookmarksPage from "./Pages/BookmarksPage";
 import { ThemeProvider } from "./context/ThemeContext";
 import SearchPage from "./Pages/SearchPage";
+import IOSInstallPrompt from "./components/IOSInstallPrompt";
 import "./App.css";
 
 // Telegram Button
@@ -136,6 +137,7 @@ function AppWrapper() {
       </div>
 
       <Footer Btn={Btn} LinkCustom={LinkCustom} />
+       <IOSInstallPrompt />
     </div>
   );
 }
