@@ -36,14 +36,12 @@ const FYBPage = () => {
 
   const handleDownload = async (format = "png") => {
     const node = fybRef.current;
-
-    // Optional delay to ensure image is fully loaded
     await new Promise((resolve) => setTimeout(resolve, 100));
 
     const canvas = await html2canvas(node, {
-      scale: 3, // High resolution
+      scale: 3,
       useCORS: true,
-      backgroundColor: "#ffffff", // Prevent transparency issues
+      backgroundColor: "#ffffff",
     });
 
     const dataUrl =
@@ -60,13 +58,13 @@ const FYBPage = () => {
   };
 
   return (
-    <div className="relative min-h-screen px-4 py-6 overflow-hidden bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200">
+    <div className="relative min-h-screen px-4 py-6 overflow-hidden bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200 dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white">
       <HiEmojiHappy className="absolute w-10 h-10 text-purple-400 opacity-40 bottom-3 right-3 animate-bounce" />
       <HiSparkles className="absolute w-10 h-10 text-pink-400 opacity-40 top-3 left-3 animate-bounce" />
 
-      {/* Input Form */}
-      <div className="max-w-md p-4 mx-auto mb-10 bg-white shadow-lg rounded-xl">
-        <h2 className="mb-4 text-xl font-semibold text-center text-purple-600">
+      {/* Form Section */}
+      <div className="max-w-md p-4 mx-auto mb-10 bg-white shadow-lg rounded-xl dark:bg-gray-800 dark:text-white">
+        <h2 className="mb-4 text-xl font-semibold text-center text-purple-600 dark:text-purple-300">
           Enter FYB Info
         </h2>
         <div className="space-y-3">
@@ -91,44 +89,49 @@ const FYBPage = () => {
                 name={field}
                 value={formData[field]}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 mt-1 text-sm border rounded"
+                className="w-full px-3 py-2 mt-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
               />
             </div>
           ))}
 
           <div>
             <label className="block mb-1 text-sm font-medium">Photo</label>
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageUpload}
+              className="dark:text-white"
+            />
           </div>
         </div>
       </div>
 
-      {/* FYB Card */}
+      {/* Card Section */}
       <div className="flex justify-center">
         <div
           ref={fybRef}
-          className="w-[360px] bg-white relative rounded-xl shadow-2xl p-5 text-sm overflow-hidden border-4 border-dashed border-purple-300"
+          className="w-[360px] bg-white relative rounded-xl shadow-2xl p-5 text-sm overflow-hidden border-4 border-dashed border-purple-300 dark:bg-gray-900 dark:text-white"
         >
-          <h2 className="mb-1 text-2xl font-extrabold text-center text-purple-700 drop-shadow-md">
+          <h2 className="mb-1 text-2xl font-extrabold text-center text-purple-700 drop-shadow-md dark:text-purple-300">
             🌟 Meet Our FYB 🌟
           </h2>
-          <p className="mb-4 text-sm font-medium text-center text-gray-600">
+          <p className="mb-4 text-sm font-medium text-center text-gray-600 dark:text-gray-400">
             Class ’25
           </p>
 
-          {/* Image Frame */}
+          {/* Profile Picture */}
           {imageUrl && (
-            <div className="w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md aspect-square">
+            <div className="relative w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md">
               <img
                 src={imageUrl}
                 alt="FYB"
-                className="object-cover w-full h-full"
+                className="absolute inset-0 object-cover w-full h-full"
               />
             </div>
           )}
 
-          {/* FYB Details */}
-          <div className="relative z-10 space-y-1 text-gray-800">
+          {/* FYB Info */}
+          <div className="relative z-10 space-y-1 text-gray-800 dark:text-gray-100">
             <p>
               <strong>Name:</strong> {formData.name}
             </p>
