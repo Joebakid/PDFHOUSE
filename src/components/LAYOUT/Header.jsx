@@ -15,7 +15,8 @@ function Header({ Btn, LinkCustom }) {
       </p>
 
       {/* Responsive buttons */}
-      <div className="flex my-10   sm:flex-row items-center gap-4 py-5">
+     <div className="flex flex-col sm:flex-row items-center gap-4 py-5 my-10">
+
         <LinkCustom
           to="/pdfs"
           text="View PDFs"

@@ -52,10 +52,11 @@ function Nav({ Btn, LinkCustom }) {
   };
 
   return (
-    <nav className="relative flex flex-col items-center justify-between p-4 m-2 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md custom-container md:flex-row text-black dark:text-white transition duration-300">
+   <nav className="relative flex flex-col items-center justify-between px-6 py-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md w-full max-w-7xl mx-auto md:flex-row text-black dark:text-white transition duration-300">
+
       {/* Logo and Hamburger */}
       <div className="flex items-center justify-between w-full md:w-auto">
-        <Link to="/" className="text-xl font-bold">
+        <Link to="/" className="text-xl md:text-xs font-bold">
           PDFHOUSE
         </Link>
         <div className="flex items-center gap-3 md:hidden">
@@ -106,7 +107,7 @@ function Nav({ Btn, LinkCustom }) {
             : "-translate-y-10 opacity-0 pointer-events-none"
         } md:translate-y-0 md:opacity-100 md:pointer-events-auto`}
       >
-        <ul className="flex flex-col gap-2 p-4 text-center md:flex-row md:items-center md:gap-6 md:p-0">
+        <ul className="flex flex-col gap-2 p-4 text-center md:flex-row md:items-center md:gap-6 md:p-0 text-xs">
           <a
             href="https://t.me/bakid1"
             target="_blank"

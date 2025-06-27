@@ -20,7 +20,7 @@ import { BookmarkProvider } from "./context/BookmarkContext";
 import BookmarksPage from "./Pages/BookmarksPage";
 import { ThemeProvider } from "./context/ThemeContext";
 import SearchPage from "./Pages/SearchPage";
-import IOSInstallPrompt from "./components/IOSInstallPrompt";
+import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 
 // Telegram Button
