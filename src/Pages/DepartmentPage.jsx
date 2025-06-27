@@ -143,7 +143,7 @@ function DepartmentPage({ BackButton }) {
 
       {/* <ProductAdCarousel/> */}
 
-      <div className="max-w-md p-5 mx-auto text-left bg-white rounded shadow">
+      <div className="max-w-md p-5 mx-auto text-left   rounded shadow">
         <h2 className="mb-4 text-2xl font-bold text-center">
           Select Department
         </h2>

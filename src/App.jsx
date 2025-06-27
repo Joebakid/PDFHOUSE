@@ -18,6 +18,7 @@ import CreatorsSection from "./components/LAYOUT/CreatorsSection";
 import Footer from "./components/LAYOUT/Footer";
 import { BookmarkProvider } from "./context/BookmarkContext";
 import BookmarksPage from "./Pages/BookmarksPage";
+import { ThemeProvider } from "./context/ThemeContext";
 import SearchPage from "./Pages/SearchPage";
 import "./App.css";
 
@@ -56,7 +57,7 @@ function BackButton() {
     <div className="flex justify-end w-full mb-4">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 px-4 py-2 transition bg-gray-100 rounded-md hover:bg-gray-200"
+        className="flex items-center gap-2 px-4 py-2 transition bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
       >
         <ArrowLeft className="w-5 h-5" />
         <span className="text-sm font-medium">Back</span>
@@ -64,6 +65,7 @@ function BackButton() {
     </div>
   );
 }
+
 
 // App Wrapper to handle GA4 Route Tracking
 function AppWrapper() {
@@ -78,7 +80,7 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+   <div className="flex flex-col min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
       <div className="flex-grow">
@@ -143,7 +145,9 @@ function App() {
   return (
     <Router>
       <BookmarkProvider>
-        <AppWrapper />
+         <ThemeProvider>
+            <AppWrapper />
+         </ThemeProvider> 
       </BookmarkProvider>
     </Router>
   );

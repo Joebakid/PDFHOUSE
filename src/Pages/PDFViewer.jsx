@@ -65,18 +65,20 @@ function CourseSection({ title, docs }) {
   return (
     <div className="mb-6 text-left">
       <button
-        className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold transition-colors duration-200 bg-gray-100 rounded-lg shadow hover:bg-gray-200"
+        className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold transition-colors duration-200 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-200 dark:hover:bg-gray-700"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{title}</span>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600">({docs.length} files)</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">
+            ({docs.length} files)
+          </span>
           {isOpen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
         </div>
       </button>
 
       {isOpen && (
-        <div className="p-4 mt-4 rounded-lg bg-gray-50">
+        <div className="p-4 mt-4 rounded-lg bg-gray-50 dark:bg-gray-900 text-black dark:text-white">
           {docs.length > 0 ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {docs.map((doc, index) => (
@@ -84,7 +86,7 @@ function CourseSection({ title, docs }) {
               ))}
             </div>
           ) : (
-            <p className="italic text-center text-gray-500">
+            <p className="italic text-center text-gray-500 dark:text-gray-400">
               No PDFs uploaded yet.
             </p>
           )}
@@ -93,6 +95,7 @@ function CourseSection({ title, docs }) {
     </div>
   );
 }
+
 
 function parseSections(data) {
   const sections = [];

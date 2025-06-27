@@ -31,9 +31,14 @@ export function BookmarkProvider({ children }) {
     return bookmarks.some((b) => b.href === href);
   };
 
+  const clearBookmarks = () => {
+    setBookmarks([]);
+    localStorage.removeItem("bookmarkedPDFs");
+  };
+
   return (
     <BookmarkContext.Provider
-      value={{ bookmarks, addBookmark, removeBookmark, isBookmarked }}
+      value={{ bookmarks, addBookmark, removeBookmark, isBookmarked, clearBookmarks }}
     >
       {children}
     </BookmarkContext.Provider>

@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global dark mode styles for form elements */
+@layer base {
+  input, textarea, select {
+    @apply bg-white text-black border-gray-300;
+  }
+
+  .dark input,
+  .dark textarea,
+  .dark select {
+    @apply bg-gray-800 text-white border-gray-600;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-2 ring-[#00CCFF];
+  }
+}
+
+
+ 
