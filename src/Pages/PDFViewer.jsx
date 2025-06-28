@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { Minimize2, Maximize2, FileText } from "lucide-react";
 import { useBookmarks } from "../context/BookmarkContext";
 
-const allJSONFiles = import.meta.glob("/src/JSON/**/*.json");
+const allJSONFiles = import.meta.glob("/src/JSON/**/*.json", { eager: true });
 
 // function Doc({ name, href }) {
 //   return (
