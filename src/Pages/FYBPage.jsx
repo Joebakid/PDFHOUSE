@@ -18,6 +18,7 @@ const FYBPage = () => {
     status: "",
     quote: "",
     advice: "",
+    department: "",
   });
 
   const [imageUrl, setImageUrl] = useState(null);
@@ -58,16 +59,44 @@ const FYBPage = () => {
   };
 
   return (
-    <div className="relative min-h-screen px-4 py-6 overflow-hidden bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200 dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white">
+    <div className="relative min-h-screen px-4 py-6 bg-gradient-to-br from-pink-100 via-yellow-100 to-purple-200 dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white">
       <HiEmojiHappy className="absolute w-10 h-10 text-purple-400 opacity-40 bottom-3 right-3 animate-bounce" />
       <HiSparkles className="absolute w-10 h-10 text-pink-400 opacity-40 top-3 left-3 animate-bounce" />
 
-      {/* Form Section */}
+      {/* Form */}
       <div className="max-w-md p-4 mx-auto mb-10 bg-white shadow-lg rounded-xl dark:bg-gray-800 dark:text-white">
         <h2 className="mb-4 text-xl font-semibold text-center text-purple-600 dark:text-purple-300">
           Enter FYB Info
         </h2>
+
         <div className="space-y-3">
+          <div>
+            <label className="block text-sm font-medium">Department</label>
+            <select
+              name="department"
+              value={formData.department}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 mt-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+            >
+              <option value="">-- Select Department --</option>
+              <option value="Marine">Marine</option>
+              <option value="Petroleum">Petroleum</option>
+              <option value="Chemical">Chemical</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Mechanical">Mechanical</option>
+              <option value="Computer">Computer</option>
+              <option value="Geology">Geology</option>
+              <option value="Industrial Chemistry">Industrial Chemistry</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Science Lab Tech">Science Lab Tech</option>
+              <option value="Environmental Science">
+                Environmental Science
+              </option>
+              <option value="Nautical">Nautical</option>
+              <option value="Mathematics Education">Mathematics</option>
+            </select>
+          </div>
+
           {[
             ["name", "Name"],
             ["nickname", "Nickname"],
@@ -106,74 +135,59 @@ const FYBPage = () => {
         </div>
       </div>
 
-      {/* Card Section */}
+      {/* FYB Card */}
       <div className="flex justify-center">
         <div
           ref={fybRef}
-          className="w-[360px] bg-white relative rounded-xl shadow-2xl p-5 text-sm overflow-hidden border-4 border-dashed border-purple-300 dark:bg-gray-900 dark:text-white"
+          className="relative w-full max-w-sm p-5 text-sm bg-white border-4 border-purple-300 border-dashed shadow-2xl rounded-xl dark:bg-gray-900 dark:text-white"
         >
-          <h2 className="mb-1 text-2xl font-extrabold text-center text-purple-700 drop-shadow-md dark:text-purple-300">
-            🌟 Meet Our FYB 🌟
+          <h2 className="mb-1 text-xl font-extrabold text-center text-purple-700 dark:text-purple-300">
+            🌟 Meet Our FYB
+            {formData.department ? `: ${formData.department}` : ""} 🌟
           </h2>
-          <p className="mb-4 text-sm font-medium text-center text-gray-600 dark:text-gray-400">
+          <p className="mb-3 text-sm text-center text-gray-600 dark:text-gray-400">
             Class ’25
           </p>
 
-          {/* Profile Picture */}
-{/* Profile Picture */}
-{imageUrl && (
-  <div className="flex justify-center mb-4">
-    <div className="overflow-hidden border-4 border-pink-400 rounded-xl shadow-md inline-block">
-      <img
-        src={imageUrl}
-        alt="FYB"
-        className="object-contain max-w-full max-h-60"
-      />
-    </div>
-  </div>
-)}
+          {imageUrl && (
+            <div className="flex justify-center mb-4">
+              <div className="inline-block overflow-hidden border-4 border-pink-400 shadow-md rounded-xl">
+                <img
+                  src={imageUrl}
+                  alt="FYB"
+                  className="object-contain max-w-full max-h-60"
+                />
+              </div>
+            </div>
+          )}
 
-
-
-
-          {/* FYB Info */}
-          <div className="relative z-10 space-y-1 text-gray-800 dark:text-gray-100">
-            <p>
-              <strong>Name:</strong> {formData.name}
-            </p>
-            <p>
-              <strong>Nickname:</strong> {formData.nickname}
-            </p>
-            <p>
-              <strong>Worst Course:</strong> {formData.worstCourse}
-            </p>
-            <p>
-              <strong>Favourite Course:</strong> {formData.favCourse}
-            </p>
-            <p>
-              <strong>Favourite Lecturer:</strong> {formData.favLecturer}
-            </p>
-            <p>
-              <strong>Hobbies:</strong> {formData.hobbies}
-            </p>
-            <p>
-              <strong>Worst Level:</strong> {formData.worstLevel}
-            </p>
-            <p>
-              <strong>Best Level:</strong> {formData.bestLevel}
-            </p>
-            <p>
-              <strong>Plans:</strong> {formData.plans}
-            </p>
-            <p>
-              <strong>Status:</strong> {formData.status}
-            </p>
-            <p>
-              <strong>Quote:</strong> {formData.quote}
-            </p>
-            <p>
-              <strong>Advice:</strong> {formData.advice}
-            </p>
+          <div className="relative z-10 space-y-2 text-sm text-gray-800 dark:text-gray-100">
+            {[
+              { label: "Name", value: formData.name },
+              { label: "Nickname", value: formData.nickname },
+              { label: "Worst Course", value: formData.worstCourse },
+              { label: "Favourite Course", value: formData.favCourse },
+              { label: "Favourite Lecturer", value: formData.favLecturer },
+              { label: "Hobbies", value: formData.hobbies },
+              { label: "Worst Level", value: formData.worstLevel },
+              { label: "Best Level", value: formData.bestLevel },
+              { label: "Plans", value: formData.plans },
+              { label: "Status", value: formData.status },
+              { label: "Quote", value: formData.quote },
+              { label: "Advice", value: formData.advice },
+            ].map((item, index) => (
+              <>
+                <hr className="my-1 border-purple-300 dark:border-purple-700" />{" "}
+                <div key={index} className="flex flex-wrap gap-1">
+                  <span className="font-semibold text-gray-600 dark:text-gray-300">
+                    {item.label}:
+                  </span>
+                  <span className="text-gray-800 dark:text-gray-100 ">
+                    {item.value}
+                  </span>
+                </div>{" "}
+              </>
+            ))}
           </div>
         </div>
       </div>
