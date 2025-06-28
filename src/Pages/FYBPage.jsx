@@ -122,12 +122,14 @@ const FYBPage = () => {
           {/* Profile Picture */}
           {imageUrl && (
             <div className="relative w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md">
-              <img
-                src={imageUrl}
-                alt="FYB"
-                className="absolute inset-0 object-cover w-full h-full"
-              />
-            </div>
+            <div className="relative w-40 h-40 mx-auto mb-4 overflow-hidden border-4 border-pink-400 rounded-full shadow-md bg-white flex items-center justify-center">
+  <img
+    src={imageUrl}
+    alt="FYB"
+    className="max-w-full max-h-full object-contain"
+  />
+</div>
+
           )}
 
           {/* FYB Info */}
