@@ -120,15 +120,20 @@ const FYBPage = () => {
           </p>
 
           {/* Profile Picture */}
-        {imageUrl && (
-  <div className="relative w-40 h-40 mx-auto mb-4 border-4 border-pink-400 rounded-full shadow-md bg-white flex items-center justify-center overflow-hidden">
-    <img
-      src={imageUrl}
-      alt="FYB"
-      className="max-w-full max-h-full object-contain"
-    />
+{/* Profile Picture */}
+{imageUrl && (
+  <div className="flex justify-center mb-4">
+    <div className="overflow-hidden border-4 border-pink-400 rounded-xl shadow-md inline-block">
+      <img
+        src={imageUrl}
+        alt="FYB"
+        className="object-contain max-w-full max-h-60"
+      />
+    </div>
   </div>
 )}
+
+
 
 
           {/* FYB Info */}
