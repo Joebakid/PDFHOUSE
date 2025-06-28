@@ -101,18 +101,14 @@ export default function SearchPage() {
       const entries = Object.entries(allJSONFiles);
 
       const deptFolder = departmentFolderMap[selectedDepartment] || "";
+      const collegeFolder = selectedCollege.toLowerCase();
 
       for (const [path, fileData] of entries) {
         const lowerPath = path.toLowerCase();
 
-        if (selectedLevel && !lowerPath.includes(`/${selectedLevel}/`))
-          continue;
-        if (
-          selectedDepartment &&
-          deptFolder &&
-          !lowerPath.includes(`/${deptFolder}`)
-        )
-          continue;
+        if (selectedLevel && !lowerPath.includes(`/${selectedLevel}/`)) continue;
+        if (selectedCollege && !lowerPath.includes(`/${collegeFolder}/`)) continue;
+        if (selectedDepartment && deptFolder && !lowerPath.includes(`/${deptFolder}`)) continue;
 
         const data = fileData.default || fileData;
         const sections = Object.entries(data);
@@ -148,7 +144,7 @@ export default function SearchPage() {
     };
 
     loadAndSearch();
-  }, [searchTerm, selectedLevel, selectedDepartment]);
+  }, [searchTerm, selectedLevel, selectedCollege, selectedDepartment]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
