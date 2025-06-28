@@ -1,5 +1,5 @@
 {
-  "Math": [
+  "Math [GET411]": [
     {
       "name": "Solutions of a System of Linear Equation",
       "href": "https://drive.google.com/file/d/1yuMrln2Sjxc9ODjEiPxy83p0jnVLHpvv/view?usp=drive_link"
@@ -35,6 +35,15 @@
     {
       "name": "GET 411 lecture Note",
       "href": "https://drive.google.com/file/d/1ZPO2nGYF9gkpOy2CLwLaa6NCYLvHWM6z/view?usp=drive_link"
+    },
+
+    {
+      "name": "ASSIGNMENT_105514.pdf",
+      "href": "https://drive.google.com/file/d/17giNf8IK8lP7UuRVk0sjqOsuUugDTY_-/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 411 Lecture note .pdf",
+      "href": "https://drive.google.com/file/d/15mxCdGjVUMUWv7DZ-2QJVWXInc4GYcUd/view?usp=drivesdk"
     }
   ]
 }
