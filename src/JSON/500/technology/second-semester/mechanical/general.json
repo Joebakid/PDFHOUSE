@@ -1,4 +1,5 @@
-{ "get511": [
+{
+  "get511": [
     {
       "name": "511 PDF",
       "href": "https://drive.google.com/file/d/1c7Wv9xMjSrIPMNB5zMKufO_5gHLfB1Oz/view?usp=drive_link"
@@ -19,7 +20,8 @@
       "name": "past question",
       "href": "https://drive.google.com/file/d/1EyoHAOxGDViBh2VX-_bWbowY7u9ht9oW/view?usp=drive_link"
     }
-  ], "mee512": [
+  ],
+  "mee512": [
     {
       "name": "512 pdf",
       "href": "https://drive.google.com/file/d/1as-Q1S1GshEvdnonX_E5jqAlgu1g5pC2/view?usp=drive_link"
@@ -32,4 +34,29 @@
       "name": "MEE512 NOTE",
       "href": "https://drive.google.com/file/d/1RBrMn9YVuOb1Chs4n5DhdjD3NcAAUW0F/view?usp=drive_link"
     }
-  ]}
+  ],
+  "EEE525 [MECHATRONICS]": [
+    {
+      "name": "pumpapplication.zm2 [APP]",
+      "href": "https://drive.google.com/file/d/1wrYX67PRxGnSMXaVrt0-gxbx_bpbqdpZ/view?usp=drive_link"
+    },
+    {
+      "name": "EX1.zm2 [APP]",
+      "href": "https://drive.google.com/file/d/1h3_BKyet102v_WIGAtowI7B_-5B2WpU8/view?usp=drive_link"
+    },
+    {
+      "name": "CHARLES PLC LECTURE.pdf",
+      "href": "https://drive.google.com/file/d/1r2hX6IpF37hBGYenF5M-GaGeR7Q9eIAW/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20250616-WA0045.jpg",
+      "href": "https://drive.google.com/file/d/1XAei5W0FAhnqXR7rzjSJ95h46eGEeMr_/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE525 MECHATRONICS ASSESSMENT.pdf",
+      "href": "https://drive.google.com/file/d/1G7BA6dF39m4-N1g-Jq398xB55YQHYsgO/view?usp=drivesdk"
+    }
+  ]
+}
+
+

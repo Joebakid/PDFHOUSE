@@ -1,4 +1,5 @@
-{ "get511": [
+{
+  "get511": [
     {
       "name": "511 PDF",
       "href": "https://drive.google.com/file/d/1c7Wv9xMjSrIPMNB5zMKufO_5gHLfB1Oz/view?usp=drive_link"
@@ -18,8 +19,13 @@
     {
       "name": "past question",
       "href": "https://drive.google.com/file/d/1EyoHAOxGDViBh2VX-_bWbowY7u9ht9oW/view?usp=drive_link"
+    },
+    {
+      "name": "GET 511-ENGINEERING LAW.pdf",
+      "href": "https://drive.google.com/file/d/12tJhI0V00em1c5F4RDKbg36xkjahf0Ej/view?usp=drivesdk"
     }
-  ], "mee512": [
+  ],
+  "mee512": [
     {
       "name": "512 pdf",
       "href": "https://drive.google.com/file/d/1as-Q1S1GshEvdnonX_E5jqAlgu1g5pC2/view?usp=drive_link"
@@ -32,4 +38,491 @@
       "name": "MEE512 NOTE",
       "href": "https://drive.google.com/file/d/1RBrMn9YVuOb1Chs4n5DhdjD3NcAAUW0F/view?usp=drive_link"
     }
-  ]}
+  ],
+  "MEE 533  ": [
+    {
+      "name": "cnc_1_0.pdf",
+      "href": "https://drive.google.com/file/d/1szaa5uOd9dv_LSnkxpEKBWIy7C9xX0RW/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 533 Materials ...3.pdf",
+      "href": "https://drive.google.com/file/d/1UGuHzK54u4I0r-OoEDOAw-0ENb8IVX7V/view?usp=drivesdk"
+    },
+    {
+      "name": "20230527_023539342.pdf",
+      "href": "https://drive.google.com/file/d/1sNrj8bOvEWpar3IZTy_Blp3Jrz-As8zF/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 533 2016 2017.pdf",
+      "href": "https://drive.google.com/file/d/1vHXpJiEvkRV5agZ7SWi7jS2Iq6g-GsFs/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 533 2016 2017.docx",
+      "href": "https://docs.google.com/document/d/13KjEDRVdWZSZMMtvYQ9_KYkEVg25_cmL/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 533   NC Exam 2019.doc",
+      "href": "https://docs.google.com/document/d/17auYCxS6jkj60ofMsqZF9WAT-VbuKZ3C/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 533 Note (Incomplete o!!!).pdf",
+      "href": "https://drive.google.com/file/d/1MLEggb3vw1eFcP-GJLqMKU3rFdhMciyk/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 533 Materials..1.pdf",
+      "href": "https://drive.google.com/file/d/1Yj3Qe6T9Iuop-EISp02XyXLLRw7Jsnl-/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 533 Materials ..2.pdf",
+      "href": "https://drive.google.com/file/d/1TXzHFqEI6Y0zCq3ub20sJ0cZjxhixVNJ/view?usp=drivesdk"
+    }
+  ],
+  "MEE 532  ": [
+    {
+      "name": "Chapter 3_Oni.pdf",
+      "href": "https://drive.google.com/file/d/1Z3lxx94PIwprcJXAl6bIDh8Dx7j2Htbw/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 532_PELUMI.pdf",
+      "href": "https://drive.google.com/file/d/1vcjMQywWiBOQ6KC-k98vjGf5zB7TpklK/view?usp=drivesdk"
+    },
+    {
+      "name": "Chapter 1_Oni.pdf",
+      "href": "https://drive.google.com/file/d/1EUpjK4RT-J_HiYcdwXhGH4pZUF3twA-y/view?usp=drivesdk"
+    },
+    {
+      "name": "Chapter 2_Oni.pdf",
+      "href": "https://drive.google.com/file/d/1ZFVWHHwj69jH2AKgkaZzwEGFNAMfFg9_/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 514_cfd 2024 LECT 1.docx",
+      "href": "https://docs.google.com/document/d/1zdOJG3zXkZe4KDF5Q8E-WTnImJvHgrWg/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "null.pdf",
+      "href": "https://drive.google.com/file/d/1inWuUr3mvdJLorQPi-QlC96Wq8zWY1wo/view?usp=drivesdk"
+    }
+  ],
+  "MEE 519  ": [
+    {
+      "name": "New and Emerging Technologies.pdf",
+      "href": "https://drive.google.com/file/d/1nHjEw2R5FeLFcJFb0X-1CUYrR8yL6bm7/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 519 (TECHNOLOGY PROGRESS AND ECONOMIC GROWTH PART I & II).pdf",
+      "href": "https://drive.google.com/file/d/1PW1uabXjHEZyIQY4nv53jmGHAzwf7pNb/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 519 _ TECHNOLOGY CHOICE.pdf",
+      "href": "https://drive.google.com/file/d/1iSpMmAFtTdn-jBPZK-Zv0MLuTyDLbLkp/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 519 (BASIC CONCEPTS).pdf",
+      "href": "https://drive.google.com/file/d/1qqenDJDXj1HZjBFa9OUhSnFry9K8QbYr/view?usp=drivesdk"
+    },
+    {
+      "name": "DEVELOPMENT PROBLEMATIQUE.pdf",
+      "href": "https://drive.google.com/file/d/10t5XhYB04nwVxD_Qyg0cEmRbRlnfr12h/view?usp=drivesdk"
+    },
+    {
+      "name": "NEW AND EMERGING TECH.pdf",
+      "href": "https://drive.google.com/file/d/13a3WJBcwPn0vm8AfVwPRtyFiynBh0Sx2/view?usp=drivesdk"
+    },
+    {
+      "name": "DEVELOPMENT OF LOCAL TECHNOLOGY CAPACITY.pdf",
+      "href": "https://drive.google.com/file/d/1OeCq7a18tSyHDDGuaFin2gfXU-92aupD/view?usp=drivesdk"
+    },
+    {
+      "name": "I When I visited the factory in 1976, they were producing parts (the fail.pdf",
+      "href": "https://drive.google.com/file/d/1ajzyJ-0qeBHLk4SuCDB0hGldrEadRL46/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 519 NOTE.pdf",
+      "href": "https://drive.google.com/file/d/1rKmoTJxsml95vwtLdx52wLu_XBwIfjor/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 519.pdf",
+      "href": "https://drive.google.com/file/d/1TZRnleAvQ34bXoXTOuwACe5K_POUA4y7/view?usp=drivesdk"
+    }
+  ],
+  "MEE 517  ": [
+    {
+      "name": "MEE 517 HANDOUT .pdf",
+      "href": "https://drive.google.com/file/d/1Paox-dUG8o9SMIUArIpPMDoqB-PxqzEc/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE517 26-Apr-2023 13-42-42.pdf",
+      "href": "https://drive.google.com/file/d/1JteUUEzfUkpCZKJKysxVig8xJbs3jafB/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 517 (production).pdf",
+      "href": "https://drive.google.com/file/d/1wUPmhMbhCFkcW0ErLYnfg8I9cQ8M_jDp/view?usp=drivesdk"
+    },
+    {
+      "name": "Production and Operations Management - BY Civildatas.com.pdf",
+      "href": "https://drive.google.com/file/d/1gMJStuxRykoqdZF069O0bED5cARLIkeV/view?usp=drivesdk"
+    }
+  ],
+  "MEE 516  ": [
+    {
+      "name": "mEE 516 EXAmPLE QUESTIONS.docx",
+      "href": "https://docs.google.com/document/d/1UHGkxbjDvkarq6Z4ZEiPror1OkxwbfSc/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Thermodynamics an Engineering Approach.pdf",
+      "href": "https://drive.google.com/file/d/1G5T9gtcGpqj5DKXB8HsQ-78ZlnTGO6yr/view?usp=drivesdk"
+    },
+    {
+      "name": "Thermodynamics_cengel_2015_8th_textbook.pdf",
+      "href": "https://drive.google.com/file/d/1DHbaqSr7S7cFFU0fYXS1S9hlP6o5c6M-/view?usp=drivesdk"
+    },
+    {
+      "name": "thermodynamics.pdf",
+      "href": "https://drive.google.com/file/d/1cDJn-ZPObUcC_IjOle15ye46CjAa_s9u/view?usp=drivesdk"
+    },
+    {
+      "name": "Engineering Thermodynamics A Computer Approach (SI Units Version), Third Edition by R. K. Rajput (z-lib.org) (1).pdf",
+      "href": "https://drive.google.com/file/d/10DzfgTTc0ADq_CH8JJzYGqd1Z831FEF0/view?usp=drivesdk"
+    },
+    {
+      "name": "516 resources 2.docx",
+      "href": "https://docs.google.com/document/d/1okf4yPv5LKmnUS-pur5nr_owYaRDqL2W/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "516 resources 1.docx",
+      "href": "https://docs.google.com/document/d/1oHSfq0V2cmpn26FK5tL5ADdSNZVkEaiP/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    }
+  ],
+  "MEE 514  ": [
+    {
+      "name": "table_of_control_chart_constants_old.pdf",
+      "href": "https://drive.google.com/file/d/15ilx6MrzlHHb5zHARWFYptdpnsh_WAox/view?usp=drivesdk"
+    },
+    {
+      "name": "Simplex Method.pdf",
+      "href": "https://drive.google.com/file/d/11v0opqh2UJRpGekoe_FihQKs-xNwoB5X/view?usp=drivesdk"
+    },
+    {
+      "name": "Transportation and Assignment Problems.ppt",
+      "href": "https://docs.google.com/presentation/d/132gV5LQdinMU6mU_tidZfDGrws1BOE2O/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE514(1) 26-Apr-2023 16-47-40.pdf",
+      "href": "https://drive.google.com/file/d/1FUQ-0GD88BN_UsROH4kqOFIjitGXnduL/view?usp=drivesdk"
+    },
+    {
+      "name": "prob formulatn e.g. MEE 514  on OR - Feb. 1, 2021.pdf",
+      "href": "https://drive.google.com/file/d/15ITygFkuLd5jllhvObaJXSTnugbnoARu/view?usp=drivesdk"
+    }
+  ],
+  "MEE 513  ": [
+    {
+      "name": "CAD_CAM_CNC_PART PROGRAMMING.pdf",
+      "href": "https://drive.google.com/file/d/1CIzP1LydKKuLepS2D4IEvv-D-SUx_580/view?usp=drivesdk"
+    },
+    {
+      "name": "bar elements.pptx",
+      "href": "https://docs.google.com/presentation/d/18mZyhqRSb_8xlO4PvCF4KqQAHY-19CNa/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Finite Element Truss.pdf",
+      "href": "https://drive.google.com/file/d/1gc2Q7urIbS5mKzsvCgXHSUwhc1gegWL5/view?usp=drivesdk"
+    },
+    {
+      "name": "Chapter 5_FEM_Truss (Updated).pdf",
+      "href": "https://drive.google.com/file/d/12kbjFzH5WGwLFMpFU99qxPBH_yAKj7Rw/view?usp=drivesdk"
+    },
+    {
+      "name": "FEM ASSIGNMENT.docx",
+      "href": "https://docs.google.com/document/d/1XhIEaksFyxkd64EM3fWjqj8yZo3Ew7kZ/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 513 (FINITE ELEMENT MODELING AND ANALYSIS).pdf",
+      "href": "https://drive.google.com/file/d/1N-23DwwoG-9-yTpe-XG5l3VXc_HfhGS-/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 (GEOMETRIC MODELLING).pdf",
+      "href": "https://drive.google.com/file/d/1Y0urIS0IMnXRyDQcQIYqTyIhCAB2v1EC/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 (FINITE ELEMENT METHOD- FEM).pdf",
+      "href": "https://drive.google.com/file/d/1cGHVdAIOXKrC86nSvXcTi8tYQdJE1-8u/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD_CAM_Hardware.pdf",
+      "href": "https://drive.google.com/file/d/11oYaYy5OB5tO716bFbw3GtWq43Vybbkh/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD & CAM 1st Class.pdf",
+      "href": "https://drive.google.com/file/d/1AvlpvQLRyESqd4EsFgkpeAh4vQImrUjE/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD-CAM 513 01-May-2023 10-54-58.pdf",
+      "href": "https://drive.google.com/file/d/1loHgn3krKMqkTqvkBLy5JeyK55DoceC0/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 Assignment.pdf",
+      "href": "https://drive.google.com/file/d/151c-47vaP0G9R1wyupAfCaKh1MKZqst6/view?usp=drivesdk"
+    },
+    {
+      "name": "Lecture notes on FEM.pdf",
+      "href": "https://drive.google.com/file/d/1B768qZpQGe-ZqedgyNTP9RJzdfUyT6jA/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 QUIZ.pdf",
+      "href": "https://drive.google.com/file/d/1QvRYzMr0xXQmQ2ImJgLFblrvTxml9UkU/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 Part 1a.pdf",
+      "href": "https://drive.google.com/file/d/1e3tPq_ll-0tpDSByCjxttl-xzYVD4l89/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 Part 1d.pdf",
+      "href": "https://drive.google.com/file/d/1HZiuYIs_YmsEn8O1MIeaWjNRL2H9b9m_/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 Part 1b.pdf",
+      "href": "https://drive.google.com/file/d/1hQZt5FKMkJS6I99SHREGm0O9hrj7pRst/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 513 Part 1c.pdf",
+      "href": "https://drive.google.com/file/d/1ww6zH993sUn9P61Mq8VIn6TGCSnMD8WR/view?usp=drivesdk"
+    },
+    {
+      "name": "Mee 513 introduction.pdf",
+      "href": "https://drive.google.com/file/d/1UIOmc0PUt-vVEgiyNHc7pFnoBYTtHi4r/view?usp=drivesdk"
+    }
+  ],
+  "MEE 512  ": [
+    {
+      "name": "VIBRATION%20%20AND%20%20NOISE%20%20MEE%20%20512.pdf",
+      "href": "https://drive.google.com/file/d/19jLcW6DBthBi2puXdBSEp1NIeELv-w2J/view?usp=drivesdk"
+    },
+    {
+      "name": "VIBRATION  AND  NOISE  MEE  512.doc",
+      "href": "https://docs.google.com/document/d/17NKNBLQ_RIzMzgqGsM1aXGQ25GmIigde/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 512 22-May-2023 08-59-12(1).pdf",
+      "href": "https://drive.google.com/file/d/1Cso1eT9SG5bFieOu1UJY7cd1be6UYqR5/view?usp=drivesdk"
+    },
+    {
+      "name": "CamScanner 04-16-2023 15.42.pdf",
+      "href": "https://drive.google.com/file/d/1T3VRZsK2Lfkm-mt4D90hIY959N5tmU2f/view?usp=drivesdk"
+    },
+    {
+      "name": "Theory of Vibration with Applications ( PDFDrive ) (1).pdf",
+      "href": "https://drive.google.com/file/d/1sa7wVhT1aqkdknZ9_sy4N9801aaxlNnA/view?usp=drivesdk"
+    },
+    {
+      "name": "Rao_Mechanical_Vibrations_5th_txtbk.PDF",
+      "href": "https://drive.google.com/file/d/1nRF75ym3qft3pfTizn6nfck0V636GrY-/view?usp=drivesdk"
+    },
+    {
+      "name": "Kelly Schaums Outline of Mechanical Vibrations (ISBN 0070340412).pdf",
+      "href": "https://drive.google.com/file/d/1Wu7stvrVdEue-1kG5RsQI16XZ3TJXouP/view?usp=drivesdk"
+    },
+    {
+      "name": "mechanical-vibrations-by-v-p-singh-s2booksformech-blogspot-com.pdf",
+      "href": "https://drive.google.com/file/d/1ewgnuxMOmKVOLWdzbfF6_GKVmE16lNrB/view?usp=drivesdk"
+    },
+    {
+      "name": "mechanical vibration.pdf",
+      "href": "https://drive.google.com/file/d/1HSMT9Zy36_mv7ahXmJrKLpBlrZiHDgz0/view?usp=drivesdk"
+    }
+  ],
+  "MEE 511  ": [
+    {
+      "name": "MEE 511 - Welded Joints.pdf",
+      "href": "https://drive.google.com/file/d/1JkdJfmkwIaDdpFRCP5RttTP-2RvTDmrI/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 - DESIGN FOR WELDING.pdf",
+      "href": "https://drive.google.com/file/d/14bXOlzG4XdX9g532uPzwFZNzUzKR5yQo/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 _ Design for forging.pdf",
+      "href": "https://drive.google.com/file/d/1GYxV2Mb40Nj9mrUZlWc2KBsIcrAIcAIU/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 _ Design and Manufacturing of automobile engine piston part II the manufacturing process.pdf",
+      "href": "https://drive.google.com/file/d/10QBIzbPP51jDNVCFa55ABYih0_OoXcCW/view?usp=drivesdk"
+    },
+    {
+      "name": "Copy-machine-design-khurmi-gupta.pdf",
+      "href": "https://drive.google.com/file/d/1PJvWdcJVZDWwl_6yepiP5DC7Jozgu4-D/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE511 02-May-2023 09-06-54.pdf",
+      "href": "https://drive.google.com/file/d/1A6Zpq5QSaJWMOFjX5V1bP3dBme1z2tV8/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 3rd and 4th class .pdf",
+      "href": "https://drive.google.com/file/d/1oKz8R49UXH2Yl04PD5tot0vfGuG5qEuY/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 (1).pdf",
+      "href": "https://drive.google.com/file/d/15nELiT233kQw_Bwq2QBvvkg85p-lt9py/view?usp=drivesdk"
+    },
+    {
+      "name": "New Document(5) 31-Mar-2023 12-20-20.pdf",
+      "href": "https://drive.google.com/file/d/1Mik_cG40t0MmWLaDv634ycwMMRtmYrKE/view?usp=drivesdk"
+    },
+    {
+      "name": "NEW AND EMERGING TECH.pdf",
+      "href": "https://drive.google.com/file/d/12ENSsUKXs8XXvjMH2kXscqhG_7GJwoWI/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 (2).pdf",
+      "href": "https://drive.google.com/file/d/1nmySHfluH90KosSz2emwzEsSV-Wpk60X/view?usp=drivesdk"
+    },
+    {
+      "name": "TECHNOLOGY CHOICE.pdf",
+      "href": "https://drive.google.com/file/d/1_ez8FqnLRvQ7AOY3eUxOKz5mhGMr4Y2c/view?usp=drivesdk"
+    },
+    {
+      "name": "DEVELOPMENT PROBLEMATIQUE.pdf",
+      "href": "https://drive.google.com/file/d/1DC0PtevIvvEWhCaSUKb9pRq8UxniBvP5/view?usp=drivesdk"
+    },
+    {
+      "name": "I When I visited the factory in 1976, they were producing parts (the fail.pdf",
+      "href": "https://drive.google.com/file/d/1L5pieM9ay_zFqYT06rRzbAHyFPsEvPg-/view?usp=drivesdk"
+    },
+    {
+      "name": "DEVELOPMENT OF LOCAL TECHNOLOGY CAPACITY.pdf",
+      "href": "https://drive.google.com/file/d/1rQAAtmmnrEmgGbNCn_DzYx5dQHT3lNt2/view?usp=drivesdk"
+    }
+  ],
+  "GET 511  ": [
+    {
+      "name": "GET 511-ENGINEERING LAW.pdf",
+      "href": "https://drive.google.com/file/d/1uWoGvb2DofYuITWeNht1fo42LhFgCLtW/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 511 -PM -LECTURE NOTE.pdf",
+      "href": "https://drive.google.com/file/d/1aiOl5jk1xghCiXaAhnFbTN4IwugrTeFy/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 511-full material.pdf",
+      "href": "https://drive.google.com/file/d/1qKTldgmq3lyo5WzVF_eRlWtj3doTt6Ft/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 511-ENGINEERING LAW AND MGT Part 1.pdf",
+      "href": "https://drive.google.com/file/d/1r5RiuH6R2K5Vifm8ODMWmGz51SQjr7YL/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 (2).pdf",
+      "href": "https://drive.google.com/file/d/1VYZtJQPOCqZqQTo-A-MUaKaVvqUrkmoL/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 511 (1).pdf",
+      "href": "https://drive.google.com/file/d/1vOnjbW8WB4cVm5o2tFyIMWSX-Ak05NXN/view?usp=drivesdk"
+    }
+  ],
+  "EEE 516 [MECHATRONICS]  ": [
+    {
+      "name": "EEE 516 (Lectures 1 and 2).pdf",
+      "href": "https://drive.google.com/file/d/1A74S8V__jYlPJXqp8oofs1P6bWxU4Y1V/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE516 NOTE 22-Apr-2023 10-56-34(1).pdf",
+      "href": "https://drive.google.com/file/d/1MtaG9GqUeCXAk9OKXMRE61ytqmZPZbMG/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE 516 ASSIGNMENT - Stanmancer.pdf",
+      "href": "https://drive.google.com/file/d/1cyOmYQcbS75d2-8hJgi-wI5b3O9k7P6O/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE 516 Past Question Solution - By Prinztolvic.pdf",
+      "href": "https://drive.google.com/file/d/1ChlLKINh927K9chSCV2X5JNyiew2vYGA/view?usp=drivesdk"
+    },
+    {
+      "name": "CHARLES PLC LECTURE.pptx",
+      "href": "https://docs.google.com/presentation/d/1FcGHnn5dmHwJLUsarBUWqexubE4WpyOH/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "EEE 516 - Number Bases.pdf",
+      "href": "https://drive.google.com/file/d/1GG7mgKV2VbYKfGTuC6ddrDRFQ3SpHUDO/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE 516 - Introduction to Karnaugh Maps.pdf",
+      "href": "https://drive.google.com/file/d/10w7SGcUM5L3wa_b-G4gr4PVTgjkBrxnQ/view?usp=drivesdk"
+    },
+    {
+      "name": "TAKE HOME QUESTION ON PLCs-converted-1.pdf",
+      "href": "https://drive.google.com/file/d/1sMljtD3ghkvoVMVTA--TlxpOkCUmtuen/view?usp=drivesdk"
+    }
+  ],
+  "OTHERS  ": [
+    {
+      "name": "~$taset 4 3D_ Prof Islam on Ultrasonic LB.docx",
+      "href": "https://docs.google.com/document/d/1O6At8yT8AJBH-6fWm8VZ8_TcHPfvvFF4/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "NOISE.docx",
+      "href": "https://docs.google.com/document/d/1Ik19PQYqfwlMdFfdN_f_8KFfu0OpMPm8/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Dataset 4 3D_ Prof Islam on Ultrasonic LB.docx",
+      "href": "https://docs.google.com/document/d/1hXTfSfa8VpfD-4v9FilM4tY2Ivcfn_Dm/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Properties sheet.pdf",
+      "href": "https://drive.google.com/file/d/1PHtx8Zz_4iaKtMs1kaHwpbHgsL61bfYp/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 516 Problem Set.pdf",
+      "href": "https://drive.google.com/file/d/1AEDQmRrQpTbnHTeTQRrIr029OzQ_G2B4/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 532 THIRD ASSIGNMENT .pdf",
+      "href": "https://drive.google.com/file/d/1KDjP_7yTuZBx6BF3GLVqOmINCbkCcp8o/view?usp=drivesdk"
+    },
+
+    {
+      "name": "Choir songs lyrics.docx",
+      "href": "https://docs.google.com/document/d/1mhnRaRFD8HEf3Ot1n2J7E7Uuc_rwVAoB/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "516 CPQ ASS.docx",
+      "href": "https://docs.google.com/document/d/1tABMjnTvVQGECFeuiUGRq50IoYMpHqA-/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "vibration to be used_5.pdf",
+      "href": "https://drive.google.com/file/d/1maVZNwCPjlQPFAKjC45mpV9I72Sio576/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 516 Tutorials - TESPy.pdf",
+      "href": "https://drive.google.com/file/d/1-Zq7IVCNRD6f8LuC0Ad2JVzf3efE_703/view?usp=drivesdk"
+    },
+    {
+      "name": "1. MEE 514. Linear Programming with Simplex Method.pdf",
+      "href": "https://drive.google.com/file/d/1CmRawp87HWhOYOfh-5MWiq85q2-VmiR1/view?usp=drivesdk"
+    },
+
+    {
+      "name": "Mee 513 CADCAM First Part.pdf",
+      "href": "https://drive.google.com/file/d/1J4Hrudi5eHqxtRIpdvZMcp7djnH5sV4k/view?usp=drivesdk"
+    },
+    {
+      "name": "EEE 516 (First Part).pdf",
+      "href": "https://drive.google.com/file/d/1chQLgguodQdOgbGvfPyj4S79itGnIjdL/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD_CAM_Hardware.pdf",
+      "href": "https://drive.google.com/file/d/1F3cn4MZe9N-B-eKPdp0qvjT03TDLl4nR/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD_CAM_CNC_PART PROGRAMMING.pdf",
+      "href": "https://drive.google.com/file/d/15itCIoFsVV8UibqEL_Lm8hUXXHO3UnGz/view?usp=drivesdk"
+    },
+    {
+      "name": "CAD & CAM 1st Class.pdf",
+      "href": "https://drive.google.com/file/d/1vZDRA5wrEfR2XuRQu1l_sHfQRl01mJ3w/view?usp=drivesdk"
+    },
+    {
+      "name": "Theory of Machines-Khurmi.pdf",
+      "href": "https://drive.google.com/file/d/1--GANggSQ0iWobvv0HnEQo724TZNvizu/view?usp=drivesdk"
+    }
+  ]
+}
