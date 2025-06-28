@@ -253,37 +253,44 @@ export default function SearchPage() {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center mt-6 space-x-2">
-            <button
-              onClick={() => goToPage(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-            >
-              Prev
-            </button>
+         <div className="flex flex-wrap justify-center mt-6 space-x-2">
+  <button
+    onClick={() => goToPage(currentPage - 1)}
+    disabled={currentPage === 1}
+    className="px-3 py-1 text-sm rounded 
+               bg-gray-200 hover:bg-gray-300 
+               dark:bg-gray-800 dark:hover:bg-gray-700 
+               dark:text-white disabled:opacity-50"
+  >
+    Prev
+  </button>
 
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => goToPage(i + 1)}
-                className={`px-3 py-1 text-sm rounded ${
-                  currentPage === i + 1
-                    ? "bg-[#00CCFF] text-white"
-                    : "bg-gray-200 hover:bg-gray-300"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
+  {Array.from({ length: totalPages }, (_, i) => (
+    <button
+      key={i + 1}
+      onClick={() => goToPage(i + 1)}
+      className={`px-3 py-1 text-sm rounded ${
+        currentPage === i + 1
+          ? "bg-[#00CCFF] text-white dark:bg-[#00CCFF]"
+          : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white"
+      }`}
+    >
+      {i + 1}
+    </button>
+  ))}
 
-            <button
-              onClick={() => goToPage(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="px-3 py-1 text-sm bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
+  <button
+    onClick={() => goToPage(currentPage + 1)}
+    disabled={currentPage === totalPages}
+    className="px-3 py-1 text-sm rounded 
+               bg-gray-200 hover:bg-gray-300 
+               dark:bg-gray-800 dark:hover:bg-gray-700 
+               dark:text-white disabled:opacity-50"
+  >
+    Next
+  </button>
+</div>
+
         </>
       ) : (
         <p className="text-center text-gray-500">No results found.</p>
