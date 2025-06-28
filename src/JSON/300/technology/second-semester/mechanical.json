@@ -1,3 +1,773 @@
- 
-{ }
- 
+{
+  "All Past Questions": [
+    {
+      "name": "IMG-20230703-WA0016.jpg",
+      "href": "https://drive.google.com/file/d/1lYxAUhQgMX_lTbQGgKm4aswlvWXT47AK/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0026.jpg",
+      "href": "https://drive.google.com/file/d/1nH4aYg92sL4sWLRyok0An7-MqrYSavRk/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0025.jpg",
+      "href": "https://drive.google.com/file/d/1cVDH9Ck0ZiNTFhUgpUoJN9f4NpO5h7FH/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230705-WA0008.jpg",
+      "href": "https://drive.google.com/file/d/1GBfZiiFRF3gwuQzPHPVljGcw0_U0gEE3/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230705-WA0009.jpg",
+      "href": "https://drive.google.com/file/d/1RSR50MmtVYaCH5wMLSWbnvcOx8vOIggq/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230712-WA0032.jpg",
+      "href": "https://drive.google.com/file/d/1mG7Z2xy1Hb-BxCtoJ6Io1ArahRlSUtHm/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230710-WA0019.jpg",
+      "href": "https://drive.google.com/file/d/1naW2diVsYehb6A3VFEvDDrvu-BpiZlgT/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230712-WA0033.jpg",
+      "href": "https://drive.google.com/file/d/16rlh6Irw_5Qr86X2Iown_XZsszMzKax0/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230713-WA0006.jpg",
+      "href": "https://drive.google.com/file/d/1wMdTEfhP1As45eVOd1dDAQMMxLeEoAKT/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230717-WA0006.jpg",
+      "href": "https://drive.google.com/file/d/1dptgSwG9ikaQBCb-FN1bJ4oB2aBYAML4/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230703-WA0019.jpg",
+      "href": "https://drive.google.com/file/d/1yytuuUuMTbgRpBxpe63lFT1oKXeVHpfH/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230721-WA0066.jpg",
+      "href": "https://drive.google.com/file/d/140RvyGujT2-UEwJp5mU7B7TUE90eI61F/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230721-WA0067.jpg",
+      "href": "https://drive.google.com/file/d/1bXU_jx4PqICktlkGDte25Ey6gx7lPsVV/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230721-WA0068.jpg",
+      "href": "https://drive.google.com/file/d/10Sy9k6E9WnCBYeXbnLeJNCoxufbFjYPo/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230721-WA0069.jpg",
+      "href": "https://drive.google.com/file/d/1ZwKGajaR1VsweRRwn5K3qvcNhi000yot/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230724-WA0015.jpg",
+      "href": "https://drive.google.com/file/d/1BcO_sXi2iCcbADMIRJA7fW5GHRFjQkJJ/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230724-WA0016.jpg",
+      "href": "https://drive.google.com/file/d/1a7jQPV5N9525GMx-3jo10PxUaiczHc5z/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230724-WA0014.jpg",
+      "href": "https://drive.google.com/file/d/1q7L3wjnWY0DTMymKtfxJPuLr9UUEWQzv/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230724-WA0017.jpg",
+      "href": "https://drive.google.com/file/d/13KyQQaKTiwf8J1Xz4TN-1Z1hidOO0hpz/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0006.jpg",
+      "href": "https://drive.google.com/file/d/1dTfEyNini0mgOT-3MOtngPgRU-7Nahix/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0007.jpg",
+      "href": "https://drive.google.com/file/d/1a-Wz_WxNCyh9_tAZUrV_LVtgxqdpbeHP/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0008.jpg",
+      "href": "https://drive.google.com/file/d/14JLBQ3A4aDAVIQ-aWT6LgjlKry8_SZY6/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0010.jpg",
+      "href": "https://drive.google.com/file/d/1VtgpRstjW4UwHKhokq8LTvoFXo_voeI4/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0009.jpg",
+      "href": "https://drive.google.com/file/d/1yBcXc2FUbh_qJEU586wbnwr9MCF01yge/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0011.jpg",
+      "href": "https://drive.google.com/file/d/1yNeJwy_fWXyMzmC7JHUwk0qn5x4gWm25/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0012.jpg",
+      "href": "https://drive.google.com/file/d/1TKf0bd6_o7IRVW_jrvWx7b-Eb71eaUQ0/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0024.jpg",
+      "href": "https://drive.google.com/file/d/18-TSyQg4X2Ibd_3OBncjvO_JLCkbvU5O/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0023.jpg",
+      "href": "https://drive.google.com/file/d/1AiIYIM8PVKCvkuCNsarWYzFujmD9Cmql/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0027.jpg",
+      "href": "https://drive.google.com/file/d/11jeYnIBsZF1UWiXZ2rmP5ScJNzXqrEQ5/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0028.jpg",
+      "href": "https://drive.google.com/file/d/1V_Ll5nhlvq1PfDxNjvfFccONkqn_42sh/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0029.jpg",
+      "href": "https://drive.google.com/file/d/176fsxt5WA6_HmJ5CiwREGDzN-Jx-kJEf/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0030.jpg",
+      "href": "https://drive.google.com/file/d/10VPOLnwX8q3oPA9myuhEYwsmEKdt_tyo/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0018.jpg",
+      "href": "https://drive.google.com/file/d/1mrgzk_ghZYkFMJmcQxY9nlIH4Ik_5jHn/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0031.jpg",
+      "href": "https://drive.google.com/file/d/1wXImILkEUO1WNw5b9rfHSDfzezAfk3QL/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0020.jpg",
+      "href": "https://drive.google.com/file/d/1UDtI98RA_bNQlMpXsVPub4UnPv44B5mt/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0019.jpg",
+      "href": "https://drive.google.com/file/d/1XNcSs2F5WK4-APjw4UFUxdypU6G4IrrT/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0021.jpg",
+      "href": "https://drive.google.com/file/d/1G5x6EYA9oz3O4RS8zkNKP5vcUIKMCNgy/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0022.jpg",
+      "href": "https://drive.google.com/file/d/1SCHlEMWIzsYx0qSkAMcspxwaj-U2UIs0/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0024.jpg",
+      "href": "https://drive.google.com/file/d/1Q7I1m0f2q0Cqx4AA3SAK49IQZh-ACsAH/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230727-WA0023.jpg",
+      "href": "https://drive.google.com/file/d/1lo7LlT9BwH_ynTcJoGjfFL2DsXgt4PdG/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230703-WA0018.jpg",
+      "href": "https://drive.google.com/file/d/1_zYoLuTBSyIKWMUkZ_Fi8fv2xcFkmgie/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230728-WA0011.jpg",
+      "href": "https://drive.google.com/file/d/1V8pAz4jZmVSmssSr-ORXAqO4mUpgdj8f/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230728-WA0013.jpg",
+      "href": "https://drive.google.com/file/d/1vWsmqTQwQqV4GBpLnhmFSd0P1O4AjvCH/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230728-WA0014.jpg",
+      "href": "https://drive.google.com/file/d/1PshPQNDls-S7e5WnCaRToRltVO4mVu1W/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230729-WA0011.jpg",
+      "href": "https://drive.google.com/file/d/1w_WZ2nagOAszF6jzxEZmdcdoCsBt-Z8E/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230729-WA0013.jpg",
+      "href": "https://drive.google.com/file/d/1OlXjKSoSK6MVh7phtoyClOhD_SN2vJ4i/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230729-WA0012.jpg",
+      "href": "https://drive.google.com/file/d/1wXLEcY8IHC8cbuUIA72Ha1n17dWLteQA/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230731-WA0013.jpg",
+      "href": "https://drive.google.com/file/d/1bXcEbyRbPMAFpWWE6dTvUYqmi2wYQy7_/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230731-WA0016.jpg",
+      "href": "https://drive.google.com/file/d/1N9tbDGT72CIvczm9hl7tbj5EMKmxukSb/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230801-WA0023.jpg",
+      "href": "https://drive.google.com/file/d/1u4JFNdqr85PPfJvY8Y0uWiNHz0oLjLgY/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230731-WA0015.jpg",
+      "href": "https://drive.google.com/file/d/1y5eYKiGovlZaKCVTxvJwwc7upyMp8lbw/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230801-WA0024.jpg",
+      "href": "https://drive.google.com/file/d/1_qvF6viLM_gDLyq4Od2wb5mwJH9AFZxr/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230801-WA0025.jpg",
+      "href": "https://drive.google.com/file/d/1EHn4m3ZeQ85xRPMqA8oJdJznxzX5CFdq/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230801-WA0027.jpg",
+      "href": "https://drive.google.com/file/d/1g36pZIIrcmcl58SLsPsVBs8lBwuo-EUr/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230703-WA0011.jpg",
+      "href": "https://drive.google.com/file/d/1NG9VdYgA7Nn4FqAYMSurAjlxrklaufxi/view?usp=drivesdk"
+    }
+  ],
+
+  "MEE 329 [WORKSHOP]": [
+    {
+      "name": "IMG-20221115-WA0006.jpg",
+      "href": "https://drive.google.com/file/d/149YpQtH0HiTCX7X0N_SxfmPTAK_CfIhp/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0009.jpg",
+      "href": "https://drive.google.com/file/d/151Bhn_jz2NTBIhiWOVMsbIbOAC_TqtMB/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 329 Guide (Strength of materials practical).pdf",
+      "href": "https://drive.google.com/file/d/16BibYgrtJGoaLQTqXFmOWrmAk4NTDnSY/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0045.jpg",
+      "href": "https://drive.google.com/file/d/1RIFGZoRDSw2lRmf9HqlCz1zzbDRFb-8l/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0043.jpg",
+      "href": "https://drive.google.com/file/d/1lGp99YIFX_s_ek2BOiRkBiCacBfUBI-8/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0007.jpg",
+      "href": "https://drive.google.com/file/d/1pbkhIlXiApIV9ZvYmaQ2iqiWSKLylRvI/view?usp=drivesdk"
+    },
+    {
+      "name": "workbook.pdf",
+      "href": "https://drive.google.com/file/d/1vY_emKnj4s-SibRdyPz7A3HYmrlenTws/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0008.jpg",
+      "href": "https://drive.google.com/file/d/1vuUSuZq6DfmH-VyomTdtjgI6hR5aeLet/view?usp=drivesdk"
+    },
+    {
+      "name": "Static and Dynamic Balancing Apparatus.pdf",
+      "href": "https://drive.google.com/file/d/1EvsL4dp-ESkOS_6vT0_j_T2j8lwDUWJG/view?usp=drivesdk"
+    },
+    {
+      "name": ".trashed-1673710113-IMG-20221115-WA0048.jpg",
+      "href": "https://drive.google.com/file/d/1AwdmiLIYLi9QT0juTCzQr2wzQtv66SoO/view?usp=drivesdk"
+    },
+    {
+      "name": "06011001 2 (1).pdf",
+      "href": "https://drive.google.com/file/d/1DxPQCEiV5SMzchVBTRARLMTeEFyUbceB/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 329 Lab Report.pdf",
+      "href": "https://drive.google.com/file/d/1Eququ1BYxMmVn2S_6jO5jzrSorklmgWa/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0044.jpg",
+      "href": "https://drive.google.com/file/d/1HA6eVogE7urW80E8Z_phS4_aIVlyC6MP/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0046.jpg",
+      "href": "https://drive.google.com/file/d/1e13R_iipkeePlPLEFrpwSgHdZOZJhNA0/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20221115-WA0047.jpg",
+      "href": "https://drive.google.com/file/d/1fGeGHR2x3oLYVt_Ay2NX6npksiEHzo_7/view?usp=drivesdk"
+    }
+  ],
+
+  "MEE 327": [
+    {
+      "name": "measurement-and-data-analysis-for-engineering-and-science-fourth-edition_compress.pdf",
+      "href": "https://drive.google.com/file/d/1-zcot2EIrfkg30JqaVQJ21AgVWRUYq2m/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE327 NOTE.pdf",
+      "href": "https://drive.google.com/file/d/1Q8LYCx5Zi2fSfJOb83Wyv9Fh-fEQ5_Te/view?usp=drivesdk"
+    },
+    {
+      "name": "mee 327 lno1&2-4-1.pdf",
+      "href": "https://drive.google.com/file/d/1kHwjB4nWulCR33RLbGYckrXLbFwztJob/view?usp=drivesdk"
+    },
+    {
+      "name": "Measurement and Instrumentation Principles ( PDFDrive ).pdf",
+      "href": "https://drive.google.com/file/d/1KLzw7L_3XYO8AXVhYNLyhrybN13euyYE/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 327 Note Summary.pdf",
+      "href": "https://drive.google.com/file/d/1aru4C7XpOOREJkL96SmEnsAlye82aepV/view?usp=drivesdk"
+    },
+    {
+      "name": "Mechanical Measurements and Instrumentation Digital Material (1).pdf",
+      "href": "https://drive.google.com/file/d/1f9f-CRaxaFT42AiV2I7c6dJ6-oE0zTkT/view?usp=drivesdk"
+    }
+  ],
+
+  "MEE 326": [
+    {
+      "name": "How to setup coolprop in MATLAB.txt",
+      "href": "https://drive.google.com/file/d/1abfo3pgwDhcFBemlcCenDr6t1Nwlv-GH/view?usp=drivesdk"
+    },
+    {
+      "name": "HEAT TRANSFER-TABLE.pdf",
+      "href": "https://drive.google.com/file/d/1qrXnDkA7nsVvo1ikKhsBKUc2mrcOK-R7/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 326 2018-2019 PQ.pdf",
+      "href": "https://drive.google.com/file/d/17AsnsNEDWrN1SXWUNrEXVMkWz5EVrK1e/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 326 Class Notes.pdf",
+      "href": "https://drive.google.com/file/d/1WQS0m663LjeeiyG-104Ffw_x4aZq1mYm/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 326.pdf",
+      "href": "https://drive.google.com/file/d/1C5fe2ctGK4vvEpGKbPELwoi2x48Hbeha/view?usp=drivesdk"
+    }
+  ],
+
+  "MEE 326 [THERMO TEXTBOOKS]": [
+    {
+      "name": "AHTTv510.pdf",
+      "href": "https://drive.google.com/file/d/1RTPrjJqcbxzwAf6MKcClJjBeWRpudrAH/view?usp=drivesdk"
+    },
+    {
+      "name": "Engineering heat and mass transfer (Rathore, Mahesh M.) (Z-Library).pdf",
+      "href": "https://drive.google.com/file/d/11-3SDF92izS5czg3X8Qkn7foVHmT2UrP/view?usp=drivesdk"
+    },
+    {
+      "name": "HEAT AND MASS TRANSFER 5TH EDITION.pdf",
+      "href": "https://drive.google.com/file/d/1W8iFPC1FJcNBhLQ9FIbnpezxuDR-8XZH/view?usp=drivesdk"
+    },
+    {
+      "name": "Heat and mass transfer by Mahesh M. Rathor.pdf",
+      "href": "https://drive.google.com/file/d/1_Xp6rLSoKD9wom1IByhSEA4uI3mVY8Q3/view?usp=drivesdk"
+    },
+    {
+      "name": "Energy Systems _ A New Approach to Engineering Thermodynamics ( PDFDrive ).pdf",
+      "href": "https://drive.google.com/file/d/1qftGkmdC02Kw9dp72o3n5SGp1JAZbjq2/view?usp=drivesdk"
+    },
+    {
+      "name": "thermodynamics-an-engineering-approach-cengel-boles.pdf",
+      "href": "https://drive.google.com/file/d/1XY05rC7amzp-BM91kzjvbMdpc4q3leam/view?usp=drivesdk"
+    },
+    {
+      "name": "Complete Solution Manual to Accompany Heat Transfer_ A Practical Approach ( PDFDrive ).pdf",
+      "href": "https://drive.google.com/file/d/1IJ3k0W_JYNTzwfuwFA_dgMG_af_q3ZNx/view?usp=drivesdk"
+    },
+    {
+      "name": "HEAT TRANSFER TEXTBOOK BY CENGEL.pdf",
+      "href": "https://drive.google.com/file/d/1v5ykkBJEwNlFaBnRWyAoA4KZuj3QDQt3/view?usp=drivesdk"
+    },
+    {
+      "name": "HEAT TRANSFER-SOLUTION MANUAL.pdf",
+      "href": "https://drive.google.com/file/d/18am9tNOhV6bqoq7tTleISkMVvzgLDuzm/view?usp=drivesdk"
+    },
+    {
+      "name": "Engg-Thermodynamics.pdf",
+      "href": "https://drive.google.com/file/d/11_xaXw8usGMWBf2rZAHQy_X__LJKiS7j/view?usp=drivesdk"
+    },
+    {
+      "name": "Heat Transfer by Cengel 2nd Ed_2-1-1.pdf",
+      "href": "https://drive.google.com/file/d/1chq62v_IJA420TE7ZIhayO6gp-KK9uGD/view?usp=drivesdk"
+    }
+  ],
+
+  "MEE 326 [SLIDES]": [
+    {
+      "name": "LECTURES_6-7.pptx",
+      "href": "https://docs.google.com/presentation/d/1h2YdUg3E-fTyrFZFnpyHq7SoQwYOKDvf/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "LECTURES_3-5.pptx",
+      "href": "https://docs.google.com/presentation/d/1fPuNdvs7Ojx4dlDYRgSvbz7wFD_hyTad/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "LECTURE_2.pptx",
+      "href": "https://docs.google.com/presentation/d/1rgD5iBdlqA1RvLAilTCynEaqoOBFW8oA/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "LECTURE_1.pptx",
+      "href": "https://docs.google.com/presentation/d/1LSKiPqrJNnBv_PAxDLrcfT_eS3zYgDGW/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "LECTURE 8.pptx",
+      "href": "https://docs.google.com/presentation/d/1xngdVt9RtusUmWa05vdL_RpYcqCRa6tv/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    }
+  ],
+  "MEE 324": [
+    {
+      "name": "MEE 324 Revised.pdf",
+      "href": "https://drive.google.com/file/d/1KrF8nC7DwngK8GrVOKQOYjb3kRL3r5QB/view?usp=drivesdk"
+    },
+    {
+      "name": "An Introduction to Metallurgy - PDF Room.pdf",
+      "href": "https://drive.google.com/file/d/1jZGnBu_xvRJLjT1GkUJkXVAXc1jVpdk3/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 324 Revision notes.pdf",
+      "href": "https://drive.google.com/file/d/1-Ir5SqziIQElpE0ic3WhARiQ4hmDA9Kc/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230811-WA0010.jpg",
+      "href": "https://drive.google.com/file/d/13Wusf6rciKeMALApLSiEFoS7EGniVfxa/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230703-WA0011.jpg",
+      "href": "https://drive.google.com/file/d/1V6m0cqyLVMdS4urpOX0o1MZ3RQjSacBA/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230703-WA0021.jpg",
+      "href": "https://drive.google.com/file/d/1IOZFXGo82uAyHYN3IVdFcIQ2gsvVMz0k/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 324-1 - Copy.pdf",
+      "href": "https://drive.google.com/file/d/1zqS7fyvWhQmnrmXp_89dlIKgk6J_DC-0/view?usp=drivesdk"
+    }
+  ],
+  "MEE 323": [
+    {
+      "name": "a-textbook-of-production-engineering-11nbsped-9788121901116_compress.pdf",
+      "href": "https://drive.google.com/file/d/19nS24l-GQ6UoU2bbjkWS1JDv0OwyJfpn/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 323 mechanical working Extrusion_rolling_and_wire_drawing.pdf",
+      "href": "https://drive.google.com/file/d/1UQ3oyTGUSOOUzMynb792VjR8oCmIqsMp/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 323 materials and thier structure.pdf",
+      "href": "https://drive.google.com/file/d/1AHXkCfNS4bsaaKbtT84na_btac-LmtMd/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 323 plastic and thier processes use this to teach yr 3 students.pdf",
+      "href": "https://drive.google.com/file/d/1lAmrXKTiigi2uieQejqHzxL-4DBxNhGi/view?usp=drivesdk"
+    },
+    {
+      "name": "ADVERSE EFFECTS-WPS Office.doc",
+      "href": "https://docs.google.com/document/d/1xVTLFwKmVHXLG5oAKqMfswcit60t9H7e/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Strategies to Reduce the Global Carbon Footprint of Plastics.docx",
+      "href": "https://docs.google.com/document/d/1D6DoiE51vY_q6mqKMP4zPd3FPlHQVWkr/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 323 - Powder Metallurgy and Mechanical Processes.pdf",
+      "href": "https://drive.google.com/file/d/1G9_KX32xiQJEiqFmyqVneNt6vaitkjCK/view?usp=drivesdk"
+    },
+    {
+      "name": "PWE production plan.pdf",
+      "href": "https://drive.google.com/file/d/1ZubGRFvwIt47dtqOpy84xc9bR5syrXVr/view?usp=drivesdk"
+    },
+    {
+      "name": "Project.docx",
+      "href": "https://docs.google.com/document/d/1agJ-Rv2395UzL6wbnN9m-0fsYloxVPtR/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "ScienceprogressVannessaGoodship.pdf",
+      "href": "https://drive.google.com/file/d/1B8y425emwPgm77hVLXZ_o-xG8maTjGGb/view?usp=drivesdk"
+    },
+    {
+      "name": "recycling-03-00033.pdf",
+      "href": "https://drive.google.com/file/d/1DEz_nAaDeCAo0B9AsAjvRaiJxeVnZ6IH/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 323 Manufacturing_and_Metal_Working_Process_Classification.pdf",
+      "href": "https://drive.google.com/file/d/1HbQirAVS30aQx0YDVJtEpyKytXvCdmbr/view?usp=drivesdk"
+    },
+    {
+      "name": "PQ1",
+      "href": "https://drive.google.com/file/d/1qbjx7hs447ga97xSZUuSjYDPu2CwoFIi/view?usp=drivesdk"
+    },
+    {
+      "name": "PQ2",
+      "href": "https://drive.google.com/file/d/1S-OtEetOMPcWGYIGKLnzqm0BAJqX0XZm/view?usp=drivesdk"
+    },
+    {
+      "name": "PQ3",
+      "href": "https://drive.google.com/file/d/1MplE3coEIDQhaWMIg2kTi0rB7M0GZJWm/view?usp=drivesdk"
+    }
+  ],
+  "MEE 322": [
+    {
+      "name": "Assignment ans.docx",
+      "href": "https://docs.google.com/document/d/1KP6x3xJHc5BdMah7yosOdEJgXAKiJfpf/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Theory of Machines-Khurmi.pdf",
+      "href": "https://drive.google.com/file/d/1ITGyu5zSUQFTlXonuE3xuiYFtH2sYsxQ/view?usp=drivesdk"
+    },
+    {
+      "name": "0-MEE 322(First Part)-1.pdf",
+      "href": "https://drive.google.com/file/d/153DOwcs886Lk_e274IQEuYnSVv3iE2Zq/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE  322 (Last Part from Engr. O. D. Samuel).pdf",
+      "href": "https://drive.google.com/file/d/1Bln5n63E-ZCrdhNZzO4S23ViY5aMi619/view?usp=drivesdk"
+    },
+    {
+      "name": "Group 3.docx",
+      "href": "https://docs.google.com/document/d/1OoepKiCUQ22t_mDu0JzaZnmbUptVSJAp/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 322.pdf",
+      "href": "https://drive.google.com/file/d/1jOTv-1RRYrYAcypajdZeJiUEotgZEucN/view?usp=drivesdk"
+    }
+  ],
+  "MEE 321": [
+    {
+      "name": "IMG-20230814-WA0014.jpg",
+      "href": "https://drive.google.com/file/d/1yE2gnzPV1MKYHLben7AUHZv6WoogoT9D/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230814-WA0016.jpg",
+      "href": "https://drive.google.com/file/d/1WBPwsnKP82uf7YtqMgYl1HfpdMHW7p5Y/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0026.jpg",
+      "href": "https://drive.google.com/file/d/11uPfCkmm-pqIYk2S9PGBpxWOAsi7rkHb/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG-20230726-WA0025.jpg",
+      "href": "https://drive.google.com/file/d/1v8OlTU_xajHtbhxkvYJHqmap4_eRG-Sa/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 321 MECHANICAL ENGINEERING DESIGN.pdf",
+      "href": "https://drive.google.com/file/d/15tk63DEz8Qkz1gZ5kTHyflDAepN9cq4L/view?usp=drivesdk"
+    },
+    {
+      "name": "lecture1423723085.pdf",
+      "href": "https://drive.google.com/file/d/1A9EnIU-UhhG2RaMVODNNwhfzT_5sIdOS/view?usp=drivesdk"
+    }
+  ],
+  "GET 322": [
+    {
+      "name": "p work.docx",
+      "href": "https://docs.google.com/document/d/144cr4DT4Hls4b_7DMI-EKM9AzK4Cy3jm/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "precious work.pdf",
+      "href": "https://drive.google.com/file/d/1vnxB2CARbrEVOZRpAHyycWzyA7VsnZgA/view?usp=drivesdk"
+    },
+    {
+      "name": "CIT802.pdf",
+      "href": "https://drive.google.com/file/d/1Edxif8Bo1kEgX_LGEd0ay4OoO47A11Rb/view?usp=drivesdk"
+    },
+    {
+      "name": "Elijah T. Anthony COT. 5115. 2018 (Letters).docx",
+      "href": "https://docs.google.com/document/d/13wblFn7fdvFi0Rdl-m9zvEm6hPbsP-Eb/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "GET 322-illustrating.pdf",
+      "href": "https://drive.google.com/file/d/18nCTkQow1jJdGBtwtINt_vU0YQdKe-Zt/view?usp=drivesdk"
+    },
+    {
+      "name": "ELIJAH T. ANTHONY COT. 5115.2018 (Graph Explanations).docx",
+      "href": "https://docs.google.com/document/d/19qaxfvTdGL8Z_KDpyx5y19M4F-iS7ysy/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "GET-322-2015-2016(1).pdf",
+      "href": "https://drive.google.com/file/d/1BdwUCIyz9Gn0-Z7wgaU1HXqZS0xW4kG3/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 322 note 3.pdf",
+      "href": "https://drive.google.com/file/d/1JUpwn736rRu2TRYizKN287-eYBquYX6Y/view?usp=drivesdk"
+    },
+    {
+      "name": "Report style writing guide_Engineering.pdf",
+      "href": "https://drive.google.com/file/d/1PE5fpfv8xWfLS79egKw7tdvoYOacfAZn/view?usp=drivesdk"
+    },
+    {
+      "name": "Technical_Report_Elements.pdf",
+      "href": "https://drive.google.com/file/d/1TSX3K-DsQCmp2nCYmb2YzT22poxRRO20/view?usp=drivesdk"
+    },
+    {
+      "name": "ABEYI OGHENEVOVWERO (Excel Plots).xlsx",
+      "href": "https://docs.google.com/spreadsheets/d/1_URFOhiCiBaR8PHtf8UBFAU2cYl2bf5K/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "GET 322-1.pdf",
+      "href": "https://drive.google.com/file/d/1dXd3aB_OzWV8wd8NMDV5OUV2Qu1PUHC9/view?usp=drivesdk"
+    },
+    {
+      "name": "Ogochukwu E. Success COT. 5381.2018 [LETTER].docx",
+      "href": "https://docs.google.com/document/d/1h-6fXbDOpYGGJxsgV-hqAhzghL9kPOiu/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "ABEYI OGHENEVOVWERO COT.5188.2018.docx",
+      "href": "https://docs.google.com/document/d/1iIDN6I-MTydlCQPAujdMdSOFlbBhyugu/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "Elijah T. Anthony (Excel Plots) .xlsx",
+      "href": "https://docs.google.com/spreadsheets/d/1nL0OS1KGrNrxHhIce9Wi5_XRm0NIQ66d/edit?usp=drivesdk&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "GET 322_Data presentation_LECTURE 1.pdf",
+      "href": "https://drive.google.com/file/d/1nfVyC7E8NMdPPO3K5d_pA6PQ3yqPL2gi/view?usp=drivesdk"
+    }
+  ],
+  "GET 322 ADDICTIONAL FILES": [
+    {
+      "name": "IMG_20230712_160006_248.jpg",
+      "href": "https://drive.google.com/file/d/1RWM6g41iEHw-MJz130tKqL98R_uOl40W/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_160000_997.jpg",
+      "href": "https://drive.google.com/file/d/1SU66UtjNAk9BE9zmQnYA_gnAlzXRcE14/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_114116_970.jpg",
+      "href": "https://drive.google.com/file/d/1-YvemLMHJ7qsaLXr-NfMlqTDxVCyWWxw/view?usp=drivesdk"
+    },
+    {
+      "name": "CIT802.pdf",
+      "href": "https://drive.google.com/file/d/1iKvKUNX0E-6XLmB12QbxcBSy4LKmjjMm/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230719_160201_941.jpg",
+      "href": "https://drive.google.com/file/d/1zIliOy_uGHlOzstbKHta2SR6yfd9GYAA/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230719_160157_877.jpg",
+      "href": "https://drive.google.com/file/d/1t6HHDYgka-tE47Z08btdy07eM7brZPEE/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230719_160155_599.jpg",
+      "href": "https://drive.google.com/file/d/1_vsNnPDbW5dZnsjZgD_p2xdjTdmpy0Tr/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230719_160151_379.jpg",
+      "href": "https://drive.google.com/file/d/1AzbuSwEhhrYp366v3ucL9YRaRTwEPhEU/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230719_160147_752.jpg",
+      "href": "https://drive.google.com/file/d/1ULgaR-3WUPBF0rF4gbHTIJW4R5amwawX/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_155928_555.jpg",
+      "href": "https://drive.google.com/file/d/1hVfN2pAukMz2xJCWJWCExU5f6Xv0elxd/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_140252_755.jpg",
+      "href": "https://drive.google.com/file/d/1E9xJI4OB3p-iwwN6Le7JIJ8Ggd1YigE2/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_140235_472.jpg",
+      "href": "https://drive.google.com/file/d/1pBRCNRebDAMhK4_h6XWfKnBad3IWJ112/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_114129_947.jpg",
+      "href": "https://drive.google.com/file/d/10X_-ttD3aL5yfAlYhivtYpsTTzqUr1vJ/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230712_114127_362.jpg",
+      "href": "https://drive.google.com/file/d/1gEA_mhfuYAjlkSXPQOeQlpg4xd-pmVzs/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230726_155417_224.jpg",
+      "href": "https://drive.google.com/file/d/1n7SZ7ml4qfeo-nEuLw999uwfYgCqPjuj/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230726_155411_986.jpg",
+      "href": "https://drive.google.com/file/d/1ND90o5jopUCuNVm4KJrrGLX5nKIYyMXU/view?usp=drivesdk"
+    },
+    {
+      "name": "IMG_20230726_155409_024.jpg",
+      "href": "https://drive.google.com/file/d/17Dod_gcyoeJ9CEEXKDxzeeIQ-wmYLQ-M/view?usp=drivesdk"
+    },
+    {
+      "name": "writing-an-application-letter.pdf",
+      "href": "https://drive.google.com/file/d/1LLlptNflZtc7HnUJyd-nm6mrCUou3T_F/view?usp=drivesdk"
+    },
+    {
+      "name": "writing-a-successful-proposal.pdf",
+      "href": "https://drive.google.com/file/d/1vaQpa3CD3K99ijaT5MrnjRx6eC_mtSZC/view?usp=drivesdk"
+    }
+  ],
+  "GET 321": [
+    {
+      "name": "Error_Analysis_Notes.pdf",
+      "href": "https://drive.google.com/file/d/1TuGDJheEyeRsY2A6GZf4Mq73e5Ut_Hfr/view?usp=drivesdk"
+    },
+    {
+      "name": "StatistialTables.pdf",
+      "href": "https://drive.google.com/file/d/1FDWhPn24KaiuKgL3nrIlMxlgIJQyj9nQ/view?usp=drivesdk"
+    },
+    {
+      "name": "standardnormaltable.pdf",
+      "href": "https://drive.google.com/file/d/1_UJJo4CxOynN22FZngfb7IDxNRRSaS8G/view?usp=drivesdk"
+    },
+    {
+      "name": "Engineering Mathematics by K.A. Stroud (z-lib.org).pdf",
+      "href": "https://drive.google.com/file/d/16-pG2XqEsjvz93FG5VehsL-jUYbSVLwV/view?usp=drivesdk"
+    },
+    {
+      "name": "GET321.pdf",
+      "href": "https://drive.google.com/file/d/1afjvQZEIjV09LgAQLcprD9gbOsrb4IRf/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 2017-2018.pdf",
+      "href": "https://drive.google.com/file/d/1onreymDQBAtR_DkUjpNqT2c72UXXT1Qm/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 NOTES SUMMARY.pdf",
+      "href": "https://drive.google.com/file/d/1vHKyM6Y14qFgoVhUgdnrL8v9Edf9l48e/view?usp=drivesdk"
+    },
+    {
+      "name": "particular table used in class GET321.pdf",
+      "href": "https://drive.google.com/file/d/1z-Me1CWgVrWekhmY6C2GfHEYJnS-EjuQ/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 LN1, LN6 PROBABILITY-1.pdf",
+      "href": "https://drive.google.com/file/d/1EAJZbW7Mp24QsmAm6GEKB-iLi5jxEiOH/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 Past Questions 2019-2020.pdf",
+      "href": "https://drive.google.com/file/d/1VEcNAQu1etfviwLi0DLdQw4rsE9R7R6p/view?usp=drivesdk"
+    },
+    {
+      "name": "Solutions to past question 2018-2020.pdf",
+      "href": "https://drive.google.com/file/d/1Czao7MlBN-ectaMPcvh36Mh-YPnyYZzY/view?usp=drivesdk"
+    },
+    {
+      "name": "Statistics and probability(GET 321).pdf",
+      "href": "https://drive.google.com/file/d/1jHAhY0HagpOLy9g0XbW2TX0DRDADH6fV/view?usp=drivesdk"
+    },
+    {
+      "name": "GET321 TABLE.pdf",
+      "href": "https://drive.google.com/file/d/15nnGFwJVnKnjLcKACg-ab2rWvOqO6VlP/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321_compressed.pdf",
+      "href": "https://drive.google.com/file/d/1Ob11kJ0vWylrGxLSpSUhHAsOz13--Brz/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 NOTES.pdf",
+      "href": "https://drive.google.com/file/d/1WSIkzpXhlh2qHFngDj5g16l0QTPNjNEh/view?usp=drivesdk"
+    },
+    {
+      "name": "416 19,600.pdf",
+      "href": "https://drive.google.com/file/d/1Kg8OIZQ2fS3lm-R_9V8ldtSLwgO7plxO/view?usp=drivesdk"
+    },
+    {
+      "name": "Higher Engineering Mathematics 7th Edition(John Bird).pdf",
+      "href": "https://drive.google.com/file/d/1DT5BZa7oZ76iHQSX3ffU1ShLdjPt76I_/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 first Handout.pdf",
+      "href": "https://drive.google.com/file/d/1hfBGosYQHHzp-J81PJ6gtKt_1qDSTYaA/view?usp=drivesdk"
+    },
+    {
+      "name": "Statistics and probability(GET 321).pdf",
+      "href": "https://drive.google.com/file/d/1xN3yg-nLOAi3HxQZQkmo9giIV89xk8fQ/view?usp=drivesdk"
+    }
+  ]
+}
