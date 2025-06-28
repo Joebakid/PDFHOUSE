@@ -1,1 +1,42 @@
-{ }
+{
+  "PEE 321": [
+    {
+      "name": "PEE 321 LECTURE HANDOUT.pdf",
+      "href": "https://drive.google.com/file/d/1SNmnzCAzbEkfBfKVXClLRlOTAxG8Qsb1/view?usp=drivesdk"
+    },
+    {
+      "name": "PEE 321- Drilling engineering.pdf",
+      "href": "https://drive.google.com/file/d/19YabJD7yU2ZiwZ_TCIEiX56n04nuAAre/view?usp=drivesdk"
+    },
+    {
+      "name": "PEE 321 - First Handout.pdf",
+      "href": "https://drive.google.com/file/d/1PyZpxt3I124Fw6zhr4bEAz4VitJ-ASCM/view?usp=drivesdk"
+    }
+  ],
+  "PEE 326": [
+    {
+      "name": "PEE 326 2nd Handout.pdf",
+      "href": "https://drive.google.com/file/d/1wz5RRb5wCzamoDFSPVgRGWTdJ-CTgDJn/view?usp=drivesdk"
+    },
+    {
+      "name": "PEE 326 LECTURER HANDOUT (1).pdf",
+      "href": "https://drive.google.com/file/d/1yH2KqIz6DauOkgq6eLYi9NsObkB522hr/view?usp=drivesdk"
+    }
+  ],
+  "PEE 320": [
+    {
+      "name": "PEE 320 Second Handout.pdf",
+      "href": "https://drive.google.com/file/d/1kAbgApcC4zFBEPUb7grrAwQJtxnfPAVk/view?usp=drivesdk"
+    }
+  ],
+  "GET": [
+    {
+      "name": "Higher Engineering Mathematics 7th Edition(John Bird).pdf",
+      "href": "https://drive.google.com/file/d/1AjHDDScSNA31x4WhpidOrO0v--RN5rdT/view?usp=drivesdk"
+    },
+    {
+      "name": "GET 321 first Handout.pdf",
+      "href": "https://drive.google.com/file/d/1dZewoNglpyB4ShnHzw2Pufs1n0GpDXUI/view?usp=drivesdk"
+    }
+  ]
+}
