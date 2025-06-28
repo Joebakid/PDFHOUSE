@@ -1,5 +1,5 @@
 {
-  "MEE 316": [
+  "MEE 316 [Thermo]": [
     {
       "name": "Note compressed",
       "href": "https://drive.google.com/file/d/1t3TVepaHQHpsyWs7Klxl6diBz9mo6N6t/view?usp=drive_link"
@@ -78,7 +78,7 @@
     }
   ],
 
-  "MEE 316 CLASS SLIDE": [
+  "MEE 316 CLASS SLIDE [Thermo]": [
     {
       "name": "LECTURE 1-1",
       "href": "https://docs.google.com/presentation/d/1_4lWYOfXBogxCY4sbZ1wt09WX0zf_2IK/edit?usp=drive_link&ouid=104154279933771110676&rtpof=true&sd=true"
@@ -207,7 +207,7 @@
     }
   ],
 
-  "MEE 311 Engineering Drawing": [
+  "MEE 311 [Engineering/Technical Drawing]": [
     {
       "name": "CADCAM",
       "href": "https://drive.google.com/file/d/19QNiACnAMuOZbuLn9MVdtD6VhS71la5X/view?usp=drive_link"
@@ -231,6 +231,165 @@
     {
       "name": "MEE 311 ASSIGNMENT 1",
       "href": "https://docs.google.com/document/d/1FtWEihRPXGJ7bVxpos7IkjeqtFlT7N70/edit?usp=drive_link&ouid=104154279933771110676&rtpof=true&sd=true"
+    }
+  ],
+
+  "MEE 314 [Engineering material]": [
+    {
+      "name": "THEORY OF MACHINES-BY-SS RATTAN",
+      "href": "https://drive.google.com/file/d/1x5g4QQHufgXMamDs1YqoNd6ObqCnnBEB/view?usp=drive_link"
+    },
+    {
+      "name": "Strength-of-material-by R K Bansal",
+      "href": "https://drive.google.com/file/d/1W5BlK4PLpfkYpU3uPwNyX0pv1u57dVcB/view?usp=drive_link"
+    },
+    {
+      "name": "strength of materials, g.h. ryder",
+      "href": "https://drive.google.com/file/d/1P2cNM4OjP82urXRZUdujYssNYXcTiP59/view?usp=drive_link"
+    },
+    {
+      "name": "Strength of Materials by S. S. Rattan",
+      "href": "https://drive.google.com/file/d/1HBbqEgTjDFq5-_lwKWJgfLPfjOxNJev-/view?usp=drive_link"
+    },
+    {
+      "name": "SetupMDSolids40 [App exe]",
+      "href": "https://drive.google.com/file/d/13XycAZ5Hx2j1EnWUp4Ttm6i6BZ-SiXE6/view?usp=drive_link"
+    },
+    {
+      "name": "D. K. Singh - Strength of Materials-Springer (2020)",
+      "href": "https://drive.google.com/file/d/1eUkincuQCsS3nvN8wh8ewgf5tE0fBiLW/view?usp=drive_link"
+    },
+    {
+      "name": "Castigliano_s_Theorem",
+      "href": "https://drive.google.com/file/d/1x3AIQKPFUjTKFbOWKI6SWP4Uv9oJbSp4/view?usp=drive_link"
+    }
+  ],
+
+  "MEE 313 [MANUFACTURING TECHNOLOGY]": [
+    {
+      "name": "milling operation",
+      "href": "https://drive.google.com/file/d/1QDKiB4bx9PaV0UqTpOsIs-QEk1WzvSzR/view?usp=drive_link"
+    },
+    {
+      "name": "MEE313 Grinding",
+      "href": "https://drive.google.com/file/d/1XSMD-My_3vvCG-tfEOOvCFVw5xwAuY0x/view?usp=drive_link"
+    },
+    {
+      "name": "MEE313 Belt drive",
+      "href": "https://drive.google.com/file/d/199H0hwAURbT5Ggwq2FniI7Nh6SflCQNX/view?usp=drive_link"
+    },
+    {
+      "name": "MEE Drilling operation",
+      "href": "https://drive.google.com/file/d/1JHXIv2ZyJzRm_63IavZBYiSzW-gZ-bKv/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 Turning operation",
+      "href": "https://drive.google.com/file/d/1_c_6HmqUr3D3_RLBxhxBz7D2T3sQgyYq/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 Shaping planing  slotting",
+      "href": "https://drive.google.com/file/d/1yE2lEQTDpUEUfG0481pxGyep8esaDcc3/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 press and press work",
+      "href": "https://drive.google.com/file/d/1DL02cYeAjWH98x0RkFoSYcIcvAPzzLxK/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 milling operations",
+      "href": "https://drive.google.com/file/d/1V6FGmAZ26gT6B1w0AFCyrzCJufqTujKV/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 METAL FORMING, JOINING PROCESSES, METAL FINISHING",
+      "href": "https://drive.google.com/file/d/1Lpxg1vQ2LVWyBv51pJ6OraRO4hj3Ds4L/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 Chain drive",
+      "href": "https://drive.google.com/file/d/12XPPJD1v4_WzAQ-MNwzwhAyOJpqFrOte/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 Broaching",
+      "href": "https://drive.google.com/file/d/1RJTYtJh6SQDHf8gYaAMhLv8uvgSXkjCb/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 Boring",
+      "href": "https://drive.google.com/file/d/1TsCS0P2PhNi0YvI-NCnyNzJhrfQtasLd/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 313 2017 2018",
+      "href": "https://drive.google.com/file/d/1EFtkk_Cp4PI2Y-C106Bq_XHLIpnN7fG2/view?usp=drive_link"
+    },
+    {
+      "name": "BMT - metal machining process @spicest",
+      "href": "https://drive.google.com/file/d/1AYc1DmIH363m6thpwfGINP-QyO-2XGIy/view?usp=drive_link"
+    },
+    {
+      "name": "BMT - Broaching - Principles, systems and Applications.",
+      "href": "https://drive.google.com/file/d/1PS1IzKV5QKuVsDvfXiL5mUzmDsUVoGW4/view?usp=drive_link"
+    },
+    {
+      "name": "7 shpaper planer",
+      "href": "https://drive.google.com/file/d/1STbWjA1fWrRWqooHnpbkteYny5p8XlXo/view?usp=drive_link"
+    }
+  ],
+
+  "MEE 312 [ENGINEERING MECHANICS]": [
+    {
+      "name": "Theory of Machines - R.S.Khurmi",
+      "href": "https://drive.google.com/file/d/15PeYEShR0VeiN-ypQwZmocZKat_ipEo5/view?usp=drive_link"
+    },
+    {
+      "name": "MEE312 Second handout...",
+      "href": "https://drive.google.com/file/d/1RFW0qetfKA6c7L5piB8ouNr-J6PFZjCd/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 312 docx",
+      "href": "https://docs.google.com/document/d/138hvVGrb6DABvjxbpa_lIGo7mug4pRCI/edit?usp=drive_link&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 312 handout",
+      "href": "https://drive.google.com/file/d/1sevnT_8_MQoWd3ObT_ILXkebuP1FL6h_/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 312 handout..",
+      "href": "https://drive.google.com/file/d/1JnuskohDhv7iiif2hs3Ki-T1VJmHYnN0/view?usp=drive_link"
+    }
+  ],
+
+  "MEE 311 [ENGINEERING DRAWING]": [
+    {
+      "name": "MEE 311 ASSIGNMENT 1",
+      "href": "https://docs.google.com/document/d/1FtWEihRPXGJ7bVxpos7IkjeqtFlT7N70/edit?usp=drive_link&ouid=104154279933771110676&rtpof=true&sd=true"
+    },
+    {
+      "name": "MEE 311 2017 2018-1",
+      "href": "https://drive.google.com/file/d/1gjA7VH37BodiQKaRaTNhms9lEG6juhpB/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 311 2015 2016 EXAM-1-1",
+      "href": "https://drive.google.com/file/d/1sMeMEXSJR6oFUQ-HO6zpluDISnPWnWi9/view?usp=drive_link"
+    },
+    {
+      "name": "Machine_Drawing_Lecture_1",
+      "href": "https://drive.google.com/file/d/1lHgql89AxtnvSMn3tsisA0jZPsUCgYjY/view?usp=drive_link"
+    },
+    {
+      "name": "Machine drawing",
+      "href": "https://drive.google.com/file/d/1Jw7FXIMzsHZpFHdeVR3aQoMuLJIr7IGu/view?usp=drive_link"
+    },
+    {
+      "name": "engineering-drawing",
+      "href": "https://drive.google.com/file/d/1gAdww0ktmJ-bi4_LqngzNHXktUDC9xHT/view?usp=drive_link"
+    },
+    {
+      "name": "CADCAM.pdf",
+      "href": "https://drive.google.com/file/d/19QNiACnAMuOZbuLn9MVdtD6VhS71la5X/view?usp=drive_link"
+    }
+  ],
+
+  "MEE 319 [LAB]": [
+    {
+      "name": "MEE 319 Practical Report",
+      "href": "https://drive.google.com/file/d/1h_aGu5_-lO9diyi2zw2LvkouvTvLVabL/view?usp=drive_link"
     }
   ]
 }
