@@ -24,6 +24,7 @@ import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
 import SPEBirthday from "./Pages/SPEBirthday";
+import SUGMemo from "./Pages/SUGMemo";
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -142,6 +143,7 @@ function AppWrapper() {
               />
             }
           />
+          <Route path="/sug-memo" element={<SUGMemo />} />
           <Route path="/bookmarks" element={<BookmarksPage />} />
           <Route
             path="/search"
