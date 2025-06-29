@@ -320,14 +320,26 @@ const CVGenerator = () => {
           <p className="text-sm italic">No experience/project added yet.</p>
         ) : (
           formData.experienceProjectGroups.map((item, i) => (
-            <div key={i} className="mb-6">
-              <p className="font-semibold">{item.experience.title}</p>
-              <p className="text-sm italic">{item.experience.date}</p>
-              {item.experience.description.split("\n").map((line, idx) => (
-                <p key={idx}>• {line}</p>
-              ))}
-              <div className="mt-2 ml-4">
-                <p className="font-semibold">Project: {item.project.title}</p>
+            <div
+              key={i}
+              className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2"
+            >
+              {/* Experience */}
+              <div>
+                <p className="font-semibold">{item.experience.title}</p>
+                <p className="text-sm italic">{item.experience.date}</p>
+                {item.experience.description
+                  .split("\n")
+                  .map((line, idx) => (
+                    <p key={idx}>• {line}</p>
+                  ))}
+              </div>
+
+              {/* Project */}
+              <div>
+                <p className="font-semibold">
+                  Project: {item.project.title}
+                </p>
                 <p className="text-sm italic">
                   Languages: {item.project.languages}
                 </p>
