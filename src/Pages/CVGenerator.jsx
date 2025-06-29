@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import html2pdf from "html2pdf.js";
 
 const CVGenerator = () => {
@@ -11,15 +11,13 @@ const CVGenerator = () => {
     github: "",
     education: [{ school: "", degree: "", startDate: "", endDate: "" }],
     skills: "",
-    experiences: [],
-    projects: [{ title: "", languages: "" }],
+    experienceProjectGroups: [],
     profileImage: null,
   });
 
-  const [experienceInput, setExperienceInput] = useState({
-    title: "",
-    date: "",
-    description: "",
+  const [experienceProjectInput, setExperienceProjectInput] = useState({
+    experience: { title: "", date: "", description: "" },
+    project: { title: "", languages: "" },
   });
 
   const [textColor, setTextColor] = useState("#000000");
@@ -43,22 +41,42 @@ const CVGenerator = () => {
   };
 
   const handleExperienceChange = (field, value) => {
-    setExperienceInput({ ...experienceInput, [field]: value });
+    setExperienceProjectInput((prev) => ({
+      ...prev,
+      experience: { ...prev.experience, [field]: value },
+    }));
   };
 
-  const addExperience = () => {
-    const { title, date, description } = experienceInput;
-    if (!title.trim() || !date.trim() || !description.trim()) {
-      alert("Please fill in all experience fields and click 'Add Experience'");
+  const handleProjectChange = (field, value) => {
+    setExperienceProjectInput((prev) => ({
+      ...prev,
+      project: { ...prev.project, [field]: value },
+    }));
+  };
+
+  const addExperienceProjectGroup = () => {
+    const { experience, project } = experienceProjectInput;
+
+    if (
+      !experience.title.trim() ||
+      !experience.date.trim() ||
+      !experience.description.trim() ||
+      !project.title.trim() ||
+      !project.languages.trim()
+    ) {
+      alert("Please fill in all experience and project fields.");
       return;
     }
 
     setFormData((prev) => ({
       ...prev,
-      experiences: [...prev.experiences, experienceInput],
+      experienceProjectGroups: [...prev.experienceProjectGroups, experienceProjectInput],
     }));
 
-    setExperienceInput({ title: "", date: "", description: "" });
+    setExperienceProjectInput({
+      experience: { title: "", date: "", description: "" },
+      project: { title: "", languages: "" },
+    });
   };
 
   const handleImageUpload = (e) => {
@@ -82,24 +100,10 @@ const CVGenerator = () => {
     html2pdf().set(options).from(cvRef.current).save();
   };
 
-  const handleProjectChange = (index, field, value) => {
-    const updated = [...formData.projects];
-    updated[index][field] = value;
-    setFormData({ ...formData, projects: updated });
-  };
-
-  const addProject = () => {
-    setFormData((prev) => ({
-      ...prev,
-      projects: [...prev.projects, { title: "", languages: "" }],
-    }));
-  };
-
   return (
     <div className="max-w-5xl px-6 py-10 mx-auto">
       <h2 className="mb-6 text-2xl font-bold text-center">CV Generator</h2>
 
-      {/* Contact Info */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         <input
           type="text"
@@ -120,9 +124,7 @@ const CVGenerator = () => {
           placeholder="Website"
           className="p-2 border rounded"
           value={formData.website}
-          onChange={(e) =>
-            setFormData({ ...formData, website: e.target.value })
-          }
+          onChange={(e) => setFormData({ ...formData, website: e.target.value })}
         />
         <input
           type="text"
@@ -133,13 +135,11 @@ const CVGenerator = () => {
         />
       </div>
 
-      {/* Profile Image */}
       <div className="mb-4">
         <label className="block mb-1 font-semibold">Profile Image</label>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
       </div>
 
-      {/* Colors + Font Size */}
       <div className="flex flex-wrap items-center gap-6 mb-6">
         <label className="flex items-center gap-2">
           Text Color:
@@ -170,7 +170,6 @@ const CVGenerator = () => {
         </label>
       </div>
 
-      {/* Education */}
       <h3 className="mt-6 mb-2 text-lg font-semibold">Education</h3>
       {formData.education.map((edu, i) => (
         <div key={i} className="grid grid-cols-2 gap-4 mb-2">
@@ -193,18 +192,14 @@ const CVGenerator = () => {
             placeholder="Start Date"
             className="p-2 border rounded"
             value={edu.startDate}
-            onChange={(e) =>
-              handleEducationChange(i, "startDate", e.target.value)
-            }
+            onChange={(e) => handleEducationChange(i, "startDate", e.target.value)}
           />
           <input
             type="text"
             placeholder="End Date"
             className="p-2 border rounded"
             value={edu.endDate}
-            onChange={(e) =>
-              handleEducationChange(i, "endDate", e.target.value)
-            }
+            onChange={(e) => handleEducationChange(i, "endDate", e.target.value)}
           />
         </div>
       ))}
@@ -215,7 +210,6 @@ const CVGenerator = () => {
         + Add Education
       </button>
 
-      {/* Skills */}
       <h3 className="mb-2 text-lg font-semibold">Skills & Technologies</h3>
       <textarea
         className="w-full p-2 mb-6 border rounded"
@@ -225,65 +219,49 @@ const CVGenerator = () => {
         onChange={(e) => setFormData({ ...formData, skills: e.target.value })}
       />
 
-      {/* Experience */}
-      <h3 className="mb-2 text-lg font-semibold">Professional Experience</h3>
+      <h3 className="mb-2 text-lg font-semibold">Experience + Project</h3>
       <input
         type="text"
         placeholder="Job Title & Company"
         className="w-full p-2 mb-2 border rounded"
-        value={experienceInput.title}
+        value={experienceProjectInput.experience.title}
         onChange={(e) => handleExperienceChange("title", e.target.value)}
       />
       <input
         type="text"
         placeholder="Date Range"
         className="w-full p-2 mb-2 border rounded"
-        value={experienceInput.date}
+        value={experienceProjectInput.experience.date}
         onChange={(e) => handleExperienceChange("date", e.target.value)}
       />
       <textarea
-        className="w-full p-2 mb-1 border rounded"
+        className="w-full p-2 mb-2 border rounded"
         placeholder="Description"
-        value={experienceInput.description}
+        value={experienceProjectInput.experience.description}
         onChange={(e) => handleExperienceChange("description", e.target.value)}
       />
+      <input
+        type="text"
+        placeholder="Project Title"
+        className="w-full p-2 mb-2 border rounded"
+        value={experienceProjectInput.project.title}
+        onChange={(e) => handleProjectChange("title", e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Languages Used"
+        className="w-full p-2 mb-2 border rounded"
+        value={experienceProjectInput.project.languages}
+        onChange={(e) => handleProjectChange("languages", e.target.value)}
+      />
       <p className="mb-2 text-sm italic text-red-600">
-        Make sure to click "+ Add Experience" after filling.
+        Fill all fields and click "+ Add" below to add both experience and project.
       </p>
       <button
-        onClick={addExperience}
+        onClick={addExperienceProjectGroup}
         className="px-4 py-2 mb-6 text-white bg-blue-600 rounded hover:bg-blue-500"
       >
-        + Add Experience
-      </button>
-
-      {/* Projects */}
-      <h3 className="mb-2 text-lg font-semibold">Projects (Optional)</h3>
-      {formData.projects.map((proj, i) => (
-        <div key={i} className="grid grid-cols-2 gap-4 mb-2">
-          <input
-            type="text"
-            placeholder="Project Title"
-            className="p-2 border rounded"
-            value={proj.title}
-            onChange={(e) => handleProjectChange(i, "title", e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Languages Used"
-            className="p-2 border rounded"
-            value={proj.languages}
-            onChange={(e) =>
-              handleProjectChange(i, "languages", e.target.value)
-            }
-          />
-        </div>
-      ))}
-      <button
-        onClick={addProject}
-        className="px-4 py-2 mb-6 text-white bg-indigo-600 rounded hover:bg-indigo-500"
-      >
-        + Add Project
+        + Add Experience + Project
       </button>
 
       {/* CV Preview */}
@@ -328,32 +306,24 @@ const CVGenerator = () => {
         <p className="mb-4">{formData.skills}</p>
 
         <h2 className="mt-4 mb-1 text-xl font-semibold">
-          PROFESSIONAL EXPERIENCE
+          PROFESSIONAL EXPERIENCE & PROJECTS
         </h2>
-        {formData.experiences.length === 0 ? (
-          <p className="text-sm italic">No experience added yet.</p>
+        {formData.experienceProjectGroups.length === 0 ? (
+          <p className="text-sm italic">No experience/project added yet.</p>
         ) : (
-          formData.experiences.map((exp, i) => (
-            <div key={i} className="mb-4">
-              <p className="font-semibold">{exp.title}</p>
-              <p className="text-sm italic">{exp.date}</p>
-              {exp.description.split("\n").map((line, idx) => (
+          formData.experienceProjectGroups.map((item, i) => (
+            <div key={i} className="mb-6">
+              <p className="font-semibold">{item.experience.title}</p>
+              <p className="text-sm italic">{item.experience.date}</p>
+              {item.experience.description.split("\n").map((line, idx) => (
                 <p key={idx}>• {line}</p>
               ))}
+              <div className="mt-2 ml-4">
+                <p className="font-semibold">Project: {item.project.title}</p>
+                <p className="text-sm italic">Languages: {item.project.languages}</p>
+              </div>
             </div>
           ))
-        )}
-
-        {formData.projects.length > 0 && (
-          <>
-            <h2 className="mt-4 mb-1 text-xl font-semibold">PROJECTS</h2>
-            {formData.projects.map((proj, i) => (
-              <div key={i} className="mb-2">
-                <p className="font-semibold">{proj.title}</p>
-                <p className="text-sm italic">Languages: {proj.languages}</p>
-              </div>
-            ))}
-          </>
         )}
       </div>
 
