@@ -23,6 +23,7 @@ import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
+import SPEBirthday from "./Pages/SPEBirthday";
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -125,6 +126,16 @@ function AppWrapper() {
             path="/fyb"
             element={
               <FYBPage
+                Btn={Btn}
+                LinkCustom={LinkCustom}
+                BackButton={BackButton}
+              />
+            }
+          />
+          <Route
+            path="/spe-birthday"
+            element={
+              <SPEBirthday
                 Btn={Btn}
                 LinkCustom={LinkCustom}
                 BackButton={BackButton}
