@@ -27,7 +27,10 @@ function Nav({ Btn, LinkCustom }) {
     };
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     return () => {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
     };
   }, []);
 
@@ -71,7 +74,9 @@ function Nav({ Btn, LinkCustom }) {
       {/* Dropdown and Nav Links */}
       <div
         className={`absolute md:static top-24 left-0 w-full md:w-auto bg-gray-100 dark:bg-gray-800 transition-all duration-300 z-10 rounded-md shadow-md md:shadow-none ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
         }`}
       >
         <ul className="flex flex-col gap-3 px-4 py-4 text-center md:flex-row md:items-center md:gap-6 md:py-0 md:px-0">
@@ -102,16 +107,16 @@ function Nav({ Btn, LinkCustom }) {
                   FYB Page
                 </Link>
                 <Link
-                  to="/spe-birthday"
+                  to="/cv-generator"
                   className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
                 >
-                  SPE Birthday
+                  CV generator
                 </Link>
                 <Link
-                  to="/sug-memo"
+                  to="/slide"
                   className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
                 >
-                  SUG Memo
+                  slide-generator
                 </Link>
               </div>
             )}

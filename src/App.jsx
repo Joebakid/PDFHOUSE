@@ -23,8 +23,9 @@ import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
-import SPEBirthday from "./Pages/SPEBirthday";
-import SUGMemo from "./Pages/SUGMemo";
+import CVGenerator from "./Pages/CVGenerator";
+import SlideGenerator from "./Pages/SlideGenerator";
+import NotFound from "./Pages/NotFound";
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -134,16 +135,16 @@ function AppWrapper() {
             }
           />
           <Route
-            path="/spe-birthday"
+            path="/cv-generator"
             element={
-              <SPEBirthday
+              <CVGenerator
                 Btn={Btn}
                 LinkCustom={LinkCustom}
                 BackButton={BackButton}
               />
             }
           />
-          <Route path="/sug-memo" element={<SUGMemo />} />
+          <Route path="/slide" element={<SlideGenerator />} />
           <Route path="/bookmarks" element={<BookmarksPage />} />
           <Route
             path="/search"
@@ -155,6 +156,7 @@ function AppWrapper() {
               />
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
 
