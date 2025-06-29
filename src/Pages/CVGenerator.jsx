@@ -70,7 +70,10 @@ const CVGenerator = () => {
 
     setFormData((prev) => ({
       ...prev,
-      experienceProjectGroups: [...prev.experienceProjectGroups, experienceProjectInput],
+      experienceProjectGroups: [
+        ...prev.experienceProjectGroups,
+        experienceProjectInput,
+      ],
     }));
 
     setExperienceProjectInput({
@@ -101,10 +104,12 @@ const CVGenerator = () => {
   };
 
   return (
-    <div className="max-w-5xl px-6 py-10 mx-auto">
-      <h2 className="mb-6 text-2xl font-bold text-center">CV Generator</h2>
+    <div className="max-w-6xl px-4 py-10 mx-auto">
+      <h2 className="mb-6 text-2xl font-bold text-center sm:text-3xl">
+        CV Generator
+      </h2>
 
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
         <input
           type="text"
           placeholder="Full Name"
@@ -124,7 +129,9 @@ const CVGenerator = () => {
           placeholder="Website"
           className="p-2 border rounded"
           value={formData.website}
-          onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, website: e.target.value })
+          }
         />
         <input
           type="text"
@@ -172,7 +179,7 @@ const CVGenerator = () => {
 
       <h3 className="mt-6 mb-2 text-lg font-semibold">Education</h3>
       {formData.education.map((edu, i) => (
-        <div key={i} className="grid grid-cols-2 gap-4 mb-2">
+        <div key={i} className="grid grid-cols-1 gap-4 mb-2 md:grid-cols-2">
           <input
             type="text"
             placeholder="School"
@@ -192,14 +199,18 @@ const CVGenerator = () => {
             placeholder="Start Date"
             className="p-2 border rounded"
             value={edu.startDate}
-            onChange={(e) => handleEducationChange(i, "startDate", e.target.value)}
+            onChange={(e) =>
+              handleEducationChange(i, "startDate", e.target.value)
+            }
           />
           <input
             type="text"
             placeholder="End Date"
             className="p-2 border rounded"
             value={edu.endDate}
-            onChange={(e) => handleEducationChange(i, "endDate", e.target.value)}
+            onChange={(e) =>
+              handleEducationChange(i, "endDate", e.target.value)
+            }
           />
         </div>
       ))}
@@ -255,7 +266,8 @@ const CVGenerator = () => {
         onChange={(e) => handleProjectChange("languages", e.target.value)}
       />
       <p className="mb-2 text-sm italic text-red-600">
-        Fill all fields and click "+ Add" below to add both experience and project.
+        Fill all fields and click "+ Add" below to add both experience and
+        project.
       </p>
       <button
         onClick={addExperienceProjectGroup}
@@ -271,12 +283,8 @@ const CVGenerator = () => {
           backgroundColor: bgColor,
           color: textColor,
           fontSize: `${fontSize}px`,
-          minHeight: "1122px",
-          width: "794px",
-          padding: "1.5rem",
-          boxSizing: "border-box",
         }}
-        className="mx-auto mb-6 border rounded-md shadow"
+        className="w-full max-w-[794px] mx-auto mb-6 p-6 border rounded-md shadow"
       >
         {formData.profileImage && (
           <div className="mb-4 text-center">
@@ -320,7 +328,9 @@ const CVGenerator = () => {
               ))}
               <div className="mt-2 ml-4">
                 <p className="font-semibold">Project: {item.project.title}</p>
-                <p className="text-sm italic">Languages: {item.project.languages}</p>
+                <p className="text-sm italic">
+                  Languages: {item.project.languages}
+                </p>
               </div>
             </div>
           ))
@@ -329,7 +339,7 @@ const CVGenerator = () => {
 
       <button
         onClick={generatePDF}
-        className="px-6 py-3 mt-6 text-white bg-black rounded hover:bg-gray-700"
+        className="w-full px-6 py-3 mt-6 text-white bg-black rounded hover:bg-gray-700 sm:w-auto"
       >
         Download CV as PDF
       </button>
