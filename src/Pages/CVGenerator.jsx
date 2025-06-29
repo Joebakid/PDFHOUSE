@@ -113,25 +113,25 @@ const CVGenerator = () => {
       <h2 className="mb-6 text-3xl font-bold text-center">CV Generator</h2>
 
       {/* Inputs */}
-      <div className="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
         <input
           type="text"
           placeholder="Full Name"
-          className="p-2 border rounded"
+          className="w-full p-2 border rounded"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
         <input
           type="email"
           placeholder="Email"
-          className="p-2 border rounded"
+          className="w-full p-2 border rounded"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
         <input
           type="text"
           placeholder="Website"
-          className="p-2 border rounded"
+          className="w-full p-2 border rounded"
           value={formData.website}
           onChange={(e) =>
             setFormData({ ...formData, website: e.target.value })
@@ -140,7 +140,7 @@ const CVGenerator = () => {
         <input
           type="text"
           placeholder="GitHub"
-          className="p-2 border rounded"
+          className="w-full p-2 border rounded"
           value={formData.github}
           onChange={(e) => setFormData({ ...formData, github: e.target.value })}
         />
@@ -148,7 +148,12 @@ const CVGenerator = () => {
 
       <div className="mb-4">
         <label className="block mb-1 font-semibold">Profile Image</label>
-        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImageUpload}
+          className="w-full"
+        />
       </div>
 
       {/* Settings */}
@@ -185,25 +190,25 @@ const CVGenerator = () => {
       {/* Education */}
       <h3 className="mb-2 text-lg font-semibold">Education</h3>
       {formData.education.map((edu, i) => (
-        <div key={i} className="grid grid-cols-1 gap-4 mb-2 md:grid-cols-2">
+        <div key={i} className="grid grid-cols-1 gap-4 mb-2 sm:grid-cols-2">
           <input
             type="text"
             placeholder="School"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={edu.school}
             onChange={(e) => handleEducationChange(i, "school", e.target.value)}
           />
           <input
             type="text"
             placeholder="Degree"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={edu.degree}
             onChange={(e) => handleEducationChange(i, "degree", e.target.value)}
           />
           <input
             type="text"
             placeholder="Start Date"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={edu.startDate}
             onChange={(e) =>
               handleEducationChange(i, "startDate", e.target.value)
@@ -212,7 +217,7 @@ const CVGenerator = () => {
           <input
             type="text"
             placeholder="End Date"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={edu.endDate}
             onChange={(e) =>
               handleEducationChange(i, "endDate", e.target.value)
@@ -220,7 +225,6 @@ const CVGenerator = () => {
           />
         </div>
       ))}
-      <hr className="my-4 border-gray-400" />
       <button
         onClick={addEducation}
         className="px-4 py-2 mt-2 mb-6 text-white bg-green-600 rounded"
@@ -237,29 +241,28 @@ const CVGenerator = () => {
         value={formData.skills}
         onChange={(e) => setFormData({ ...formData, skills: e.target.value })}
       />
-      <hr className="my-4 border-gray-400" />
 
-      {/* Experience + Project */}
+      {/* Experience */}
       <h3 className="mb-2 text-lg font-semibold">Experience + Project</h3>
       {experienceInputList.map((item, i) => (
-        <div key={i} className="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
+        <div key={i} className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
           <input
             type="text"
             placeholder="Job Title & Company"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={item.experience}
             onChange={(e) => handleInputChange(i, "experience", e.target.value)}
           />
           <input
             type="text"
             placeholder="Date"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={item.date}
             onChange={(e) => handleInputChange(i, "date", e.target.value)}
           />
           <textarea
             placeholder="Description (use line breaks)"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={item.description}
             onChange={(e) =>
               handleInputChange(i, "description", e.target.value)
@@ -268,14 +271,14 @@ const CVGenerator = () => {
           <input
             type="text"
             placeholder="Project Title"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={item.project}
             onChange={(e) => handleInputChange(i, "project", e.target.value)}
           />
           <input
             type="text"
             placeholder="Languages Used"
-            className="p-2 border rounded"
+            className="w-full p-2 border rounded"
             value={item.languages}
             onChange={(e) => handleInputChange(i, "languages", e.target.value)}
           />
@@ -287,21 +290,21 @@ const CVGenerator = () => {
       >
         + Add Experience + Project
       </button>
-      <hr className="my-4 border-gray-400" />
 
-      {/* Preview */}
+      {/* CV Preview */}
       <div
         ref={cvRef}
         style={{
           backgroundColor: bgColor,
           color: textColor,
           fontSize: `${fontSize}px`,
-          width: "794px", // A4 width in px at 96dpi
-          height: "1123px", // A4 height in px at 96dpi
           padding: "40px",
           boxSizing: "border-box",
+          width: "100%",
+          maxWidth: "794px", // keep max A4 width
+          aspectRatio: "794 / 1123", // maintain A4 aspect ratio
         }}
-        className="mx-auto mb-6 shadow-xl"
+        className="mx-auto mb-6 overflow-hidden shadow-xl"
       >
         {formData.profileImage && (
           <div className="mb-4 text-center">
