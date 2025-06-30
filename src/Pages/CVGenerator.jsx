@@ -110,7 +110,12 @@ const CVGenerator = () => {
 
   return (
     <div className="max-w-6xl px-4 py-10 mx-auto">
-      <h2 className="mb-6 text-3xl font-bold text-center">CV Generator</h2>
+       <div className=" text-center mb-6">
+      <h1 className=" text-3xl font-bold text-blue-700 dark:text-white">
+         CV Generator
+      </h1>
+      <p className="text-gray-400">Create your professional resume in minutes</p>
+      </div>
 
       {/* Inputs */}
       <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2">

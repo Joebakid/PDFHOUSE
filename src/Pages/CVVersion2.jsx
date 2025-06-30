@@ -77,9 +77,13 @@ const CVGeneratorStyled = () => {
 
   return (
     <div className="min-h-screen p-4 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900">
-      <h1 className="mb-6 text-3xl font-bold text-center text-blue-700 dark:text-white">
+
+      <div className=" text-center mb-6">
+      <h1 className=" text-3xl font-bold text-blue-700 dark:text-white">
          CV Generator
       </h1>
+      <p className="text-gray-400">Create your professional resume in minutes</p>
+      </div>
 
       {/* Inputs */}
       <div className="flex flex-col gap-4">
