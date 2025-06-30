@@ -23,9 +23,9 @@ import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
-import CVGenerator from "./Pages/CVGenerator";
 import SlideGenerator from "./Pages/SlideGenerator";
 import NotFound from "./Pages/NotFound";
+import CVGeneratorWrapper from './Pages/CVWrapper'
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -137,7 +137,7 @@ function AppWrapper() {
           <Route
             path="/cv-generator"
             element={
-              <CVGenerator
+              <CVGeneratorWrapper
                 Btn={Btn}
                 LinkCustom={LinkCustom}
                 BackButton={BackButton}
