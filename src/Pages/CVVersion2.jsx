@@ -78,7 +78,7 @@ const CVGeneratorStyled = () => {
   return (
     <div className="min-h-screen p-4 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900">
       <h1 className="mb-6 text-3xl font-bold text-center text-blue-700 dark:text-white">
-        Responsive CV Generator
+         CV Generator
       </h1>
 
       {/* Inputs */}
