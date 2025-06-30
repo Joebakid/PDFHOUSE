@@ -1,10 +1,25 @@
-import React, { useState } from "react";
-import CVGenerator from "./CVGenerator"; // This is your current version 1
-import CVVersion2 from "./CVVersion2";   // You will create this
-import CVVersion3 from "./CVVersion3";   // You will create this
+import React, { useState, useEffect } from "react";
+import CVGenerator from "./CVGenerator";
+import CVVersion2 from "./CVVersion2";
+import CVVersion3 from "./CVVersion3";
 
 const CVWrapper = () => {
-  const [selectedVersion, setSelectedVersion] = useState("v1");
+  const [selectedVersion, setSelectedVersion] = useState(null); // delay rendering
+
+  // Load version from localStorage once
+  useEffect(() => {
+    const savedVersion = localStorage.getItem("cv_version") || "v1";
+    console.log("Loaded from localStorage:", savedVersion);
+    setSelectedVersion(savedVersion);
+  }, []);
+
+  // Save to localStorage whenever selectedVersion changes
+  useEffect(() => {
+    if (selectedVersion !== null) {
+      console.log("Saving to localStorage:", selectedVersion);
+      localStorage.setItem("cv_version", selectedVersion);
+    }
+  }, [selectedVersion]);
 
   const renderSelectedVersion = () => {
     switch (selectedVersion) {
@@ -15,9 +30,12 @@ const CVWrapper = () => {
       case "v3":
         return <CVVersion3 />;
       default:
-        return <CVGenerator />;
+        return null;
     }
   };
+
+  // Don't render anything until localStorage is loaded
+  if (!selectedVersion) return null;
 
   return (
     <div>
