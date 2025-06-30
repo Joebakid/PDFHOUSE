@@ -80,7 +80,29 @@ function Nav({ Btn, LinkCustom }) {
         }`}
       >
         <ul className="flex flex-col gap-3 px-4 py-4 text-center md:flex-row md:items-center md:gap-6 md:py-0 md:px-0">
+          {/* Search Input (Mobile Only) */}
+          <form
+            onSubmit={handleSearch}
+            className="flex items-center gap-2 px-2 mt-2 md:hidden"
+          >
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search PDFs..."
+              className="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00CCFF] bg-white dark:bg-gray-800 text-black dark:text-white"
+            />
+            <button
+              type="submit"
+              className="p-2 text-white bg-[#00CCFF] rounded-md hover:bg-[#00b0e6]"
+              aria-label="Search"
+            >
+              <FiSearch size={18} />
+            </button>
+          </form>
+
           {/* External Link */}
+
           <a
             href="https://t.me/bakid1"
             target="_blank"
