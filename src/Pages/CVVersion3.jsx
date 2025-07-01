@@ -11,20 +11,20 @@ const fonts = {
 const ResumeThree = () => {
   const resumeRef = useRef();
   const [formData, setFormData] = useState({
-    name: "Kavita Desai",
-    title: "UI/UX Designer",
-    phone: "+91 9xxxx 9xxxx",
-    email: "name@website.com",
-    address: "Sector 25A, Noida, Uttar Pradesh, 201301",
+    name: "",
+    title: "",
+    phone: "",
+    email: "",
+    address: "",
     about:
-      "Innovative UI/UX Designer with a focus on creating intuitive and user-friendly digital experiences.",
-    skills: "UI/UX Design\nWireframing\nPrototyping\nUser Research",
+      "",
+    skills: "",
     experience:
-      "UI/UX Designer\nCOMPANY NAME, Noida\nSeptember 20XX - Present",
+      "",
     education:
-      "Bachelor’s in Interaction Design\nABC College, Mumbai\nGraduated May 20XX",
+      "",
     certifications:
-      "User Experience Design Certification\nWeb Design Fundamentals Course",
+      "",
     font: "Sans",
     fontSize: "16",
     fontColor: "#000000",
@@ -76,16 +76,26 @@ const ResumeThree = () => {
   return (
     <div className="p-4 max-w-5xl mx-auto">
       <div className="mb-6 space-y-4">
-        <h1 className="text-2xl font-bold">Resume Generator 3</h1>
+  <div className="text-center mb-6">
+        <h1 className="text-3xl font-bold text-blue-700 dark:text-white">
+          CV Generator
+        </h1>
+        <p className="text-gray-400">
+          Create your professional resume in minutes
+        </p>
+        <p className="text-gray-400">
+         For Everyone
+        </p>
+      </div>
 
         {/* Editable Fields */}
-        <input type="text" placeholder="Full Name" className="w-full p-2 border rounded" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-        <input type="text" placeholder="Title" className="w-full p-2 border rounded" value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} />
-        <input type="text" placeholder="Phone" className="w-full p-2 border rounded" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-        <input type="email" placeholder="Email" className="w-full p-2 border rounded" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-        <input type="text" placeholder="Address" className="w-full p-2 border rounded" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} />
-        <textarea placeholder="About Me" className="w-full p-2 border rounded" value={formData.about} onChange={(e) => setFormData({ ...formData, about: e.target.value })} />
-        <textarea placeholder="Skills (newline separated)" className="w-full p-2 border rounded" value={formData.skills} onChange={(e) => setFormData({ ...formData, skills: e.target.value })} />
+        <input type="text" placeholder="Full Name" className="w-full p-4 border rounded" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+        <input type="text" placeholder="Title" className="w-full p-4 border rounded" value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} />
+        <input type="text" placeholder="Phone" className="w-full p-4 border rounded" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+        <input type="email" placeholder="Email" className="w-full p-4 border rounded" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+        <input type="text" placeholder="Address" className="w-full p-4 border rounded" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} />
+        <textarea placeholder="About Me" className="w-full p-4 border rounded" value={formData.about} onChange={(e) => setFormData({ ...formData, about: e.target.value })} />
+        <textarea placeholder="Skills (newline separated)" className="w-full p-4 border rounded" value={formData.skills} onChange={(e) => setFormData({ ...formData, skills: e.target.value })} />
         <textarea placeholder="Experience" className="w-full p-2 border rounded" value={formData.experience} onChange={(e) => setFormData({ ...formData, experience: e.target.value })} />
         <textarea placeholder="Education" className="w-full p-2 border rounded" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} />
         <textarea placeholder="Certifications" className="w-full p-2 border rounded" value={formData.certifications} onChange={(e) => setFormData({ ...formData, certifications: e.target.value })} />
