@@ -8,6 +8,12 @@ const fonts = {
   Monospace: "'Courier New', monospace",
 };
 
+const fontSizes = {
+  Small: "14px",
+  Medium: "16px",
+  Large: "18px",
+};
+
 const CVGeneratorStyled = () => {
   const cvRef = useRef();
   const [formData, setFormData] = useState({
@@ -21,6 +27,7 @@ const CVGeneratorStyled = () => {
     overview: "",
     skills: "",
     font: "Sans",
+    fontSize: "Medium",
     bgColor: "#ffffff",
     textColor: "#000000",
   });
@@ -77,15 +84,19 @@ const CVGeneratorStyled = () => {
 
   return (
     <div className="min-h-screen p-4 mx-auto max-w-5xl bg-gray-50 dark:bg-gray-900">
-
-      <div className=" text-center mb-6">
-      <h1 className=" text-3xl font-bold text-blue-700 dark:text-white">
-         CV Generator
-      </h1>
-      <p className="text-gray-400">Create your professional resume in minutes</p>
+      <div className="text-center mb-6">
+        <h1 className="text-3xl font-bold text-blue-700 dark:text-white">
+          CV Generator
+        </h1>
+        <p className="text-gray-400">
+          Create your professional resume in minutes
+        </p>
+        <p className="text-gray-400">
+         For Business / Management CV Generator
+        </p>
       </div>
 
-      {/* Inputs */}
+      {/* Form Inputs */}
       <div className="flex flex-col gap-4">
         <input className="p-2 border rounded" placeholder="Full Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
         <input className="p-2 border rounded" placeholder="Title" value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} />
@@ -98,7 +109,7 @@ const CVGeneratorStyled = () => {
 
         <input type="file" accept="image/*" onChange={handleImageUpload} />
 
-        {/* Font & Color Selectors */}
+        {/* Font Selector */}
         <div className="flex flex-col gap-2">
           <label className="text-sm">Font Style</label>
           <select className="p-2 border rounded" value={formData.font} onChange={(e) => setFormData({ ...formData, font: e.target.value })}>
@@ -108,6 +119,17 @@ const CVGeneratorStyled = () => {
           </select>
         </div>
 
+        {/* Font Size Selector */}
+        <div className="flex flex-col gap-2">
+          <label className="text-sm">Font Size</label>
+          <select className="p-2 border rounded" value={formData.fontSize} onChange={(e) => setFormData({ ...formData, fontSize: e.target.value })}>
+            {Object.keys(fontSizes).map((size) => (
+              <option key={size} value={size}>{size}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Color Pickers */}
         <div className="flex flex-col gap-2">
           <label className="text-sm">Background Color</label>
           <input type="color" value={formData.bgColor} onChange={(e) => setFormData({ ...formData, bgColor: e.target.value })} />
@@ -118,7 +140,7 @@ const CVGeneratorStyled = () => {
           <input type="color" value={formData.textColor} onChange={(e) => setFormData({ ...formData, textColor: e.target.value })} />
         </div>
 
-        {/* EDUCATION INPUT */}
+        {/* Education Section */}
         <h2 className="mt-6 text-xl font-semibold">Education</h2>
         {educationList.map((edu, idx) => (
           <div key={idx} className="flex flex-col gap-2 border p-3 rounded">
@@ -128,7 +150,7 @@ const CVGeneratorStyled = () => {
           </div>
         ))}
 
-        {/* EXPERIENCE INPUT */}
+        {/* Experience Section */}
         <h2 className="mt-6 text-xl font-semibold">Professional Experience</h2>
         {experienceList.map((exp, idx) => (
           <div key={idx} className="flex flex-col gap-2 border p-3 rounded">
@@ -140,14 +162,10 @@ const CVGeneratorStyled = () => {
           </div>
         ))}
 
-        {/* Buttons */}
+        {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-          <button className="px-4 py-2 bg-black text-white rounded" onClick={downloadPDF}>
-            Download PDF
-          </button>
-          <button className="px-4 py-2 border rounded" onClick={downloadImage}>
-            Download Image
-          </button>
+          <button className="px-4 py-2 bg-black text-white rounded" onClick={downloadPDF}>Download PDF</button>
+          <button className="px-4 py-2 border rounded" onClick={downloadImage}>Download Image</button>
         </div>
       </div>
 
@@ -159,6 +177,7 @@ const CVGeneratorStyled = () => {
           backgroundColor: formData.bgColor,
           color: formData.textColor,
           fontFamily: fonts[formData.font],
+          fontSize: fontSizes[formData.fontSize],
         }}
       >
         <div className="text-center">

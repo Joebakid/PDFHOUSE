@@ -115,6 +115,7 @@ const CVGenerator = () => {
          CV Generator
       </h1>
       <p className="text-gray-400">Create your professional resume in minutes</p>
+      <p className="text-gray-400">for Web Developers</p>
       </div>
 
       {/* Inputs */}
