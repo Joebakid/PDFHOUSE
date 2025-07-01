@@ -23,9 +23,9 @@ import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
-import SlideGenerator from "./Pages/SlideGenerator";
+import LetterGenerator from "./Pages/LetterGenerator";
 import NotFound from "./Pages/NotFound";
-import CVGeneratorWrapper from './Pages/CVWrapper'
+import CVGeneratorWrapper from "./Pages/CVWrapper";
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -144,7 +144,7 @@ function AppWrapper() {
               />
             }
           />
-          <Route path="/slide" element={<SlideGenerator />} />
+          <Route path="/letter-gen" element={<LetterGenerator />} />
           <Route path="/bookmarks" element={<BookmarksPage />} />
           <Route
             path="/search"

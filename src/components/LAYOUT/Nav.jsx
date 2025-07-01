@@ -135,10 +135,10 @@ function Nav({ Btn, LinkCustom }) {
                   CV generator
                 </Link>
                 <Link
-                  to="/slide"
+                  to="/letter-gen"
                   className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
                 >
-                  slide-generator
+                  Letter
                 </Link>
               </div>
             )}
