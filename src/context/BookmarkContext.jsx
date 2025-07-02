@@ -1,4 +1,3 @@
-// src/context/BookmarkContext.jsx
 import { createContext, useContext, useState, useEffect } from "react";
 
 const BookmarkContext = createContext();
@@ -18,13 +17,24 @@ export function BookmarkProvider({ children }) {
   }, [bookmarks]);
 
   const addBookmark = (doc) => {
-    if (!bookmarks.some((b) => b.href === doc.href)) {
-      setBookmarks((prev) => [...prev, doc]);
+    // If it's a PDF with href
+    if (doc.href) {
+      if (!bookmarks.some((b) => b.href === doc.href)) {
+        setBookmarks((prev) => [...prev, doc]);
+      }
+    }
+    // If it's a non-PDF bookmark (e.g. timetable)
+    else if (doc.type && doc.name) {
+      if (!bookmarks.some((b) => b.name === doc.name && b.type === doc.type)) {
+        setBookmarks((prev) => [...prev, doc]);
+      }
     }
   };
 
-  const removeBookmark = (href) => {
-    setBookmarks((prev) => prev.filter((b) => b.href !== href));
+  const removeBookmark = (id) => {
+    setBookmarks((prev) =>
+      prev.filter((b) => (b.href ? b.href !== id : b.name !== id))
+    );
   };
 
   const isBookmarked = (href) => {
@@ -38,7 +48,13 @@ export function BookmarkProvider({ children }) {
 
   return (
     <BookmarkContext.Provider
-      value={{ bookmarks, addBookmark, removeBookmark, isBookmarked, clearBookmarks }}
+      value={{
+        bookmarks,
+        addBookmark,
+        removeBookmark,
+        isBookmarked,
+        clearBookmarks,
+      }}
     >
       {children}
     </BookmarkContext.Provider>

@@ -1,14 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useBookmarks } from "../context/BookmarkContext";
-import { FileText, Trash2 } from "lucide-react";
+import { FileText, Trash2, Download } from "lucide-react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 function BookmarksPage() {
   const { bookmarks, removeBookmark, clearBookmarks } = useBookmarks();
+  const refs = useRef({});
 
   const handleClearAll = () => {
     if (confirm("Are you sure you want to remove all bookmarks?")) {
       clearBookmarks();
     }
+  };
+
+  const downloadPDF = async (doc, index) => {
+    const node = refs.current[index];
+    if (!node) return;
+
+    const canvas = await html2canvas(node, {
+      scale: 2,
+      backgroundColor: "#ffffff",
+      useCORS: true,
+    });
+
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("landscape", "pt", "a4");
+    const width = pdf.internal.pageSize.getWidth();
+    const height = (canvas.height * width) / canvas.width;
+
+    pdf.addImage(imgData, "PNG", 0, 0, width, height);
+    pdf.save(`${doc.name}.pdf`);
+  };
+
+  const downloadImage = async (doc, index) => {
+    const node = refs.current[index];
+    if (!node) return;
+
+    const canvas = await html2canvas(node, {
+      scale: 2,
+      backgroundColor: "#ffffff",
+      useCORS: true,
+    });
+
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = `${doc.name}.png`;
+    link.click();
   };
 
   return (
@@ -30,23 +68,118 @@ function BookmarksPage() {
               Clear All
             </button>
           </div>
+
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {bookmarks.map((doc, index) => (
               <div
                 key={index}
-                className="relative p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow"
+                className="relative p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow overflow-auto"
               >
-                <a
-                  href={doc.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  <FileText size={18} />
-                  <span className="truncate">{doc.name}</span>
-                </a>
+                {doc.type !== "Timetable" ? (
+                  <>
+                    <a
+                      href={doc.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      <FileText size={18} />
+                      <span className="truncate">{doc.name}</span>
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 mb-2">
+                      <FileText size={18} />
+                      <span className="font-semibold truncate">{doc.name}</span>
+                    </div>
+
+                    {/* Hidden exportable node (offscreen not hidden!) */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        left: "-10000px",
+                        top: "0",
+                        background: "#fff",
+                        padding: "20px",
+                      }}
+                    >
+                      <div ref={(el) => (refs.current[index] = el)}>
+                        <table className="w-full border-collapse text-sm text-black">
+                          <thead>
+                            <tr>
+                              <th className="border px-2 py-1 text-left">Day / Time</th>
+                              {doc.data.hours.map((hour, i) => (
+                                <th key={i} className="border px-2 py-1">
+                                  {hour}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {doc.data.days.map((day) => (
+                              <tr key={day}>
+                                <td className="border px-2 py-1 font-semibold">{day}</td>
+                                {doc.data.timetable[day]?.map((course, i) => (
+                                  <td key={i} className="border px-2 py-1">
+                                    {course || "—"}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    {/* Visible Table */}
+                    <div className="overflow-x-auto text-xs">
+                      <table className="w-full border-collapse">
+                        <thead>
+                          <tr>
+                            <th className="border px-2 py-1 text-left">Day / Time</th>
+                            {doc.data.hours.map((hour, i) => (
+                              <th key={i} className="border px-2 py-1">
+                                {hour}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {doc.data.days.map((day) => (
+                            <tr key={day}>
+                              <td className="border px-2 py-1 font-semibold">{day}</td>
+                              {doc.data.timetable[day]?.map((course, i) => (
+                                <td key={i} className="border px-2 py-1">
+                                  {course || "—"}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Download Buttons */}
+                    <div className="flex gap-3 mt-2 text-sm">
+                      <button
+                        onClick={() => downloadPDF(doc, index)}
+                        className="flex items-center gap-1 text-green-600 hover:underline"
+                      >
+                        <Download size={14} /> PDF
+                      </button>
+                      <button
+                        onClick={() => downloadImage(doc, index)}
+                        className="flex items-center gap-1 text-blue-600 hover:underline"
+                      >
+                        <Download size={14} /> Image
+                      </button>
+                    </div>
+                  </>
+                )}
+
                 <button
-                  onClick={() => removeBookmark(doc.href)}
+                  onClick={() => removeBookmark(doc.href || doc.name)}
                   className="absolute text-sm text-red-500 top-2 right-2 hover:text-red-700"
                 >
                   <Trash2 size={16} />

@@ -1,36 +1,46 @@
+// src/Pages/TimetableGenerator.jsx
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
+import { useBookmarks } from "../context/BookmarkContext";
 
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-const hours = ["6:00-8:00pm", "8:00-10:00pm"];
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const hours = ["8:00-10:00pm"]; // You can extend this
 
 export default function TimetableGenerator() {
   const { isDarkMode } = useContext(ThemeContext);
+  const { addBookmark } = useBookmarks();
+
   const [courses, setCourses] = useState([]);
   const [newCourse, setNewCourse] = useState("");
-  const [timetable, setTimetable] = useState({});
-  const [mode, setMode] = useState("Reading Timetable");
+  const [timetable, setTimetable] = useState(() => {
+    const saved = localStorage.getItem("currentTimetable");
+    return saved ? JSON.parse(saved) : {};
+  });
+
   const tableRef = useRef();
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDarkMode);
   }, [isDarkMode]);
 
+  useEffect(() => {
+    localStorage.setItem("currentTimetable", JSON.stringify(timetable));
+  }, [timetable]);
+
   const addCourse = () => {
     const course = newCourse.trim();
-    if (course && !courses.includes(course)) {
-      setCourses([...courses, course]);
-      setNewCourse("");
-    }
+    if (!course || courses.includes(course)) return;
+    setCourses([...courses, course]);
+    setNewCourse("");
   };
 
-  const removeCourse = (index) => {
+  const removeCourse = (i) => {
     const updated = [...courses];
-    updated.splice(index, 1);
+    updated.splice(i, 1);
     setCourses(updated);
   };
 
@@ -38,48 +48,35 @@ export default function TimetableGenerator() {
     const result = {};
     days.forEach((day) => (result[day] = Array(hours.length).fill("")));
 
-    if (mode === "Class Timetable") {
-      // Order-based fill: top to bottom, left to right
-      let i = 0;
-      outer: for (const day of days) {
-        for (let h = 0; h < hours.length; h++) {
-          const course = courses[i];
-          if (!course) break outer;
-          result[day][h] = course;
-          i++;
-        }
+    const slots = [];
+    days.forEach((day) => {
+      for (let h = 0; h < hours.length; h++) {
+        slots.push({ day, hour: h });
       }
-    } else {
-      // Reading Timetable: evenly spray, max 2 per day, max 2 per course
-      const slots = [];
-      days.forEach((day) => {
-        for (let h = 0; h < hours.length; h++) {
-          slots.push({ day, hour: h });
-        }
-      });
+    });
 
-      const shuffled = slots.sort(() => Math.random() - 0.5);
-      const courseCount = Object.fromEntries(courses.map((c) => [c, 0]));
-      const dailyCount = Object.fromEntries(days.map((d) => [d, 0]));
+    const shuffled = slots.sort(() => Math.random() - 0.5);
+    const courseCount = Object.fromEntries(courses.map((c) => [c, 0]));
+    const dailyCount = Object.fromEntries(days.map((d) => [d, 0]));
 
-      for (const { day, hour } of shuffled) {
-        if (dailyCount[day] >= 2) continue;
-
-        const available = courses.filter((c) => courseCount[c] < 2);
-        if (available.length === 0) break;
-
-        const course = available[Math.floor(Math.random() * available.length)];
-        result[day][hour] = course;
-        courseCount[course]++;
-        dailyCount[day]++;
-      }
+    for (const { day, hour } of shuffled) {
+      if (dailyCount[day] >= 1) continue;
+      const available = courses.filter((c) => courseCount[c] < 2);
+      if (available.length === 0) break;
+      const course = available[Math.floor(Math.random() * available.length)];
+      result[day][hour] = course;
+      courseCount[course]++;
+      dailyCount[day]++;
     }
 
     setTimetable(result);
   };
 
   const exportImage = async () => {
-    const canvas = await html2canvas(tableRef.current);
+    const canvas = await html2canvas(tableRef.current, {
+      scale: 2,
+      backgroundColor: isDarkMode ? "#111827" : "#ffffff",
+    });
     const data = canvas.toDataURL("image/png");
     const link = document.createElement("a");
     link.href = data;
@@ -88,7 +85,10 @@ export default function TimetableGenerator() {
   };
 
   const exportPDF = async () => {
-    const canvas = await html2canvas(tableRef.current);
+    const canvas = await html2canvas(tableRef.current, {
+      scale: 2,
+      backgroundColor: isDarkMode ? "#111827" : "#ffffff",
+    });
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("landscape", "pt", "a4");
     const width = pdf.internal.pageSize.getWidth();
@@ -100,7 +100,7 @@ export default function TimetableGenerator() {
   const exportExcel = () => {
     const wsData = [["Day / Time", ...hours]];
     days.forEach((day) => {
-      wsData.push([day, ...timetable[day]]);
+      wsData.push([day, ...(timetable[day] || ["—"])]);
     });
     const worksheet = XLSX.utils.aoa_to_sheet(wsData);
     const workbook = XLSX.utils.book_new();
@@ -112,18 +112,47 @@ export default function TimetableGenerator() {
     saveAs(new Blob([excelBuffer]), "timetable.xlsx");
   };
 
+  const bookmarkTimetable = () => {
+    if (Object.keys(timetable).length === 0) {
+      alert("Generate a timetable first!");
+      return;
+    }
+
+    const name = prompt("Enter a name for this timetable:");
+    if (!name) return;
+
+    const doc = {
+      name,
+      type: "Timetable",
+      data: {
+        timetable,
+        hours,
+        days,
+      },
+    };
+
+    addBookmark(doc);
+    alert("Timetable bookmarked!");
+  };
+
+  const deleteTimetable = () => {
+    if (confirm("Delete this timetable?")) {
+      setTimetable({});
+      localStorage.removeItem("currentTimetable");
+    }
+  };
+
   return (
     <div className="min-h-screen p-6 text-black transition-all bg-white dark:bg-gray-900 dark:text-white">
       <h1 className="mb-4 text-3xl font-bold">Timetable Generator</h1>
 
       <div className="flex flex-col gap-4 mb-4 sm:flex-row">
         <select
-          value={mode}
-          onChange={(e) => setMode(e.target.value)}
+          value={"Reading Timetable"}
+          disabled
           className="px-4 py-2 border rounded dark:bg-gray-800"
         >
           <option>Reading Timetable</option>
-          {/* <option>Class Timetable</option> */}
         </select>
 
         <input
@@ -144,6 +173,12 @@ export default function TimetableGenerator() {
           className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
         >
           Generate
+        </button>
+        <button
+          onClick={deleteTimetable}
+          className="px-4 py-2 text-white bg-gray-700 rounded hover:bg-gray-800"
+        >
+          Delete
         </button>
       </div>
 
@@ -185,6 +220,12 @@ export default function TimetableGenerator() {
             >
               Download Excel
             </button>
+            <button
+              onClick={bookmarkTimetable}
+              className="px-3 py-2 text-white bg-teal-600 rounded hover:bg-teal-700"
+            >
+              Bookmark Timetable
+            </button>
           </div>
 
           <div className="overflow-x-auto" ref={tableRef}>
@@ -203,7 +244,7 @@ export default function TimetableGenerator() {
                 {days.map((day) => (
                   <tr key={day}>
                     <td className="px-4 py-2 font-semibold border">{day}</td>
-                    {timetable[day].map((course, i) => (
+                    {timetable[day]?.map((course, i) => (
                       <td key={i} className="px-4 py-2 border">
                         {course || "—"}
                       </td>
