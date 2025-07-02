@@ -20,7 +20,6 @@ function BookmarksPage() {
 
     const canvas = await html2canvas(node, {
       scale: 2,
-      backgroundColor: "#ffffff",
       useCORS: true,
     });
 
@@ -39,7 +38,6 @@ function BookmarksPage() {
 
     const canvas = await html2canvas(node, {
       scale: 2,
-      backgroundColor: "#ffffff",
       useCORS: true,
     });
 
@@ -48,6 +46,8 @@ function BookmarksPage() {
     link.download = `${doc.name}.png`;
     link.click();
   };
+
+  const isDarkMode = document.documentElement.classList.contains("dark");
 
   return (
     <div className="max-w-4xl px-4 py-8 mx-auto">
@@ -94,18 +94,23 @@ function BookmarksPage() {
                       <span className="font-semibold truncate">{doc.name}</span>
                     </div>
 
-                    {/* Hidden exportable node (offscreen not hidden!) */}
+                    {/* Hidden exportable node with dark mode class */}
                     <div
+                      className={isDarkMode ? "dark" : ""}
                       style={{
                         position: "absolute",
                         left: "-10000px",
                         top: "0",
-                        background: "#fff",
                         padding: "20px",
+                        background: isDarkMode ? "#1f2937" : "#ffffff", // Tailwind gray-800 or white
+                        color: isDarkMode ? "#ffffff" : "#000000",
                       }}
                     >
-                      <div ref={(el) => (refs.current[index] = el)}>
-                        <table className="w-full border-collapse text-sm text-black">
+                      <div
+                        ref={(el) => (refs.current[index] = el)}
+                        className="text-black dark:text-white bg-white dark:bg-gray-800"
+                      >
+                        <table className="w-full border-collapse text-sm">
                           <thead>
                             <tr>
                               <th className="border px-2 py-1 text-left">Day / Time</th>

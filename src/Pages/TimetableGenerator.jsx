@@ -8,7 +8,7 @@ import { saveAs } from "file-saver";
 import { useBookmarks } from "../context/BookmarkContext";
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const hours = ["8:00-10:00pm"]; // You can extend this
+const hours = ["8:00-10:00pm"];
 
 export default function TimetableGenerator() {
   const { isDarkMode } = useContext(ThemeContext);
@@ -72,29 +72,65 @@ export default function TimetableGenerator() {
     setTimetable(result);
   };
 
+  const createClonedContainer = () => {
+    const container = tableRef.current.cloneNode(true);
+    container.style.background = isDarkMode ? "#1a202c" : "#ffffff";
+    container.style.color = isDarkMode ? "#ffffff" : "#000000";
+    container.style.padding = "20px";
+    container.style.borderRadius = "10px";
+    container.classList.remove("dark");
+
+    container.style.position = "absolute";
+    container.style.left = "-9999px";
+    container.style.top = "0";
+    document.body.appendChild(container);
+
+    return container;
+  };
+
   const exportImage = async () => {
-    const canvas = await html2canvas(tableRef.current, {
-      scale: 2,
-      backgroundColor: isDarkMode ? "#111827" : "#ffffff",
+    if (!tableRef.current) return;
+    const container = createClonedContainer();
+
+    window.scrollTo(0, 0);
+    const canvas = await html2canvas(container, {
+      scale: window.innerWidth < 768 ? 1.5 : 2,
+      useCORS: true,
     });
-    const data = canvas.toDataURL("image/png");
-    const link = document.createElement("a");
-    link.href = data;
-    link.download = "timetable.png";
-    link.click();
+
+    const dataUrl = canvas.toDataURL("image/png");
+
+    if (window.innerWidth < 768) {
+      const preview = window.open("");
+      preview.document.write(`<img src="${dataUrl}" style="width:100%" />`);
+    } else {
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "timetable.png";
+      link.click();
+    }
+
+    document.body.removeChild(container);
   };
 
   const exportPDF = async () => {
-    const canvas = await html2canvas(tableRef.current, {
-      scale: 2,
-      backgroundColor: isDarkMode ? "#111827" : "#ffffff",
+    if (!tableRef.current) return;
+    const container = createClonedContainer();
+
+    window.scrollTo(0, 0);
+    const canvas = await html2canvas(container, {
+      scale: window.innerWidth < 768 ? 1.5 : 2,
+      useCORS: true,
     });
+
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("landscape", "pt", "a4");
     const width = pdf.internal.pageSize.getWidth();
     const height = (canvas.height * width) / canvas.width;
     pdf.addImage(imgData, "PNG", 0, 0, width, height);
     pdf.save("timetable.pdf");
+
+    document.body.removeChild(container);
   };
 
   const exportExcel = () => {
@@ -105,10 +141,7 @@ export default function TimetableGenerator() {
     const worksheet = XLSX.utils.aoa_to_sheet(wsData);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Timetable");
-    const excelBuffer = XLSX.write(workbook, {
-      bookType: "xlsx",
-      type: "array",
-    });
+    const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
     saveAs(new Blob([excelBuffer]), "timetable.xlsx");
   };
 
