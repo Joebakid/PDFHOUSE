@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Minimize2 } from "lucide-react";
 
 function PDFs({ BackButton }) {
   const navigate = useNavigate();
@@ -19,16 +18,18 @@ function PDFs({ BackButton }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // navigate("/department", { state: formData });
     navigate(`/department?level=${formData.level}&college=${formData.college}`);
   };
 
   // Define level options based on college
   const getLevelsForCollege = (college) => {
     if (college === "Science") {
-      // Science students max out at 400L, except Sci Lab Tech & Env Science (handled in department page)
       return ["100", "200", "300", "400", "500"];
-    } else if (college === "Technology" || college === "Computing") {
+    } else if (
+      college === "Technology" ||
+      college === "Computing" ||
+      college === "Maritime"
+    ) {
       return ["100", "200", "300", "400", "500"];
     }
     return [];
@@ -56,6 +57,7 @@ function PDFs({ BackButton }) {
             <option value="Science">Science</option>
             <option value="Technology">Technology</option>
             <option value="Computing">Computing</option>
+            <option value="Maritime">Maritime</option>
           </select>
         </div>
 

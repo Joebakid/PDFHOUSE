@@ -42,6 +42,10 @@ function DepartmentPage({ BackButton }) {
       "Industrial Chemistry",
       "Environmental Science",
     ],
+      Maritime:[
+      'Maritime transport and logistics',
+      'Maritime Economics and finance'
+    ],
     Computing: [
       "Computer Science",
       "Information Technology",
@@ -49,6 +53,7 @@ function DepartmentPage({ BackButton }) {
       "Cyber Security",
       "Data Science",
     ],
+  
   };
 
   const marineSubdivisions = ["Offshore", "Naval", "Powerplant"];
