@@ -123,7 +123,7 @@ export default function TimetableGenerator() {
           className="px-4 py-2 border rounded dark:bg-gray-800"
         >
           <option>Reading Timetable</option>
-          <option>Class Timetable</option>
+          {/* <option>Class Timetable</option> */}
         </select>
 
         <input
