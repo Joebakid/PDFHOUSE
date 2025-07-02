@@ -23,7 +23,7 @@ import SearchPage from "./Pages/SearchPage";
 import IOSInstallPrompt from "./components/LAYOUT/IOSInstallPrompt";
 import "./App.css";
 import FYBPage from "./Pages/FYBPage";
-import LetterGenerator from "./Pages/LetterGenerator";
+import TimetableGenerator from "./Pages/TimetableGenerator";
 import NotFound from "./Pages/NotFound";
 import CVGeneratorWrapper from "./Pages/CVWrapper";
 
@@ -144,7 +144,7 @@ function AppWrapper() {
               />
             }
           />
-          <Route path="/letter-gen" element={<LetterGenerator />} />
+          <Route path="/timetable" element={<TimetableGenerator />} />
           <Route path="/bookmarks" element={<BookmarksPage />} />
           <Route
             path="/search"
