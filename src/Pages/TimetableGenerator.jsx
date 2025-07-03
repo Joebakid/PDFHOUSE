@@ -7,7 +7,15 @@ import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import { useBookmarks } from "../context/BookmarkContext";
 
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 const hours = ["8:00-10:00pm"];
 
 export default function TimetableGenerator() {
@@ -23,9 +31,13 @@ export default function TimetableGenerator() {
 
   const tableRef = useRef();
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-  }, [isDarkMode]);
+  //   useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }, [isDarkMode]);
 
   useEffect(() => {
     localStorage.setItem("currentTimetable", JSON.stringify(timetable));
@@ -141,7 +153,10 @@ export default function TimetableGenerator() {
     const worksheet = XLSX.utils.aoa_to_sheet(wsData);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Timetable");
-    const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+    const excelBuffer = XLSX.write(workbook, {
+      bookType: "xlsx",
+      type: "array",
+    });
     saveAs(new Blob([excelBuffer]), "timetable.xlsx");
   };
 

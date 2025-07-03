@@ -87,10 +87,11 @@ const CVGenerator = () => {
 
     html2pdf()
       .set({
-        margin: 0,
+        margin: [20, 20, 20, 20], // top, left, bottom, right
         filename: `${formData.name || "cv"}.pdf`,
         html2canvas: { scale: 2, backgroundColor: bgColor },
         jsPDF: { unit: "pt", format: "a4", orientation: "portrait" },
+        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
       })
       .from(clone)
       .save();
@@ -110,12 +111,14 @@ const CVGenerator = () => {
 
   return (
     <div className="max-w-6xl px-4 py-10 mx-auto">
-       <div className=" text-center mb-6">
-      <h1 className=" text-3xl font-bold text-blue-700 dark:text-white">
-         CV Generator
-      </h1>
-      <p className="text-gray-400">Create your professional resume in minutes</p>
-      <p className="text-gray-400">for Web Developers</p>
+      <div className="mb-6 text-center ">
+        <h1 className="text-3xl font-bold text-blue-700 dark:text-white">
+          CV Generator
+        </h1>
+        <p className="text-gray-400">
+          Create your professional resume in minutes
+        </p>
+        <p className="text-gray-400">for Web Developers</p>
       </div>
 
       {/* Inputs */}
