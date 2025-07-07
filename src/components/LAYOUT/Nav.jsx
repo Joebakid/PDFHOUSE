@@ -55,7 +55,7 @@ function Nav({ Btn, LinkCustom }) {
   };
 
   return (
-    <nav className="relative flex flex-col items-center justify-between w-full px-6 py-4 mx-auto text-xs text-black transition duration-300 bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 max-w-7xl md:flex-row dark:text-white">
+    <nav className="relative flex flex-col items-center justify-between w-full px-6 py-4 md:mx-auto text-xs text-black transition duration-300 bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 max-w-7xl md:flex-row dark:text-white  md:mt-6  ">
       {/* Logo + Mobile Icons */}
       <div className="flex items-center justify-between w-full md:w-auto">
         <Link to="/" className="text-xl font-bold">

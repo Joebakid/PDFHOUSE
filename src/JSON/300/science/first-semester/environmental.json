@@ -1,122 +1,205 @@
 {
-  "MTH101": [
+
+ "EMT 319": [
+  {
+    "name": "EMT 319  Lecture Note.docx",
+    "href": "https://docs.google.com/document/d/1m7ca0Ba4D7JxvJrm8TaIgFWCHYS3R5-m/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  }
+],
+
+ "AIR POLLUTION": [
+  {
+    "name": "AIR POLLUTION2.pdf",
+    "href": "https://drive.google.com/file/d/1-huBQkcwjKRZ4Uw-jYvewTu1HoNPCpGY/view?usp=drivesdk"
+  }
+],
+
+ "REPRODUCTION IN BACTERIA": [
+  {
+    "name": "REPRODUCTION IN BACTERIA.pdf",
+    "href": "https://drive.google.com/file/d/1_CYGsk3HAzj3wFUSG8HZU0sczL_vfxH0/view?usp=drivesdk"
+  }
+],
+ "Entrepreneurship": [
+ {
+    "name": "Entrepreneurship training class 5.pdf",
+    "href": "https://drive.google.com/file/d/1MhDnReJrQvL0StdZ0AXUpBAj0UBZibRK/view?usp=drivesdk"
+  },
+  {
+    "name": "Entrepreneurship training class 4.pdf",
+    "href": "https://drive.google.com/file/d/1eO3h_7GukDOz-QB6h459jG20iQhz9PZs/view?usp=drivesdk"
+  },
+  {
+    "name": "entrepreneurship class 2.pdf",
+    "href": "https://drive.google.com/file/d/1chyAa0NuvVzzjzqnzWm6nKu6BVqE1EBU/view?usp=drivesdk"
+  },
+  {
+    "name": "entrepreneurship studies.pdf",
+    "href": "https://drive.google.com/file/d/1q4olVElBAuieEAvGpJYj-TqekGPa24PE/view?usp=drivesdk"
+  }
+],
+
+ "EMT 318": [
+ {
+    "name": "Chapter 4 for 318 students.pdf",
+    "href": "https://drive.google.com/file/d/1kXG_Yo_1-Wq5QGrtMgkTxGsL-lIWZGRf/view?usp=drivesdk"
+  }
+],
+ "thermo": [
+ {
+    "name": "first-law-of-thermodynamics-basic-concepts.pdf",
+    "href": "https://drive.google.com/file/d/190ZMQMZlkumqZ6AomQ4h0bGsk4XzRb-f/view?usp=drivesdk"
+  },
+  {
+    "name": "first-law-of-thermodynamics-basic-concepts.pdf",
+    "href": "https://drive.google.com/file/d/1dgO69qjyX8HleqfiOBFN3gqtNz9UjGAd/view?usp=drivesdk"
+  },
+  {
+    "name": "Lattice Energy.pdf",
+    "href": "https://drive.google.com/file/d/1Iz8mcSbyrH3eux0EQXCEeAAgBwFQxqJ5/view?usp=drivesdk"
+  }
+],
+
+
+"EMT 316": [
     {
-      "name": "MTH101 Note",
-      "href": "#"
-    }
-  ],
-  "MTH103": [
-    {
-      "name": "MTH103 Note",
-      "href": "#"
-    }
-  ],
-  "CHM101": [
-    {
-      "name": "CHM101 Note",
-      "href": "#"
-    }
-  ],
-  "CHM107": [
-    {
-      "name": "CHM107 Practical",
-      "href": "#"
-    }
-  ],
-  "PHY101": [
-    {
-      "name": "PHY101 Note",
-      "href": "#"
-    }
-  ],
-  "PHY103": [
-    {
-      "name": "PHY103 Note",
-      "href": "#"
-    }
-  ],
-  "PHY107": [
-    {
-      "name": "PHY107 Practical",
-      "href": "#"
-    }
-  ],
-  "GET101": [
-    {
-      "name": "GET101 Note",
-      "href": "#"
-    }
-  ],
-  "MAR101": [
-    {
-      "name": "MAR101 Note",
-      "href": "#"
-    }
-  ],
-  "GST111": [
-    {
-      "name": "GST111 Note",
-      "href": "#"
-    }
-  ],
-  "MEE102": [
-    {
-      "name": "MEE102 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PHY102": [
-    {
-      "name": "FUPRE-PHY102 Note",
-      "href": "#"
-    }
-  ],
-  "PHY108": [
-    {
-      "name": "PHY108 Practical",
-      "href": "#"
-    }
-  ],
-  "CHM102": [
-    {
-      "name": "CHM102 Note",
-      "href": "#"
-    }
-  ],
-  "CHM108": [
-    {
-      "name": "CHM108 Practical",
-      "href": "#"
-    }
-  ],
-  "GET102": [
-    {
-      "name": "GET102 Graphics",
-      "href": "#"
-    }
-  ],
-  "GST112": [
-    {
-      "name": "GST112 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PHY104": [
-    {
-      "name": "FUPRE-PHY104 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-STA112": [
-    {
-      "name": "FUPRE-STA112 Note",
-      "href": "#"
-    }
-  ],
-  "FUPRE-PEE102": [
-    {
-      "name": "FUPRE-PEE102 Note",
-      "href": "#"
-    }
+    "name": "EMT 316 Dr EFE second material.pdf",
+    "href": "https://drive.google.com/file/d/19CtV9VCEJRmTkJohOt7teloLiQbs8jsq/view?usp=drivesdk"
+  },
+  {
+    "name": "EMT 316 first pdf for Dr Efe.pdf",
+    "href": "https://drive.google.com/file/d/1UUeZ1qv3TOKocxCooYkgkR3xAU6YmYct/view?usp=drivesdk"
+  },
+  
+  {
+    "name": "EMT 316 second material .pdf",
+    "href": "https://drive.google.com/file/d/1se3mFhnGjozIE4dFO11homiJKVDpxR_T/view?usp=drivesdk"
+  },
+  {
+    "name": "print 316 Enzymes in Biochemistry.docx",
+    "href": "https://docs.google.com/document/d/1CVDIToGcigDDGfUe5IL8XTDEdSMWqMEB/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  }
+],
+
+"EMT 317": [
+   {
+    "name": "emt 317 biotechnology.doc",
+    "href": "https://docs.google.com/document/d/1coaHw3bm3IMcBupL5JrQFAGlFkmb0h3D/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+   {
+    "name": "EMT 317 continuation of class note .pdf",
+    "href": "https://drive.google.com/file/d/1jof8Zu6pb7ZxJRgRKP_CnBSCTtVguxQ8/view?usp=drivesdk"
+  },
+  {
+    "name": "EMT317 first class .pdf",
+    "href": "https://drive.google.com/file/d/19Id7qZbqDG_ZDfozKuNtW_AyxIChd7NV/view?usp=drivesdk"
+  },
+  {
+    "name": "FUPRE EMT317 (Beckley Part) 2024-25.pdf",
+    "href": "https://drive.google.com/file/d/1UbH5QrVUKsmYUh34SAVszag2OfQF1T3p/view?usp=drivesdk"
+  },
+   {
+    "name": "Dr tega first material on EMT 317.pdf",
+    "href": "https://drive.google.com/file/d/1kbS_1hLx--1ZxLIOcTLEjFB1sKpwmzFd/view?usp=drivesdk"
+  }
+],
+
+ "Sampling Methods": [
+   {
+    "name": "Fundamentals-of-Environmental-Sampling-and-Analysis.pdf",
+    "href": "https://drive.google.com/file/d/1LyymfZOkkcmKPNUI5W9fayMgP9nRXqPf/view?usp=drivesdk"
+  },
+  {
+    "name": "Overview of Sampling Methods from Chapter 3.pdf",
+    "href": "https://drive.google.com/file/d/18T8Q6D7VGfGrCdHHyTu0p63TEZl39fev/view?usp=drivesdk"
+  },
+  {
+    "name": "Overview of Sampling Methods from Chapter 3.pdf",
+    "href": "https://drive.google.com/file/d/1fKpYOB9gW9-h5XKhcEG6nziEMMPW5h1C/view?usp=drivesdk"
+  }
+],
+
+"Noise Pollution": [
+  {
+    "name": "NOISE POLLUTION.docx",
+    "href": "https://docs.google.com/document/d/1UjlP448VTATs9lDwOteGRpdXqTBPrEt9/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+  {
+    "name": "NOISE POLLUTION.docx",
+    "href": "https://docs.google.com/document/d/1vW3tlDsG4z7MI5_AJDJWMjUYvHOlGpRk/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  }
+],
+
+"EMT 312": [
+   {
+    "name": "EMT 312 LECTURE NOTE_2025.docx",
+    "href": "https://docs.google.com/document/d/13A_BJUg27x_LYzgxQlKTcSIoTWA20XP6/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+   {
+    "name": "EMT 312 2021_092537.docx",
+    "href": "https://docs.google.com/document/d/1tw7WDjbQXTVNk9PFr051XXvcdc2owQmb/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  }
+],
+"EMT 311": [
+  {
+    "name": "311 LEVEL NOTE.pdf",
+    "href": "https://drive.google.com/file/d/1m5R49wIDX06LiLLIAHqQJ8P3y3lgjV71/view?usp=drivesdk"
+  },
+ 
+  {
+    "name": "GST 311 .pdf",
+    "href": "https://drive.google.com/file/d/1mbGgd2nWB92mpTdUHulbc5cGf9pCAR0Q/view?usp=drivesdk"
+  }
+],
+
+
+  "CLIMATE": [
+     {
+    "name": "Factors affecting climate.docx",
+    "href": "https://docs.google.com/document/d/1EIH6k_vsFPivlhrKU74x9ykwPv0E74o4/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+  {
+    "name": "Factors affecting climate.docx",
+    "href": "https://docs.google.com/document/d/1s2aat_8TEAYl2PiUxBWa3FB3Uw0Jdo8W/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+  {
+    "name": "Climatology data processing methods.docx",
+    "href": "https://docs.google.com/document/d/1DBZx19TdaaDFHRbyYw9gXMSnbJjZpUx5/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  }
+],
+
+  "EMT 314": [
+   {
+    "name": "EMT 314 Controlling Microbial Growth.docx",
+    "href": "https://docs.google.com/document/d/1CiWgEYkcT3JWV9EMIZUJZOVyV_2d78vG/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+  {
+    "name": "EMT 314 Controlling Microbial Growth.docx",
+    "href": "https://docs.google.com/document/d/1Uw1NSTDN9WtqFDLbJO7LnLOVR59dT7AV/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+ 
+  {
+    "name": "EMT 314 2025_074320.docx",
+    "href": "https://docs.google.com/document/d/1-1DYJkCdbIiYeVDNK5W_TAZPsnoiI07_/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+  {
+    "name": "EMT 314 2025_074320.docx",
+    "href": "https://docs.google.com/document/d/1CogslL9A37ZyNvVhvIrSsXd5cWinOwrf/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+
+  {
+    "name": "EMT 314 2025.docx",
+    "href": "https://docs.google.com/document/d/1JU4B9B9wc1e6nSDneMNucRb_jbsBgrbX/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+  },
+ 
+  
+  {
+    "name": "478_PHS 383 REMOTE SENSING(1).pdf",
+    "href": "https://drive.google.com/file/d/12R5trEPVg37IOtz0CiTjU_N60CBLlx5O/view?usp=drivesdk"
+  }
+ 
+ 
+
   ]
+   
 }

@@ -125,14 +125,28 @@ export default function SearchPage() {
                 typeof doc.name === "string" &&
                 doc.name.toLowerCase().includes(searchTerm.toLowerCase());
 
-              if (keyMatches || nameMatch) {
-                matches.push({
-                  name: doc.name,
-                  href: doc.href,
-                  section: sectionKey,
-                  source: path.split("/src/JSON/")[1],
-                });
-              }
+            if (keyMatches) {
+  // If the section title matches, include all its docs
+  for (const doc of docs) {
+    matches.push({
+      name: doc.name,
+      href: doc.href,
+      section: sectionKey,
+      source: path.split("/src/JSON/")[1],
+    });
+  }
+  continue; // Skip further checking for this section
+}
+
+if (nameMatch) {
+  matches.push({
+    name: doc.name,
+    href: doc.href,
+    section: sectionKey,
+    source: path.split("/src/JSON/")[1],
+  });
+}
+
             }
           }
         }
