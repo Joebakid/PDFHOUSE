@@ -85,13 +85,26 @@ const CVGenerator = () => {
       input.parentNode.replaceChild(div, input);
     });
 
+    // Remove aspect ratio and set height to auto for PDF generation
+    clone.style.aspectRatio = "unset";
+    clone.style.height = "auto";
+
     html2pdf()
       .set({
         margin: [20, 20, 20, 20], // top, left, bottom, right
         filename: `${formData.name || "cv"}.pdf`,
-        html2canvas: { scale: 2, backgroundColor: bgColor },
-        jsPDF: { unit: "pt", format: "a4", orientation: "portrait" },
-        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+        html2canvas: {
+          scale: 2,
+          backgroundColor: bgColor,
+          useCORS: true,
+          logging: false,
+        },
+        jsPDF: {
+          unit: "pt",
+          format: "a4",
+          orientation: "portrait",
+        },
+        pagebreak: { mode: ["css"], avoid: ["h1", "h2", "h3"] },
       })
       .from(clone)
       .save();
@@ -102,6 +115,7 @@ const CVGenerator = () => {
     const canvas = await html2canvas(element, {
       scale: 2,
       backgroundColor: bgColor,
+      useCORS: true,
     });
     const link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
@@ -111,13 +125,11 @@ const CVGenerator = () => {
 
   return (
     <div className="max-w-6xl px-4 py-10 mx-auto">
-      <div className="mb-6 text-center ">
+      <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold text-blue-700 dark:text-white">
           CV Generator
         </h1>
-        <p className="text-gray-400">
-          Create your professional resume in minutes
-        </p>
+        <p className="text-gray-400">Create your professional resume in minutes</p>
         <p className="text-gray-400">for Web Developers</p>
       </div>
 
@@ -142,9 +154,7 @@ const CVGenerator = () => {
           placeholder="Website"
           className="w-full p-2 border rounded"
           value={formData.website}
-          onChange={(e) =>
-            setFormData({ ...formData, website: e.target.value })
-          }
+          onChange={(e) => setFormData({ ...formData, website: e.target.value })}
         />
         <input
           type="text"
@@ -219,18 +229,14 @@ const CVGenerator = () => {
             placeholder="Start Date"
             className="w-full p-2 border rounded"
             value={edu.startDate}
-            onChange={(e) =>
-              handleEducationChange(i, "startDate", e.target.value)
-            }
+            onChange={(e) => handleEducationChange(i, "startDate", e.target.value)}
           />
           <input
             type="text"
             placeholder="End Date"
             className="w-full p-2 border rounded"
             value={edu.endDate}
-            onChange={(e) =>
-              handleEducationChange(i, "endDate", e.target.value)
-            }
+            onChange={(e) => handleEducationChange(i, "endDate", e.target.value)}
           />
         </div>
       ))}
@@ -273,9 +279,7 @@ const CVGenerator = () => {
             placeholder="Description (use line breaks)"
             className="w-full p-2 border rounded"
             value={item.description}
-            onChange={(e) =>
-              handleInputChange(i, "description", e.target.value)
-            }
+            onChange={(e) => handleInputChange(i, "description", e.target.value)}
           />
           <input
             type="text"
@@ -310,8 +314,8 @@ const CVGenerator = () => {
           padding: "40px",
           boxSizing: "border-box",
           width: "100%",
-          maxWidth: "794px", // keep max A4 width
-          aspectRatio: "794 / 1123", // maintain A4 aspect ratio
+          maxWidth: "794px", // A4 width in points at 96 DPI
+          aspectRatio: "794 / 1123", // A4 aspect ratio for preview
         }}
         className="mx-auto mb-6 overflow-hidden shadow-xl"
       >
@@ -345,9 +349,7 @@ const CVGenerator = () => {
         <p>{formData.skills}</p>
         <hr className="my-4" />
 
-        <h2 className="text-xl font-semibold">
-          PROFESSIONAL EXPERIENCE & PROJECTS
-        </h2>
+        <h2 className="text-xl font-semibold">PROFESSIONAL EXPERIENCE & PROJECTS</h2>
         {experienceInputList.map((item, i) => (
           <div key={i} className="mb-4">
             <p className="font-bold">{item.experience}</p>
@@ -361,8 +363,7 @@ const CVGenerator = () => {
                 ))}
             </ul>
             <p className="mt-1">
-              <span className="font-semibold">{item.project}</span> –{" "}
-              {item.languages}
+              <span className="font-semibold">{item.project}</span> – {item.languages}
             </p>
           </div>
         ))}
