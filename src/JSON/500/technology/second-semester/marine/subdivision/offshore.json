@@ -30,10 +30,40 @@
       "href": "https://drive.google.com/file/d/1eN_2C9aHuvubXAS9fJFCg3ShmWs1GMvw/view?usp=drive_link"
     }
   ],
-  "MEE 521":[
+  "MEE 521": [
     {
-      "name":"Engrg Mats Selection Curriculum",
-      "href":"https://docs.google.com/document/d/1VJnx77YQJMQt4YvTp7_bYuMitydcGrQq/edit?usp=drive_link&ouid=109512274485351289933&rtpof=true&sd=true"
+      "name": "Engrg Mats Selection Curriculum",
+      "href": "https://docs.google.com/document/d/1VJnx77YQJMQt4YvTp7_bYuMitydcGrQq/edit?usp=drive_link&ouid=109512274485351289933&rtpof=true&sd=true"
+    }
+  ],
+  "MAR 527": [
+    {
+      "name": "Well Completion Definition and Packers.pdf",
+      "href": "https://drive.google.com/file/d/16DZrSvmlUumVDUXLDcRPjgtTbjI-kILh/view?usp=drivesdk"
+    },
+    {
+      "name": "Subsea Production System2.pdf",
+      "href": "https://drive.google.com/file/d/1XBkt9PK3qy12Ewa-eUH1HiXdntyvNOOf/view?usp=drivesdk"
+    },
+    {
+      "name": "Note 2 Reservior and Prodution Systems.pdf",
+      "href": "https://drive.google.com/file/d/1pY3H4GDNj7dw2RinsfH7v1BzQeCxsu5H/view?usp=drivesdk"
+    },
+    {
+      "name": "Subsea Components and Pipeline Installation.pptx",
+      "href": "https://docs.google.com/presentation/d/1TmBWRKn1ICDLqzTf0qw8Dnj-oMj1wy8Z/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+    },
+    {
+      "name": "Subsea Well Arrangement.pptx",
+      "href": "https://docs.google.com/presentation/d/1W6vEFZMA0rQNMQvvTrIbWiXtojSSBmOu/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+    },
+    {
+      "name": "Maintenance.pptm.pptx",
+      "href": "https://docs.google.com/presentation/d/1QcjF7dnG29Ev1EZL4LYAW0SpyymWZvOK/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
+    },
+    {
+      "name": "Exercises and Examples Solution.docx",
+      "href": "https://docs.google.com/document/d/1FlCm178whu7gscg4q6-Iq_TXvf-neozK/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
     }
   ]
 }
