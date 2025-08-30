@@ -1,25 +1,31 @@
 {
-  "get511": [
+  "Get521": [
     {
-      "name": "511 PDF",
-      "href": "https://drive.google.com/file/d/1c7Wv9xMjSrIPMNB5zMKufO_5gHLfB1Oz/view?usp=drive_link"
+      "name": "521 Lecture Note 1",
+      "href": "https://drive.google.com/file/d/1Uh_r9VCSrRGUWfNcN-k__ueQ1zAoe3cw/view?usp=drive_link"
     },
     {
-      "name": "past question",
-      "href": "https://drive.google.com/file/d/1j0YobMFNr8VagM8vZ1i1mLC_Rqw6xLNh/view?usp=drive_link"
+      "name": "Project management",
+      "href": "https://drive.google.com/file/d/1FYOiKQgSHOPJlB7RDcbzyJ-6bmtR7ydt/view?usp=drive_link"
     },
-    {
-      "name": "past question",
-      "href": "https://drive.google.com/file/d/1itpffxcz3dYk8bmsBzmVPdfLcExC0IhC/view?usp=drive_link"
-    },
-    {
-      "name": "past question",
-      "href": "https://drive.google.com/file/d/1iANfZ3y8XwXvuBUX7JNNiDGLs0B9Iclv/view?usp=drive_link"
-    },
-    {
-      "name": "past question",
-      "href": "https://drive.google.com/file/d/1EyoHAOxGDViBh2VX-_bWbowY7u9ht9oW/view?usp=drive_link"
+     {
+      "name": "Past question",
+      "href": "https://drive.google.com/file/d/1yAE1fzu5IBV7nauqxF4rDPXe0ODco80y/view?usp=drive_link"
     }
+  ],
+  "MEE 521": [
+    {
+    "name": "MEE 521-Lecture Notes 9-10 - PDF.pdf",
+    "href": "https://drive.google.com/file/d/101nWdf4hrZCw3hdLjUttRHuPDCIxNCRY/view?usp=drivesdk"
+  },
+  {
+    "name": "MEE 521-Lecture Notes 1-4.pdf",
+    "href": "https://drive.google.com/file/d/1WRnT0PwaKp3WGHLyAOoDLwh_eeOEfRop/view?usp=drivesdk"
+  },
+  {
+    "name": "Material Science and Engineering- Introduction.pdf",
+    "href": "https://drive.google.com/file/d/1RBumtBhSki3ouhTydu8zd-4RDxpo4jsg/view?usp=drivesdk"
+  }
   ],
   
   "EEE525 [MECHATRONICS]": [
