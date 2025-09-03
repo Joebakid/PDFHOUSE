@@ -8,7 +8,7 @@
       "name": "Project management",
       "href": "https://drive.google.com/file/d/1FYOiKQgSHOPJlB7RDcbzyJ-6bmtR7ydt/view?usp=drive_link"
     },
-     {
+    {
       "name": "Past question",
       "href": "https://drive.google.com/file/d/1yAE1fzu5IBV7nauqxF4rDPXe0ODco80y/view?usp=drive_link"
     }
@@ -64,23 +64,26 @@
       "href": "https://docs.google.com/document/d/1azKc4-THeLci15tmC4u_CMwzIt_iMMJW/edit?usp=drivesdk&ouid=109512274485351289933&rtpof=true&sd=true"
     }
   ],
-   "MEE 521": [
+  "MEE 521": [
     {
-    "name": "MEE 521-Lecture Notes 9-10 - PDF.pdf",
-    "href": "https://drive.google.com/file/d/101nWdf4hrZCw3hdLjUttRHuPDCIxNCRY/view?usp=drivesdk"
-  },
-  {
-    "name": "MEE 521-Lecture Notes 1-4.pdf",
-    "href": "https://drive.google.com/file/d/1WRnT0PwaKp3WGHLyAOoDLwh_eeOEfRop/view?usp=drivesdk"
-  },
-  {
-    "name": "Material Science and Engineering- Introduction.pdf",
-    "href": "https://drive.google.com/file/d/1RBumtBhSki3ouhTydu8zd-4RDxpo4jsg/view?usp=drivesdk"
-  },
-  {
-    "name": "Curriculum",
-    "href": "https://docs.google.com/document/d/1VJnx77YQJMQt4YvTp7_bYuMitydcGrQq/edit?usp=drive_link&ouid=109512274485351289933&rtpof=true&sd=true"
-  }
-  
+      "name": "MEE 521-Lecture Notes 9-10 - PDF.pdf",
+      "href": "https://drive.google.com/file/d/101nWdf4hrZCw3hdLjUttRHuPDCIxNCRY/view?usp=drivesdk"
+    },
+    {
+      "name": "MEE 521-Lecture Notes 5-8 - PDF.pdf",
+      "href": "https://drive.google.com/file/d/1l3JNgH7amnVHSvl7WdzyhZRxqNxo9vvU/view?usp=drive_link"
+    },
+    {
+      "name": "MEE 521-Lecture Notes 1-4.pdf",
+      "href": "https://drive.google.com/file/d/1WRnT0PwaKp3WGHLyAOoDLwh_eeOEfRop/view?usp=drivesdk"
+    },
+    {
+      "name": "Material Science and Engineering- Introduction.pdf",
+      "href": "https://drive.google.com/file/d/1RBumtBhSki3ouhTydu8zd-4RDxpo4jsg/view?usp=drivesdk"
+    },
+    {
+      "name": "Curriculum",
+      "href": "https://docs.google.com/document/d/1VJnx77YQJMQt4YvTp7_bYuMitydcGrQq/edit?usp=drive_link&ouid=109512274485351289933&rtpof=true&sd=true"
+    }
   ]
 }
