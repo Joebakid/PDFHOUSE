@@ -13,7 +13,17 @@ function Nav({ Btn, LinkCustom }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const isMobile = window.innerWidth < 768;
+
+  // === Use lg (1024px) as the breakpoint for hamburger ===
+  const getIsBelowLg = () =>
+    typeof window !== "undefined" ? window.innerWidth < 1024 : true;
+  const [isMobile, setIsMobile] = useState(getIsBelowLg());
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(getIsBelowLg());
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -55,13 +65,17 @@ function Nav({ Btn, LinkCustom }) {
   };
 
   return (
-    <nav className="relative flex flex-col items-center justify-between w-full px-6 py-4 md:mx-auto text-xs text-black transition duration-300 bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 max-w-7xl md:flex-row dark:text-white  md:mt-6  ">
+    <nav className="relative flex flex-col items-center justify-between 
+    w-[calc(100%-2rem)] mx-auto my-4 px-6 py-4 
+    lg:mx-auto text-xs text-black transition duration-300 
+    bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 
+    max-w-7xl lg:flex-row dark:text-white lg:mt-6">
       {/* Logo + Mobile Icons */}
-      <div className="flex items-center justify-between w-full md:w-auto">
+      <div className="flex items-center justify-between w-full lg:w-auto">
         <Link to="/" className="text-xl font-bold">
           PDFHOUSE
         </Link>
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
           <button onClick={toggleTheme} className="p-1" title="Toggle Theme">
             {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
           </button>
@@ -73,17 +87,17 @@ function Nav({ Btn, LinkCustom }) {
 
       {/* Dropdown and Nav Links */}
       <div
-        className={`absolute md:static top-24 left-0 w-full md:w-auto bg-gray-100 dark:bg-gray-800 transition-all duration-300 z-10 rounded-md shadow-md md:shadow-none ${
+        className={`absolute lg:static top-24 left-0 w-full lg:w-auto bg-gray-100 dark:bg-gray-800 transition-all duration-300 z-10 rounded-md shadow-md lg:shadow-none ${
           isOpen
             ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+            : "opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto"
         }`}
       >
-        <ul className="flex flex-col gap-3 px-4 py-4 text-center md:flex-row md:items-center md:gap-6 md:py-0 md:px-0">
+        <ul className="flex flex-col gap-3 px-4 py-4 text-center lg:flex-row lg:items-center lg:gap-6 lg:py-0 lg:px-0">
           {/* Search Input (Mobile Only) */}
           <form
             onSubmit={handleSearch}
-            className="flex items-center gap-2 px-2 mt-2 md:hidden"
+            className="flex items-center gap-2 px-2 mt-2 lg:hidden"
           >
             <input
               type="text"
@@ -102,10 +116,10 @@ function Nav({ Btn, LinkCustom }) {
           </form>
 
           {/* External Link */}
-
           <a
             href="https://t.me/bakid1"
             target="_blank"
+            rel="noreferrer"
             className="cursor-pointer hover:text-[#00CCFF] custom-transition"
           >
             Add a PDF
@@ -121,7 +135,7 @@ function Nav({ Btn, LinkCustom }) {
             </button>
 
             {showDesignDropdown && (
-              <div className="absolute z-30 w-40 mt-2 -translate-x-1/2 bg-white border rounded-lg shadow-lg left-1/2 md:left-auto md:right-0 md:translate-x-0 dark:bg-gray-900 dark:border-gray-700">
+              <div className="absolute z-30 w-40 mt-2 -translate-x-1/2 bg-white border rounded-lg shadow-lg left-1/2 lg:left-auto lg:right-0 lg:translate-x-0 dark:bg-gray-900 dark:border-gray-700">
                 <Link
                   to="/fyb"
                   className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
@@ -145,7 +159,7 @@ function Nav({ Btn, LinkCustom }) {
           </div>
 
           {/* Bookmarks + View PDFs (Mobile Only) */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <LinkCustom
               to="/bookmarks"
               text="Bookmarks"
@@ -153,7 +167,7 @@ function Nav({ Btn, LinkCustom }) {
             />
           </div>
 
-          <div className="mt-2 md:hidden">
+          <div className="mt-2 lg:hidden">
             <LinkCustom
               to="/pdfs"
               text="View PDFs"
@@ -163,7 +177,7 @@ function Nav({ Btn, LinkCustom }) {
 
           {/* Install App Button (Mobile Only) */}
           {isMobile && deferredPrompt && (
-            <div className="my-4 md:hidden">
+            <div className="my-4 lg:hidden">
               <button
                 onClick={handleInstall}
                 className="px-5 py-2 text-white transition bg-green-500 rounded-lg shadow-lg hover:bg-green-600"
@@ -176,7 +190,7 @@ function Nav({ Btn, LinkCustom }) {
       </div>
 
       {/* Right Side Buttons (Desktop Only) */}
-      <div className="items-center hidden gap-4 md:flex">
+      <div className="items-center hidden gap-4 lg:flex">
         <form onSubmit={handleSearch} className="flex items-center gap-2">
           <input
             type="text"
@@ -217,7 +231,7 @@ function Nav({ Btn, LinkCustom }) {
         {deferredPrompt && (
           <button
             onClick={handleInstall}
-            className="hidden px-4 py-2 text-white transition bg-green-500 rounded-lg hover:bg-green-600 md:block"
+            className="hidden px-4 py-2 text-white transition bg-green-500 rounded-lg hover:bg-green-600 lg:block"
           >
             Install App
           </button>
