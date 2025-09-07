@@ -65,11 +65,13 @@ function Nav({ Btn, LinkCustom }) {
   };
 
   return (
+ 
     <nav className="relative flex flex-col items-center justify-between 
     w-[calc(100%-2rem)] mx-auto my-4 px-6 py-4 
     lg:mx-auto text-xs text-black transition duration-300 
     bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 
     max-w-7xl lg:flex-row dark:text-white lg:mt-6">
+ 
       {/* Logo + Mobile Icons */}
       <div className="flex items-center justify-between w-full lg:w-auto">
         <Link to="/" className="text-xl font-bold">
