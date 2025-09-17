@@ -26,6 +26,8 @@ import FYBPage from "./Pages/FYBPage";
 import TimetableGenerator from "./Pages/TimetableGenerator";
 import NotFound from "./Pages/NotFound";
 import CVGeneratorWrapper from "./Pages/CVWrapper";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"; // optional
 
 // Telegram Button
 function Btn({ text, className }) {
@@ -84,6 +86,7 @@ function AppWrapper() {
 
   return (
     <div className="flex flex-col min-h-screen text-black transition-colors duration-300 bg-white dark:bg-gray-900 dark:text-white">
+      {/* <Analytics/> */}
       <Nav Btn={Btn} LinkCustom={LinkCustom} />
 
       <div className="flex-grow">
@@ -172,6 +175,8 @@ function App() {
     <Router>
       <BookmarkProvider>
         <ThemeProvider>
+           <Analytics />
+          <SpeedInsights />  
           <AppWrapper />
         </ThemeProvider>
       </BookmarkProvider>
