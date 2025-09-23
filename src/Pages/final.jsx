@@ -8,7 +8,7 @@ import Json from "./finalyr.json"
 /**
  * Final Year Objectives Builder + JSON Quiz Loader
  * ---------------------------------------------------------------
- * • Build/preview 30‑question MCQ sheets
+ * • Build/preview 30-question MCQ sheets
  * • Load real questions from imported ./finalyr.json
  * • Start a quiz, click options, Submit → score + corrections
  * • Export printable sheet & answer key (PNG/JPG)
@@ -41,7 +41,43 @@ function clamp30(arr) {
   return copy.map((q, i) => ({ ...q, id: i + 1 }))
 }
 
-// Convert a topic from finalyr.json → builder topic shape
+/* --------------------------- NEW: answer randomization helpers --------------------------- */
+// Fisher–Yates
+function shuffle(arr) {
+  const a = arr.slice()
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+/** Randomize the option order for one question while keeping the correct mapping */
+function randomizeQuestion(q) {
+  const opts = q.options.slice(0, 4)
+  while (opts.length < 4) opts.push("")
+  const correctIdx = Math.min(3, Math.max(0, q.answerIndex | 0))
+
+  const incorrectIdxs = [0, 1, 2, 3].filter((i) => i !== correctIdx)
+  const shuffledIncorrect = shuffle(incorrectIdxs)
+
+  // place correct option at a random slot A/B/C/D uniformly
+  const newCorrect = Math.floor(Math.random() * 4)
+  const newOptions = new Array(4)
+  let k = 0
+  for (let i = 0; i < 4; i++) {
+    newOptions[i] = i === newCorrect ? opts[correctIdx] : opts[shuffledIncorrect[k++]]
+  }
+  return { ...q, options: newOptions, answerIndex: newCorrect }
+}
+
+/** Randomize answers for an entire topic */
+function randomizeTopicAnswers(topic) {
+  const qs = (topic.questions || []).map(randomizeQuestion)
+  return { ...topic, questions: qs }
+}
+
+/* --------------------------- Convert a topic from finalyr.json → builder topic shape --------------------------- */
 function topicFromJson(topic) {
   const srcQs = Array.isArray(topic?.questions) ? topic.questions : []
   const qs = Array.from({ length: 30 }, (_, i) => {
@@ -51,7 +87,8 @@ function topicFromJson(topic) {
     const ai = Math.min(3, Math.max(0, typeof s.answerIndex === "number" ? s.answerIndex : idxFrom(s.answer)))
     return { id: i + 1, text: s.text || "", options: opts, answerIndex: ai }
   })
-  return { name: topic.title || topic.id || "Topic", questions: qs, collapsed: false }
+  // NEW: ensure answer letters are randomized every time we load
+  return randomizeTopicAnswers({ name: topic.title || topic.id || "Topic", questions: qs, collapsed: false })
 }
 
 /* --------------------------- component --------------------------- */
@@ -165,6 +202,14 @@ export default function FinalYearObjectivesBuilder() {
         ;[arr[i], arr[j]] = [arr[j], arr[i]]
       }
       topics[ti] = { ...t, questions: arr.map((q, idx) => ({ ...q, id: idx + 1 })) }
+      return { ...d, topics }
+    })
+
+  // NEW: randomize A/B/C/D positions for all questions in the active topic
+  const randomizeAnswers = (ti) =>
+    setData((d) => {
+      const topics = d.topics.slice()
+      topics[ti] = randomizeTopicAnswers(topics[ti])
       return { ...d, topics }
     })
 
@@ -391,6 +436,14 @@ export default function FinalYearObjectivesBuilder() {
               className="px-4 py-2 text-white bg-purple-600 rounded hover:bg-purple-700"
             >
               Randomize Questions
+            </button>
+
+            {/* NEW: randomize A/B/C/D positions */}
+            <button
+              onClick={() => randomizeAnswers(activeTopicIdx)}
+              className="px-4 py-2 text-white bg-teal-600 rounded hover:bg-teal-700"
+            >
+              Randomize Answers
             </button>
           </div>
         </div>

@@ -1112,11 +1112,1200 @@
       "code": "MEE521",
       "name": "MEE521",
       "topics": [
-        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
-        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
-        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
-        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
-        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+       {
+      "id": "ch1",
+      "title": "Chapter 1 – Design & Materials (MEE521)",
+      "questions": [
+        {
+          "text": "Engineering design is best described in these notes as:",
+          "options": [
+            "A systematic creative process turning ideas into practical solutions",
+            "Sketching component shapes without constraints",
+            "Reverse engineering only",
+            "Procurement of ready-made parts"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which item is NOT listed as a reason why material selection matters in design?",
+          "options": [
+            "Aesthetics & User Experience",
+            "Increased tax credits for manufacturers",
+            "Durability & Reliability",
+            "Manufacturability"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A design objective for a subsea oil pipeline given in the notes is to:",
+          "options": [
+            "Maximize frictional head losses",
+            "Withstand underwater pressure and corrosion",
+            "Ensure frequent shutdowns for testing",
+            "Avoid quality control testing"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "For the pipeline case study, the pipe body material chosen was:",
+          "options": [
+            "Duplex stainless steel without coating",
+            "Carbon steel with coatings",
+            "PVC-U",
+            "Glass-fiber only"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which coating is specified to prevent corrosion and increase longevity?",
+          "options": [
+            "Fusion Bonded Epoxy (FBE)",
+            "Zinc-rich paint only",
+            "Bare steel (no coating)",
+            "Porous ceramic wash"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which insulation was selected to minimize heat loss in the subsea pipeline?",
+          "options": [
+            "Polyurethane foam",
+            "Aerogel blanket exclusively",
+            "No insulation is used",
+            "Cork"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "What is the function of the concrete weight coating layer?",
+          "options": [
+            "Adds stability against underwater currents",
+            "Improves electrical insulation only",
+            "Reduces internal wax deposition chemically",
+            "Acts as the primary corrosion barrier"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An alternative considered for the pipe body was:",
+          "options": [
+            "Duplex stainless steel (better corrosion resistance but costlier)",
+            "Wood laminate (cheaper, lighter)",
+            "Plain carbon steel with no coatings",
+            "Glass-only tube"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which step is NOT listed under the manufacturing process for the pipeline?",
+          "options": [
+            "Hydrostatic pressure testing",
+            "3D bioprinting of steel microstructures",
+            "Ultrasonic inspection",
+            "Coating application"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Pipeline installation methods mentioned include:",
+          "options": [
+            "J-lay or S-lay",
+            "Push-in by ROV claws only",
+            "Helicopter drop",
+            "Bucket dredging"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A performance outcome reported for the pipeline case study is:",
+          "options": [
+            "Frequent leakage events recorded",
+            "Successful monitoring through intelligent pigging",
+            "Zero need for inspection over lifetime",
+            "Elimination of coatings after one year"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A sustainability trend suggested for pipelines is:",
+          "options": [
+            "Use of composite pipes to reduce corrosion",
+            "Eliminating all insulation",
+            "Avoiding leak detection systems",
+            "Single-use plastic casings"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For ROVs, a key design objective listed is to:",
+          "options": [
+            "Operate safely at extreme depths",
+            "Eliminate camera systems",
+            "Avoid modularity",
+            "Reduce maneuverability"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A material selection criterion important for ROVs is:",
+          "options": [
+            "Corrosion resistance in saltwater",
+            "Maximal electrical conductivity of housings",
+            "High optical emissivity only",
+            "Fragility to enable easy replacement"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which material is identified for ROV buoyancy elements to maintain depth control?",
+          "options": [
+            "Syntactic foam",
+            "Solid steel blocks",
+            "Corkwood",
+            "Porous concrete"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A typical ROV tether material listed in the notes is:",
+          "options": [
+            "Polyurethane-sheathed copper cable",
+            "Bare aluminum wire",
+            "No tether—battery only",
+            "Compressed air line without conductors"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Electronics casings on ROVs can be made from:",
+          "options": [
+            "Acrylic or Polycarbonate",
+            "Plain glass",
+            "Open mesh steel",
+            "Untreated wood"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A listed deep-sea operational challenge for ROVs is:",
+          "options": [
+            "Cable entanglement",
+            "Excess sunlight glare",
+            "Low humidity cracking",
+            "Static electricity buildup on sand"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A future direction for ROVs mentioned is:",
+          "options": [
+            "Integration of AI-based navigation systems",
+            "Eliminating cameras entirely",
+            "Replacing syntactic foam with air bladders only",
+            "Prohibiting modular designs"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For GSM handset design, the outer casing material suggested is often:",
+          "options": [
+            "Polycarbonate or ABS",
+            "Uncoated mild steel",
+            "Brittle glass",
+            "Lead sheet"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The screen material highlighted for drop resistance is:",
+          "options": [
+            "Gorilla Glass (alkali aluminosilicate)",
+            "Annealed float glass only",
+            "Plexiglass without hard coat",
+            "Paper laminate"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Handset frame/chassis materials can include:",
+          "options": [
+            "Magnesium alloy or Aluminum",
+            "Copper foam",
+            "Untreated pine",
+            "Plaster of Paris"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An internal shock-damping technique mentioned is:",
+          "options": [
+            "Rubber gaskets or floating PCB mounts",
+            "Gluing everything rigidly",
+            "Leaving components loose",
+            "Filling with water"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Crash/Drop testing procedures include:",
+          "options": [
+            "Tumble tests",
+            "X-ray crystallography only",
+            "Electroplating tests",
+            "Gamma irradiation"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which is a handset design technique for impact zones?",
+          "options": [
+            "Reinforced corners",
+            "Hollow corners only",
+            "Thin unsupported edges",
+            "Random screw placements"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which is NOT a design objective for GSM handset drop protection?",
+          "options": [
+            "Resist mechanical damage from typical drops",
+            "Increase wireless SAR emissions",
+            "Protect delicate internal components",
+            "Keep weight and cost low"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "In the Offshore Drilling ROV case study, the structural frame material chosen was:",
+          "options": [
+            "Titanium alloy",
+            "Plywood laminate",
+            "Cast iron",
+            "PVC"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A functional feature of drilling ROVs listed is:",
+          "options": [
+            "Multipurpose manipulators with interchangeable tools",
+            "Single fixed claw only",
+            "No lighting to save power",
+            "Unshielded electronics"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A stated future innovation for ROVs is:",
+          "options": [
+            "Hybrid composite materials to improve strength while reducing weight",
+            "Increased use of plain carbon steel housings",
+            "Removal of sonar systems",
+            "Ban on AI diagnostics"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Chapter 2 – Materials Data, Databases & Graphs (MEE521)",
+      "questions": [
+        {
+          "text": "Materials data describe how substances behave in terms of their:",
+          "options": [
+            "Physical, chemical, and structural characteristics",
+            "Marketing popularity only",
+            "Color alone",
+            "Packaging details"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which category is NOT listed among materials data types?",
+          "options": [
+            "Mechanical",
+            "Thermal",
+            "Electrical",
+            "Astrological"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "A database that provides general properties of metals, plastics, and ceramics is:",
+          "options": [
+            "MatWeb",
+            "WorldCat",
+            "IMDb",
+            "PubChem Movies"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An educational tool with charts and selection filters is:",
+          "options": [
+            "Granta EduPack",
+            "ASM Handbooks",
+            "MEDLINE",
+            "CERN SPS"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "ASM Handbooks are used primarily as:",
+          "options": [
+            "Metallurgy and engineering materials references",
+            "A video tutorial site",
+            "A retail catalog",
+            "A shipping database"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A stress–strain curve allows engineers to identify:",
+          "options": [
+            "Elastic region, yield point, and fracture point",
+            "Only the material color",
+            "Tooling costs",
+            "Market demand"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Young’s modulus is obtained from the stress–strain curve as:",
+          "options": [
+            "The slope of the elastic region",
+            "The area under the plastic region",
+            "The time derivative of strain",
+            "The intercept at zero stress"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ashby charts are primarily used to:",
+          "options": [
+            "Compare material properties like strength vs. density",
+            "Price components",
+            "Track shipping routes",
+            "Predict stock prices"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Phase diagrams map material phases as a function of:",
+          "options": [
+            "Temperature and composition",
+            "Advertising spend",
+            "Altitude and latitude",
+            "Paint color codes"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An application of materials data listed in the notes is to:",
+          "options": [
+            "Select suitable materials for designs",
+            "Replace engineering judgment fully",
+            "Avoid testing forever",
+            "Eliminate documentation"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "On a hardness vs. thermal conductivity chart, Aluminum 6061 would lie near:",
+          "options": [
+            "(High k, moderate hardness)",
+            "(Low k, low hardness)",
+            "(Low k, very high hardness)",
+            "(Zero k, infinite hardness)"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "From the given table, which has the highest thermal conductivity?",
+          "options": [
+            "Aluminum 6061 (≈150 W/m·K)",
+            "Stainless Steel 304 (≈16.2 W/m·K)",
+            "Polycarbonate (≈0.2 W/m·K)",
+            "All are equal"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which material is the lightest by density among the three listed?",
+          "options": [
+            "Polycarbonate (~1.2 g/cm³)",
+            "Stainless Steel 304 (~8.0 g/cm³)",
+            "Aluminum 6061 (~2.7 g/cm³)",
+            "They have identical densities"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which has the highest tensile strength in the comparison set?",
+          "options": [
+            "Stainless Steel 304 (~515 MPa)",
+            "Aluminum 6061 (~310 MPa)",
+            "Polycarbonate (~70 MPa)",
+            "All equal at 250 MPa"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which material is a poor heat conductor but relatively soft?",
+          "options": [
+            "Polycarbonate",
+            "Stainless Steel 304",
+            "Aluminum 6061",
+            "Diamond"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A correct use of databases per the notes is to:",
+          "options": [
+            "Find verified property data for selection and simulation",
+            "Replace quality control tests entirely",
+            "Forecast macroeconomy",
+            "Scrape unverified blogs"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A graphing task suggested in the notes asks students to:",
+          "options": [
+            "Plot materials on a property–property chart they choose",
+            "Record TV ratings",
+            "Design a car logo",
+            "Edit a novel"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "When comparing materials for a smartphone casing in a database exercise, students should consider:",
+          "options": [
+            "Strength, weight, and corrosion resistance",
+            "Only purchase price",
+            "Screen size",
+            "Carrier network"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An Ashby chart exploration asks you to design a lightweight bike frame and:",
+          "options": [
+            "Pick two suitable materials and justify based on performance and cost",
+            "Choose the most expensive alloy only",
+            "Ignore density",
+            "Focus on color matching"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A reason why charts matter is that they:",
+          "options": [
+            "Visualize trade-offs to guide selection",
+            "Guarantee zero error",
+            "Eliminate experiments forever",
+            "Replace all equations"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "In the example, Stainless Steel 304 shows:",
+          "options": [
+            "High hardness but much lower thermal conductivity than aluminum",
+            "Lowest hardness and highest k",
+            "Same k as polycarbonate",
+            "No mechanical strength"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Polycarbonate is characterized in the example as:",
+          "options": [
+            "Lightweight and flexible; poor heat conductor",
+            "Very dense and strongest overall",
+            "Heaviest and hardest",
+            "Best thermal conductor"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A caution with property data is that you should:",
+          "options": [
+            "Use consistent units and note temperature effects",
+            "Ignore anisotropy always",
+            "Trust any datasheet without verification",
+            "Mix units freely"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A practical task in the notes is to label on a stress–strain curve:",
+          "options": [
+            "Elastic region, yield point, fracture point",
+            "Color gradient",
+            "Marketing labels",
+            "Edge bevel radius"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ashby charts can include axes such as:",
+          "options": [
+            "Young’s Modulus vs. Density",
+            "Budget vs. Revenue",
+            "Latitude vs. Longitude",
+            "Font size vs. Page count"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A good reason to use a database like MatWeb is:",
+          "options": [
+            "Fast comparison across many materials",
+            "It replaces lab safety rules",
+            "It controls CNC machines directly",
+            "It translates languages"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The notes encourage optimizing for:",
+          "options": [
+            "Sustainability or cost in addition to performance",
+            "Only appearance",
+            "Only brand loyalty",
+            "Only highest melting point"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "When plotting your own chart, a recommended step is to:",
+          "options": [
+            "Gather property data from reliable sources",
+            "Guess values to save time",
+            "Use random axes",
+            "Remove units"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A phase diagram helps you:",
+          "options": [
+            "Map material phases with temperature/composition and guide processing choices",
+            "Choose color palettes",
+            "Design logos",
+            "Estimate shipping distances"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A concluding theme is that visual tools and databases:",
+          "options": [
+            "Help screen and rank materials for a given application",
+            "Replace all engineering judgment",
+            "Eliminate constraints",
+            "Make strength irrelevant"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Chapter 3 – Material Indices & Selection (MEE521)",
+      "questions": [
+        {
+          "text": "Material indices combine properties to allow:",
+          "options": [
+            "Objective comparison of materials for a design function",
+            "Elimination of testing standards",
+            "Marketing-only ranking",
+            "Ignoring constraints"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Why use a material index according to the notes?",
+          "options": [
+            "Simplify optimization and guide selection",
+            "Increase paperwork only",
+            "Avoid mechanics entirely",
+            "Guarantee the cheapest choice"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A first step in selection is to:",
+          "options": [
+            "Define the problem (function and needs)",
+            "Pick materials alphabetically",
+            "Draw a random Ashby chart",
+            "Start with manufacturing only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The notes list which as part of the basic steps?",
+          "options": [
+            "Identify constraints; set objectives; derive index; screen; rank",
+            "Skip constraints; choose at random",
+            "Prototype first; define later",
+            "Price first; performance later always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For a thin-walled pressure vessel minimized for mass, the model solution shows the key index:",
+          "options": [
+            "σy / ρ",
+            "E × ρ",
+            "k × ρ",
+            "α / k"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "In the provided calculation, which material ranks best by σy/ρ?",
+          "options": [
+            "Carbon Fiber",
+            "Brass",
+            "Aluminum",
+            "All equal"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For the same pressure vessel example, the thinnest wall is required by:",
+          "options": [
+            "Carbon Fiber",
+            "Brass",
+            "Aluminum",
+            "All tie"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Mass results in the expanded design show the lightest wall for:",
+          "options": [
+            "Carbon Fiber (~6.7 kg)",
+            "Aluminum (~10.9 kg)",
+            "Brass (~42.3 kg)",
+            "All same mass"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An Ashby chart can guide selection by plotting:",
+          "options": [
+            "Yield strength vs. density",
+            "Tax vs. profit",
+            "Time vs. calendar week",
+            "Color vs. texture"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A common objective in selection is to:",
+          "options": [
+            "Minimize mass for a given performance",
+            "Maximize mass always",
+            "Ignore constraints",
+            "Avoid using indices"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Deriving an index depends on:",
+          "options": [
+            "Function, objectives, and constraints of the component",
+            "Random survey results",
+            "Only supplier preferences",
+            "Uniform price lists"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For a lightweight beam with stiffness constraint (conceptual), indices often involve:",
+          "options": [
+            "Young’s modulus and density",
+            "Color and gloss",
+            "Retail price and brand",
+            "Melting color"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "When screening materials, you should first:",
+          "options": [
+            "Eliminate those that don’t meet constraints",
+            "Eliminate the cheapest options",
+            "Keep all options to the end",
+            "Pick by popularity"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ranking with indices is typically followed by:",
+          "options": [
+            "Choosing top contenders from Ashby charts or databases",
+            "Immediate mass production",
+            "Ignoring results",
+            "Discarding charts"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "In the model pressure vessel example, hoop stress governs failure. This leads to:",
+          "options": [
+            "A thickness proportional to P·r / σ",
+            "A thickness inversely proportional to radius only",
+            "No need for stress considerations",
+            "A thickness set by cost"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The expanded design uses densities (kg/m³) of approximately:",
+          "options": [
+            "Brass 8400; Carbon Fiber 1600; Aluminum 2700",
+            "Brass 1600; Carbon Fiber 8400; Aluminum 2700",
+            "All 2700",
+            "Aluminum 8400; Brass 2700; Carbon Fiber 1600"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A visualization suggested for selection is:",
+          "options": [
+            "An Ashby-style chart of yield strength vs. density",
+            "A pie chart of brand logos",
+            "A timeline of holidays",
+            "A color wheel"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A second visualization compares:",
+          "options": [
+            "Mass vs. wall thickness for different materials",
+            "Font size vs. hardness",
+            "Latitude vs. longitude",
+            "Hashtag count vs. modulus"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Selection often balances:",
+          "options": [
+            "Performance, cost, and sustainability",
+            "Only marketing factors",
+            "Only lowest density always",
+            "Only highest modulus always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "According to the notes, common property groups considered include:",
+          "options": [
+            "Mechanical, physical, economic, environmental",
+            "Astrological, culinary",
+            "Musical, artistic",
+            "Zodiacal, chromatic"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For a given function, indices help by:",
+          "options": [
+            "Turning mechanics into a simple comparative metric",
+            "Replacing dimensions with colors",
+            "Eliminating constraints",
+            "Ensuring one universal material"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A constraint example in the steps is:",
+          "options": [
+            "Fixed dimensions or minimum strength",
+            "Preferred color scheme",
+            "Supplier marketing budget",
+            "Cafe menu"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "After screening and ranking, a designer should:",
+          "options": [
+            "Select top candidates and consider processing/cost details",
+            "Ignore manufacturability",
+            "Skip safety checks",
+            "Freeze the first option blindly"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The pressure vessel example indicates that Carbon Fiber:",
+          "options": [
+            "Provides lowest mass for required strength despite higher cost",
+            "Is always cheapest",
+            "Has highest density",
+            "Requires the thickest wall"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ashby charts enable:",
+          "options": [
+            "Identification of clusters of promising materials",
+            "Exact final design dimensions",
+            "Elimination of constraints",
+            "Ignoring processing routes"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A correct statement about indices is:",
+          "options": [
+            "They are derived from the physics of the component’s function",
+            "They are purely aesthetic measures",
+            "They depend only on supplier preference",
+            "They are independent of constraints"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "In selection, the 'objective' refers to:",
+          "options": [
+            "What we wish to minimize or maximize (e.g., mass, cost)",
+            "Who the supplier is",
+            "Which color to paint",
+            "The holiday schedule"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A 'lightweight beam for stiffness' example in the notes motivates indices involving:",
+          "options": [
+            "Stiffness measures and density",
+            "Only yield strength",
+            "Only melting point",
+            "Only electrical resistivity"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Material indices ultimately:",
+          "options": [
+            "Bridge mechanics and materials for informed choices",
+            "Replace all testing",
+            "Remove the need for safety factors",
+            "Ensure one material fits all designs"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Chapter 4 – Checking & Estimating Materials Data (MEE521)",
+      "questions": [
+        {
+          "text": "Why materials data matters: it helps with",
+          "options": [
+            "Selecting the right material and predicting performance",
+            "Choosing corporate logos",
+            "Setting cafeteria menus",
+            "Arranging travel visas"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Density is defined as:",
+          "options": [
+            "Mass per unit volume",
+            "Energy per unit mass",
+            "Force per unit area",
+            "Length per unit time"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Yield strength is the stress at which a material:",
+          "options": [
+            "Begins to deform plastically",
+            "Fractures immediately",
+            "Heats spontaneously",
+            "Stops conducting electricity"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ultimate tensile strength is the:",
+          "options": [
+            "Maximum stress before fracture",
+            "Slope of elastic region",
+            "Mass per unit volume",
+            "Heat capacity per mass"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Young’s modulus measures:",
+          "options": [
+            "Stiffness",
+            "Toughness",
+            "Hardness",
+            "Thermal expansion"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Toughness represents:",
+          "options": [
+            "Energy absorbed before fracture",
+            "Resistance to indentation",
+            "Thermal conductivity",
+            "Electrical resistivity"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Hardness tests listed include:",
+          "options": [
+            "Vickers, Brinell, Rockwell",
+            "Moisture content",
+            "Octane rating",
+            "pH scale"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Thermal conductivity has units of:",
+          "options": [
+            "W/m·K",
+            "Pa·s",
+            "kg",
+            "J/K"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Electrical resistivity units are given as:",
+          "options": [
+            "Ω·m",
+            "A/m",
+            "W",
+            "N·m"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A source of materials data listed is:",
+          "options": [
+            "MatWeb",
+            "Movie scripts",
+            "Horoscope tables",
+            "Traffic apps"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A method to estimate data when exact values aren’t available is:",
+          "options": [
+            "Use similar materials or empirical formulas",
+            "Guess and proceed",
+            "Ignore units",
+            "Assume worst case always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Rule of Mixtures is used primarily for:",
+          "options": [
+            "Fiber-reinforced composites",
+            "Pure aluminum",
+            "Glass blowing",
+            "Soil mechanics only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An example estimation formula is:",
+          "options": [
+            "Mass = ρ × Volume",
+            "Mass = Voltage × Current",
+            "Mass = Force × Distance",
+            "Mass = Time × Temperature"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Lab testing to estimate properties includes:",
+          "options": [
+            "Tensile and hardness tests; density measurement",
+            "Tuning a piano",
+            "Web analytics",
+            "Photo filters"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A common pitfall is:",
+          "options": [
+            "Unit mismatch and ignoring temperature effects",
+            "Too many citations",
+            "Plotting with axes labeled",
+            "Repeating tests"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A quick estimation tip given is that aluminum typically has:",
+          "options": [
+            "ρ ≈ 2700 kg/m³",
+            "ρ ≈ 7850 kg/m³",
+            "ρ ≈ 1600 kg/m³",
+            "ρ ≈ 12000 kg/m³"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A quick estimation tip for steel is yield strength roughly:",
+          "options": [
+            "≈ 250–1000 MPa",
+            "≈ 20–50 MPa",
+            "≈ 2–10 MPa",
+            "≈ 1–5 GPa always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A quick data pointer for carbon fiber in the notes is that it is:",
+          "options": [
+            "Very strong and light (ρ ~1600 kg/m³, strength ~500–1000 MPa)",
+            "Heaviest and weakest",
+            "Very poor mechanically",
+            "Best electrical conductor always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An example problem asks for mass of an aluminum vessel wall (given dimensions); the solution gives approximately:",
+          "options": [
+            "≈ 21.2 kg",
+            "≈ 2.1 kg",
+            "≈ 212 kg",
+            "≈ 0.21 kg"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A good practice when checking data is to rely on:",
+          "options": [
+            "Manufacturer datasheets and handbooks",
+            "Anonymous social media posts",
+            "Unverified forums only",
+            "Rumors"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ashby charts in this chapter are suggested for:",
+          "options": [
+            "Visual comparison (e.g., strength vs. density)",
+            "Color grading of photos",
+            "Topographic mapping",
+            "Music tuning"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A reason to use lab-based estimation is to obtain:",
+          "options": [
+            "Yield strength, UTS, and modulus directly",
+            "Better memes",
+            "Cheaper shipping",
+            "Energy bills"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A common pitfall is over-reliance on datasheets because:",
+          "options": [
+            "Real-world conditions may vary",
+            "They are always wrong",
+            "They never list units",
+            "They deny physics"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "When using Rule of Mixtures for E of a composite, a simple expression is:",
+          "options": [
+            "Ecomp ≈ Vf·Ef + Vm·Em",
+            "Ecomp ≈ Ef/Em",
+            "Ecomp ≈ Ef − Em",
+            "Ecomp ≈ ρf + ρm"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An example of 'Using Similar Materials' is to estimate",
+          "options": [
+            "6061-T6 aluminum using other 6061-series data",
+            "Gold using wood properties",
+            "Steel using ice",
+            "PVC using granite"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A property table in the notes includes hardness measured by:",
+          "options": [
+            "Brinell, Vickers, Rockwell scales",
+            "pH scale",
+            "Mohs for all metals only",
+            "Richter scale"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A unit consistency reminder implies you should:",
+          "options": [
+            "Convert g/cm³ ↔ kg/m³ as needed",
+            "Mix psi and Pa freely",
+            "Drop units for speed",
+            "Assume room temperature always"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "One quick tip notes plastics typically have:",
+          "options": [
+            "Low strength and low density (variable properties)",
+            "Highest strength of all materials",
+            "Same density as steel",
+            "Perfect conductivity"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A 'source of data' category in this chapter is:",
+          "options": [
+            "Databases (MatWeb, CES EduPack, ASM)",
+            "Horoscopes",
+            "Fiction magazines",
+            "Unrelated blogs"
+          ],
+          "answer": "A"
+        }
+      ]
+    }
       ]
     },
     {
