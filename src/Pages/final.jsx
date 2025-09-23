@@ -93,7 +93,7 @@ export default function FinalYearObjectivesBuilder() {
       setAnswers({})
       setShowAnswers(false)
     }
-  }, [])
+  }, [jsonSubjectCode, jsonTopicId, jsonSubjects]) // Auto-load when subject or topic changes
 
   /* --------------------------- mutators --------------------------- */
   const setSubject = (v) => setData((d) => ({ ...d, subject: v }))
@@ -258,12 +258,9 @@ export default function FinalYearObjectivesBuilder() {
             </select>
           </div>
           <div className="flex items-end">
-            <button
-              onClick={loadFromJson}
-              className="w-full px-3 py-2 text-sm text-white bg-indigo-600 rounded hover:bg-indigo-700"
-            >
-              Load Selected Topic
-            </button>
+            <div className="w-full px-3 py-2 text-sm text-center text-gray-500 bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400">
+              Auto-loading enabled
+            </div>
           </div>
         </div>
       </div>
