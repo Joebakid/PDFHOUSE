@@ -222,7 +222,7 @@ export default function FinalYearObjectivesBuilder() {
 
       {/* JSON Loader */}
       <div className="max-w-5xl p-4 mx-auto mb-4 bg-white shadow-md rounded-xl dark:bg-gray-800 dark:text-white">
-        <h3 className="mb-3 text-lg font-semibold text-purple-700 dark:text-purple-300">Load from finalyr.json</h3>
+        {/* <h3 className="mb-3 text-lg font-semibold text-purple-700 dark:text-purple-300">Load from finalyr.json</h3> */}
         <div className="grid items-end gap-3 md:grid-cols-3">
           <div>
             <label className="block text-sm font-medium">Subject</label>
@@ -259,7 +259,7 @@ export default function FinalYearObjectivesBuilder() {
           </div>
           <div className="flex items-end">
             <div className="w-full px-3 py-2 text-sm text-center text-gray-500 bg-gray-100 rounded dark:bg-gray-700 dark:text-gray-400">
-              Auto-loading enabled
+             Welcome
             </div>
           </div>
         </div>
