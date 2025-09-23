@@ -1,0 +1,1167 @@
+{
+  "subjects": [
+    {
+      "code": "MAR526",
+      "name": "MAR526",
+      "topics": [
+      {
+      "id": "ch1",
+      "title": "Chapter 1 – Offshore & Underwater Survey Fundamentals",
+      "questions": [
+        {
+          "text": "Marine engineering subjects in this course are divided into which two broad areas?",
+          "options": [
+            "Engineering of marine activities topside & engineering of marine activities underwater",
+            "Coastal engineering & river engineering",
+            "Ship design & port management",
+            "Pipeline engineering & telecoms engineering"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which activity is NOT a topside activity?",
+          "options": [
+            "Marine vessel operations",
+            "ROV intervention on a subsea valve",
+            "Structural installation of an offshore platform from the deck",
+            "Helideck logistics on a platform"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which of the following is a typical underwater engineering activity?",
+          "options": [
+            "Deck crane selection",
+            "Helicopter crew change",
+            "ROV and AUV operations",
+            "Accommodation logistics"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Primary reason for performing a survey before design/installation is to:",
+          "options": [
+            "Reduce insurance premiums",
+            "Shorten project schedule by skipping design reviews",
+            "Increase vessel day rates",
+            "Confirm the site is adequate and safe for the intended system"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Offshore survey contractors typically:",
+          "options": [
+            "Provide and operate vessel positioning systems and signals",
+            "Design jackets and topsides",
+            "Run drilling operations",
+            "Handle only onshore warehousing"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Pre-design information for a fixed jacket site commonly includes all EXCEPT:",
+          "options": [
+            "Wave characteristics and currents/tides",
+            "Stock market volatility",
+            "Seabed/soil characteristics and strengths",
+            "Existing seabed facilities near the location"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Why are offshore surveys often very expensive?",
+          "options": [
+            "All survey gear is disposable by regulation",
+            "Only manned submersibles are legal",
+            "The underwater environment makes data gathering complex and resource-intensive",
+            "They require onshore refineries"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Visual survey typically involves:",
+          "options": [
+            "Measuring magnetic anomalies only",
+            "Computing finite-element models of jackets",
+            "Injecting tracers into pipelines",
+            "Human/Camera observation via ROV/AUV or divers"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Depth survey methods commonly include:",
+          "options": [
+            "Echo sounders and depth/sub-bottom profilers",
+            "LIDAR exclusively",
+            "Barometers and anemometers",
+            "Thermal cameras only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "An echo sounder determines depth by:",
+          "options": [
+            "Measuring light reflectivity of the seabed",
+            "Transmitting a sound pulse from the surface and timing its return from the seabed",
+            "Weighing a drop weight on the bottom",
+            "Sampling sediment cores directly"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Because seabeds are rarely flat, echo sounders provide:",
+          "options": [
+            "A full 3D model of all buried layers",
+            "Noisy data unsuitable for navigation",
+            "Instantaneous depth at a point beneath the transducer",
+            "Only average depth along a transect"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Which relation is correct for sound in water during echo sounding?",
+          "options": [
+            "Speed = distance / total time",
+            "Speed = total time / distance",
+            "Speed = distance × total time",
+            "Speed = (2 × distance travelled) / total time"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "A subsea depth profiler primarily provides:",
+          "options": [
+            "Information on layers below the seabed",
+            "Wind speed histories",
+            "Vessel fuel consumption",
+            "Wave height at the free surface only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "One principle behind depth/sub-bottom profiling is to detect:",
+          "options": [
+            "Color changes visible to the naked eye",
+            "Conductivity or electromagnetic differences between layers",
+            "pH variations in air",
+            "Radio stations"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which task needs MORE detailed depth profiling?",
+          "options": [
+            "Installing a surface helideck light",
+            "Painting topside handrails",
+            "Piling for a slot jacket platform",
+            "Catering logistics"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Combining echo sounding with sub-bottom profiling allows engineers to:",
+          "options": [
+            "Replace geotechnical borings entirely",
+            "Predict oil price movements",
+            "Eliminate the need for GPS",
+            "Generate seabed contours AND understand sub-seabed layers"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Compared to a basic echo sounder, a sub-bottom profiler:",
+          "options": [
+            "Penetrates the seafloor to reflect from deeper strata",
+            "Uses only magnetic fields and no acoustics",
+            "Is mounted only on satellites",
+            "Measures air temperature"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Integrating GPS with survey acquisition allows you to:",
+          "options": [
+            "Measure salinity directly",
+            "Tag each data point/image with position coordinates",
+            "Avoid time synchronization",
+            "Operate without a vessel"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A sea-bottom (seabed) survey is performed primarily to:",
+          "options": [
+            "Assess onshore soil for foundations",
+            "Estimate helicopter flight time",
+            "Confirm the site is free of obstructions such as wrecks or existing assets",
+            "Verify cafeteria menus on the barge"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Marine magnetometers are used to detect:",
+          "options": [
+            "Water temperature only",
+            "Wind gusts at hub height",
+            "pH of seawater",
+            "Ferrous objects and magnetic anomalies on/within the seabed"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Why is a surface-towed magnetometer streamed far behind the ship?",
+          "options": [
+            "To minimize interference from the ship’s own magnetic field",
+            "To stay within visual range of divers",
+            "Because it has no power cable",
+            "To keep it in shallow water only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Compared with deep-towed magnetometers, surface-towed units generally:",
+          "options": [
+            "Provide higher sensitivity and detail",
+            "Cover larger areas at lower cost but with less detail",
+            "Cannot be used in salt water",
+            "Require ROVs to function"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "3D imaging of subsea assets can be achieved using:",
+          "options": [
+            "Only thermal cameras",
+            "Only barometric sensors",
+            "Laser scanning, fibre-optic, ultrasonic, and acoustic imaging",
+            "Gamma-ray telescopes"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "A key advantage of 3D imaging mentioned is that it can be used for:",
+          "options": [
+            "Only aerial powerlines",
+            "Only topside flare tips",
+            "Only intertidal zones",
+            "Open, buried, or submerged pipelines"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Which is a listed disadvantage of 3D imaging systems?",
+          "options": [
+            "They inevitably contain some measurement errors and can be expensive",
+            "They eliminate operator training needs",
+            "They work without any power",
+            "They guarantee zero interpretation effort"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Positioning for offshore surveys commonly starts from:",
+          "options": [
+            "Random local benchmarks with no tie-in",
+            "Global Positioning System (GPS) references",
+            "Tide tables alone",
+            "Magnetic declination charts only"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "In survey terminology, a global grid refers to:",
+          "options": [
+            "X/Y measured only on the vessel deck",
+            "Compass headings only",
+            "Latitude/longitude on the Earth’s surface",
+            "Depth below keel only"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Why might an onshore communications dish be part of the positioning chain?",
+          "options": [
+            "To compute structural fatigue",
+            "To desalinate seawater",
+            "To launch UAVs",
+            "To boost communication between satellites, the vessel, and survey tools"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "An as-built survey is performed to:",
+          "options": [
+            "Document actual installation geometry after field deviations",
+            "Replace pre-engineering surveys entirely",
+            "Decide staff promotion schedules",
+            "Estimate vessel catering needs"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A common cause of deviations captured by as-built surveys is:",
+          "options": [
+            "Perfectly calm seas",
+            "Wave and sea-load challenges leading to practical compromises",
+            "Unlimited budget and time",
+            "Absence of environmental loads"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Chapter 2 – Subsea Facilities & Process Technology",
+      "questions": [
+        {
+          "text": "What is the most compelling reason for adopting subsea processing in deepwater developments?",
+          "options": [
+            "Improving field development profitability",
+            "Reducing topside staff headcount",
+            "Avoiding use of umbilicals",
+            "Eliminating need for risers"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Among conventional artificial-lift systems, which is closest in principle to subsea processing?",
+          "options": ["Plunger lift", "Gas lift", "Rod pump", "Jet pump"],
+          "answer": "B"
+        },
+        {
+          "text": "Why can gas-lift performance deteriorate as more gas is injected?",
+          "options": [
+            "Increased scale deposition",
+            "Pump cavitation increases",
+            "Flow-induced friction losses overtake density benefits",
+            "Separator carryover increases"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Gas lift does NOT improve which of the following, limiting its use for certain layouts?",
+          "options": [
+            "Vertical tubing flow",
+            "Wellbore inflow performance",
+            "Separator residence time",
+            "Horizontal flow in long tiebacks"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Benchmark data show superior deepwater economics mainly come from:",
+          "options": [
+            "Higher production/reserves per well and processing at an existing host",
+            "Lower taxes and subsidies",
+            "Shorter drilling time only",
+            "Using only flexible risers"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The first prototype seabed separation unit was tested:",
+          "options": [
+            "In 1989 on Argyll field, North Sea",
+            "In 1969 on the Zakum field, offshore Abu Dhabi",
+            "In 2000 at Troll C, Norway",
+            "In 1978 in the Gulf of Mexico"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "The Highlander/Tartan subsea slug catcher was installed primarily to overcome:",
+          "options": [
+            "Wax deposition in short jumpers",
+            "Hydrate plugs in umbilicals",
+            "Terrain-induced slugging in pipelines/risers",
+            "Sand production in separators"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "BOET’s prototype SSPU (1989) featured:",
+          "options": [
+            "Single-phase vertical separator only",
+            "Gas compression only",
+            "Water injection only",
+            "Two-stage system with three-phase horizontal separators"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Kvaerner Booster Station (KBS) included which combination?",
+          "options": [
+            "Two-phase vertical centrifugal separator, axial gas compressor, liquid centrifugal pump",
+            "Horizontal gravity separator and reciprocating pump",
+            "Cyclone desander and screw pump",
+            "Electrostatic coalescer and jet pump"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A unique feature of the VASPS concept was that the unit:",
+          "options": [
+            "Was mounted on a surface platform",
+            "Fit inside a 30-in surface casing of a 'dummy' well",
+            "Used only gravity separation",
+            "Eliminated the need for any riser"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "The AlphaPrime concept emphasized:",
+          "options": [
+            "Permanent welded connections offshore",
+            "Hydraulic power only",
+            "Self-contained retrievable process modules with detachable lines and all-electric power",
+            "Diver-installed control systems"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "The Troll C Pilot (SUBSIS) was designed to:",
+          "options": [
+            "Reinject oil and vent gas subsea",
+            "Separate sand only",
+            "Eliminate need for manifolds",
+            "Remove water subsea and pipe gas+oil to platform"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "Which capacity figure best describes the Troll Pilot horizontal separator?",
+          "options": [
+            "~3,400 Sm³/D oil at ~57% water cut",
+            "~500 Sm³/D oil at 10% water cut",
+            "~10,000 Sm³/D oil dry",
+            "~6,000 Sm³/D oil at 80% water cut"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For deepwater subsea vessels, a key structural design criterion is:",
+          "options": [
+            "UV exposure of coatings",
+            "External collapse pressure at depth",
+            "Topsides wind load",
+            "Crew access platforms"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which environmental factors most challenge subsea processing designs?",
+          "options": [
+            "High ambient temperatures",
+            "Low salinity",
+            "Rapid heat loss, long flowlines, tall risers",
+            "High solar radiation"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "In two-phase separation design, the limiting parameter is usually gas rate controlled by:",
+          "options": [
+            "Only viscosity",
+            "Pipe roughness only",
+            "CO₂ content only",
+            "GLR, temperature, and pressure"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "For fluids with high foaming tendency subsea, the preferred approach is:",
+          "options": [
+            "Passive mechanical foam-breaking (low-shear inlet) over chemical injection",
+            "Electrostatic treater",
+            "Only chemical antifoamers",
+            "No action; foaming is harmless"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "To mitigate hydrate risks subsea, operators commonly use:",
+          "options": [
+            "Diesel injection",
+            "Methanol and ethylene glycol; only methanol can break existing hydrates",
+            "Hot oiling only",
+            "Corrosion inhibitors"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "The only sure way to prevent wax deposition in cold subsea pipelines is to:",
+          "options": [
+            "Increase GLR",
+            "Pig daily",
+            "Maintain temperature above wax-appearance point",
+            "Reduce separator pressure"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "For severe slugging in offshore pipelines/risers, the most dependable solution today is:",
+          "options": [
+            "Feed-forward control valves (well proven)",
+            "Compressors upstream of risers only",
+            "Reducing pipe schedule",
+            "Large separators/slug catchers"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "A subsea pig launcher is used primarily to:",
+          "options": [
+            "Insert cleaning/scraping devices to control deposits inside pipelines",
+            "Inject chemicals into umbilicals",
+            "Launch ROVs",
+            "Start ESPs subsea"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Compact cyclone separators are attractive subsea because they:",
+          "options": [
+            "Rely on gravity and large volumes",
+            "Use centrifugal acceleration to reduce vessel size and have no moving parts",
+            "Require electrical heating",
+            "Eliminate the need for manifolds"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Preferred sand-handling philosophy offshore (for steady, small fines) is to:",
+          "options": [
+            "Settle and store solids subsea",
+            "Dump sand to seabed",
+            "Keep solids suspended and moving to shore; consider erosion-resistant liners",
+            "Stop production whenever sand appears"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Which pump type most often meets subsea high-flow, high-head service?",
+          "options": ["Gear pump", "Diaphragm pump", "Peristaltic pump", "Multistage centrifugal pump"],
+          "answer": "D"
+        },
+        {
+          "text": "Compared with water-turbine drives, electric-motor pump drives subsea typically:",
+          "options": [
+            "Enable variable-speed control but require high-voltage power",
+            "Need no power cables",
+            "Cannot be used below 100 m water depth",
+            "Eliminate switchgear"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "A continuing challenge for subsea power is developing reliable mateable connectors at approximately:",
+          "options": ["1–2 kV", "11 kV and higher (with concepts up to ~36 kV)", "110 V only", ">100 kV DC only"],
+          "answer": "B"
+        },
+        {
+          "text": "Subsea power distribution must provide different voltage levels primarily for:",
+          "options": [
+            "Lighting only",
+            "Cathodic protection only",
+            "Pumps, valve actuators, and instrumentation/controls",
+            "ROV thrusters only"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "All-electric valve actuators are attractive subsea because they:",
+          "options": [
+            "Require continuous hydraulic pressure",
+            "Cannot modulate flow",
+            "Only work topside",
+            "Are depth-insensitive and avoid complex hydraulics"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "A 'wet tree' differs from a 'dry tree' mainly in that it is:",
+          "options": [
+            "Installed on the seabed and typically operated via ROVs/remote control",
+            "Installed topside for direct crew access",
+            "Used only for gas wells",
+            "Not connected to manifolds"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which statement best describes subsea manifolds and risers?",
+          "options": [
+            "Manifolds gather effluent from trees; risers are the pipeline sections that rise to surface and often have thicker walls due to hydrodynamic loads",
+            "Manifolds only support ROV docking; risers are thinner than pipelines",
+            "Manifolds separate oil and gas; risers are jumpers",
+            "Both are types of pumps"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+
+        {
+      "id": "ch3",
+      "title": "Chapter 3 – Marine Corrosion & Protection",
+      "questions": [
+        {
+          "text": "In this course, corrosion is defined primarily as:",
+          "options": [
+            "The destructive reaction of a material with its environment",
+            "A reversible physical change in crystal structure",
+            "Only rusting in air without moisture",
+            "A manufacturing defect unrelated to environment"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which pair most strongly accelerates corrosion in marine conditions?",
+          "options": [
+            "Low temperature and low salinity",
+            "High pH and no oxygen",
+            "Moisture and oxygen",
+            "Inert gas and dry air"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "A correct statement about oxidation in metals in this context is:",
+          "options": [
+            "It always produces hydrogen gas directly",
+            "It can be described as a gain of oxygen or loss of hydrogen",
+            "It never occurs in the presence of water",
+            "It is unrelated to redox reactions"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which statement about corrosion films is TRUE?",
+          "options": [
+            "All corrosion films are uniformly protective",
+            "Aluminum can form protective films, while mild steel films are usually destructive",
+            "Steel always passivates in seawater without coatings",
+            "Films only form in the absence of oxygen"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which is NOT listed as a type of corrosion in these notes?",
+          "options": [
+            "Pitting",
+            "Fretting",
+            "Galvanic",
+            "Photolytic"
+          ],
+          "answer": "D"
+        },
+        {
+          "text": "According to the rule of thumb given, when soil resistivity is greater than about 3000 Ω·cm, the preferred CP method is:",
+          "options": [
+            "Impressed current",
+            "Sacrificial anode",
+            "Electrostatic shielding",
+            "Galvanizing by paint"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Cathodic protection works primarily by:",
+          "options": [
+            "Raising the metal’s temperature above seawater temperature",
+            "Supplying electrons to the structure to suppress anodic dissolution",
+            "Removing dissolved salts from seawater",
+            "Increasing surface roughness"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "In sacrificial-anode CP for a steel structure, which role pairing is correct?",
+          "options": [
+            "Steel = anode; Mg/Zn/Al = cathodes",
+            "Steel = cathode; Mg/Zn/Al = anodes",
+            "Steel and Mg are both anodes",
+            "All parts act as cathodes"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A required condition for CP to function properly is the presence of:",
+          "options": [
+            "Vacuum around the structure",
+            "An electrolyte such as water",
+            "Only nitrogen gas",
+            "High-frequency EM waves"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which paint system description is correct?",
+          "options": [
+            "2-coat: primer + topcoat; 3-coat: primer + intermediate + topcoat",
+            "2-coat: two topcoats only; 3-coat: primer + two primers",
+            "2-coat: intermediate + topcoat; 3-coat: three topcoats",
+            "2-coat: primer + solvent; 3-coat: primer + solvent + topcoat"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Corrosion prevention should be considered:",
+          "options": [
+            "Only after the first failure",
+            "Only during fabrication",
+            "From the design/conception stage through operation",
+            "Only during decommissioning"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Erosion-related corrosion mechanisms highlighted include:",
+          "options": [
+            "Electroplating and nitriding",
+            "Cavitation and high-velocity impact",
+            "Dealloying and carburizing",
+            "Only microbiologically induced corrosion"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Chapter 4 – IMR (Inspection, Maintenance & Repair)",
+      "questions": [
+        {
+          "text": "IMR activities are primarily carried out:",
+          "options": [
+            "Before any installation",
+            "After installation to ensure continued fitness for service",
+            "Only during the design stage",
+            "Only after full failure of a system"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "In these notes, the purpose of inspection is best summarized as:",
+          "options": [
+            "To reduce taxes on offshore assets",
+            "To reconfirm that facilities behave as designed and detect deviations",
+            "To redesign structures from scratch",
+            "To increase vessel day rates"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Two broad classes of inspection discussed are:",
+          "options": [
+            "Thermal and optical",
+            "Destructive testing (DT) and Non-Destructive Testing (NDT)",
+            "Magnetic and acoustic",
+            "Electrical and mechanical"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Which is listed as an example of destructive testing?",
+          "options": [
+            "Ultrasonic thickness gauging",
+            "Eddy-current testing",
+            "Charpy impact test",
+            "Magnetic particle inspection"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Which are classed as visual inspection in the notes?",
+          "options": [
+            "Only microscope viewing",
+            "Eye, video, and camera/photo methods",
+            "Only infrared thermography",
+            "Only drone-based LiDAR"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Under the 'sounds' category, NDT modalities mentioned include:",
+          "options": [
+            "Infrasonic, audible, and ultrasonic",
+            "Audible only",
+            "Infrasonic only",
+            "Ultrasonic only"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Eddy-current testing detects flaws by using:",
+          "options": [
+            "Electromagnetic induction in conductive materials",
+            "Chemical etching reactions",
+            "Nuclear fission tracks",
+            "Gravity measurements"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Magnetic Flux Leakage (MFL) is widely used to detect:",
+          "options": [
+            "UV damage on GRP",
+            "Only internal cracks in concrete",
+            "Corrosion and pitting in steel structures",
+            "Paint adhesion failure"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Condition monitoring under preventive maintenance commonly uses:",
+          "options": [
+            "Only visual observation",
+            "Fibre-optic, pressure, vibration, and temperature sensors",
+            "Tax audits",
+            "Hull painting alone"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Corrective maintenance is undertaken when:",
+          "options": [
+            "There are no symptoms at all",
+            "A structure is brand new",
+            "Equipment begins to show signs of impending failure",
+            "Only after catastrophic failure"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "A listed pipeline repair method is:",
+          "options": [
+            "Laser sintering of seawater",
+            "Clamping and sleeving",
+            "Electroforming of oxygen",
+            "Vacuum annealing"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Rehabilitation vs. modification is best described as:",
+          "options": [
+            "Both always replace the full system with a new one",
+            "Rehabilitation adapts to new operating regimes; modification is like-for-like",
+            "Rehabilitation is like-for-like restoration; modification adapts capacity for new regimes",
+            "They are identical terms"
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Chapter 5 – Diving Fundamentals & Safety",
+      "questions": [
+        {
+          "text": "Commercial diving refers to:",
+          "options": [
+            "Any underwater activity for fun",
+            "Any paid underwater work",
+            "Only military diving",
+            "Only scientific diving"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "SCUBA diving is characterized by:",
+          "options": [
+            "No breathing gas at all",
+            "Bottled breathing gas without continuous surface supply",
+            "Only helium as a breathing medium",
+            "Breathing through seawater osmosis"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "According to the table, Nitrox I composition is approximately:",
+          "options": [
+            "32% O₂ / 68% N₂",
+            "36% O₂ / 64% N₂",
+            "21% O₂ / 79% N₂",
+            "50% O₂ / 50% He"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "In the dive community, 'trimix' refers to blends of:",
+          "options": [
+            "Oxygen, nitrogen, and helium",
+            "Oxygen, argon, and neon",
+            "Nitrogen, argon, and hydrogen",
+            "Oxygen, carbon dioxide, and helium"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "The naming convention 'trimix 20/30' indicates:",
+          "options": [
+            "20% nitrogen, 30% oxygen, 50% helium",
+            "20% oxygen, 30% helium, balance nitrogen",
+            "20% helium, 30% oxygen, balance nitrogen",
+            "20% oxygen, 30% nitrogen, balance helium"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Saturation diving involves:",
+          "options": [
+            "Keeping divers at ambient surface pressure throughout",
+            "Diver tissues being saturated with inert gases while living under pressure",
+            "Only using air with no mixed gas",
+            "Short, shallow dives only"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A 'closed bell' enables which critical procedure?",
+          "options": [
+            "Open-sea decompression only",
+            "Transfer Under Pressure (TUP) to deck chambers",
+            "Only wet in-water stops",
+            "Freediving without gas"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A key hazard typically beyond ~30 m in air diving is:",
+          "options": [
+            "Nitrogen narcosis",
+            "Hyperoxia from helium",
+            "Sunburn",
+            "Electrical shock from sea water"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Ear pain on descent is primarily due to:",
+          "options": [
+            "Increasing outside pressure relative to middle ear",
+            "Decreasing oxygen fraction in the lungs",
+            "Sun glare underwater",
+            "Nitrogen bubbles in the bloodstream"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Decompression (DECO) is conducted to:",
+          "options": [
+            "Add nitrogen to tissues",
+            "Allow dissolved inert gases to leave tissues safely over time",
+            "Increase heart rate",
+            "Replace oxygen with helium"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Compared to SCUBA, surface-supplied diving provides:",
+          "options": [
+            "No communications with surface",
+            "Breathing gas umbilical and often better control/support from the surface",
+            "Less safety monitoring",
+            "Only rebreather systems"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A 'slow ascend' (SA) in these notes refers to:",
+          "options": [
+            "Returning rapidly to surface to reduce cold exposure",
+            "A controlled, slower return aiding safe decompression",
+            "Hovering indefinitely at bottom",
+            "A sprint to the surface to conserve gas"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Chapter 6 – ROV & AUV (Operations and Calculations)",
+      "questions": [
+        {
+          "text": "An ROV is typically:",
+          "options": [
+            "A manned, tethered underwater vehicle",
+            "A remotely operated, tethered vehicle controlled from a surface ship",
+            "An unmanned, untethered autonomous vehicle",
+            "A free-swimming diver propulsion device"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "An AUV such as ABE is best used for:",
+          "options": [
+            "Real-time manual manipulations requiring pilot feedback",
+            "Pre-programmed surveys and mapping missions without supervision",
+            "Only shallow-water diving support",
+            "Emergency life support for divers"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "ROPOS is controlled via:",
+          "options": [
+            "Acoustic pings only with onboard power",
+            "Fibre-optic tether providing power and real-time data/video",
+            "No cable—battery only",
+            "Compressed air umbilical without data"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "A valve pack on an ROV primarily contains:",
+          "options": [
+            "Directional control valves (DCVs) that actuate cylinders",
+            "Only pressure gauges",
+            "Only filters and strainers",
+            "Only electric relays"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Which cylinder type is listed in these notes?",
+          "options": [
+            "Single-acting and various double-acting configurations",
+            "Triple-acting",
+            "Quad-acting",
+            "Electrostatic cylinders"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "Given hydraulic flow rate Q and piston area A₁, the cylinder speed v is:",
+          "options": [
+            "v = Q / A₁",
+            "v = A₁ / Q",
+            "v = Q × A₁",
+            "v = Q² / A₁"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "With efficiency factor K, pressure P (in Pa), and flow Q (m³/s), hydraulic power is:",
+          "options": [
+            "P / (KQ)",
+            "K × P × Q",
+            "K × P / Q",
+            "P × Q / K"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "Using the worked example: 1-inch OD pipe, 4 mm wall, internal diameter ≈ 0.0174 m. If flow velocity is 0.5 m/s, the volumetric flow Q is closest to:",
+          "options": [
+            "1.19 × 10⁻⁴ m³/s",
+            "1.19 × 10⁻² m³/s",
+            "2.38 × 10⁻⁵ m³/s",
+            "2.38 × 10⁻³ m³/s"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "With K = 0.7, P = 10 bar, and Q ≈ 1.19 × 10⁻⁴ m³/s, the hydraulic power is approximately:",
+          "options": [
+            "8.3 W",
+            "83 W",
+            "830 W",
+            "8.3 kW"
+          ],
+          "answer": "B"
+        },
+        {
+          "text": "If a hydraulic motor receives ~83 W and turns at N = 1 rev/s, the ideal mechanical torque τ ≈",
+          "options": [
+            "13 N·m",
+            "83 N·m",
+            "52 N·m",
+            "6.3 N·m"
+          ],
+          "answer": "A"
+        },
+        {
+          "text": "For a cylinder with area A₁ = 0.2 m² at 10 bar, the ideal thrust force is closest to:",
+          "options": [
+            "2,000 N",
+            "20,000 N",
+            "200,000 N",
+            "2,000,000 N"
+          ],
+          "answer": "C"
+        },
+        {
+          "text": "Using Q ≈ 1.19 × 10⁻⁴ m³/s and A₁ = 0.2 m², the piston speed v is closest to:",
+          "options": [
+            "5.95 × 10⁻⁴ m/s",
+            "5.95 × 10⁻³ m/s",
+            "5.95 × 10⁻⁵ m/s",
+            "5.95 × 10⁻² m/s"
+          ],
+          "answer": "A"
+        }
+      ]
+    }
+      ]
+    },
+    {
+      "code": "MEE521",
+      "name": "MEE521",
+      "topics": [
+        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+      ]
+    },
+    {
+      "code": "MAR528",
+      "name": "MAR528",
+      "topics": [
+        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+      ]
+    },
+    {
+      "code": "GET521",
+      "name": "GET521",
+      "topics": [
+        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+      ]
+    },
+    {
+      "code": "MAR527",
+      "name": "MAR527",
+      "topics": [
+        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+      ]
+    },
+    {
+      "code": "EEE525",
+      "name": "EEE525",
+      "topics": [
+        { "id": "ch1", "title": "Chapter 1 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch2", "title": "Chapter 2 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch3", "title": "Chapter 3 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch4", "title": "Chapter 4 – (Your Topic Title Here)", "questions": [] },
+        { "id": "ch5", "title": "Chapter 5 – (Your Topic Title Here)", "questions": [] }
+      ]
+    }
+  ]
+}

@@ -156,6 +156,12 @@ function Nav({ Btn, LinkCustom }) {
                 >
                   timetable
                 </Link>
+                <Link
+                  to="/final"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white"
+                >
+                  finalyr review
+                </Link>
               </div>
             )}
           </div>
