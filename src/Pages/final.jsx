@@ -4,6 +4,7 @@ import { useMemo, useRef, useState, useEffect } from "react"
 import html2canvas from "html2canvas"
 import { HiSparkles, HiEmojiHappy } from "react-icons/hi"
 import Json from "./finalyr.json"
+// ❌ Removed next/navigation (not available in Vite)
 
 /**
  * Final Year Objectives Builder + JSON Quiz Loader
@@ -29,9 +30,7 @@ const idxFrom = (v) =>
         0,
         (String(v || "A")
           .toUpperCase()
-          .charCodeAt(0) -
-          65) |
-          0,
+          .charCodeAt(0) - 65) | 0
       )
 
 function clamp30(arr) {
@@ -39,6 +38,48 @@ function clamp30(arr) {
   if (copy.length < 30) for (let i = copy.length; i < 30; i++) copy.push(makeQuestion(i))
   else if (copy.length > 30) copy.length = 30
   return copy.map((q, i) => ({ ...q, id: i + 1 }))
+}
+
+/* --------------------------- URL query sync (vanilla History API) --------------------------- */
+function useUrlQuerySync(jsonSubjects, jsonSubjectCode, setJsonSubjectCode, jsonTopicId, setJsonTopicId) {
+  // Read current URL and set state accordingly; also handle back/forward
+  useEffect(() => {
+    const applyFromUrl = () => {
+      if (typeof window === "undefined") return
+      const sp = new URLSearchParams(window.location.search)
+      const s = sp.get("subject")
+      const t = sp.get("topic")
+
+      if (s && s !== jsonSubjectCode && jsonSubjects.some((x) => x.code === s)) {
+        setJsonSubjectCode(s)
+        const subj = jsonSubjects.find((x) => x.code === s)
+        const validTopicIds = (subj?.topics || []).map((u) => u.id)
+        setJsonTopicId(t && validTopicIds.includes(t) ? t : subj?.topics?.[0]?.id || subj?.topics?.[0]?.title || "")
+      } else if (t && t !== jsonTopicId) {
+        setJsonTopicId(t)
+      }
+    }
+
+    applyFromUrl()
+    if (typeof window !== "undefined") {
+      window.addEventListener("popstate", applyFromUrl)
+      return () => window.removeEventListener("popstate", applyFromUrl)
+    }
+  }, [jsonSubjects]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const setParams = (updates) => {
+    if (typeof window === "undefined") return
+    const sp = new URLSearchParams(window.location.search)
+    for (const [k, v] of Object.entries(updates)) {
+      if (v == null || v === "") sp.delete(k)
+      else sp.set(k, String(v))
+    }
+    const qs = sp.toString()
+    const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname
+    window.history.replaceState({}, "", url)
+  }
+
+  return { setParams }
 }
 
 /* --------------------------- NEW: answer randomization helpers --------------------------- */
@@ -87,7 +128,7 @@ function topicFromJson(topic) {
     const ai = Math.min(3, Math.max(0, typeof s.answerIndex === "number" ? s.answerIndex : idxFrom(s.answer)))
     return { id: i + 1, text: s.text || "", options: opts, answerIndex: ai }
   })
-  // NEW: ensure answer letters are randomized every time we load
+  // ensure answer letters are randomized every time we load
   return randomizeTopicAnswers({ name: topic.title || topic.id || "Topic", questions: qs, collapsed: false })
 }
 
@@ -113,6 +154,15 @@ export default function FinalYearObjectivesBuilder() {
   const jsonSubject = jsonSubjects.find((s) => s.code === jsonSubjectCode) || jsonSubjects[0]
   const [jsonTopicId, setJsonTopicId] = useState(jsonSubject?.topics?.[0]?.id || jsonSubject?.topics?.[0]?.title || "")
   const jsonTopic = (jsonSubject?.topics || []).find((t) => t.id === jsonTopicId) || jsonSubject?.topics?.[0]
+
+  // URL sync hook (vanilla)
+  const { setParams } = useUrlQuerySync(
+    jsonSubjects,
+    jsonSubjectCode,
+    setJsonSubjectCode,
+    jsonTopicId,
+    setJsonTopicId
+  )
 
   const activeTopic = data.topics[activeTopicIdx] || makeTopic("")
 
@@ -205,7 +255,7 @@ export default function FinalYearObjectivesBuilder() {
       return { ...d, topics }
     })
 
-  // NEW: randomize A/B/C/D positions for all questions in the active topic
+  // randomize A/B/C/D positions for all questions in the active topic
   const randomizeAnswers = (ti) =>
     setData((d) => {
       const topics = d.topics.slice()
@@ -274,9 +324,13 @@ export default function FinalYearObjectivesBuilder() {
             <select
               value={jsonSubjectCode}
               onChange={(e) => {
-                setJsonSubjectCode(e.target.value)
-                const s = jsonSubjects.find((x) => x.code === e.target.value) || jsonSubjects[0]
-                setJsonTopicId(s?.topics?.[0]?.id || s?.topics?.[0]?.title || "")
+                const nextCode = e.target.value
+                setJsonSubjectCode(nextCode)
+                const s = jsonSubjects.find((x) => x.code === nextCode) || jsonSubjects[0]
+                const nextTopicId = s?.topics?.[0]?.id || s?.topics?.[0]?.title || ""
+                setJsonTopicId(nextTopicId)
+                // reflect in URL
+                setParams({ subject: nextCode, topic: nextTopicId })
               }}
               className="w-full px-3 py-2 mt-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
             >
@@ -292,7 +346,12 @@ export default function FinalYearObjectivesBuilder() {
             <label className="block text-sm font-medium">Topic</label>
             <select
               value={jsonTopicId}
-              onChange={(e) => setJsonTopicId(e.target.value)}
+              onChange={(e) => {
+                const tId = e.target.value
+                setJsonTopicId(tId)
+                // reflect in URL
+                setParams({ subject: jsonSubjectCode, topic: tId })
+              }}
               className="w-full px-3 py-2 mt-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
             >
               {(jsonSubject?.topics || []).map((t) => (
@@ -438,7 +497,7 @@ export default function FinalYearObjectivesBuilder() {
               Randomize Questions
             </button>
 
-            {/* NEW: randomize A/B/C/D positions */}
+            {/* randomize A/B/C/D positions */}
             <button
               onClick={() => randomizeAnswers(activeTopicIdx)}
               className="px-4 py-2 text-white bg-teal-600 rounded hover:bg-teal-700"
